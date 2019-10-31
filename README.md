@@ -14,5 +14,5 @@ Gestion de l'enseignement spécialisé.
 Attention : cette commande efface toutes les données déjà présentes dans la base de données.
 
 ```shell
-php artisan plugin:digitalartisan/enseignement
+php artisan plugin:refresh digitalartisan.enseignement
 ```
