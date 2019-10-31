@@ -1,9 +1,0 @@
-/*
-/*/
-.gitignore
-
-!/config/
-!/plugins/digitalartisan/
-!/themes/
-
-/config/database.php
