@@ -1,0 +1,11 @@
+scopes:
+    ecole:
+        label: Ecole
+        modelClass: DigitalArtisan\Enseignement\Models\Ecole
+        conditions: ecole_id in (:filtered)
+        nameFrom: designation
+    pathologies:
+        label: Pathologies
+        modelClass: DigitalArtisan\Enseignement\Models\Pathologies
+        conditions: id in (select eleve_id from digitalartisan_enseignement_path_eleve where path_id in (:filtered))
+        nameFrom: designation                                                                

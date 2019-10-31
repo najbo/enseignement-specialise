@@ -1,0 +1,20 @@
+fields:
+    designation:
+        label: 'Désignation courte de la pathologie'
+        span: auto
+        required: 1
+        type: text
+    color:
+        label: Couleur
+        span: auto
+        type: colorpicker
+    complement:
+        label: Complément
+        size: small
+        span: full
+        required: 1
+        type: textarea
+    is_archived:
+        label: 'Est archivé'
+        span: auto
+        type: switch

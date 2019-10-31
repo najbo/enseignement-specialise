@@ -1,0 +1,38 @@
+columns:
+    date:
+        label: Date
+        type: date
+        searchable: true
+        sortable: true
+        width: 150px
+    type:
+        label: 'Type d''activité'
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: type
+    resume:
+        label: Résumé
+        type: text
+        searchable: true
+        sortable: true        
+    therapie:
+        label: Mesure
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: therapie
+    interlocuteur_id:
+        label: Thérapeute
+        type: text
+        searchable: true
+        sortable: true
+        select: 'concat(prenom, '' '' ,nom)'
+        relation: interlocuteur
+    prochaineecheance:
+        label: 'Prochaine échéance'
+        type: date
+        searchable: true
+        sortable: true

@@ -1,0 +1,10 @@
+name: Volees
+form: $/digitalartisan/enseignement/models/volee/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Volee
+defaultRedirect: digitalartisan/enseignement/volees
+create:
+    redirect: 'digitalartisan/enseignement/volees/update/:id'
+    redirectClose: digitalartisan/enseignement/volees
+update:
+    redirect: digitalartisan/enseignement/volees
+    redirectClose: digitalartisan/enseignement/volees

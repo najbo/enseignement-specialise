@@ -1,0 +1,57 @@
+fields:
+    nom:
+        label: Nom
+        span: auto
+        required: 1
+        type: text
+    prenom:
+        label: Prénom
+        span: auto
+        required: 1
+        type: text
+    titre:
+        label: 'Titre professionnell'
+        span: auto
+        type: text
+    fonctions:
+        label: Fonctions professionnelles
+        span: auto
+        mode: relation
+        separator: comma
+        nameFrom: designation
+        customTags: true
+        useKey: false
+        type: taglist
+tabs:
+    fields:
+        npa:
+            label: NPA
+            span: auto
+            type: text
+            tab: 'Données de base'
+        localite:
+            label: Localité
+            span: auto
+            type: text
+            tab: 'Données de base'
+        telephonepro:
+            label: 'Téléphone professionnel'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        telephoneprive:
+            label: 'Téléphone privé'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        mail:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        remarque:
+            label: Remarques
+            size: large
+            span: full
+            type: richeditor
+            tab: Remarques

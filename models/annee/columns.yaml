@@ -1,0 +1,16 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    debut:
+        label: 'Date de début'
+        type: date
+        searchable: true
+        sortable: true
+    fin:
+        label: 'Date de fin'
+        type: date
+        searchable: true
+        sortable: true

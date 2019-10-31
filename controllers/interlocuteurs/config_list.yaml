@@ -1,0 +1,13 @@
+list: $/digitalartisan/enseignement/models/interlocuteur/columns.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Interlocuteur
+title: Interlocuteurs
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'digitalartisan/enseignement/interlocuteurs/update/:id'
+filter: config_filter.yaml

@@ -1,0 +1,16 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    complement:
+        label: Complément
+        type: text
+        searchable: true
+        sortable: true
+    is_archived:
+        label: 'Est archivé'
+        type: switch
+        searchable: true
+        sortable: true

@@ -1,0 +1,16 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    programme:
+        label: 'Programme en cours'
+        type: text
+        searchable: true
+        sortable: true
+    classe:
+        label: Classe
+        type: text
+        searchable: true
+        sortable: true

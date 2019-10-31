@@ -1,0 +1,29 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        required: 1
+        type: text
+    debut:
+        label: 'Date de début de l''année scolaire'
+        mode: date
+        span: left
+        required: 1
+        firstDay: 1
+        type: datepicker
+    fin:
+        label: 'Date de fin'
+        mode: date
+        span: auto
+        required: 1
+        firstDay: 1
+        type: datepicker
+    complement:
+        label: Complément
+        span: full
+        size: small
+        type: textarea
+    is_archived:
+        label: 'Est archivé'
+        span: auto
+        type: switch

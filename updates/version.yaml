@@ -1,0 +1,110 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table digitalartisan_enseignement_interlocuteurs'
+    - builder_table_create_digitalartisan_enseignement_interlocuteurs.php
+1.0.3:
+    - 'Created table digitalartisan_enseignement_status'
+    - builder_table_create_digitalartisan_enseignement_status.php
+1.0.4:
+    - 'Created table digitalartisan_enseignement_eleves'
+    - builder_table_create_digitalartisan_enseignement_eleves.php
+1.0.5:
+    - 'Created table digitalartisan_enseignement_volees'
+    - builder_table_create_digitalartisan_enseignement_volees.php
+1.0.6:
+    - 'Created table digitalartisan_enseignement_annees'
+    - builder_table_create_digitalartisan_enseignement_annees.php
+1.0.7:
+    - 'Created table digitalartisan_enseignement_ecoles'
+    - builder_table_create_digitalartisan_enseignement_ecoles.php
+1.0.8:
+    - 'Created table digitalartisan_enseignement_pathologies'
+    - builder_table_create_digitalartisan_enseignement_pathologies.php
+1.0.9:
+    - 'Created table digitalartisan_enseignement_path_suivi'
+    - builder_table_create_digitalartisan_enseignement_path_suivi.php
+1.0.10:
+    - 'Created table digitalartisan_enseignement_suivi'
+    - builder_table_create_digitalartisan_enseignement_suivi.php
+1.0.11:
+    - 'Created table digitalartisan_enseignement_fonctions'
+    - builder_table_create_digitalartisan_enseignement_fonctions.php
+1.0.12:
+    - 'Created table digitalartisan_enseignement_therapie'
+    - builder_table_create_digitalartisan_enseignement_therapies.php
+1.0.13:
+    - 'Created table digitalartisan_enseignement_path_eleve'
+    - builder_table_create_digitalartisan_enseignement_path_eleve.php
+1.0.14:
+    - 'Created table digitalartisan_enseignement_inter_fct'
+    - builder_table_create_digitalartisan_enseignement_inter_fct.php
+1.0.16:
+    - 'Created table digitalartisan_enseignement_suivi_activites'
+    - builder_table_create_digitalartisan_enseignement_suivi_activites.php
+1.0.17:
+    - 'Created table digitalartisan_enseignement_type'
+    - builder_table_create_digitalartisan_enseignement_types.php
+1.0.18:
+    - 'Seed status'
+    - seeder1018.php
+1.0.19:
+    - 'Seed types'
+    - seeder1019.php
+1.0.20:
+    - 'Seed écoles'
+    - seeder1020.php
+1.0.21:
+    - 'Seed pathologies'
+    - seeder1021.php
+1.0.22:
+    - 'Seed thérapies'
+    - seeder1022.php
+1.0.23:
+    - 'Seed fonctions des interlocuteurs'
+    - seeder1023.php
+1.0.24:
+    - 'Seed interlocuteurs'
+    - seeder1024.php
+1.0.25:
+    - 'Created table digitalartisan_enseignement_activite_statut'
+    - builder_table_create_digitalartisan_enseignement_activite_statut.php
+1.0.26:
+    - 'Seed Statut des activités'
+    - seeder1026.php
+1.0.27:
+    - 'Created table digitalartisan_enseignement_proches'
+    - builder_table_create_digitalartisan_enseignement_proches.php
+1.0.28:
+    - 'Seed élèves'
+    - seeder1028.php
+1.0.29:
+    - 'Seed volées'
+    - seeder1029.php
+1.0.30:
+    - 'Created table digitalartisan_enseignement_proches_roles'
+    - builder_table_create_digitalartisan_enseignement_proches_roles.php
+1.0.31:
+    - 'Seed rôles des proches'
+    - seeder1031.php
+1.0.32:
+    - 'Created table digitalartisan_enseignement_enseignants'
+    - builder_table_create_digitalartisan_enseignement_enseignants.php
+1.0.33:
+    - 'Created table digitalartisan_enseignement_suivi_enseignants'
+    - builder_table_create_digitalartisan_enseignement_suivi_enseignants.php
+1.0.34:
+    - 'Created table digitalartisan_enseignement_ens_eco'
+    - builder_table_create_digitalartisan_enseignement_ens_eco.php
+1.0.35:
+    - 'Seed des enseignants'
+    - seeder1035.php
+1.0.36:
+    - 'Created table digitalartisan_enseignement_eco_dir'
+    - builder_table_create_digitalartisan_enseignement_eco_dir.php
+1.0.37:
+    - 'Created table digitalartisan_enseignement_pays'
+    - builder_table_create_digitalartisan_enseignement_pays.php
+1.0.38:
+    - 'Seed pays'
+    - seeder1038.php

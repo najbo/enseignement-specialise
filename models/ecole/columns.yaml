@@ -1,0 +1,23 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    npa:
+        label: NPA
+        type: text
+        searchable: true
+        sortable: true
+    localite:
+        label: Localité
+        type: text
+        searchable: true
+        sortable: true
+    directeurs:
+        label: Direction
+        type: text
+        searchable: true
+        sortable: true
+        select: 'concat(prenom, '' '' ,nom)'
+        relation: directeurs

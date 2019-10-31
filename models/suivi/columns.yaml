@@ -1,0 +1,44 @@
+columns:
+    eleve:
+        label: Eleve
+        type: text
+        searchable: true
+        sortable: true
+        select: 'concat(prenom, '' '', nom)'
+        relation: eleve
+    pathologies:
+        label: Pathologies
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: pathologies
+    designation:
+        label: Résumé
+        type: text
+        searchable: true
+        sortable: true
+    debut:
+        label: Début
+        type: date
+        searchable: true
+        sortable: true
+    fin:
+        label: Fin
+        type: date
+        searchable: true
+        sortable: true
+    activites:
+        label: Activités
+        type: number
+        useRelationCount: 'yes'
+        searchable: true
+        sortable: true
+        relation: activites
+    statut:
+        label: Statut
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: status

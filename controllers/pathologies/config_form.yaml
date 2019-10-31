@@ -1,0 +1,10 @@
+name: Pathologies
+form: $/digitalartisan/enseignement/models/pathologies/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Pathologies
+defaultRedirect: digitalartisan/enseignement/pathologies
+create:
+    redirect: 'digitalartisan/enseignement/pathologies/update/:id'
+    redirectClose: digitalartisan/enseignement/pathologies
+update:
+    redirect: digitalartisan/enseignement/pathologies
+    redirectClose: digitalartisan/enseignement/pathologies

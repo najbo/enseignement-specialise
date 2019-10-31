@@ -1,0 +1,115 @@
+fields:
+    nom:
+        label: 'Nom de l''élève'
+        span: auto
+        required: 1
+        type: text
+    prenom:
+        label: 'Prénom de l''élève'
+        span: auto
+        required: 1
+        type: text
+    ecole:
+        label: Ecole
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    volee:
+        label: Volée
+        nameFrom: FullName
+        descriptionFrom: complement
+        span: auto
+        required: 1
+        type: relation
+        emptyOption: '-- Non spécifiée --'
+    pathologies:
+        label: Pathologies
+        span: auto
+        mode: relation
+        separator: comma
+        nameFrom: designation
+        customTags: true
+        useKey: false
+        type: taglist
+    programme:
+        label: 'Programme effectif'
+        span: auto
+        type: text
+        comment: 'Indiquer si différent du programme de la volée'
+tabs:
+    fields:
+        adresse:
+            label: Adresse
+            span: auto
+            type: text
+            tab: 'Données de base'
+        pays:
+            label: 'Pays d''origine'
+            span: auto
+            nameFrom: designation
+            descriptionFrom: description
+            type: relation
+            tab: 'Données de base'
+            emptyOption: '-- Non spécifié --'
+        npa:
+            label: NPA
+            span: left
+            type: text
+            tab: 'Données de base'
+        localite:
+            label: Localité
+            span: auto
+            type: text
+            tab: 'Données de base'
+        naissance:
+            label: 'Date de naissance'
+            mode: date
+            span: auto
+            type: datepicker
+            firstDay: 1
+            tab: 'Données de base'
+        nss:
+            label: 'Numéro d''assurance sociale'
+            span: auto
+            placeholder: '756.'
+            type: text
+            tab: 'Données de base'
+        proches:
+            label: Proches
+            span: full
+            type: partial
+            path: field_proche
+            tab: Proches
+        remarque:
+            label: Remarques
+            size: large
+            span: full
+            type: richeditor
+            tab: Remarques
+        suivi:
+            label: 'Suivi de cet élève'
+            span: full
+            type: partial
+            path: field_suivis
+            tab: Suivi
+        documents:
+            label: 'Documents généraux'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Documents généraux'
+        images:
+            label: Images
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: 'Documents généraux'

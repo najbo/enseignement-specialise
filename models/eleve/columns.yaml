@@ -1,0 +1,50 @@
+columns:
+    nom:
+        label: Nom
+        type: text
+        searchable: true
+        sortable: true
+    prenom:
+        label: Prénom
+        type: text
+        searchable: true
+        sortable: true
+    ecole:
+        label: Ecole
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: ecole
+    volee:
+        label: Volée
+        type: text
+        searchable: true
+        sortable: true
+        select: 'concat(designation,'' ('', programme,'')'')'
+        relation: volee
+    programme:
+        label: 'Progr. effectif'
+        type: text
+        searchable: true
+        sortable: true
+    pathologies:
+        label: Pathologies
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: pathologies
+    suivis:
+        label: Suivis
+        type: number
+        sortable: true
+        relation: suivis
+        useRelationCount: 'yes'
+    proches:
+        label: Proches
+        type: text
+        searchable: true
+        sortable: true
+        valueFrom: FullName
+        relation: proches

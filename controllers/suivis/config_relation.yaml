@@ -1,0 +1,21 @@
+activites:
+    label: Activités
+    emptyMessage: Aucune activité pour le moment
+    view:
+        list: $/digitalartisan/enseignement/models/suiviactivite/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digitalartisan/enseignement/models/suiviactivite/fields.yaml
+        showSearch: true   
+enseignants:
+    label: Enseignants
+    emptyMessage: Aucun enseignant créé pour le moment
+    view:
+        list: $/digitalartisan/enseignement/models/suivienseignant/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digitalartisan/enseignement/models/suivienseignant/fields.yaml
+        showSearch: true   
+  

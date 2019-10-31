@@ -1,0 +1,12 @@
+list: $/digitalartisan/enseignement/models/pathologies/columns.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Pathologies
+title: Pathologies
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'digitalartisan/enseignement/pathologies/update/:id'

@@ -1,0 +1,11 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    iso:
+        label: 'Code ISO'
+        type: text
+        searchable: true
+        sortable: true

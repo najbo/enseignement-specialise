@@ -1,0 +1,35 @@
+fields:
+    designation:
+        label: 'Désignation de l''école'
+        span: auto
+        required: 1
+        type: text
+    abreviation:
+        label: Abréviation
+        span: auto
+        type: text
+    directeurs:
+        label: Directeur(s)
+        separator: comma
+        customTags: false
+        useKey: true
+        span: auto
+        mode: array
+        options: true
+        type: taglist
+    is_archived:
+        label: 'Est archivé'
+        span: auto
+        type: switch
+    adresse:
+        label: Adresse
+        span: auto
+        type: text
+    npa:
+        label: NPA
+        span: left
+        type: text
+    localite:
+        label: Localité
+        span: auto
+        type: text

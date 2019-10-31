@@ -1,0 +1,41 @@
+fields:
+    nom:
+        label: Nom
+        span: auto
+        type: text
+    prenom:
+        label: Prénom
+        span: auto
+        type: text
+    complement:
+        label: 'Complément ou fonction'
+        span: full
+        type: text
+    debut:
+        label: Début
+        mode: date
+        span: auto
+        type: datepicker
+    fin:
+        label: Fin
+        span: auto
+        mode: date
+        type: datepicker
+tabs:
+    fields:
+        telephonemobile:
+            label: 'Téléphone mobile'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        mail:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        remarques:
+            label: Remarques
+            size: large
+            span: full
+            type: richeditor
+            tab: Remarques

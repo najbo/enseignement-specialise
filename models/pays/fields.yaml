@@ -1,0 +1,9 @@
+fields:
+    designation:
+        label: 'Désignation du pays'
+        span: auto
+        type: text
+    iso:
+        label: 'Code ISO'
+        span: auto
+        type: text

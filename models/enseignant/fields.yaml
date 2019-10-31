@@ -1,0 +1,81 @@
+fields:
+    nom:
+        label: Nom
+        span: auto
+        type: text
+    prenom:
+        label: Prénom
+        span: auto
+        type: text
+    is_maitreclasse:
+        label: 'Maître de classe'
+        span: auto
+        type: switch
+    is_direction:
+        label: Direction
+        span: auto
+        type: switch
+    ecoles:
+        label: Ecoles
+        span: auto
+        mode: relation
+        separator: comma
+        nameFrom: designation
+        customTags: false
+        useKey: false
+        type: taglist
+    initiales:
+        label: Initiales
+        span: auto
+        type: text
+    naissance:
+        label: 'Date de naissance'
+        mode: date
+        span: auto
+        type: datepicker
+        firstDay: 1
+tabs:
+    fields:
+        adresse:
+            label: Adresse
+            span: auto
+            type: text
+            tab: 'Données de base'
+        npa:
+            label: NPA
+            span: left
+            type: text
+            tab: 'Données de base'
+        localite:
+            label: Localité
+            span: auto
+            type: text
+            tab: 'Données de base'
+        telephonemobile:
+            label: 'Téléphone mobile'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        mail:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        entree:
+            label: 'Date d''entrée'
+            mode: date
+            span: auto
+            type: datepicker
+            tab: 'Données de base'
+        sortie:
+            label: 'Date de sortie'
+            span: auto
+            mode: date
+            type: datepicker
+            tab: 'Données de base'
+        remarques:
+            label: Remarques
+            size: large
+            span: full
+            type: richeditor
+            tab: Remarques

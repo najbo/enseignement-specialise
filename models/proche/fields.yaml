@@ -1,0 +1,67 @@
+fields:
+    nom:
+        label: Nom
+        span: auto
+        type: text
+    prenom:
+        label: Prénom
+        span: auto
+        type: text
+    procherole:
+        label: Rôle
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    role:
+        label: 'Rôle (autre)'
+        span: auto
+        type: text
+tabs:
+    fields:
+        telephonemobile:
+            label: 'Téléphone mobile'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        telephoneprof:
+            label: 'Téléphone professionnel'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        mail:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        is_autoriteparentale:
+            label: 'Détient l''autorité parentale'
+            span: auto
+            type: switch
+            tab: 'Données de base'
+        remarque:
+            label: Remarques
+            size: large
+            span: full
+            type: richeditor
+            tab: Remarques
+        documents:
+            label: Documents
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Documents
+        images:
+            label: Images
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: Documents

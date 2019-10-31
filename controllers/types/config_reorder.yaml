@@ -1,0 +1,5 @@
+title: Types
+modelClass: DigitalArtisan\Enseignement\Models\Types
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,82 @@
+fields:
+    date:
+        label: Date
+        mode: date
+        span: auto
+        required: 1
+        type: datepicker
+        firstDay: 1
+    type:
+        label: 'Type d''activité'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    therapie:
+        label: Mesure
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+        emptyOption: '-- Aucune mesure --'
+    interlocuteur:
+        label: Thérapeute
+        nameFrom: FullName
+        descriptionFrom: description
+        prompt: 'Sélectionnez le thérapeute affecté'
+        list: $/digitalartisan/enseignement/models/interlocuteur/columns_short.yaml
+        span: auto
+        type: recordfinder
+    resume:
+        label: Résumé
+        span: auto
+        type: text
+    statut:
+        label: 'Statut de l''activité'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation        
+tabs:
+    fields:
+        developpement:
+            label: Développement
+            size: large
+            span: full
+            type: richeditor
+            tab: Développement
+        documents:
+            label: 'Documents ou rapports'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
+            tab: 'Documents et rapports'
+        gestionnaire:
+            label: Gestionnaire
+            nameFrom: FullName
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: 'Autres informations'
+        prochaineecheance:
+            label: 'Prochaine échéance'
+            span: auto
+            mode: date
+            type: datepicker
+            tab: 'Autres informations'
+        debut:
+            label: 'Début de la mesure'
+            mode: date
+            span: auto
+            type: datepicker
+            tab: 'Autres informations'
+        fin:
+            label: 'Fin de la mesure'
+            mode: date
+            span: auto
+            type: datepicker
+            tab: 'Autres informations'

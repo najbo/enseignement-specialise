@@ -1,0 +1,11 @@
+name: Therapies
+modelClass: DigitalArtisan\Enseignement\Models\Therapie
+form: $/digitalartisan/enseignement/models/therapie/fields.yaml
+defaultRedirect: digitalartisan/enseignement/therapies
+create:
+    redirect: 'digitalartisan/enseignement/therapies/update/:id'
+    redirectClose: digitalartisan/enseignement/therapies
+update:
+    redirect: digitalartisan/enseignement/therapies
+    redirectClose: digitalartisan/enseignement/therapies
+preview: {  }

@@ -1,0 +1,5 @@
+title: ProchesRoles
+modelClass: DigitalArtisan\Enseignement\Models\ProcheRole
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

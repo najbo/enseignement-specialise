@@ -1,0 +1,17 @@
+proches:
+    label: Proches
+    emptyMessage: Aucun proche pour le moment
+    view:
+        list: $/digitalartisan/enseignement/models/proche/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digitalartisan/enseignement/models/proche/fields.yaml
+        showSearch: true   
+suivis:
+    readOnly: true
+    label: Suivi
+    emptyMessage: Aucun suivi pour le moment
+    view:
+        list: $/digitalartisan/enseignement/models/suivi/columns.yaml
+        showSearch: true

@@ -1,0 +1,80 @@
+fields:
+    eleve:
+        label: Elève
+        nameFrom: FullName
+        descriptionFrom: description
+        prompt: 'Sélectionner un élève'
+        list: $/digitalartisan/enseignement/models/eleve/columns.yaml
+        span: auto
+        type: recordfinder
+    status:
+        label: Statut du suivi
+        span: auto
+        nameFrom: designation
+        descriptionFrom: description
+        type: relation
+    designation:
+        label: 'Résumé du suivi'
+        span: auto
+        required: 0
+        type: text
+    pathologies:
+        label: Pathologies
+        span: auto
+        mode: relation
+        separator: comma
+        nameFrom: designation
+        customTags: true
+        useKey: false
+        type: taglist
+    debut:
+        label: 'Date de début'
+        mode: date
+        span: auto
+        type: datepicker
+        firstDay: 1
+        format: 'd.m.Y'
+    fin:
+        label: Fin
+        span: auto
+        mode: date
+        type: datepicker
+        firstDay: 1
+        format: 'd.m.Y'
+tabs:
+    fields:
+        activites:
+            label: Activités
+            span: full
+            type: partial
+            path: field_activite
+            tab: Activités
+        remarques:
+            label: Remarques
+            size: large
+            span: full
+            type: richeditor
+            tab: Remarques
+        gestionnaire:
+            label: Gestionnaire
+            nameFrom: FullName
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: Remarques
+        enseignants:
+            label: 'Enseignants liés'
+            span: full
+            type: partial
+            path: field_enseignant
+            tab: 'Enseignants liés'
+        documents:
+            label: 'Documents généraux'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
+            tab: 'Documents généraux'

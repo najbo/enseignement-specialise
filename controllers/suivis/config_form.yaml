@@ -1,0 +1,10 @@
+name: Suivis
+form: $/digitalartisan/enseignement/models/suivi/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Suivi
+defaultRedirect: digitalartisan/enseignement/suivis
+create:
+    redirect: 'digitalartisan/enseignement/suivis/update/:id'
+    redirectClose: digitalartisan/enseignement/suivis
+update:
+    redirect: digitalartisan/enseignement/suivis
+    redirectClose: digitalartisan/enseignement/suivis

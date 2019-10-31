@@ -1,0 +1,26 @@
+columns:
+    nom:
+        label: Nom
+        type: text
+        searchable: true
+        sortable: true
+    prenom:
+        label: Prénom
+        type: text
+        searchable: true
+        sortable: true
+    complement:
+        label: Complément
+        type: text
+        searchable: true
+        sortable: true
+    debut:
+        label: Début
+        type: date
+        searchable: true
+        sortable: true
+    fin:
+        label: Fin
+        type: date
+        searchable: true
+        sortable: true

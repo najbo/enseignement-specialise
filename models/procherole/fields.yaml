@@ -1,0 +1,10 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    is_autre:
+        label: 'Est un autre rôle'
+        span: auto
+        type: switch
+        comment: 'Permet d''introduire un texte spécifique'

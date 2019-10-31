@@ -1,0 +1,13 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+    complement:
+        label: Complément
+        type: text
+        searchable: true
+    is_archived:
+        label: 'Est archivé'
+        type: switch
+        searchable: true

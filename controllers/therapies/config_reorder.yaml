@@ -1,0 +1,5 @@
+title: Therapies
+modelClass: DigitalArtisan\Enseignement\Models\Therapie
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

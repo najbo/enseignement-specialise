@@ -1,0 +1,122 @@
+plugin:
+    name: 'digitalartisan.enseignement::lang.plugin.name'
+    description: 'Gère le suivi de l''enseignement spécialisé'
+    author: digital-artisan
+    icon: oc-icon-trophy
+    homepage: ''
+permissions:
+    digitalartisan.enseignement.interlocuteurs:
+        tab: 'Ressources humaines'
+        label: 'Gère les interlocuteurs'
+    digitalartisan.enseignement.status:
+        tab: Protocoles
+        label: 'Gère les status de la prise en charge'
+    digitalartisan.enseignement.eleves:
+        tab: 'Ressources humaines'
+        label: 'Gère les élèves de l''enseignement spécialisé'
+    digitalartisan.enseignement.volees:
+        tab: Structures
+        label: 'Gère les volées'
+    digitalartisan.enseignement.annees:
+        tab: Structures
+        label: 'Gère les années scolaires'
+    digitalartisan.enseignement.ecoles:
+        tab: Structures
+        label: 'Gère les écoles'
+    digitalartisan.enseignement.pathologies:
+        tab: Protocoles
+        label: 'Gère les pathologies des cas'
+    digitalartisan.enseignement.fonctions:
+        tab: Protocoles
+        label: 'Gère les fonctions des suivis'
+    digitalartisan.enseignement.suivis:
+        tab: Protocoles
+        label: 'Gère le suivi des élèves'
+    digitalartisan.enseignement.therapies:
+        tab: Protocoles
+        label: 'Gère les thérapies à disposition'
+    digitalartisan.enseignement.types:
+        tab: Protocoles
+        label: 'Gère les types d''activités liées aux suivis'
+    digitalartisan.enseignement.prochesroles:
+        tab: 'Ressources humaines'
+        label: 'Gère les rôles des proches (parents et autres)'
+    digitalartisan.enseignement.enseignants:
+        tab: 'Ressources humaines'
+        label: 'Gère les enseignants'
+    digitalartisan.enseignement.pays:
+        tab: Structures
+        label: 'Gère les pays'
+navigation:
+    protocoles:
+        label: Protocoles
+        url: digitalartisan/enseignement/suivis
+        icon: icon-pencil
+        sideMenu:
+            suivi:
+                label: 'Suivi des élèves'
+                url: digitalartisan/enseignement/suivis
+                icon: icon-stethoscope
+            mesures:
+                label: Mesures
+                url: digitalartisan/enseignement/therapies
+                icon: icon-wheelchair
+            statuts:
+                label: 'Statuts des suivis'
+                url: digitalartisan/enseignement/status
+                icon: icon-tags
+            type-activites:
+                label: 'Types d''activités'
+                url: digitalartisan/enseignement/types
+                icon: icon-suitcase
+    ressources-humaines:
+        label: 'Ressources humaines'
+        url: digitalartisan/enseignement/eleves
+        icon: icon-child
+        sideMenu:
+            eleves:
+                label: Elèves
+                url: digitalartisan/enseignement/eleves
+                icon: icon-mortar-board
+            interlocuteurs:
+                label: 'Interlocuteurs externes'
+                url: digitalartisan/enseignement/interlocuteurs
+                icon: icon-users
+            enseignants:
+                label: Enseignants
+                url: digitalartisan/enseignement/enseignants
+                icon: icon-coffee
+            pathologies:
+                label: Pathologies
+                url: digitalartisan/enseignement/pathologies
+                icon: icon-bug
+            fonctions:
+                label: 'Fonctions professionnelles'
+                url: digitalartisan/enseignement/fonctions
+                icon: icon-ambulance
+                attributes: {  }
+            roles-proches:
+                label: 'Rôles des proches'
+                url: digitalartisan/enseignement/prochesroles
+                icon: icon-link
+    structures:
+        label: Structures
+        url: digitalartisan/enseignement/ecoles
+        icon: icon-gears
+        sideMenu:
+            ecoles:
+                label: Ecoles
+                url: digitalartisan/enseignement/ecoles
+                icon: icon-institution
+            annees:
+                label: 'Années scolaires'
+                url: digitalartisan/enseignement/annees
+                icon: icon-calendar
+            volees:
+                label: Volées
+                url: digitalartisan/enseignement/volees
+                icon: icon-sitemap
+            pays:
+                label: Pays
+                url: digitalartisan/enseignement/pays
+                icon: icon-flag
