@@ -1,5 +1,5 @@
 # Enseignement specialisé
-Gestion de l'enseignement spécialisé.
+Gestion de l'enseignement spécialisé. Le plugin doit être placé dans /plugins/digitalartisan/enseignement.
 
 ## Fonctions et tables :
 
