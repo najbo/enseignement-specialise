@@ -3,6 +3,8 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
+// Types d'activités
+
 class BuilderTableCreateDigitalartisanEnseignementTypes extends Migration
 {
     public function up()

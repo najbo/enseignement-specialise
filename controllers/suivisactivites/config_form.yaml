@@ -1,0 +1,10 @@
+name: SuivisActivites
+form: $/digitalartisan/enseignement/models/suiviactivite/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\SuiviActivite
+defaultRedirect: digitalartisan/enseignement/suivisactivites
+create:
+    redirect: 'digitalartisan/enseignement/suivisactivites/update/:id'
+    redirectClose: digitalartisan/enseignement/suivisactivites
+update:
+    redirect: digitalartisan/enseignement/suivisactivites
+    redirectClose: digitalartisan/enseignement/suivisactivites

@@ -1,0 +1,23 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: false
+    code:
+        label: Code
+        type: text
+        searchable: true
+        sortable: false
+    is_default:
+        label: 'Par défaut'
+        type: switch
+        searchable: true
+        sortable: false
+    ecoles:
+        label: Ecoles
+        type: number
+        useRelationCount: 'yes'
+        searchable: true
+        sortable: false
+        relation: ecoles

@@ -13,11 +13,6 @@ fields:
         nameFrom: designation
         descriptionFrom: description
         type: relation
-    designation:
-        label: 'Résumé du suivi'
-        span: auto
-        required: 0
-        type: text
     pathologies:
         label: Pathologies
         span: auto
@@ -27,6 +22,11 @@ fields:
         customTags: true
         useKey: false
         type: taglist
+    designation:
+        label: 'Résumé du suivi'
+        span: auto
+        required: 0
+        type: text
     debut:
         label: 'Date de début'
         mode: date

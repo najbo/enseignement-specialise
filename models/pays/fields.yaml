@@ -7,3 +7,7 @@ fields:
         label: 'Code ISO'
         span: auto
         type: text
+    is_origine:
+        label: 'Pays par défaut'
+        span: auto
+        type: checkbox

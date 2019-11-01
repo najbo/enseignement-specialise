@@ -1,5 +1,5 @@
 columns:
-    eleve:
+    nom_eleve:
         label: Eleve
         type: text
         searchable: true
@@ -36,9 +36,14 @@ columns:
         sortable: true
         relation: activites
     statut:
-        label: Statut
-        type: text
+        label: Status
+        type: partial
+        path: ~/plugins/digitalartisan/enseignement/models/suivi/_status_column.htm
         searchable: true
-        sortable: true
-        select: designation
-        relation: status
+        sortable: false 
+    ecole:
+        label: Ecole
+        type: partial
+        path: ~/plugins/digitalartisan/enseignement/models/suivi/_ecole_column.htm
+        searchable: true
+        sortable: false           

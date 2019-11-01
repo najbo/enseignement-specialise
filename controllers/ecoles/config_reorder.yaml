@@ -1,0 +1,5 @@
+title: Ecole
+modelClass: DigitalArtisan\Enseignement\Models\Ecole
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

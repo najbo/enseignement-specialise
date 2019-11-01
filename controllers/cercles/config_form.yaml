@@ -1,0 +1,10 @@
+name: Cercles
+form: $/digitalartisan/enseignement/models/cercle/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Cercle
+defaultRedirect: digitalartisan/enseignement/cercles
+create:
+    redirect: 'digitalartisan/enseignement/cercles/update/:id'
+    redirectClose: digitalartisan/enseignement/cercles
+update:
+    redirect: digitalartisan/enseignement/cercles
+    redirectClose: digitalartisan/enseignement/cercles

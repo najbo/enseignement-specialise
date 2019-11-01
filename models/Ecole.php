@@ -8,7 +8,7 @@ use Model;
 class Ecole extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
+    use \October\Rain\Database\Traits\Sortable;
     use \October\Rain\Database\Traits\SoftDelete;
 
     protected $dates = ['naissance', 'deleted_at'];
@@ -28,10 +28,9 @@ class Ecole extends Model
 
 
     public $belongsTo = [
-        'direction' => ['DigitalArtisan\Enseignement\Models\Enseignant',
-                   'key' => 'enseignant_id',
-                   'conditions' => 'is_direction = 1',
-                   'order' => 'nom']                 
+        'cercle' => ['DigitalArtisan\Enseignement\Models\Cercle',
+                   'key' => 'cercle_id',
+                   'order' => 'sort_order']              
     ];
 
     public $belongsToMany = [
@@ -43,6 +42,10 @@ class Ecole extends Model
             'conditions' => 'is_direction = 1',
             'order' => 'nom']
     ];
+
+    public $hasMany = [
+         'eleves' => ['DigitalArtisan\Enseignement\Models\Eleve', 'key' => 'ecole_id', 'order' => 'FullName'] 
+    ]; 
 
 
     public function getDirecteursOptions($fieldName, $value)

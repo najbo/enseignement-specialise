@@ -3,21 +3,35 @@ columns:
         label: Désignation
         type: text
         searchable: true
-        sortable: true
+        sortable: false
     npa:
         label: NPA
         type: text
         searchable: true
-        sortable: true
+        sortable: false
     localite:
         label: Localité
         type: text
         searchable: true
-        sortable: true
+        sortable: false
     directeurs:
         label: Direction
         type: text
         searchable: true
-        sortable: true
+        sortable: false
         select: 'concat(prenom, '' '' ,nom)'
         relation: directeurs
+    cercle:
+        label: Cercle scolaire
+        type: text
+        searchable: true
+        sortable: false
+        select: designation
+        relation: cercle
+    eleves:
+        label: Eleves
+        type: number
+        useRelationCount: 'yes'
+        searchable: true
+        sortable: false
+        relation: eleves

@@ -47,6 +47,9 @@ permissions:
     digitalartisan.enseignement.pays:
         tab: Structures
         label: 'Gère les pays'
+    digitalartisan.enseignement.cercles:
+        tab: Structures
+        label: 'Gère les cercles des écoles'
 navigation:
     protocoles:
         label: Protocoles
@@ -57,6 +60,10 @@ navigation:
                 label: 'Suivi des élèves'
                 url: digitalartisan/enseignement/suivis
                 icon: icon-stethoscope
+            activites:
+                label: Activités
+                url: digitalartisan/enseignement/suivisactivites
+                icon: icon-calendar-o
             mesures:
                 label: Mesures
                 url: digitalartisan/enseignement/therapies
@@ -108,6 +115,10 @@ navigation:
                 label: Ecoles
                 url: digitalartisan/enseignement/ecoles
                 icon: icon-institution
+            cercles:
+                label: 'Cercles scolaires'
+                url: digitalartisan/enseignement/cercles
+                icon: icon-circle-o
             annees:
                 label: 'Années scolaires'
                 url: digitalartisan/enseignement/annees

@@ -17,10 +17,12 @@ fields:
         mode: array
         options: true
         type: taglist
-    is_archived:
-        label: 'Est archivé'
+    cercle:
+        label: 'Cercles scolaires'
+        nameFrom: designation
+        descriptionFrom: description
         span: auto
-        type: switch
+        type: relation
     adresse:
         label: Adresse
         span: auto
@@ -33,3 +35,7 @@ fields:
         label: Localité
         span: auto
         type: text
+    is_archived:
+        label: 'Est archivé'
+        span: auto
+        type: switch

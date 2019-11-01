@@ -1,0 +1,6 @@
+scopes:
+    Eleves:
+        label: Eleves
+        modelClass: DigitalArtisan\Enseignement\Models\Eleve
+        conditions: id in (SELECT eleve_id FROM digitalartisan_enseignement_suivi_activites LEFT JOIN digitalartisan_enseignement_suivi ON digitalartisan_enseignement_suivi.id = digitalartisan_enseignement_suivi_activites.suivi_id in (:filtered))
+        nameFrom: FullName      

@@ -47,5 +47,8 @@ class SuiviActivite extends Model
         'statut'    => ['DigitalArtisan\Enseignement\Models\ActiviteStatut',
                    'key' => 'statut_id',
                    'order' => 'sort_order'],                           
+        'suivi'    => ['DigitalArtisan\Enseignement\Models\Suivi',
+                   'key' => 'suivi_id',
+                   'order' => ''],                   
     ];    
 }

@@ -5,10 +5,10 @@ use Model;
 /**
  * Model
  */
-class Pays extends Model
+class Cercle extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
+    use \October\Rain\Database\Traits\Sortable;
     use \October\Rain\Database\Traits\SoftDelete;
 
     protected $dates = ['deleted_at'];
@@ -17,12 +17,16 @@ class Pays extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_pays';
+    public $table = 'digitalartisan_enseignement_cercles';
 
     /**
      * @var array Validation rules
      */
     public $rules = [
-        'is_origin' => 'unique:pays'
+        'designation' => 'required'
     ];
+
+    public $hasMany = [
+         'ecoles' => ['DigitalArtisan\Enseignement\Models\Ecole', 'key' => 'cercle_id', 'order' => 'designation']        
+    ];     
 }

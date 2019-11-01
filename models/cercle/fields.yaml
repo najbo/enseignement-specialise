@@ -1,0 +1,27 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    code:
+        label: Code
+        span: auto
+        type: text
+    complement:
+        label: Complément
+        size: large
+        span: full
+        type: richeditor
+    is_default:
+        label: 'Cercle par défaut'
+        span: auto
+        type: checkbox
+    is_statistiques:
+        label: Statistiques
+        span: auto
+        default: 1
+        type: checkbox
+    is_archived:
+        label: Archivé
+        span: auto
+        type: checkbox

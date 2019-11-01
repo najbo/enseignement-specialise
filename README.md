@@ -16,3 +16,7 @@ Attention : cette commande efface toutes les données déjà présentes dans la 
 ```shell
 php artisan plugin:refresh digitalartisan.enseignement
 ```
+
+## Plugins nécessaires :
+
+- DynamicPDF

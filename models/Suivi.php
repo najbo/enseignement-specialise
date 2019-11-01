@@ -22,7 +22,10 @@ class Suivi extends Model
     /**
      * @var array Validation rules
      */
+
     public $rules = [
+        'eleve_id' => 'required',
+        'debut' => 'required'
     ];
 
     public $attachMany = [
@@ -53,6 +56,6 @@ class Suivi extends Model
    
     public $hasMany = [
          'activites' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'suivi_id', 'order' => 'date desc'],
-         'enseignants' => ['DigitalArtisan\Enseignement\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc']        
+         'enseignants' => ['DigitalArtisan\Enseignement\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc'] 
     ]; 
 }

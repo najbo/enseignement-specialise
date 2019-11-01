@@ -1,13 +1,17 @@
 columns:
     designation:
         label: Désignation
-        type: text
+        type: partial
+        path: ~/plugins/digitalartisan/enseignement/models/status/_designation_column.htm
         searchable: true
+        sortable: false 
     complement:
         label: Complément
         type: text
         searchable: true
+        sortable: false
     is_archived:
         label: 'Est archivé'
         type: switch
         searchable: true
+        sortable: false

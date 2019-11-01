@@ -13,3 +13,11 @@ fields:
         label: Archivé
         span: auto
         type: switch
+    color_bg:
+        label: 'Couleur de fond'
+        span: left
+        type: colorpicker
+    color_txt:
+        label: 'Couleur du texte'
+        span: auto
+        type: colorpicker
