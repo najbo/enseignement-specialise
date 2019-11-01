@@ -2,6 +2,8 @@
 
 use Backend\Classes\Controller;
 use BackendMenu;
+use Flash;
+use Renatio\DynamicPDF\Classes\PDF;
 
 class Eleves extends Controller
 {
@@ -23,4 +25,17 @@ class Eleves extends Controller
         parent::__construct();
         BackendMenu::setContext('DigitalArtisan.Enseignement', 'ressources-humaines', 'eleves');
     }
+
+    public function onPDF()
+        {
+            // Flash::error("DO NOT CLICK THIS BUTTON!");
+            $templateCode = 'renatio::invoice'; // unique code of the template
+            $data = ['name' => 'John Doe']; // optional data used in template
+
+           // return PDF::loadTemplate($templateCode, $data)->stream('download.pdf');
+
+            return PDF::loadTemplate('renatio::invoice')
+    ->stream();
+
+        }
 }

@@ -76,6 +76,6 @@ class Eleve extends Model
     public function getProgrammeEffectifAttribute($value)
     {
         return $this->programme;
-    }
+    }   
 
 }
