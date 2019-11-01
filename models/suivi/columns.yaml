@@ -1,4 +1,9 @@
 columns:
+    id:
+        label: ID
+        type: text
+        searchable: true
+        sortable: true    
     nom_eleve:
         label: Eleve
         type: text
@@ -40,10 +45,11 @@ columns:
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/suivi/_status_column.htm
         searchable: true
-        sortable: false 
+        sortable: false
     ecole:
         label: Ecole
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/suivi/_ecole_column.htm
         searchable: true
-        sortable: false           
+        sortable: false
+
