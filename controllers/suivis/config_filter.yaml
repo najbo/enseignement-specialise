@@ -1,4 +1,9 @@
 scopes:
+    #ecole:
+        #label: Eleves
+        #modelClass: DigitalArtisan\Enseignement\Models\Eleve
+        #conditions: eleve_id in (:filtered)
+        #nameFrom: FullName     
     eleve:
         label: Eleves
         type: group
@@ -24,7 +29,8 @@ scopes:
         label: Thérapeutes
         modelClass: DigitalArtisan\Enseignement\Models\Interlocuteur
         conditions: id in (select suivi_id from digitalartisan_enseignement_suivi_activites where interlocuteur_id in (:filtered))
-        nameFrom: FullName     
+        #nameFrom: FullName     
+        options: getPrenomNomInterlocuteursOptions
     status:
         label: Statuts
         modelClass: DigitalArtisan\Enseignement\Models\Status

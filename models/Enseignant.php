@@ -31,8 +31,8 @@ class Enseignant extends Model
         'ecoles' => [
             'DigitalArtisan\Enseignement\Models\Ecole',
             'table' => 'digitalartisan_enseignement_ens_eco',
-            'key' => 'eco_id',
-            'otherKey' => 'ens_id',
+            'key' => 'ens_id',
+            'otherKey' => 'eco_id',
             'order' => 'designation']
     ];
 

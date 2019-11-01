@@ -14,7 +14,7 @@ class Eleve extends Model
 
     protected $dates = ['naissance','deleted_at'];
 
-
+    #protected $appends = ['full_name'];
     /**
      * @var string The database table used by the model.
      */
@@ -27,7 +27,6 @@ class Eleve extends Model
         'nom' => 'required',
         'prenom' => 'required'
     ];
-
 
 
     public $attachMany = [
@@ -82,10 +81,13 @@ class Eleve extends Model
     public function getPrenomNomElevesOptions() {
         #$result = Eleve::orderBy('nom','prenom')->get()->pluck('FullName', 'id');
 
+/*        
         $result = Eleve::select(
             DB::raw("CONCAT(prenom,' ',nom) AS name"),'id')
             ->pluck('name', 'id')
             ->toArray();
+*/
+        $result = Eleve::orderBy('nom','prenom')->get()->pluck('FullName', 'id')->toArray();          
         return $result;
     }   
 

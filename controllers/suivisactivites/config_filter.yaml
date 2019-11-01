@@ -13,7 +13,7 @@ scopes:
         label: Eleves
         modelClass: DigitalArtisan\Enseignement\Models\Eleve
         conditions: suivi_id in (SELECT suivi_id FROM digitalartisan_enseignement_suivi_activites JOIN digitalartisan_enseignement_suivi ON digitalartisan_enseignement_suivi.id = digitalartisan_enseignement_suivi_activites.suivi_id where eleve_id in (:filtered))
-        nameFrom: FullName      
+        options: getPrenomNomElevesOptions      
     types_activites:
         label: Type d'activité
         modelClass: DigitalArtisan\Enseignement\Models\Types
@@ -28,7 +28,7 @@ scopes:
         label: Interlocuteurs
         modelClass: DigitalArtisan\Enseignement\Models\Interlocuteur
         conditions: interlocuteur_id in (:filtered)
-        nameFrom: FullName                        
+        options: getPrenomNomInterlocuteursOptions                        
     statuts_activites:
         label: Statut de l'activité
         modelClass: DigitalArtisan\Enseignement\Models\ActiviteStatut

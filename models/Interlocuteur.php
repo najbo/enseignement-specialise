@@ -44,4 +44,10 @@ class Interlocuteur extends Model
     public function getFullNameAttribute() {
         return $this->prenom.' '. $this->nom;
     }
+
+    public function getPrenomNomInterlocuteursOptions() {
+
+        $result = Interlocuteur::orderBy('nom','prenom')->get()->pluck('FullName', 'id')->toArray();          
+        return $result;
+    }       
 }
