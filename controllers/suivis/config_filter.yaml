@@ -1,14 +1,10 @@
 scopes:
-    suivi_id:
-        label: Suivi
-        modelClass: DigitalArtisan\Enseignement\Models\Suivi
-        conditions: id (:filtered)
-        nameFrom: id     
     eleve:
-        label: Elève
+        label: Eleves
+        type: group
         modelClass: DigitalArtisan\Enseignement\Models\Eleve
         conditions: eleve_id in (:filtered)
-        nameFrom: FullName 
+        options: getPrenomNomElevesOptions   
     ecole:
         label: Ecole
         modelClass: DigitalArtisan\Enseignement\Models\Ecole

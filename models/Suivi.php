@@ -61,5 +61,6 @@ class Suivi extends Model
 
     public function getFullNameAttribute() {
         return $this->id.' - ' .$this->designation;
-    }    
+    }  
+
 }

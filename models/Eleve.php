@@ -1,6 +1,7 @@
 <?php namespace DigitalArtisan\Enseignement\Models;
 
 use Model;
+use DB;
 
 /**
  * Model
@@ -76,6 +77,16 @@ class Eleve extends Model
     public function getProgrammeEffectifAttribute($value)
     {
         return $this->programme;
+    }   
+
+    public function getPrenomNomElevesOptions() {
+        #$result = Eleve::orderBy('nom','prenom')->get()->pluck('FullName', 'id');
+
+        $result = Eleve::select(
+            DB::raw("CONCAT(prenom,' ',nom) AS name"),'id')
+            ->pluck('name', 'id')
+            ->toArray();
+        return $result;
     }   
 
 }
