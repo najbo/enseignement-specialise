@@ -19,13 +19,12 @@ columns:
         sortable: true
         select: designation
         relation: suivi            
-    statut:
-        label: 'Statut du suivi'
-        type: text
+    statut_suivi:
+        label: Statut du suivi
+        type: partial
+        path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_statutsuivi_column.htm
         searchable: true
-        sortable: true
-        select: designation
-        relation: statut    
+        sortable: false   
     resume:
         label: Résumé de l'activité
         type: text

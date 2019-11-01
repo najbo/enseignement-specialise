@@ -58,4 +58,8 @@ class Suivi extends Model
          'activites' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'suivi_id', 'order' => 'date desc'],
          'enseignants' => ['DigitalArtisan\Enseignement\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc'] 
     ]; 
+
+    public function getFullNameAttribute() {
+        return $this->id.' - ' .$this->designation;
+    }    
 }

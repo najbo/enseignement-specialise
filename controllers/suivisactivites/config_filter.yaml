@@ -1,6 +1,40 @@
 scopes:
+    suivi:
+        label: Suivi
+        modelClass: DigitalArtisan\Enseignement\Models\Suivi
+        conditions: suivi_id in (:filtered)
+        nameFrom: FullName    
+    statuts_suivi:
+        label: Statut du suivi
+        modelClass: DigitalArtisan\Enseignement\Models\Status
+        conditions: suivi_id in (SELECT suivi_id FROM digitalartisan_enseignement_suivi_activites JOIN digitalartisan_enseignement_suivi ON digitalartisan_enseignement_suivi.id = digitalartisan_enseignement_suivi_activites.suivi_id where status_id in (:filtered))
+        nameFrom: designation          
     Eleves:
         label: Eleves
         modelClass: DigitalArtisan\Enseignement\Models\Eleve
-        conditions: id in (SELECT eleve_id FROM digitalartisan_enseignement_suivi_activites LEFT JOIN digitalartisan_enseignement_suivi ON digitalartisan_enseignement_suivi.id = digitalartisan_enseignement_suivi_activites.suivi_id in (:filtered))
+        conditions: suivi_id in (SELECT suivi_id FROM digitalartisan_enseignement_suivi_activites JOIN digitalartisan_enseignement_suivi ON digitalartisan_enseignement_suivi.id = digitalartisan_enseignement_suivi_activites.suivi_id where eleve_id in (:filtered))
         nameFrom: FullName      
+    types_activites:
+        label: Type d'activité
+        modelClass: DigitalArtisan\Enseignement\Models\Types
+        conditions: type_id in (:filtered)
+        nameFrom: designation        
+    therapies:
+        label: Thérapies
+        modelClass: DigitalArtisan\Enseignement\Models\Therapie
+        conditions: therapie_id in (:filtered)
+        nameFrom: designation                
+    interlocteurs:
+        label: Interlocuteurs
+        modelClass: DigitalArtisan\Enseignement\Models\Interlocuteur
+        conditions: interlocuteur_id in (:filtered)
+        nameFrom: FullName                        
+    statuts_activites:
+        label: Statut de l'activité
+        modelClass: DigitalArtisan\Enseignement\Models\ActiviteStatut
+        conditions: statut_id in (:filtered)
+        nameFrom: designation
+    periode:
+        label: Période
+        type: daterange
+        conditions: date >= ':after' AND date <= ':before'        
