@@ -49,11 +49,11 @@ columns:
         valueFrom: FullName
         relation: proches
     sexe:
-        label: sexe
+        label: Genre
         type: text
         sortable: true
         select: abreviation
-        relation: sexe    
+        relation: sexe
     export:
         label: Export
         type: partial

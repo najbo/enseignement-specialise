@@ -1,0 +1,10 @@
+name: Langues
+form: $/digitalartisan/enseignement/models/langue/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Langue
+defaultRedirect: digitalartisan/enseignement/langues
+create:
+    redirect: 'digitalartisan/enseignement/langues/update/:id'
+    redirectClose: digitalartisan/enseignement/langues
+update:
+    redirect: digitalartisan/enseignement/langues
+    redirectClose: digitalartisan/enseignement/langues

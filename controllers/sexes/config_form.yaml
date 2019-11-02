@@ -1,4 +1,4 @@
-name: Sexes
+name: Genres
 modelClass: DigitalArtisan\Enseignement\Models\Sexe
 form: $/digitalartisan/enseignement/models/sexe/fields.yaml
 defaultRedirect: digitalartisan/enseignement/sexes
@@ -8,4 +8,3 @@ create:
 update:
     redirect: digitalartisan/enseignement/sexes
     redirectClose: digitalartisan/enseignement/sexes
-preview: {  }

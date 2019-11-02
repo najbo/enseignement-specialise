@@ -76,12 +76,21 @@ tabs:
             type: text
             tab: 'Données de base'
         sexe:
-            label: Sexe
+            label: Genre
             span: auto
             nameFrom: designation
             descriptionFrom: description
             type: relation
             tab: 'Données de base'
+            emptyOption: '-- Non défini --'
+        langue:
+            label: Langue
+            span: auto
+            nameFrom: designation
+            descriptionFrom: description
+            type: relation
+            tab: 'Données de base'
+            emptyOption: '-- Non défini --'
         proches:
             label: Proches
             span: full

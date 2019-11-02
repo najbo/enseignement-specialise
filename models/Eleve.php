@@ -9,7 +9,6 @@ use DB;
 class Eleve extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
     use \October\Rain\Database\Traits\SoftDelete;
 
     protected $dates = ['naissance','deleted_at'];
@@ -50,6 +49,9 @@ class Eleve extends Model
         'sexe' => ['DigitalArtisan\Enseignement\Models\Sexe',
                    'key' => 'sexe_id',
                    'order' => 'sort_order'],                   
+        'langue' => ['DigitalArtisan\Enseignement\Models\Langue',
+                   'key' => 'langue_id',
+                   'order' => 'sort_order'],
     ];
 
     public $belongsToMany = [
@@ -92,5 +94,31 @@ class Eleve extends Model
         $result = Eleve::orderBy('nom','prenom')->get()->pluck('FullName', 'id')->toArray();          
         return $result;
     }   
+
+
+
+    public function beforeSave()
+        {
+         \Log::info("Before Save");
+    }
+
+    public function afterSave()
+        {
+         \Log::info("After Save ".$this->id);    
+    }
+
+    public function afterDelete()
+        {
+
+        #$eleve = Eleve::findOrFail($this->id);
+        #$eleve->pathologies()->delete();
+
+        # $this->pathologies()->delete();
+        
+        # PathologieEleve::where("eleve_id", $this->id)->forceDelete(); // NoSoftDelete
+        PathologieEleve::where("eleve_id", $this->id)->delete(); // Softdelete
+         \Log::info("We just deleted record #".$this->id. " but *not* the related pathologies");    
+    }
+
 
 }

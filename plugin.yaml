@@ -53,6 +53,9 @@ permissions:
     digitalartisan.enseignement.sexes:
         tab: Structures
         label: 'Gère les sexes des différents protagonistes'
+    digitalartisan.enseignement.langues:
+        tab: Structures
+        label: 'Gère les langues des différents protagonistes'
 navigation:
     protocoles:
         label: Protocoles
@@ -134,7 +137,11 @@ navigation:
                 label: Pays
                 url: digitalartisan/enseignement/pays
                 icon: icon-flag
-            sexe:
-                label: Sexes
+            Genres:
+                label: Genres
                 url: digitalartisan/enseignement/sexes
                 icon: icon-transgender
+            langues:
+                label: Langues
+                url: digitalartisan/enseignement/langues
+                icon: icon-comments

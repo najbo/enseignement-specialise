@@ -1,4 +1,4 @@
-title: Sexes
+title: Genres
 modelClass: DigitalArtisan\Enseignement\Models\Sexe
 nameFrom: designation
 toolbar:

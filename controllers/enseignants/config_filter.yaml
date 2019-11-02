@@ -4,3 +4,13 @@ scopes:
         modelClass: DigitalArtisan\Enseignement\Models\Ecole
         conditions: id in (select ens_id from digitalartisan_enseignement_ens_eco where eco_id in (:filtered))
         nameFrom: designation
+    sexe:
+        label: Genres
+        modelClass: DigitalArtisan\Enseignement\Models\Sexe
+        conditions: sexe_id in (:filtered)
+        nameFrom: designation        
+    langue:
+        label: Langues
+        modelClass: DigitalArtisan\Enseignement\Models\Langue
+        conditions: langue_id in (:filtered)
+        nameFrom: designation    

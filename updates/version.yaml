@@ -120,3 +120,12 @@
 1.0.42:
     - 'Seed sexes'
     - seeder1042.php
+1.0.43:
+    - 'Created table digitalartisan_enseignement_langues'
+    - builder_table_create_digitalartisan_enseignement_langues.php
+1.0.44:
+    - 'Seed langues'
+    - seeder1044.php
+1.0.45:
+    - 'Seed pathologies rattachées aux élèves'
+    - seeder1045.php

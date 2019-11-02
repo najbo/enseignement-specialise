@@ -28,6 +28,15 @@ class Enseignant extends Model
         'prenom' => 'required'
     ];
 
+    public $belongsTo = [
+        'sexe' => ['DigitalArtisan\Enseignement\Models\Sexe',
+                   'key' => 'sexe_id',
+                   'order' => 'sort_order'],                   
+        'langue' => ['DigitalArtisan\Enseignement\Models\Langue',
+                   'key' => 'langue_id',
+                   'order' => 'sort_order'],                     
+    ];
+
     public $belongsToMany = [
         'ecoles' => [
             'DigitalArtisan\Enseignement\Models\Ecole',

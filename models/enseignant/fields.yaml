@@ -73,6 +73,22 @@ tabs:
             mode: date
             type: datepicker
             tab: 'Données de base'
+        sexe:
+            label: Genre
+            span: auto
+            nameFrom: designation
+            descriptionFrom: description
+            type: relation
+            tab: 'Données de base'
+            emptyOption: '-- Non défini --'
+        langue:
+            label: Langue
+            span: auto
+            nameFrom: designation
+            descriptionFrom: description
+            type: relation
+            tab: 'Données de base'
+            emptyOption: '-- Non défini --'            
         remarques:
             label: Remarques
             size: large
