@@ -48,12 +48,12 @@ columns:
         sortable: true
         valueFrom: FullName
         relation: proches
-    sexe:
+    genre:
         label: Genre
         type: text
         sortable: true
         select: abreviation
-        relation: sexe
+        relation: genre
     export:
         label: Export
         type: partial

@@ -31,9 +31,9 @@ columns:
         type: text
         searchable: true
         sortable: true
-    sexe:
+    genre:
         label: Genre
         type: text
         sortable: true
         select: abreviation
-        relation: sexe
+        relation: genre

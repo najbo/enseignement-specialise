@@ -3,11 +3,11 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreateDigitalartisanEnseignementSexes extends Migration
+class BuilderTableCreateDigitalartisanEnseignementGenres extends Migration
 {
     public function up()
     {
-        Schema::create('digitalartisan_enseignement_sexes', function($table)
+        Schema::create('digitalartisan_enseignement_genres', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
@@ -24,6 +24,6 @@ class BuilderTableCreateDigitalartisanEnseignementSexes extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('digitalartisan_enseignement_sexes');
+        Schema::dropIfExists('digitalartisan_enseignement_genres');
     }
 }

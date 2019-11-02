@@ -17,7 +17,8 @@ class Seeder1035 extends Seeder
             'npa' => '2520',
             'localite' => 'La Neuveville',
             'is_maitreclasse' => 1,
-            'is_direction' => 0
+            'is_direction' => 0,
+            'genre_id' => 2,
         ]);         
 
         Enseignant::create([
@@ -28,7 +29,8 @@ class Seeder1035 extends Seeder
             'npa' => '2722',
             'localite' => 'Les Reussilles',
             'is_maitreclasse' => 0,
-            'is_direction' => 1
+            'is_direction' => 1,
+            'genre_id' => 2,
         ]);  
         
         Enseignant::create([
@@ -39,7 +41,8 @@ class Seeder1035 extends Seeder
             'npa' => '2502',
             'localite' => 'Bienne',
             'is_maitreclasse' => 0,
-            'is_direction' => 1
+            'is_direction' => 1,
+            'genre_id' => 1,
         ]);          
 
     }

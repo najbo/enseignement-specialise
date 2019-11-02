@@ -21,7 +21,7 @@ class BuilderTableCreateDigitalartisanEnseignementEleves extends Migration
             $table->integer('volee_id')->unsigned()->nullable();
             $table->integer('ecole_id')->unsigned();
             $table->integer('pays_id')->unsigned()->nullable();
-            $table->integer('sexe_id')->nullable()->unsigned();
+            $table->integer('genre_id')->nullable()->unsigned();
             $table->integer('langue_id')->nullable()->unsigned();
             $table->text('remarque')->nullable();
             $table->date('naissance')->nullable();

@@ -29,8 +29,8 @@ class Enseignant extends Model
     ];
 
     public $belongsTo = [
-        'sexe' => ['DigitalArtisan\Enseignement\Models\Sexe',
-                   'key' => 'sexe_id',
+        'genre' => ['DigitalArtisan\Enseignement\Models\Genre',
+                   'key' => 'genre_id',
                    'order' => 'sort_order'],                   
         'langue' => ['DigitalArtisan\Enseignement\Models\Langue',
                    'key' => 'langue_id',

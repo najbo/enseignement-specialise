@@ -115,10 +115,10 @@
     - 'Seed cercles scolaires'
     - seeder1040.php
 1.0.41:
-    - 'Created table digitalartisan_enseignement_sexes'
-    - builder_table_create_digitalartisan_enseignement_sexes.php
+    - 'Created table digitalartisan_enseignement_genres'
+    - builder_table_create_digitalartisan_enseignement_genres.php
 1.0.42:
-    - 'Seed sexes'
+    - 'Seed genres'
     - seeder1042.php
 1.0.43:
     - 'Created table digitalartisan_enseignement_langues'

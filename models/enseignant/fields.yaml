@@ -73,7 +73,7 @@ tabs:
             mode: date
             type: datepicker
             tab: 'Données de base'
-        sexe:
+        genre:
             label: Genre
             span: auto
             nameFrom: designation

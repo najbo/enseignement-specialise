@@ -1,6 +1,6 @@
 name: Types
-form: $/digitalartisan/enseignement/models/types/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Types
+form: $/digitalartisan/enseignement/models/type/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Type
 defaultRedirect: digitalartisan/enseignement/types
 create:
     redirect: 'digitalartisan/enseignement/types/update/:id'

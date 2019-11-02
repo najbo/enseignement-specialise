@@ -1,7 +1,7 @@
 title: Genres
-modelClass: DigitalArtisan\Enseignement\Models\Sexe
-list: $/digitalartisan/enseignement/models/sexe/columns.yaml
-recordUrl: 'digitalartisan/enseignement/sexes/update/:id'
+modelClass: DigitalArtisan\Enseignement\Models\Genre
+list: $/digitalartisan/enseignement/models/genre/columns.yaml
+recordUrl: 'digitalartisan/enseignement/genres/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

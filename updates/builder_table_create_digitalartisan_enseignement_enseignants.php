@@ -24,7 +24,7 @@ class BuilderTableCreateDigitalartisanEnseignementEnseignants extends Migration
             $table->date('naissance')->nullable();
             $table->date('entree')->nullable();
             $table->date('sortie')->nullable();
-            $table->integer('sexe_id')->nullable()->unsigned();
+            $table->integer('genre_id')->nullable()->unsigned();
             $table->integer('langue_id')->nullable()->unsigned();
             $table->boolean('is_maitreclasse')->nullable()->default(0);
             $table->boolean('is_direction')->nullable()->default(0);

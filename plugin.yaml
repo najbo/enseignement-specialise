@@ -50,9 +50,9 @@ permissions:
     digitalartisan.enseignement.cercles:
         tab: Structures
         label: 'Gère les cercles des écoles'
-    digitalartisan.enseignement.sexes:
+    digitalartisan.enseignement.genres:
         tab: Structures
-        label: 'Gère les sexes des différents protagonistes'
+        label: 'Gère les genres des différents protagonistes'
     digitalartisan.enseignement.langues:
         tab: Structures
         label: 'Gère les langues des différents protagonistes'
@@ -139,7 +139,7 @@ navigation:
                 icon: icon-flag
             Genres:
                 label: Genres
-                url: digitalartisan/enseignement/sexes
+                url: digitalartisan/enseignement/genres
                 icon: icon-transgender
             langues:
                 label: Langues

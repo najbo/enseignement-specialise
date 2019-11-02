@@ -75,7 +75,7 @@ tabs:
             placeholder: '756.'
             type: text
             tab: 'Données de base'
-        sexe:
+        genre:
             label: Genre
             span: auto
             nameFrom: designation

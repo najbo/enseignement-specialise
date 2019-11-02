@@ -16,7 +16,7 @@ class Seeder1028 extends Seeder
             'localite' => 'Bévilard',
             'ecole_id' => 1,
             'volee_id' => 3,
-            'sexe_id' => 2,
+            'genre_id' => 2,
             'langue_id' => 1,
             'pays_id' => 1,
         ]);        
@@ -28,7 +28,7 @@ class Seeder1028 extends Seeder
             'localite' => 'Reconvilier',
             'ecole_id' => 1,
             'volee_id' => 2,
-            'sexe_id' => 2,
+            'genre_id' => 2,
             'langue_id' => 1,
             'pays_id' => 2,
         ]);        
@@ -40,7 +40,7 @@ class Seeder1028 extends Seeder
             'localite' => 'Tavannes',
             'ecole_id' => 1,
             'volee_id' => 7,
-            'sexe_id' => 2,
+            'genre_id' => 2,
             'langue_id' => 2,
             'pays_id' => 1,
         ]);        
@@ -52,7 +52,7 @@ class Seeder1028 extends Seeder
             'localite' => 'Loveresse',
             'ecole_id' => 3,
             'volee_id' => 5,
-            'sexe_id' => 3,
+            'genre_id' => 3,
             'langue_id' => 3,
             'pays_id' => 3,
         ]);          

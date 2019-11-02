@@ -1,0 +1,10 @@
+name: Genres
+modelClass: DigitalArtisan\Enseignement\Models\Genre
+form: $/digitalartisan/enseignement/models/genre/fields.yaml
+defaultRedirect: digitalartisan/enseignement/genres
+create:
+    redirect: 'digitalartisan/enseignement/genres/update/:id'
+    redirectClose: digitalartisan/enseignement/genres
+update:
+    redirect: digitalartisan/enseignement/genres
+    redirectClose: digitalartisan/enseignement/genres

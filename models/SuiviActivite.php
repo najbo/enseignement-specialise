@@ -38,7 +38,7 @@ class SuiviActivite extends Model
         'interlocuteur'    => ['DigitalArtisan\Enseignement\Models\Interlocuteur',
                    'key' => 'interlocuteur_id',
                    'order' => 'nom', 'prenom'],        
-        'type'    => ['DigitalArtisan\Enseignement\Models\Types',
+        'type'    => ['DigitalArtisan\Enseignement\Models\Type',
                    'key' => 'type_id',
                    'order' => 'sort_order'],
         'gestionnaire'    => ['DigitalArtisan\Enseignement\Models\Gestionnaire',
