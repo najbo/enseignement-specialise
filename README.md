@@ -16,7 +16,7 @@ Gestion de l'enseignement spécialisé. Le plugin doit être placé dans /plugin
 - Se rendre dans le dossier www du projet
 
 ```shell
-composer create-project october/october
+composer create-project october/october .
 ```
 
 Mettre à jour les dépendances
