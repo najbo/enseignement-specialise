@@ -4,7 +4,7 @@ fields:
         nameFrom: FullName
         descriptionFrom: description
         prompt: 'Sélectionner un élève'
-        list: $/digitalartisan/enseignement/models/eleve/columns.yaml
+        list: $/digitalartisan/enseignement/models/eleve/columns_short.yaml
         span: auto
         type: recordfinder
     status:

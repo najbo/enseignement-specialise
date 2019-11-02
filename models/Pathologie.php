@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class Pathologies extends Model
+class Pathologie extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\Sortable;
@@ -25,5 +25,6 @@ class Pathologies extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'designation' => 'required'
     ];
 }

@@ -35,28 +35,9 @@ columns:
         sortable: true
         select: designation
         relation: pathologies
-    suivis:
-        label: Suivis
-        type: number
-        sortable: true
-        relation: suivis
-        useRelationCount: 'yes'
-    proches:
-        label: Proches
-        type: text
-        searchable: true
-        sortable: true
-        valueFrom: FullName
-        relation: proches
     genre:
         label: Genre
         type: text
         sortable: true
         select: abreviation
         relation: genre
-    export:
-        label: Export
-        type: partial
-        path: ~/plugins/digitalartisan/enseignement/models/eleve/_export_column.htm
-        searchable: false
-        sortable: false     

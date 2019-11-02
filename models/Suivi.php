@@ -47,7 +47,7 @@ class Suivi extends Model
 
     public $belongsToMany = [
         'pathologies' => [
-            'DigitalArtisan\Enseignement\Models\Pathologies',
+            'DigitalArtisan\Enseignement\Models\Pathologie',
             'table' => 'digitalartisan_enseignement_path_suivi',
             'key' => 'suivi_id',
             'otherKey' => 'path_id',

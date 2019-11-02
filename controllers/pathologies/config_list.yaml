@@ -1,5 +1,5 @@
-list: $/digitalartisan/enseignement/models/pathologies/columns.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Pathologies
+list: $/digitalartisan/enseignement/models/pathologie/columns.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Pathologie
 title: Pathologies
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true

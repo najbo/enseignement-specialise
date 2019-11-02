@@ -6,7 +6,7 @@ scopes:
         nameFrom: designation
     pathologies:
         label: Pathologies
-        modelClass: DigitalArtisan\Enseignement\Models\Pathologies
+        modelClass: DigitalArtisan\Enseignement\Models\Pathologie
         conditions: id in (select eleve_id from digitalartisan_enseignement_path_eleve where path_id in (:filtered))
         nameFrom: designation                                                                
     genre:

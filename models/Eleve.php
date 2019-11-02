@@ -56,7 +56,7 @@ class Eleve extends Model
 
     public $belongsToMany = [
         'pathologies' => [
-            'DigitalArtisan\Enseignement\Models\Pathologies',
+            'DigitalArtisan\Enseignement\Models\Pathologie',
             'table' => 'digitalartisan_enseignement_path_eleve',
             'key' => 'eleve_id',
             'otherKey' => 'path_id',

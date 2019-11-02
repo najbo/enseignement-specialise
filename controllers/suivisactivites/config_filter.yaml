@@ -16,7 +16,7 @@ scopes:
         options: getPrenomNomElevesOptions      
     types_activites:
         label: Type d'activité
-        modelClass: DigitalArtisan\Enseignement\Models\Types
+        modelClass: DigitalArtisan\Enseignement\Models\Type
         conditions: type_id in (:filtered)
         nameFrom: designation        
     therapies:

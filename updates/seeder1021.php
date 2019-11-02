@@ -1,59 +1,59 @@
 <?php namespace DigitalArtisan\Enseignement\Updates;
 
 use Seeder;
-use DigitalArtisan\Enseignement\Models\Pathologies;
+use DigitalArtisan\Enseignement\Models\Pathologie;
 
 class Seeder1021 extends Seeder
 {
     public function run()
     {
-        Pathologies::truncate();
+        Pathologie::truncate();
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Dyslexie'
         ]);
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Dysorthographie'
         ]);
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Dyspraxie'
         ]);
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Dysphasie'
         ]);
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Dyscalculie'
         ]);
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Allophonie'
         ]);        
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => "Trouble de l'attention"
         ]);
 
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Hyperactivité'
         ]);
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Retard cognitif'
         ]);        
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Trouble du spectre autistique'
         ]);        
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Trouble psychologique'
         ]);        
         
-        Pathologies::create([
+        Pathologie::create([
             'designation' => 'Haut potentiel'
         ]);                
         

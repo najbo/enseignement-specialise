@@ -1,6 +1,6 @@
 name: Pathologies
-form: $/digitalartisan/enseignement/models/pathologies/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Pathologies
+form: $/digitalartisan/enseignement/models/pathologie/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Pathologie
 defaultRedirect: digitalartisan/enseignement/pathologies
 create:
     redirect: 'digitalartisan/enseignement/pathologies/update/:id'

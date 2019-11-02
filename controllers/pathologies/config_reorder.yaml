@@ -1,5 +1,5 @@
 title: Pathologies
-modelClass: DigitalArtisan\Enseignement\Models\Pathologies
+modelClass: DigitalArtisan\Enseignement\Models\Pathologie
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar
