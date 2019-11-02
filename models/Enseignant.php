@@ -13,6 +13,7 @@ class Enseignant extends Model
 
     protected $dates = ['deleted_at'];
 
+    protected $appends = ['full_name'];
 
     /**
      * @var string The database table used by the model.
