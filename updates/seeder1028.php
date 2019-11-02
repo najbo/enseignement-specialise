@@ -15,7 +15,8 @@ class Seeder1028 extends Seeder
             'npa' => '2735',
             'localite' => 'Bévilard',
             'ecole_id' => 1,
-            'volee_id' => 3
+            'volee_id' => 3,
+            'sexe_id' => 2
         ]);        
         
         Eleve::create([
@@ -24,7 +25,8 @@ class Seeder1028 extends Seeder
             'npa' => '2732',
             'localite' => 'Reconvilier',
             'ecole_id' => 1,
-            'volee_id' => 2
+            'volee_id' => 2,
+            'sexe_id' => 2
         ]);        
  
          Eleve::create([
@@ -33,7 +35,8 @@ class Seeder1028 extends Seeder
             'npa' => '2710',
             'localite' => 'Tavannes',
             'ecole_id' => 1,
-            'volee_id' => 7
+            'volee_id' => 7,
+            'sexe_id' => 2
         ]);        
                
         

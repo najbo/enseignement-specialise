@@ -75,6 +75,13 @@ tabs:
             placeholder: '756.'
             type: text
             tab: 'Données de base'
+        sexe:
+            label: Sexe
+            span: auto
+            nameFrom: designation
+            descriptionFrom: description
+            type: relation
+            tab: 'Données de base'
         proches:
             label: Proches
             span: full

@@ -48,3 +48,15 @@ columns:
         sortable: true
         valueFrom: FullName
         relation: proches
+    sexe:
+        label: sexe
+        type: text
+        sortable: true
+        select: abreviation
+        relation: sexe    
+    export:
+        label: Export
+        type: partial
+        path: ~/plugins/digitalartisan/enseignement/models/eleve/_export_column.htm
+        searchable: false
+        sortable: false     

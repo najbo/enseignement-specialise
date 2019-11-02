@@ -3,13 +3,15 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 use Flash;
-use Renatio\DynamicPDF\Classes\PDF;
+#use Renatio\DynamicPDF\Classes\PDF;
+use Renatio\DynamicPDF\Classes\PDFWrapper;
 
 class Eleves extends Controller
 {
     public $implement = [       'Backend\Behaviors\ListController',
                                 'Backend\Behaviors\FormController',
-                                'Backend.Behaviors.RelationController'
+                                'Backend.Behaviors.RelationController',
+                                'DigitalArtisan\Enseignement\Behaviors\PdfExportBehavior'
                             ];
     
     public $listConfig = 'config_list.yaml';
@@ -28,14 +30,27 @@ class Eleves extends Controller
 
     public function onPDF()
         {
-            // Flash::error("DO NOT CLICK THIS BUTTON!");
+            # Flash::error("DO NOT CLICK THIS BUTTON!");
+
+            $templateCode = 'renatio::invoice';
+            $filename ='test.pdf';
+
+            $pdf = app('dynamicpdf');
+            $data = [];
+
+            $options = [
+                'logOutputFile' => storage_path('temp/log.htm'),
+            ];
+
+            return $pdf
+                ->loadTemplate($templateCode, $data)
+                ->setOptions($options)
+                ->download($filename);
+            /*    
             $templateCode = 'renatio::invoice'; // unique code of the template
             $data = ['name' => 'John Doe']; // optional data used in template
 
-           // return PDF::loadTemplate($templateCode, $data)->stream('download.pdf');
-
-            return PDF::loadTemplate('renatio::invoice')
-    ->stream();
-
+            return PDF::loadTemplate($templateCode, $data)->stream();
+*/
         }
 }

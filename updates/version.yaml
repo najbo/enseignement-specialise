@@ -114,3 +114,9 @@
 1.0.40:
     - 'Seed cercles scolaires'
     - seeder1040.php
+1.0.41:
+    - 'Created table digitalartisan_enseignement_sexes'
+    - builder_table_create_digitalartisan_enseignement_sexes.php
+1.0.42:
+    - 'Seed sexes'
+    - seeder1042.php

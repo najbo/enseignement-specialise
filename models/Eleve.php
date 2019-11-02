@@ -47,7 +47,9 @@ class Eleve extends Model
         'pays' => ['DigitalArtisan\Enseignement\Models\Pays',
                    'key' => 'pays_id',
                    'order' => 'is_origine desc'],
-
+        'sexe' => ['DigitalArtisan\Enseignement\Models\Sexe',
+                   'key' => 'sexe_id',
+                   'order' => 'sort_order'],                   
     ];
 
     public $belongsToMany = [

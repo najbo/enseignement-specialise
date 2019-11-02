@@ -50,6 +50,9 @@ permissions:
     digitalartisan.enseignement.cercles:
         tab: Structures
         label: 'Gère les cercles des écoles'
+    digitalartisan.enseignement.sexes:
+        tab: Structures
+        label: 'Gère les sexes des différents protagonistes'
 navigation:
     protocoles:
         label: Protocoles
@@ -131,3 +134,7 @@ navigation:
                 label: Pays
                 url: digitalartisan/enseignement/pays
                 icon: icon-flag
+            sexe:
+                label: Sexes
+                url: digitalartisan/enseignement/sexes
+                icon: icon-transgender
