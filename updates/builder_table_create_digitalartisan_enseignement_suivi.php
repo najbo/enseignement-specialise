@@ -17,7 +17,7 @@ class BuilderTableCreateDigitalartisanEnseignementSuivi extends Migration
             $table->text('remarques')->nullable();
             $table->text('bilan')->nullable();
             $table->integer('eleve_id');
-            $table->integer('status_id');
+            $table->integer('statut_id');
             $table->integer('gestionnaire_id')->nullable()->unsigned();
             $table->boolean('is_archived')->nullable();
             $table->timestamp('created_at')->nullable();

@@ -1,6 +1,6 @@
 fields:
     designation:
-        label: 'Désignation du status'
+        label: 'Désignation du statut'
         span: auto
         required: 1
         type: text
@@ -16,8 +16,10 @@ fields:
     color_bg:
         label: 'Couleur de fond'
         span: left
+        default: '#bdc3c7'
         type: colorpicker
     color_txt:
         label: 'Couleur du texte'
         span: auto
+        default: '#000000'
         type: colorpicker

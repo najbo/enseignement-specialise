@@ -1,5 +1,0 @@
-title: Status
-modelClass: DigitalArtisan\Enseignement\Models\Status
-nameFrom: designation
-toolbar:
-    buttons: reorder_toolbar

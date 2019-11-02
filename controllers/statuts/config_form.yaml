@@ -1,0 +1,10 @@
+name: Statuts
+modelClass: DigitalArtisan\Enseignement\Models\Statut
+form: $/digitalartisan/enseignement/models/statut/fields.yaml
+defaultRedirect: digitalartisan/enseignement/statuts
+create:
+    redirect: 'digitalartisan/enseignement/statuts/update/:id'
+    redirectClose: digitalartisan/enseignement/statuts
+update:
+    redirect: digitalartisan/enseignement/statuts
+    redirectClose: digitalartisan/enseignement/statuts

@@ -1,15 +1,15 @@
 <?php namespace DigitalArtisan\Enseignement\Updates;
 
 use Seeder;
-use DigitalArtisan\Enseignement\Models\Status;
+use DigitalArtisan\Enseignement\Models\Statut;
 
 class Seeder1018 extends Seeder
 {
     public function run()
     {
-        Status::truncate();
+        Statut::truncate();
         
-        Status::create([
+        Statut::create([
             'designation' => 'En cours',
             'sort_order' => 1,
             'color_bg' => '#f39c12',
@@ -17,7 +17,7 @@ class Seeder1018 extends Seeder
             'is_finished' => 0,
         ]);
 
-        Status::create([
+        Statut::create([
             'designation' => 'En cours (attention)',
             'sort_order' => 2,
             'color_bg' => '#c0392b',
@@ -25,7 +25,7 @@ class Seeder1018 extends Seeder
             'is_finished' => 0,
         ]);        
         
-        Status::create([
+        Statut::create([
             'designation' => 'Terminé',
             'sort_order' => 3,
             'color_bg' => '#27ae60',

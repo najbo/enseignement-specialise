@@ -4,8 +4,8 @@
     - 'Created table digitalartisan_enseignement_interlocuteurs'
     - builder_table_create_digitalartisan_enseignement_interlocuteurs.php
 1.0.3:
-    - 'Created table digitalartisan_enseignement_status'
-    - builder_table_create_digitalartisan_enseignement_status.php
+    - 'Created table digitalartisan_enseignement_statuts'
+    - builder_table_create_digitalartisan_enseignement_statuts.php
 1.0.4:
     - 'Created table digitalartisan_enseignement_eleves'
     - builder_table_create_digitalartisan_enseignement_eleves.php
@@ -46,7 +46,7 @@
     - 'Created table digitalartisan_enseignement_type'
     - builder_table_create_digitalartisan_enseignement_types.php
 1.0.18:
-    - 'Seed status'
+    - 'Seed statuts'
     - seeder1018.php
 1.0.19:
     - 'Seed types'

@@ -7,7 +7,7 @@ fields:
         list: $/digitalartisan/enseignement/models/eleve/columns_short.yaml
         span: auto
         type: recordfinder
-    status:
+    statut:
         label: Statut du suivi
         span: auto
         nameFrom: designation

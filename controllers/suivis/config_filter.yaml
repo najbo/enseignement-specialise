@@ -31,10 +31,10 @@ scopes:
         conditions: id in (select suivi_id from digitalartisan_enseignement_suivi_activites where interlocuteur_id in (:filtered))
         #nameFrom: FullName     
         options: getPrenomNomInterlocuteursOptions
-    status:
+    statut:
         label: Statuts
-        modelClass: DigitalArtisan\Enseignement\Models\Status
-        conditions: status_id in (:filtered)
+        modelClass: DigitalArtisan\Enseignement\Models\Statut
+        conditions: statut_id in (:filtered)
         nameFrom: designation                        
     periode:
         label: Période

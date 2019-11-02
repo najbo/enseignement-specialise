@@ -8,9 +8,9 @@ permissions:
     digitalartisan.enseignement.interlocuteurs:
         tab: 'Ressources humaines'
         label: 'Gère les interlocuteurs'
-    digitalartisan.enseignement.status:
+    digitalartisan.enseignement.statuts:
         tab: Protocoles
-        label: 'Gère les status de la prise en charge'
+        label: 'Gère les statuts de la prise en charge'
     digitalartisan.enseignement.eleves:
         tab: 'Ressources humaines'
         label: 'Gère les élèves de l''enseignement spécialisé'
@@ -76,7 +76,7 @@ navigation:
                 icon: icon-wheelchair
             statuts:
                 label: 'Statuts des suivis'
-                url: digitalartisan/enseignement/status
+                url: digitalartisan/enseignement/statuts
                 icon: icon-tags
             type-activites:
                 label: 'Types d''activités'

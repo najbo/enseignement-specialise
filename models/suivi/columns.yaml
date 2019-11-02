@@ -41,9 +41,9 @@ columns:
         sortable: true
         relation: activites
     statut:
-        label: Status
+        label: Statut
         type: partial
-        path: ~/plugins/digitalartisan/enseignement/models/suivi/_status_column.htm
+        path: ~/plugins/digitalartisan/enseignement/models/suivi/_statut_column.htm
         searchable: true
         sortable: false
     ecole:

@@ -6,8 +6,8 @@ scopes:
         nameFrom: FullName    
     statuts_suivi:
         label: Statut du suivi
-        modelClass: DigitalArtisan\Enseignement\Models\Status
-        conditions: suivi_id in (SELECT suivi_id FROM digitalartisan_enseignement_suivi_activites JOIN digitalartisan_enseignement_suivi ON digitalartisan_enseignement_suivi.id = digitalartisan_enseignement_suivi_activites.suivi_id where status_id in (:filtered))
+        modelClass: DigitalArtisan\Enseignement\Models\Statut
+        conditions: suivi_id in (SELECT suivi_id FROM digitalartisan_enseignement_suivi_activites JOIN digitalartisan_enseignement_suivi ON digitalartisan_enseignement_suivi.id = digitalartisan_enseignement_suivi_activites.suivi_id where digitalartisan_enseignement_suivi.statut_id in (:filtered))
         nameFrom: designation          
     Eleves:
         label: Eleves
