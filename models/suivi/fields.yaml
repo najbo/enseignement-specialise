@@ -34,6 +34,7 @@ fields:
         type: datepicker
         firstDay: 1
         format: 'd.m.Y'
+        default: now
     fin:
         label: Fin
         span: auto

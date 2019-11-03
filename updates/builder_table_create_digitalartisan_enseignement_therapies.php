@@ -12,6 +12,7 @@ class BuilderTableCreateDigitalartisanEnseignementTherapies extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->string('designation', 255);
+            $table->string('abreviation', 20)->nullable();
             $table->text('complement')->nullable();
             $table->string('color', 20)->nullable();
             $table->integer('sort_order')->nullable();

@@ -56,7 +56,15 @@ class Seeder1022 extends Seeder
         Therapie::create([
             'designation' => 'Pool 2'
         ]);        
+
+        Therapie::create([
+            'designation' => 'Article 18'
+        ]);
         
+        Therapie::create([
+            'designation' => 'ODED 27'
+        ]);            
+
         Therapie::create([
             'designation' => 'Psychothérapie'
         ]);

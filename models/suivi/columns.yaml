@@ -40,16 +40,16 @@ columns:
         searchable: true
         sortable: true
         relation: activites
-    statut:
+    statut_id:
         label: Statut
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/suivi/_statut_column.htm
-        searchable: true
-        sortable: false
-    ecole:
+        searchable: false
+        sortable: true
+    ecole_id:
         label: Ecole
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/suivi/_ecole_column.htm
-        searchable: true
+        searchable: false
         sortable: false
 

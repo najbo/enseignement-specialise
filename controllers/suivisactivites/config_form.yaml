@@ -1,10 +1,13 @@
 name: SuivisActivites
-form: $/digitalartisan/enseignement/models/suiviactivite/fields.yaml
 modelClass: DigitalArtisan\Enseignement\Models\SuiviActivite
+form: $/digitalartisan/enseignement/models/suiviactivite/fields.yaml
 defaultRedirect: digitalartisan/enseignement/suivisactivites
 create:
+    title: 'Créer une activité de suivi'
     redirect: 'digitalartisan/enseignement/suivisactivites/update/:id'
     redirectClose: digitalartisan/enseignement/suivisactivites
 update:
+    title: 'Mise à jour d''une activité de suivi'
     redirect: digitalartisan/enseignement/suivisactivites
     redirectClose: digitalartisan/enseignement/suivisactivites
+preview: {  }

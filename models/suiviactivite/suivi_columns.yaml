@@ -5,26 +5,30 @@ columns:
         searchable: true
         sortable: true
         select: id
-        relation: suivi 
+        relation: suivi
+        cssClass: gras
     eleve:
         label: Eleve concerné
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_eleve_column.htm
-        searchable: true
-        sortable: false   
+        searchable: false
+        sortable: false
+        cssClass: gras
     suivi_resume:
         label: Résumé du suivi
         type: text
         searchable: true
         sortable: true
         select: designation
-        relation: suivi            
+        relation: suivi
+        cssClass: gras            
     statut_suivi:
         label: Statut du suivi
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_statutsuivi_column.htm
-        searchable: true
-        sortable: false   
+        searchable: false
+        sortable: false
+        cssClass: gras  
     resume:
         label: Résumé de l'activité
         type: text
@@ -33,6 +37,7 @@ columns:
     date:
         label: 'Date de l''activité'
         type: date
+        format: 'd.m.Y'
         searchable: true
         sortable: true
     type:
@@ -52,14 +57,13 @@ columns:
     therapeute:
         label: Thérapeute
         type: text
-        searchable: true
-        sortable: true
+        searchable: false
+        sortable: false
         relation: interlocuteur
         valueFrom: FullName
-    activite_statut:
-        label: Statut de l'activité
-        type: text
-        searchable: true
-        sortable: true
-        relation: statut
-        select: designation
+    activite_statut_colors:
+        label: Statut
+        type: partial
+        path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_statut_column.htm
+        searchable: false
+        sortable: false        

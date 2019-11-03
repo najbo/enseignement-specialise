@@ -24,6 +24,14 @@ class Seeder1018 extends Seeder
             'color_txt' => '#ffffff',
             'is_finished' => 0,
         ]);        
+
+        Statut::create([
+            'designation' => 'En pause',
+            'sort_order' => 3,
+            'color_bg' => '#9b59b6',
+            'color_txt' => '#ffffff',
+            'is_finished' => 0,
+        ]);        
         
         Statut::create([
             'designation' => 'Terminé',

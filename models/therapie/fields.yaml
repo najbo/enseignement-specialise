@@ -3,3 +3,16 @@ fields:
         label: Désignation
         span: auto
         type: text
+    abreviation:
+        label: Abréviation
+        span: auto
+        type: text
+    complement:
+        label: Complément
+        size: large
+        span: full
+        type: textarea
+    is_archived:
+        label: Archivé
+        span: auto
+        type: checkbox

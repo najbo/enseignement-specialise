@@ -18,5 +18,6 @@ class SuivisActivites extends Controller
     {
         parent::__construct();
         BackendMenu::setContext('DigitalArtisan.Enseignement', 'protocoles', 'activites');
+        #$this->addCss('/plugins/digitalartisan/enseignement/assets/css/style.css', 'DigitalArtisan.Enseignement');
     }
 }

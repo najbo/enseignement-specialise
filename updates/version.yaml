@@ -67,8 +67,8 @@
     - 'Seed interlocuteurs'
     - seeder1024.php
 1.0.25:
-    - 'Created table digitalartisan_enseignement_activite_statut'
-    - builder_table_create_digitalartisan_enseignement_activite_statut.php
+    - 'Created table digitalartisan_enseignement_activites_statuts'
+    - builder_table_create_digitalartisan_enseignement_activites_statuts.php
 1.0.26:
     - 'Seed Statut des activités'
     - seeder1026.php

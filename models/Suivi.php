@@ -55,7 +55,7 @@ class Suivi extends Model
     ];
    
     public $hasMany = [
-         'activites' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'suivi_id', 'order' => 'date desc'],
+         'activites' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'suivi_id', 'order' => 'date asc'],
          'enseignants' => ['DigitalArtisan\Enseignement\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc'] 
     ]; 
 

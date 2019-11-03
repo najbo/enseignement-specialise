@@ -17,7 +17,7 @@ class ActiviteStatut extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_activite_statut';
+    public $table = 'digitalartisan_enseignement_activites_statuts';
 
     /**
      * @var array Validation rules

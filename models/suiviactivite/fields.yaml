@@ -6,6 +6,8 @@ fields:
         required: 1
         type: datepicker
         firstDay: 1
+        default: now
+        format: 'd.m.Y'
     type:
         label: 'Type d''activité'
         nameFrom: designation
