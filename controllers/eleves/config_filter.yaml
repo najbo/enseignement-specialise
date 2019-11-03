@@ -15,7 +15,13 @@ scopes:
         conditions: genre_id in (:filtered)
         nameFrom: designation        
     langue:
-        label: Langues
+        label: Langues maternelles
         modelClass: DigitalArtisan\Enseignement\Models\Langue
         conditions: langue_id in (:filtered)
-        nameFrom: designation        
+        nameFrom: designation
+    proches:
+        label: Proches
+        modelClass: DigitalArtisan\Enseignement\Models\Proche
+        conditions: id in (select eleve_id from digitalartisan_enseignement_proches where id in (:filtered))
+        #nameFrom: FullName
+        options: getPrenomNomProchesOptions            

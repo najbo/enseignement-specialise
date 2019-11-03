@@ -44,4 +44,9 @@ class Proche extends Model
         return $this->prenom.' '. $this->nom;
     }    
 
+    public function getPrenomNomProchesOptions() {
+
+        $result = Proche::orderBy('nom','prenom')->get()->pluck('FullName', 'id')->toArray();          
+        return $result;
+    }     
 }

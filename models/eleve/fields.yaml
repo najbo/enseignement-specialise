@@ -84,7 +84,7 @@ tabs:
             tab: 'Données de base'
             emptyOption: '-- Non défini --'
         langue:
-            label: Langue
+            label: Langue maternelle
             span: auto
             nameFrom: designation
             descriptionFrom: description
