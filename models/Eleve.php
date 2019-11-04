@@ -99,12 +99,12 @@ class Eleve extends Model
 
     public function beforeSave()
         {
-         \Log::info("Before Save");
+         #\Log::info("Before Save");
     }
 
     public function afterSave()
         {
-         \Log::info("After Save ".$this->id);    
+         \Log::info("Enregistrement de l'élève ID ".$this->id);    
     }
 
     public function afterDelete()
