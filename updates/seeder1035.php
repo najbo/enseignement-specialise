@@ -10,7 +10,7 @@ class Seeder1035 extends Seeder
         Enseignant::truncate();
         
         Enseignant::create([
-            'initiales' => 'MB',
+            'initiales' => 'MBA',
             'nom' => 'Bassin',
             'prenom' => 'Marilyne',
             'Adresse' => 'Rue du Tempé 18',
@@ -19,6 +19,7 @@ class Seeder1035 extends Seeder
             'is_maitreclasse' => 1,
             'is_direction' => 0,
             'genre_id' => 2,
+            'langue_id' => 1,
         ]);         
 
         Enseignant::create([
@@ -31,6 +32,7 @@ class Seeder1035 extends Seeder
             'is_maitreclasse' => 0,
             'is_direction' => 1,
             'genre_id' => 2,
+            'langue_id' => 1,
         ]);  
         
         Enseignant::create([
@@ -43,6 +45,7 @@ class Seeder1035 extends Seeder
             'is_maitreclasse' => 0,
             'is_direction' => 1,
             'genre_id' => 1,
+            'langue_id' => 2,
         ]);          
 
     }
