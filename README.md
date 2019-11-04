@@ -9,6 +9,8 @@ Gestion de l'enseignement spécialisé. Le plugin doit être placé dans /plugin
 - Enseignants
 - Interlocuteurs (professionnels de la santé ou autres)
 - Suivi des élèves pour l'enseignement spécialisé
+- Fonctions professionnelles
+- Mesures thérapeuthiques
 
 ## Installation
 
