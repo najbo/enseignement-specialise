@@ -61,18 +61,6 @@ tabs:
             span: auto
             type: text
             tab: 'Données de base'
-        entree:
-            label: 'Date d''entrée'
-            mode: date
-            span: auto
-            type: datepicker
-            tab: 'Données de base'
-        sortie:
-            label: 'Date de sortie'
-            span: auto
-            mode: date
-            type: datepicker
-            tab: 'Données de base'
         genre:
             label: Genre
             span: auto
@@ -95,3 +83,22 @@ tabs:
             span: full
             type: richeditor
             tab: Remarques
+        entree:
+            label: 'Date d''entrée'
+            mode: date
+            span: auto
+            type: datepicker
+            tab: 'Engagement'
+        sortie:
+            label: 'Date de sortie'
+            span: auto
+            mode: date
+            type: datepicker
+            tab: 'Engagement'
+        permis:
+            label: 'Type de permis'
+            nameFrom: designation
+            descriptionFrom: description
+            tab: 'Engagement'
+            span: auto
+            type: relation              

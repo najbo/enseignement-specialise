@@ -17,6 +17,16 @@ fields:
         label: 'Rôle (autre)'
         span: auto
         type: text
+    permis:
+        label: 'Type de permis'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    profession:
+        label: Profession
+        span: auto
+        type: text
 tabs:
     fields:
         telephonemobile:
@@ -31,6 +41,21 @@ tabs:
             tab: 'Données de base'
         mail:
             label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        adresse:
+            label: Adresse
+            span: auto
+            type: text
+            tab: 'Données de base'
+        npa:
+            label: NPA
+            span: left
+            type: text
+            tab: 'Données de base'
+        localite:
+            label: Localité
             span: auto
             type: text
             tab: 'Données de base'

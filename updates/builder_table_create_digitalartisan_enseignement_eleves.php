@@ -23,6 +23,7 @@ class BuilderTableCreateDigitalartisanEnseignementEleves extends Migration
             $table->integer('pays_id')->unsigned()->nullable();
             $table->integer('genre_id')->nullable()->unsigned();
             $table->integer('langue_id')->nullable()->unsigned();
+            $table->string('permis_id', 10)->nullable();
             $table->text('remarque')->nullable();
             $table->date('naissance')->nullable();
             $table->string('nss', 16)->nullable();

@@ -36,8 +36,10 @@ class Proche extends Model
     public $belongsTo = [
         'procherole' => ['DigitalArtisan\Enseignement\Models\ProcheRole',
                    'key' => 'role_id',
+                   'order' => 'sort_order'],
+        'permis' => ['DigitalArtisan\Enseignement\Models\ProchePermis',
+                   'key' => 'permis_id',
                    'order' => 'sort_order']
-
     ];         
 
     public function getFullNameAttribute() {

@@ -69,12 +69,6 @@ tabs:
             type: datepicker
             firstDay: 1
             tab: 'Données de base'
-        nss:
-            label: 'Numéro d''assurance sociale'
-            span: auto
-            placeholder: '756.'
-            type: text
-            tab: 'Données de base'
         genre:
             label: Genre
             span: auto
@@ -91,6 +85,13 @@ tabs:
             type: relation
             tab: 'Données de base'
             emptyOption: '-- Non défini --'
+        permis:
+            label: 'Type de permis'
+            nameFrom: designation
+            descriptionFrom: description
+            tab: 'Données de base'
+            span: auto
+            type: relation            
         proches:
             label: Proches
             span: full
@@ -129,3 +130,9 @@ tabs:
                 extension: auto
             type: fileupload
             tab: 'Documents généraux'
+        nss:
+            label: 'Numéro d''assurance sociale'
+            span: auto
+            placeholder: '756.'
+            type: text
+            tab: 'Autres données'

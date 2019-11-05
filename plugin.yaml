@@ -56,6 +56,9 @@ permissions:
     digitalartisan.enseignement.langues:
         tab: Structures
         label: 'Gère les langues des différents protagonistes'
+    digitalartisan.enseignement.prochespermis:
+        tab: 'Ressources humaines'
+        label: 'Gère les types de permis des proches'
 navigation:
     protocoles:
         label: Protocoles
@@ -145,3 +148,7 @@ navigation:
                 label: Langues
                 url: digitalartisan/enseignement/langues
                 icon: icon-comments
+            permis:
+                label: 'Types de permis'
+                url: digitalartisan/enseignement/prochespermis
+                icon: icon-suitcase

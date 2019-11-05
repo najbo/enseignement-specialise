@@ -3,17 +3,18 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreateDigitalartisanEnseignementPays extends Migration
+class BuilderTableCreateDigitalartisanEnseignementProchesPermis extends Migration
 {
     public function up()
     {
-        Schema::create('digitalartisan_enseignement_pays', function($table)
+        Schema::create('digitalartisan_enseignement_proches_permis', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->string('designation', 255);
-            $table->string('iso', 5)->nullable();
-            $table->boolean('is_origine')->nullable()->default(0);
+            $table->text('complement')->nullable();
+            $table->string('abreviation', 10)->nullable();
+            $table->integer('sort_order')->nullable();
             $table->boolean('is_archived')->nullable()->default(0);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
@@ -23,6 +24,6 @@ class BuilderTableCreateDigitalartisanEnseignementPays extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('digitalartisan_enseignement_pays');
+        Schema::dropIfExists('digitalartisan_enseignement_proches_permis');
     }
 }

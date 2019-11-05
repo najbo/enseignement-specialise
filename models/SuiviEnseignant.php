@@ -19,9 +19,28 @@ class SuiviEnseignant extends Model
      */
     public $table = 'digitalartisan_enseignement_suivi_enseignants';
 
+    protected $appends = ['nom_enseignant'];
     /**
      * @var array Validation rules
      */
     public $rules = [
     ];
+
+    public $belongsTo = [
+        'enseignant'    => ['DigitalArtisan\Enseignement\Models\Enseignant',
+                   'key' => 'enseignant_id'],
+                   
+    ];   
+
+#'order' => 'nom'], 
+
+    public function getnomEnseignantAttribute() {
+
+        if ($this->enseignant_id) {
+            return  $this->enseignant['prenom'] . ' ' . $this->enseignant['nom'];
+        } else {
+            return $this->prenom.' '. $this->nom ;
+        }
+    }
+
 }

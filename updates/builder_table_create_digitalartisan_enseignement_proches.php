@@ -20,9 +20,11 @@ class BuilderTableCreateDigitalartisanEnseignementProches extends Migration
             $table->string('telephonemobile', 20)->nullable();
             $table->string('telephoneprof', 20)->nullable();
             $table->string('mail', 255)->nullable();
+            $table->string('profession', 255)->nullable();
             $table->text('remarque')->nullable();
             $table->string('role_id', 10)->nullable();
             $table->string('role', 255)->nullable();
+            $table->string('permis_id', 10)->nullable();
             $table->boolean('is_autoriteparentale')->nullable()->default(0);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

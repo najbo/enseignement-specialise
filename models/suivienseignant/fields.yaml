@@ -1,12 +1,11 @@
 fields:
-    nom:
-        label: Nom
+    enseignant:
+        label: Enseignant
+        nameFrom: FullName
+        descriptionFrom: description
         span: auto
-        type: text
-    prenom:
-        label: Prénom
-        span: auto
-        type: text
+        type: relation
+        emptyOption: '-- Autre enseignant --'
     complement:
         label: 'Complément ou fonction'
         span: full
@@ -23,6 +22,16 @@ fields:
         type: datepicker
 tabs:
     fields:
+        nom:
+            label: Nom
+            span: auto
+            type: text
+            tab: 'Données de base'
+        prenom:
+            label: Prénom
+            span: auto
+            type: text
+            tab: 'Données de base'
         telephonemobile:
             label: 'Téléphone mobile'
             span: auto

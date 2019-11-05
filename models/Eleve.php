@@ -52,6 +52,9 @@ class Eleve extends Model
         'langue' => ['DigitalArtisan\Enseignement\Models\Langue',
                    'key' => 'langue_id',
                    'order' => 'sort_order'],
+        'permis' => ['DigitalArtisan\Enseignement\Models\ProchePermis',
+                   'key' => 'permis_id',
+                   'order' => 'sort_order']                   
     ];
 
     public $belongsToMany = [

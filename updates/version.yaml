@@ -129,3 +129,9 @@
 1.0.45:
     - 'Seed pathologies rattachées aux élèves'
     - seeder1045.php
+1.0.46:
+    - 'Created table digitalartisan_enseignement_proches_permis'
+    - builder_table_create_digitalartisan_enseignement_proches_permis.php
+1.0.47:
+    - 'Seed permis pour les proches'
+    - seeder1047.php

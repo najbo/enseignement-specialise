@@ -1,14 +1,9 @@
 columns:
-    nom:
-        label: Nom
+    nomEnseignant:
+        label: Enseignant
         type: text
-        searchable: true
-        sortable: true
-    prenom:
-        label: Prénom
-        type: text
-        searchable: true
-        sortable: true
+        searchable: false
+        sortable: false        
     complement:
         label: Complément
         type: text
@@ -19,8 +14,9 @@ columns:
         type: date
         searchable: true
         sortable: true
+
     fin:
         label: Fin
         type: date
         searchable: true
-        sortable: true
+        sortable: true        

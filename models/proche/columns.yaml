@@ -20,9 +20,21 @@ columns:
         label: 'Autre rôle'
         type: text
         searchable: true
-        sortable: true        
+        sortable: true
     telephonemobile:
         label: 'Téléphone mobile'
+        type: text
+        searchable: true
+        sortable: true
+    permis_id:
+        label: 'Type de permis'
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: permis
+    profession:
+        label: Profession
         type: text
         searchable: true
         sortable: true
