@@ -135,3 +135,6 @@
 1.0.47:
     - 'Seed permis pour les proches'
     - seeder1047.php
+1.0.48:
+    - 'Seed volées'
+    - seeder1048.php
