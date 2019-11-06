@@ -30,13 +30,13 @@ fields:
         span: auto
         type: text
     passage:
-        label: Passage
+        label: Décision en fin d'année scolaire
         nameFrom: designation
         descriptionFrom: description
         span: left
         type: relation
-    decallage_next:
-        label: Décallage
+    decalage_next:
+        label: Décalage
         span: auto
         type: number
 tabs:

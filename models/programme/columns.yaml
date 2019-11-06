@@ -1,0 +1,27 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: false
+    typeecole:
+        label: 'Type d''école'
+        type: text
+        searchable: true
+        sortable: false
+        select: abreviation
+        relation: typeecole
+    cycle:
+        label: Cycle
+        type: text
+        searchable: true
+        sortable: false
+        select: designation
+        relation: cycle
+    programmesuivant_id:
+        label: 'Programme suivant'
+        type: text
+        searchable: true
+        sortable: false
+        select: designation
+        relation: programmesuivant

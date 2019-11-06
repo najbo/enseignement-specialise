@@ -1,0 +1,5 @@
+title: Programmes
+modelClass: DigitalArtisan\Enseignement\Models\Programme
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

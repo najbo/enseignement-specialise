@@ -1,0 +1,14 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    complement:
+        label: Complément
+        size: large
+        span: full
+        type: textarea
+    is_archived:
+        label: Archivé
+        span: auto
+        type: checkbox

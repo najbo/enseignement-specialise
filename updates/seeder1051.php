@@ -12,20 +12,26 @@ class Seeder1051 extends Seeder
 
         Passage::create([
             'designation' => 'Promu',
-            'decallage' => 0,
+            #'decalage' => 0,
             'sort_order' => 1
         ]);
 
         Passage::create([
             'designation' => 'Redouble',
-            'decallage' => -1,
+            'decalage' => -1,
             'sort_order' => 2
         ]);        
         
         Passage::create([
             'designation' => 'Saute une année',
-            'decallage' => 1,
+            'decalage' => 1,
             'sort_order' => 3
-        ]);                
+        ]);    
+
+        Passage::create([
+            'designation' => "Sortie d'école",
+            #'decalage' => 0,
+            'sort_order' => 4
+        ]);            
     }
 }

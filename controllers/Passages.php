@@ -18,6 +18,6 @@ class Passages extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'passages');
+        BackendMenu::setContext('DigitalArtisan.Enseignement', 'bases', 'passages');
     }
 }

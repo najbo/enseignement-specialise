@@ -1,0 +1,5 @@
+title: Cycles
+modelClass: DigitalArtisan\Enseignement\Models\Cycle
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,10 @@
+name: Programmes
+form: $/digitalartisan/enseignement/models/programme/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Programme
+defaultRedirect: digitalartisan/enseignement/programmes
+create:
+    redirect: 'digitalartisan/enseignement/programmes/update/:id'
+    redirectClose: digitalartisan/enseignement/programmes
+update:
+    redirect: digitalartisan/enseignement/programmes
+    redirectClose: digitalartisan/enseignement/programmes

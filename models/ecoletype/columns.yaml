@@ -1,0 +1,16 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    abreviation:
+        label: Abréviation
+        type: text
+        searchable: true
+        sortable: true
+    is_archived:
+        label: Archivé
+        type: switch
+        searchable: true
+        sortable: true

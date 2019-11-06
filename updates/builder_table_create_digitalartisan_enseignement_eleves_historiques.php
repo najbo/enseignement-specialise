@@ -16,11 +16,11 @@ class BuilderTableCreateDigitalartisanEnseignementElevesHistoriques extends Migr
             $table->integer('passage_id')->nullable();
             $table->date('debut')->nullable();
             $table->date('fin')->nullable();
-            $table->string('designation', 10)->nullable();
+            $table->string('designation', 255)->nullable();
             $table->text('complement')->nullable();
             $table->string('programme', 10)->nullable();
             $table->string('programme_next', 10)->nullable();
-            $table->integer('decallage_next')->nullable();
+            $table->integer('decalage_next')->nullable();
             $table->integer('ecole_id')->nullable();
             $table->string('ecole_libre', 255)->nullable();
             $table->string('ecole_lieu', 255)->nullable();

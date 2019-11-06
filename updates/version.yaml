@@ -159,3 +159,21 @@
 1.0.55:
     - 'Seed types de faits des enseignants'
     - seeder1055.php
+1.0.56:
+    - 'Created table digitalartisan_enseignement_ecoles_types'
+    - builder_table_create_digitalartisan_enseignement_ecoles_types.php
+1.0.57:
+    - 'Seed types d''écoles'
+    - seeder1057.php
+1.0.58:
+    - 'Created table digitalartisan_enseignement_cycles'
+    - builder_table_create_digitalartisan_enseignement_cycles.php
+1.0.59:
+    - 'Seed cycles'
+    - seeder1062.php
+1.0.60:
+    - 'Created table digitalartisan_enseignement_programmes'
+    - builder_table_create_digitalartisan_enseignement_programmes.php
+1.0.61:
+    - 'Seed programmes'
+    - seeder1060.php

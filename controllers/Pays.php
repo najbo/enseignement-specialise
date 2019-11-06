@@ -17,6 +17,6 @@ class Pays extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'pays');
+        BackendMenu::setContext('DigitalArtisan.Enseignement', 'bases', 'pays');
     }
 }

@@ -21,7 +21,7 @@ columns:
         type: text
         searchable: true
         sortable: true
-        select: 'concat(designation,'' ('', programme,'')'')'
+        select: designation
         relation: volee
     programme:
         label: 'Progr. effectif'
@@ -59,4 +59,4 @@ columns:
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/eleve/_export_column.htm
         searchable: false
-        sortable: false     
+        sortable: false

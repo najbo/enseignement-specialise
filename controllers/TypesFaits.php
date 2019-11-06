@@ -18,6 +18,6 @@ class TypesFaits extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'types-faits');
+        BackendMenu::setContext('DigitalArtisan.Enseignement', 'bases', 'types-faits');
     }
 }

@@ -14,7 +14,10 @@ class Seeder1020 extends Seeder
             'designation' => 'Ecole primaire Tavannes',
             'npa' => '2710',
             'localite' => 'Tavannes',
-            'cercle_id' => 1
+            'cercle_id' => 1,
+            'ecolesuivante' => 2,
+            'type_id' => 1,
+            'sort_order' => 1,
         ]);
         
         Ecole::create([
@@ -22,7 +25,10 @@ class Seeder1020 extends Seeder
             'designation' => 'Ecole secondaire Tavannes',
             'npa' => '2710',
             'localite' => 'Tavannes',
-            'cercle_id' => 1
+            'cercle_id' => 1,
+            'ecolesuivante' => null,
+            'type_id' => 2,
+            'sort_order' => 2,
         ]);        
 
         Ecole::create([
@@ -30,7 +36,10 @@ class Seeder1020 extends Seeder
             'designation' => 'Ecole primaire Loveresse',
             'npa' => '2732',
             'localite' => 'Loveresse',
-            'cercle_id' => 1
+            'cercle_id' => 1,
+            'ecolesuivante' => 4,
+            'type_id' => 1,
+            'sort_order' => 3,
         ]); 
 
         Ecole::create([
@@ -38,7 +47,10 @@ class Seeder1020 extends Seeder
             'designation' => 'Ecole secondaire Reconvilier',
             'npa' => '2732',
             'localite' => 'Reconvilier',
-            'cercle_id' => 1
+            'cercle_id' => 1,
+            'ecolesuivante' => null,
+            'type_id' => 2,
+            'sort_order' => 4,
         ]);         
     }
 }

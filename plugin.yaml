@@ -65,6 +65,12 @@ permissions:
     digitalartisan.enseignement.typesfaits:
         tab: Structures
         label: 'Gère les types de faits des enseignants'
+    digitalartisan.enseignement.cycles:
+        tab: Structures
+        label: 'Gère les cycles'
+    digitalartisan.enseignement.programmes:
+        tab: Structures
+        label: 'Gère les programmes et les cycles liés'
 navigation:
     protocoles:
         label: Protocoles
@@ -124,7 +130,7 @@ navigation:
     structures:
         label: Structures
         url: digitalartisan/enseignement/ecoles
-        icon: icon-gears
+        icon: icon-sitemap
         sideMenu:
             ecoles:
                 label: Ecoles
@@ -138,10 +144,23 @@ navigation:
                 label: 'Années scolaires'
                 url: digitalartisan/enseignement/annees
                 icon: icon-calendar
+            programmes:
+                label: Programmes
+                url: digitalartisan/enseignement/programmes
+                icon: icon-sort-alpha-asc
+            cycles:
+                label: Cycles
+                url: digitalartisan/enseignement/cycles
+                icon: icon-bars
             volees:
                 label: Volées
                 url: digitalartisan/enseignement/volees
                 icon: icon-sitemap
+    bases:
+        label: Bases
+        url: digitalartisan/enseignement/pays
+        icon: icon-list
+        sideMenu:
             pays:
                 label: Pays
                 url: digitalartisan/enseignement/pays

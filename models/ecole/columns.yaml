@@ -22,7 +22,7 @@ columns:
         select: 'concat(prenom, '' '' ,nom)'
         relation: directeurs
     cercle:
-        label: Cercle scolaire
+        label: 'Cercle scolaire'
         type: text
         searchable: true
         sortable: false
@@ -35,3 +35,10 @@ columns:
         searchable: true
         sortable: false
         relation: eleves
+    type:
+        label: 'Type d''école'
+        type: text
+        searchable: true
+        sortable: false
+        select: abreviation
+        relation: type

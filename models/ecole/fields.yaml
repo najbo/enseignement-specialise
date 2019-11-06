@@ -8,6 +8,19 @@ fields:
         label: Abréviation
         span: auto
         type: text
+    type:
+        label: 'Type d''école'
+        span: auto
+        nameFrom: designation
+        descriptionFrom: description
+        type: relation
+    ecolesuivante:
+        label: 'Ecole suivante'
+        span: auto
+        nameFrom: designation
+        descriptionFrom: description
+        type: relation
+        emptyOption: '-- Aucune ou non définie --'
     directeurs:
         label: Directeur(s)
         separator: comma
@@ -23,19 +36,24 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
-    adresse:
-        label: Adresse
-        span: auto
-        type: text
-    npa:
-        label: NPA
-        span: left
-        type: text
-    localite:
-        label: Localité
-        span: auto
-        type: text
     is_archived:
         label: 'Est archivé'
         span: auto
-        type: switch
+        type: switch                
+tabs:
+    fields:
+        adresse:
+            label: Adresse
+            span: auto
+            type: text
+            tab: 'Données de base'
+        npa:
+            label: NPA
+            span: left
+            type: text
+            tab: 'Données de base'
+        localite:
+            label: Localité
+            span: auto
+            type: text
+            tab: 'Données de base'

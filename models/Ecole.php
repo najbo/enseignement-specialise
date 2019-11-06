@@ -30,7 +30,13 @@ class Ecole extends Model
     public $belongsTo = [
         'cercle' => ['DigitalArtisan\Enseignement\Models\Cercle',
                    'key' => 'cercle_id',
-                   'order' => 'sort_order']              
+                   'order' => 'sort_order'],
+        'type' => ['DigitalArtisan\Enseignement\Models\EcoleType',
+                   'key' => 'type_id',
+                   'order' => 'sort_order'],                  
+        'ecolesuivante' => ['DigitalArtisan\Enseignement\Models\Ecole',
+                   'key' => 'ecolesuivante_id',
+                   'order' => 'designation']
     ];
 
     public $belongsToMany = [

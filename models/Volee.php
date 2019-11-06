@@ -32,6 +32,6 @@ class Volee extends Model
     ];
 
     public function getFullNameAttribute() {
-        return $this->designation.' - '. $this->programme;
+        return $this->designation;
     }    
 }

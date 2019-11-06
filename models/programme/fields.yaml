@@ -1,0 +1,28 @@
+fields:
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    complement:
+        label: Complément
+        size: large
+        span: full
+        type: textarea
+    cycle:
+        label: Cycle
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    typeecole:
+        label: 'Type d''école'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    programmesuivant:
+        label: 'Programme suivant'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation

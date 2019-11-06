@@ -11,7 +11,7 @@ class EleveHistorique extends Model
     
     use \October\Rain\Database\Traits\SoftDelete;
 
-    protected $dates = ['deleted_at'];
+    protected $dates = ['debut', 'fin', 'deleted_at'];
 
 
     /**

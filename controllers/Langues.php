@@ -18,6 +18,6 @@ class Langues extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'langues');
+        BackendMenu::setContext('DigitalArtisan.Enseignement', 'bases', 'langues');
     }
 }

@@ -20,6 +20,6 @@ class Genres extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'genres');
+        BackendMenu::setContext('DigitalArtisan.Enseignement', 'bases', 'genres');
     }
 }

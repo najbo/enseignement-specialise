@@ -18,6 +18,6 @@ class ProchesPermis extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'permis');
+        BackendMenu::setContext('DigitalArtisan.Enseignement', 'bases', 'permis');
     }
 }

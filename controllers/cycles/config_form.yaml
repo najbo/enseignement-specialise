@@ -1,0 +1,10 @@
+name: Cycles
+form: $/digitalartisan/enseignement/models/cycle/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Cycle
+defaultRedirect: digitalartisan/enseignement/cycles
+create:
+    redirect: 'digitalartisan/enseignement/cycles/update/:id'
+    redirectClose: digitalartisan/enseignement/cycles
+update:
+    redirect: digitalartisan/enseignement/cycles
+    redirectClose: digitalartisan/enseignement/cycles
