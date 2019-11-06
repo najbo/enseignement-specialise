@@ -28,6 +28,11 @@ class Enseignant extends Model
         'prenom' => 'required'
     ];
 
+    public $attachMany = [
+        'images' => ['System\Models\File', 'public' => false],
+        'documents' => ['System\Models\File', 'public' => false]
+    ];
+
     public $belongsTo = [
         'genre' => ['DigitalArtisan\Enseignement\Models\Genre',
                    'key' => 'genre_id',
@@ -48,6 +53,10 @@ class Enseignant extends Model
             'otherKey' => 'eco_id',
             'order' => 'designation']
     ];
+
+    public $hasMany = [
+          'faits' => ['DigitalArtisan\Enseignement\Models\EnseignantFait', 'key' => 'enseignant_id', 'order' => 'debut']
+    ];     
 
     public function getFullNameAttribute() {
         return $this->prenom.' '. $this->nom;

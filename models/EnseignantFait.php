@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class EleveFait extends Model
+class EnseignantFait extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
@@ -17,11 +17,12 @@ class EleveFait extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_eleves_faits';
+    public $table = 'digitalartisan_enseignement_enseignants_faits';
 
     /**
      * @var array Validation rules
      */
+
     public $rules = [
         'debut' => 'required',
         'designation' => 'required'
@@ -31,4 +32,10 @@ class EleveFait extends Model
         'images' => ['System\Models\File', 'public' => false],
         'documents' => ['System\Models\File', 'public' => false]
     ];
+
+    public $belongsTo = [
+        'typefait' => ['DigitalArtisan\Enseignement\Models\TypeFait',
+                   'key' => 'typefait_id',
+                   'order' => 'sort_order'],                   
+    ];    
 }

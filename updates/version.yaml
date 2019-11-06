@@ -150,3 +150,12 @@
 1.0.52:
     - 'Created table digitalartisan_enseignement_eleves_faits'
     - builder_table_create_digitalartisan_enseignement_eleves_faits.php
+1.0.53:
+    - 'Created table digitalartisan_enseignement_enseignants_faits'
+    - builder_table_create_digitalartisan_enseignement_enseignants_faits.php
+1.0.54:
+    - 'Created table digitalartisan_enseignement_typesfaits'
+    - builder_table_create_digitalartisan_enseignement_typesfaits.php
+1.0.55:
+    - 'Seed types de faits des enseignants'
+    - seeder1055.php

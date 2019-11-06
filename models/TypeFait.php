@@ -3,12 +3,12 @@
 use Model;
 
 /**
- * Model
+ * Model types de faits pour les enseignants
  */
-class EleveFait extends Model
+class TypeFait extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
+    use \October\Rain\Database\Traits\Sortable;
     use \October\Rain\Database\Traits\SoftDelete;
 
     protected $dates = ['deleted_at'];
@@ -17,18 +17,12 @@ class EleveFait extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_eleves_faits';
+    public $table = 'digitalartisan_enseignement_typesfaits';
 
     /**
      * @var array Validation rules
      */
     public $rules = [
-        'debut' => 'required',
         'designation' => 'required'
-    ];
-
-    public $attachMany = [
-        'images' => ['System\Models\File', 'public' => false],
-        'documents' => ['System\Models\File', 'public' => false]
     ];
 }

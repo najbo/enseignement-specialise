@@ -8,23 +8,29 @@ fields:
         label: Fin
         mode: date
         span: auto
-        type: datepicker        
+        type: datepicker
     designation:
         label: Désignation
         span: full
         type: text
+    typefait:
+        label: 'Type de fait'
+        span: auto
+        nameFrom: designation
+        descriptionFrom: description
+        type: relation
     is_closed:
         label: Terminé
         span: auto
         type: checkbox
 tabs:
-    fields:        
+    fields:
         complement:
             label: Complément
             size: large
             span: full
             type: richeditor
-            tab: 'Complément'
+            tab: Complément
         documents:
             label: 'Documents généraux'
             mode: file

@@ -62,6 +62,9 @@ permissions:
     digitalartisan.enseignement.passages:
         tab: Structures
         label: 'Gère les types de passages d''une année à l''autre pour les élèves'
+    digitalartisan.enseignement.typesfaits:
+        tab: Structures
+        label: 'Gère les types de faits des enseignants'
 navigation:
     protocoles:
         label: Protocoles
@@ -159,3 +162,7 @@ navigation:
                 label: Passages
                 url: digitalartisan/enseignement/passages
                 icon: icon-thumbs-o-up
+            types-faits:
+                label: 'Types de faits'
+                url: digitalartisan/enseignement/typesfaits
+                icon: icon-phone

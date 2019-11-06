@@ -95,6 +95,12 @@ tabs:
             mode: date
             type: datepicker
             tab: 'Engagement'
+        fait:
+            label: Faits
+            span: full
+            type: partial
+            path: field_fait
+            tab: Faits marquants               
         permis:
             label: 'Type de permis'
             nameFrom: designation
@@ -102,3 +108,23 @@ tabs:
             tab: 'Engagement'
             span: auto
             type: relation              
+        documents:
+            label: 'Documents généraux'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Documents généraux'
+        images:
+            label: Images
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: 'Documents généraux'            

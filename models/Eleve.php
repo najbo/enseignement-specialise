@@ -71,7 +71,7 @@ class Eleve extends Model
          'proches' => ['DigitalArtisan\Enseignement\Models\Proche', 'key' => 'eleve_id', 'order' => ''],
          'suivis' => ['DigitalArtisan\Enseignement\Models\Suivi', 'key' => 'eleve_id', 'order' => ''],
          'historiques' => ['DigitalArtisan\Enseignement\Models\EleveHistorique', 'key' => 'eleve_id', 'order' => 'debut'],
-         'faits' => ['DigitalArtisan\Enseignement\Models\EleveFait', 'key' => 'eleve_id', 'order' => 'date']
+         'faits' => ['DigitalArtisan\Enseignement\Models\EleveFait', 'key' => 'eleve_id', 'order' => 'debut']
     ]; 
 
 

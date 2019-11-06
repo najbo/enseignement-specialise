@@ -3,20 +3,19 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreateDigitalartisanEnseignementElevesFaits extends Migration
+class BuilderTableCreateDigitalartisanEnseignementTypesfaits extends Migration
 {
     public function up()
     {
-        Schema::create('digitalartisan_enseignement_eleves_faits', function($table)
+        Schema::create('digitalartisan_enseignement_typesfaits', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
-            $table->integer('eleve_id');
-            $table->date('debut');
-            $table->date('fin')->nullable();
             $table->string('designation', 255);
             $table->text('complement')->nullable();
-            $table->boolean('is_closed')->default(0);
+            $table->integer('sort_order')->nullable()->default(0);
+            $table->boolean('is_archived')->nullable()->default(0);
+            #$table->boolean('is_enseignant')->nullable()->default(0);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
@@ -25,6 +24,6 @@ class BuilderTableCreateDigitalartisanEnseignementElevesFaits extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('digitalartisan_enseignement_eleves_faits');
+        Schema::dropIfExists('digitalartisan_enseignement_typesfaits');
     }
 }
