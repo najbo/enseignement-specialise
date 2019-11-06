@@ -8,6 +8,26 @@ proches:
     manage:
         form: $/digitalartisan/enseignement/models/proche/fields.yaml
         showSearch: true   
+historiques:
+    label: Historiques
+    emptyMessage: Aucun historique pour le moment
+    view:
+        list: $/digitalartisan/enseignement/models/elevehistorique/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digitalartisan/enseignement/models/elevehistorique/fields.yaml
+        showSearch: true          
+faits:
+    label: Faits marquants
+    emptyMessage: Aucun fait marquant pour le moment
+    view:
+        list: $/digitalartisan/enseignement/models/elevefait/columns.yaml
+        toolbarButtons: create|delete
+        showSearch: true
+    manage:
+        form: $/digitalartisan/enseignement/models/elevefait/fields.yaml
+        showSearch: true          
 suivis:
     readOnly: true
     label: Suivi

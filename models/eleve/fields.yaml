@@ -98,6 +98,18 @@ tabs:
             type: partial
             path: field_proche
             tab: Proches
+        historique:
+            label: Historique de passage
+            span: full
+            type: partial
+            path: field_historique
+            tab: Historique            
+        fait:
+            label: Faits
+            span: full
+            type: partial
+            path: field_fait
+            tab: Faits marquants               
         remarque:
             label: Remarques
             size: large

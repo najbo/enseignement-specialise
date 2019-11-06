@@ -1,0 +1,5 @@
+title: Passages
+modelClass: DigitalArtisan\Enseignement\Models\Passage
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

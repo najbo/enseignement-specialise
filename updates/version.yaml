@@ -136,5 +136,17 @@
     - 'Seed permis pour les proches'
     - seeder1047.php
 1.0.48:
-    - 'Seed volées'
+    - 'Seed années'
     - seeder1048.php
+1.0.49:
+    - 'Created table digitalartisan_enseignement_eleves_historiques'
+    - builder_table_create_digitalartisan_enseignement_eleves_historiques.php
+1.0.50:
+    - 'Created table digitalartisan_enseignement_passages'
+    - builder_table_create_digitalartisan_enseignement_passages.php
+1.0.51:
+    - 'Seed types de passages'
+    - seeder1051.php
+1.0.52:
+    - 'Created table digitalartisan_enseignement_eleves_faits'
+    - builder_table_create_digitalartisan_enseignement_eleves_faits.php

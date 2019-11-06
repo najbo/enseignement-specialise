@@ -1,0 +1,80 @@
+fields:
+    annee:
+        label: Année
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    programme:
+        label: 'Programme suivi'
+        span: auto
+        type: text
+    debut:
+        label: Début
+        mode: date
+        span: auto
+        type: datepicker
+    fin:
+        label: Fin
+        mode: date
+        span: auto
+        type: datepicker
+    ecole:
+        label: Ecole
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    designation:
+        label: Désignation
+        span: auto
+        type: text
+    passage:
+        label: Passage
+        nameFrom: designation
+        descriptionFrom: description
+        span: left
+        type: relation
+    decallage_next:
+        label: Décallage
+        span: auto
+        type: number
+tabs:
+    fields:
+        ecole_libre:
+            label: 'Autre école'
+            span: auto
+            type: text
+            comment: 'Utilisé pour la provenance ou le départ d''un élève'
+            tab: 'Autres informations'
+        ecole_lieu:
+            label: 'Localité de l''école libre'
+            span: auto
+            type: text
+            tab: 'Autres informations'
+        complement:
+            label: Complément
+            span: full
+            size: large
+            type: richeditor
+            tab: 'Complément de texte'
+        documents:
+            label: 'Documents généraux'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Documents généraux'
+        images:
+            label: Images
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: 'Documents généraux'

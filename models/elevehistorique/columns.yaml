@@ -1,0 +1,35 @@
+columns:
+    annee:
+        label: Annéee
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: annee
+    debut:
+        label: Début
+        type: date
+        searchable: true
+        sortable: true
+    fin:
+        label: Fin
+        type: date
+        searchable: true
+        sortable: true
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    programme:
+        label: Programme
+        type: text
+        searchable: true
+        sortable: true
+    passage:
+        label: Passage
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: passage

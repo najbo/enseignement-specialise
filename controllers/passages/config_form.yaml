@@ -1,0 +1,10 @@
+name: Passages
+form: $/digitalartisan/enseignement/models/passage/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\Passage
+defaultRedirect: digitalartisan/enseignement/passages
+create:
+    redirect: 'digitalartisan/enseignement/passages/update/:id'
+    redirectClose: digitalartisan/enseignement/passages
+update:
+    redirect: digitalartisan/enseignement/passages
+    redirectClose: digitalartisan/enseignement/passages

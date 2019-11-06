@@ -59,6 +59,9 @@ permissions:
     digitalartisan.enseignement.prochespermis:
         tab: 'Ressources humaines'
         label: 'Gère les types de permis des proches'
+    digitalartisan.enseignement.passages:
+        tab: Structures
+        label: 'Gère les types de passages d''une année à l''autre pour les élèves'
 navigation:
     protocoles:
         label: Protocoles
@@ -152,3 +155,7 @@ navigation:
                 label: 'Types de permis'
                 url: digitalartisan/enseignement/prochespermis
                 icon: icon-suitcase
+            passages:
+                label: Passages
+                url: digitalartisan/enseignement/passages
+                icon: icon-thumbs-o-up

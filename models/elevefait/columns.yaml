@@ -1,0 +1,16 @@
+columns:
+    date:
+        label: Date
+        type: date
+        searchable: true
+        sortable: true
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: true
+    is_closed:
+        label: Terminé
+        type: switch
+        searchable: true
+        sortable: true

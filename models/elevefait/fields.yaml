@@ -1,0 +1,43 @@
+fields:
+    date:
+        label: Date
+        mode: date
+        span: auto
+        type: datepicker
+    designation:
+        label: Désignation
+        span: full
+        type: text
+
+    is_closed:
+        label: Terminé
+        span: auto
+        type: checkbox
+tabs:
+    fields:        
+        complement:
+            label: Complément
+            size: large
+            span: full
+            type: richeditor
+            tab: 'Complément'
+        documents:
+            label: 'Documents généraux'
+            mode: file
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            tab: 'Documents généraux'
+        images:
+            label: Images
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: 'Documents généraux'
