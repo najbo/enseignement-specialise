@@ -121,7 +121,7 @@ tabs:
             span: full
             type: partial
             path: field_suivis
-            tab: Suivi
+            tab: Suivi ESP
         documents:
             label: 'Documents généraux'
             mode: file
