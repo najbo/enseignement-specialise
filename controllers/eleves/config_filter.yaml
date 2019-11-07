@@ -24,4 +24,4 @@ scopes:
         modelClass: DigitalArtisan\Enseignement\Models\Proche
         conditions: id in (select eleve_id from digitalartisan_enseignement_proches where id in (:filtered))
         #nameFrom: FullName
-        options: getPrenomNomProchesOptions            
+        options: getPrenomNomProchesOptions           

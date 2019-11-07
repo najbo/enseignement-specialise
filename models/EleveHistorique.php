@@ -42,5 +42,8 @@ class EleveHistorique extends Model
         'passage' => ['DigitalArtisan\Enseignement\Models\Passage',
                    'key' => 'passage_id',
                    'order' => 'sort_order'],               
+        'programme' => ['DigitalArtisan\Enseignement\Models\Programme',
+                   'key' => 'programme_id',
+                   'order' => 'sort_order'],                   
     ];    
 }

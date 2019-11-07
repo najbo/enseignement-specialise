@@ -13,7 +13,8 @@ class Proche extends Model
 
     protected $dates = ['deleted_at'];
 
-    #protected $appends = ['full_name'];
+    protected $appends = ['full_name'];
+
     /**
      * @var string The database table used by the model.
      */
@@ -43,7 +44,8 @@ class Proche extends Model
     ];         
 
     public function getFullNameAttribute() {
-        return $this->prenom.' '. $this->nom;
+        # return $this->prenom.' '. $this->nom. ' ('.$this->procherole->designation .')';
+        return $this->prenom.' '. $this->nom ;
     }    
 
     public function getPrenomNomProchesOptions() {

@@ -12,7 +12,7 @@ columns:
         searchable: true
         sortable: true
         select: abreviation
-        relation: ecole        
+        relation: ecole
     debut:
         label: Début
         type: date
@@ -33,10 +33,13 @@ columns:
         type: text
         searchable: true
         sortable: true
+        select: designation
+        relation: programme
     passage:
-        label: Décision fin annéee
+        label: 'Décision fin annéee'
         type: text
         searchable: true
         sortable: true
         select: designation
         relation: passage
+    

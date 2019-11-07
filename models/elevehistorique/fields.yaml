@@ -7,8 +7,11 @@ fields:
         type: relation
     programme:
         label: 'Programme suivi'
+        nameFrom: designation
+        descriptionFrom: description
         span: auto
-        type: text
+        type: relation
+        emptyOption: '-- Non spécifié --'
     debut:
         label: Début
         mode: date
@@ -30,7 +33,7 @@ fields:
         span: auto
         type: text
     passage:
-        label: Décision en fin d'année scolaire
+        label: 'Décision en fin d''année scolaire'
         nameFrom: designation
         descriptionFrom: description
         span: left
