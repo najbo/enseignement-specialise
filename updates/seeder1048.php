@@ -13,12 +13,14 @@ class Seeder1048 extends Seeder
             'designation' => '2018-2019',
             'debut' => '2018-08-01',
             'fin' => '2019-07-31',
+            'anneesuivante_id' => 2
         ]);
         
         Annee::create([
             'designation' => '2019-2020',
             'debut' => '2019-08-01',
             'fin' => '2020-07-31',
+            'anneesuivante_id' => 3
         ]);
 
         Annee::create([

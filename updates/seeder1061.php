@@ -3,7 +3,7 @@
 use Seeder;
 use DigitalArtisan\Enseignement\Models\Programme;
 
-class Seeder1060 extends Seeder
+class Seeder1061 extends Seeder
 {
     public function run()
     {

@@ -1,29 +1,53 @@
 <?php namespace DigitalArtisan\Enseignement\Updates;
 
 use Seeder;
-use DigitalArtisan\Enseignement\Models\Cycle;
+use DigitalArtisan\Enseignement\Models\EleveHistorique;
 
 class Seeder1062 extends Seeder
 {
     public function run()
     {
-        Cycle::truncate();
+        EleveHistorique::truncate();
          
-        Cycle::create([
-            'designation' => 'Cycle 1',
-            'sort_order' => 1,
-        ]);
-        
-        Cycle::create([
-            'designation' => 'Cycle 2',
-            'sort_order' => 2,
-        ]);
-                
-        Cycle::create([
-            'designation' => 'Cycle 3',
-            'sort_order' => 3,
-        ]);
-                        
+        EleveHistorique::create([
+            'eleve_id' => 1,
+            'annee_id' => 1,
+            'passage_id' => 1,
+            'programme_id' => 7,
+            'ecole_id' => 1,
+        ]); 
+
+        EleveHistorique::create([
+            'eleve_id' => 1,
+            'annee_id' => 2,
+            'passage_id' => 1,
+            'programme_id' => 8,
+            'ecole_id' => 1,
+        ]); 
+
+        EleveHistorique::create([
+            'eleve_id' => 1,
+            'annee_id' => 3,
+            'passage_id' => 1,
+            'programme_id' => 9,
+            'ecole_id' => 1,
+        ]); 
+
+        EleveHistorique::create([
+            'eleve_id' => 2,
+            'annee_id' => 1,
+            'passage_id' => 1,
+            'programme_id' => 1,
+            'ecole_id' => 2,
+        ]); 
+
+        EleveHistorique::create([
+            'eleve_id' => 2,
+            'annee_id' => 2,
+            'passage_id' => 1,
+            'programme_id' => 2,
+            'ecole_id' => 2,
+        ]);                 
 
     }
 }

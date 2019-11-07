@@ -176,4 +176,7 @@
     - builder_table_create_digitalartisan_enseignement_programmes.php
 1.0.61:
     - 'Seed programmes'
-    - seeder1060.php
+    - seeder1061.php
+1.0.62:
+    - 'Seed historique des années scolaires des élèves'
+    - seeder1062.php

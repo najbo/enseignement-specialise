@@ -41,6 +41,14 @@
                     data-request-confirm="<?= e(trans('backend::lang.form.confirm_delete')) ?>">
                 </button>
 
+                <button 
+                    type="button"
+                    class="btn btn-default" 
+                    data-request="onBouclement"
+                    data-request-confirm="Lancer le bouclement de cette année ?">
+                    Bouclement
+                </button>
+
                 <span class="btn-text">
                     <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('digitalartisan/enseignement/annees') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
                 </span>

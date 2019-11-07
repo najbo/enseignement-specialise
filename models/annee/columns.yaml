@@ -3,14 +3,29 @@ columns:
         label: Désignation
         type: text
         searchable: true
-        sortable: true
+        sortable: false
     debut:
         label: 'Date de début'
         type: date
         searchable: true
-        sortable: true
+        sortable: false
     fin:
         label: 'Date de fin'
         type: date
         searchable: true
-        sortable: true
+        sortable: false
+    bouclement:
+        label: 'Date de bouclement'
+        type: date
+        searchable: true
+        sortable: false
+    gestionnaire_id:
+        label: 'Bouclé par'
+        type: text
+        searchable: true
+    anneesuivante:
+        label: 'Année suivante'
+        type: text
+        searchable: true
+        select: designation
+        relation: anneesuivante

@@ -18,7 +18,7 @@ class Plugin extends PluginBase
 
     public function boot()
     {
-       $user = BackendAuth::getUser();
+       $backend_user = BackendAuth::getUser();
 
         // Ajout de la feuille de style style.css du plugin au moment du démarrage pour certains styles spécifiques au plugin :
 

@@ -23,7 +23,22 @@ fields:
         span: full
         size: small
         type: textarea
+    anneesuivante:
+        label: 'Année suivante'
+        span: auto
+        nameFrom: designation
+        descriptionFrom: description
+        type: relation
+        emptyOption: '-- Non définie --'
+    bouclement:
+        label: 'Date de bouclement'
+        span: auto
+        disabled: 1
+        readOnly: 1
+        type: text
+
     is_archived:
         label: 'Est archivé'
         span: auto
         type: switch
+

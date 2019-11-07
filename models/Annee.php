@@ -11,7 +11,7 @@ class Annee extends Model
     
     use \October\Rain\Database\Traits\SoftDelete;
 
-    protected $dates = ['debut', 'fin', 'deleted_at'];
+    protected $dates = ['debut', 'fin', 'bouclement', 'deleted_at'];
 
 
     /**
@@ -25,4 +25,11 @@ class Annee extends Model
     public $rules = [
         'designation' => 'required'
     ];
+
+    public $belongsTo = [                
+        'anneesuivante' => ['DigitalArtisan\Enseignement\Models\Annee',
+                   'key' => 'anneesuivante_id',
+                   'order' => 'debut'],           
+    ];   
+
 }
