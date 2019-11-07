@@ -29,17 +29,37 @@ class Annees extends Controller
 
     public function onBouclement($recordId)
         {
-            
-            #$annee = Annee::where('id', $recordId)->first();
+            // On cherche des informations sur l'année actuelle
             $annee = $this->formFindModelObject($recordId);
 
-            $historiques = EleveHistorique::where('annee_id', $recordId)->get();
+            // L'année actuelle est déjà bouclée ? 
+            if (!empty($annee->bouclement))
+            {
+                Flash::error("La période actuelle ". $annee->designation ." est déjà bouclée"); 
+                return;               
+
+            }
+            // On contrôle si l'annnée précédente est bouclée
+            $anneePrecedente = Annee::where('anneesuivante_id', $recordId)->first();
+
+            // Si l'année précdente n'est pas bouclée ou que ce n'est pas la première période, on arrête le traitement
+            if (!(!$anneePrecedente || !is_null($anneePrecedente->bouclement)))
+            {
+                Flash::error("La période précédente ". $anneePrecedente->designation ." n'est pas bouclée"); 
+                return;  
+            }   
+
             
+
+            // Filtrage de l'historique des années pour la période actuelle qu'on veut boucler
+            $historiques = EleveHistorique::where('annee_id', $recordId)->get();
+            $nouvelHistorique = new EleveHistorique;
 
             if ($historiques->count() != 0) {
                 foreach ($historiques as $historique) {
-
-
+                    $nouvelHistorique->eleve_id = $historique->eleve_id;
+                    $nouvelHistorique->annee_id = $annee->anneesuivante_id;
+                    $nouvelHistorique->save();
                 }
 
                 $annee->bouclement = now();
