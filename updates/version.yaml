@@ -170,7 +170,7 @@
     - builder_table_create_digitalartisan_enseignement_cycles.php
 1.0.59:
     - 'Seed cycles'
-    - seeder1062.php
+    - seeder1059.php
 1.0.60:
     - 'Created table digitalartisan_enseignement_programmes'
     - builder_table_create_digitalartisan_enseignement_programmes.php
@@ -180,3 +180,9 @@
 1.0.62:
     - 'Seed historique des années scolaires des élèves'
     - seeder1062.php
+1.0.63:
+    - 'Created table digitalartisan_enseignement_passages_types'
+    - builder_table_create_digitalartisan_enseignement_passages_types.php
+1.0.64:
+    - 'Seed types de passages'
+    - seeder1064.php

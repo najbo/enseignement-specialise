@@ -4,3 +4,15 @@ columns:
         type: text
         searchable: true
         sortable: false
+    abreviation:
+        label: Abréviation
+        type: text
+        searchable: true
+        sortable: false
+    passagetype:
+        label: 'Type de passage'
+        type: text
+        searchable: true
+        sortable: false
+        select: designation
+        relation: passagetype

@@ -8,7 +8,7 @@ use Redirect;
 
 use DigitalArtisan\Enseignement\Models\EleveHistorique;
 use DigitalArtisan\Enseignement\Models\Annee;
-
+use DigitalArtisan\Enseignement\Models\Programme;
 
 class Annees extends Controller
 {
@@ -29,6 +29,8 @@ class Annees extends Controller
 
     public function onBouclement($recordId)
         {
+            $saveNouvelHistorique = '';
+
             // On cherche des informations sur l'année actuelle
             $annee = $this->formFindModelObject($recordId);
 
@@ -39,8 +41,19 @@ class Annees extends Controller
                 return;               
 
             }
+
+            // L'année contient-elle une prochaine période ?
+            if (empty($annee->anneesuivante_id))
+            {
+                Flash::error("La période ". $annee->designation ." ne peut pas encore être bouclée parce qu'il n'y a pas de période suivante indiquée !"); 
+                return;               
+
+            }
+
+
             // On contrôle si l'annnée précédente est bouclée
             $anneePrecedente = Annee::where('anneesuivante_id', $recordId)->first();
+            $anneeSuivante = Annee::where('id', $annee->anneesuivante_id)->first();
 
             // Si l'année précdente n'est pas bouclée ou que ce n'est pas la première période, on arrête le traitement
             if (!(!$anneePrecedente || !is_null($anneePrecedente->bouclement)))
@@ -53,15 +66,93 @@ class Annees extends Controller
 
             // Filtrage de l'historique des années pour la période actuelle qu'on veut boucler
             $historiques = EleveHistorique::where('annee_id', $recordId)->get();
-            $nouvelHistorique = new EleveHistorique;
+
+            #Flash::error("Terminé : ".$historiques->count()); 
+            #return;
 
             if ($historiques->count() != 0) {
                 foreach ($historiques as $historique) {
-                    $nouvelHistorique->eleve_id = $historique->eleve_id;
-                    $nouvelHistorique->annee_id = $annee->anneesuivante_id;
-                    $nouvelHistorique->save();
+
+                    $controleHistorique = EleveHistorique::where('eleve_id', $historique->eleve_id)->where('annee_id', $annee->anneesuivante_id)->count();
+
+                    // On vérifie si cet élève a déjà la nouvelle année dans son historiqu
+                    if ($controleHistorique == 0) {
+                        $nouvelHistorique = new EleveHistorique;
+
+                        // Inscription des nouvelles données (1/2) d'historique
+                        $nouvelHistorique->eleve_id = $historique->eleve_id;
+                        $nouvelHistorique->annee_id = $annee->anneesuivante_id;
+                        
+
+                        // Conditions selon les critères de fin d'année (types de passagse) :
+                        // 1 = promu
+                        // 2 = redouble
+                        // 3 = saute une année
+                        // 4 = fin d'école ou sortie
+
+                            // L'élève est promu et passe à un programme suivant
+                            if ($historique->passage_id == 1) {
+                                
+                                $nouvelHistorique->programme_id = Programme::where('id', $historique->programme_id)->first()->programmesuivant_id;
+
+                                $nouvelHistorique->ecole_id = Programme::where('programmesuivant_id', $historique->programme_id)->first()->ecole_id;
+
+                                $saveNouvelHistorique = true;
+                            }
+
+                            // L'élève redouble et refait le même programme
+                            if ($historique->passage_id == 2) {
+                                
+                                $nouvelHistorique->programme_id = $historique->programme_id;
+                                # $nouvelHistorique->ecole_id = $historique->programme_id;
+                                $saveNouvelHistorique = true;
+                            }                            
+
+                            // L'élève saute une année et passe au programme supérieur
+                            if ($historique->passage_id == 3) {
+                                
+                                # \Log::info($historique->programmesuivant_id);
+                                /*
+                                if (!empty( $historique->programmesuivant_id)) {
+                                    $nouvelHistorique->programme_id = Programme::where('id', $historique->programmesuivant_id))->first()->programmesuivant_id;
+                                    }
+                                */
+
+                                $saveNouvelHistorique = true;
+                            }                            
+
+                            // L'élève sort de l'école
+                            if ($historique->passage_id == 4) {
+                                
+                                $saveNouvelHistorique = false;
+
+                                // Dans ce cas, on indique encore la date de fin sur eleve>fin
+                            }   
+
+                            // L'élève fait une pause
+                            if ($historique->passage_id == 5) {
+                                
+                                $saveNouvelHistorique = true;
+                            }                            
+
+
+                        if ($saveNouvelHistorique == true) {
+
+                            $nouvelHistorique->debut =  $anneeSuivante->debut;
+                            $nouvelHistorique->fin =  $anneeSuivante->fin;
+                            
+                            $nouvelHistorique->save();
+
+                            \Log::info("Ajout d'une nouvelle année d'historique ". $nouvelHistorique->annee->designation." pour l'élève ".$historique->eleve->fullname);  
+                            }
+
+                    } else {
+                        \Log::info("La nouvelle année d'historique pour l'élève ".$historique->eleve->fullname. " n'as pas été ajoutée ; elle existait déjà.");
+                    }
+
                 }
 
+                // On note le résultat sur l'année concernée et on la boucle.
                 $annee->bouclement = now();
                 $annee->gestionnaire_id = BackendAuth::getUser()->id;
                 $annee->save();

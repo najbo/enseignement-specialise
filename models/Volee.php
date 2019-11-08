@@ -23,13 +23,14 @@ class Volee extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'designation' => 'required'
     ];
 
-    public $belongsTo = [
+/*    public $belongsTo = [
         'maitredeclasse' => ['DigitalArtisan\Enseignement\Models\Enseignant',
                    'key' => 'enseignant_id',
                    'order' => 'nom'],
-    ];
+    ];*/
 
     public function getFullNameAttribute() {
         return $this->designation;

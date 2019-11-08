@@ -16,13 +16,14 @@ columns:
         sortable: false
     bouclement:
         label: 'Date de bouclement'
-        type: date
+        type: datetime
         searchable: true
-        sortable: false
-    gestionnaire_id:
+    backenduser:
         label: 'Bouclé par'
         type: text
         searchable: true
+        select: 'concat(first_name, '' '', last_name)'
+        relation: backenduser
     anneesuivante:
         label: 'Année suivante'
         type: text

@@ -45,5 +45,8 @@ class EleveHistorique extends Model
         'programme' => ['DigitalArtisan\Enseignement\Models\Programme',
                    'key' => 'programme_id',
                    'order' => 'sort_order'],                   
+        'eleve' => ['DigitalArtisan\Enseignement\Models\Eleve',
+                   'key' => 'eleve_id',
+                   'order' => 'nom'],                    
     ];    
 }

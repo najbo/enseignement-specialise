@@ -4,12 +4,3 @@ fields:
         span: auto
         required: 1
         type: text
-    programme:
-        label: 'Programme en cours de la volée'
-        span: auto
-        required: 1
-        type: text
-    classe:
-        label: Classe
-        span: auto
-        type: text

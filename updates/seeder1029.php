@@ -11,57 +11,57 @@ class Seeder1029 extends Seeder
         
         Volee::create([
             'designation' => '2019',
-            'programme' => '1H'
+            #'programme' => '1H'
         ]);             
 
         Volee::create([
             'designation' => '2018',
-            'programme' => '2H'
+            # 'programme' => '2H'
         ]); 
 
         Volee::create([
             'designation' => '2017',
-            'programme' => '3H'            
+            # 'programme' => '3H'            
         ]); 
         
         Volee::create([
             'designation' => '2016',
-            'programme' => '4H'            
+            # 'programme' => '4H'            
         ]);    
 
         Volee::create([
             'designation' => '2015',
-            'programme' => '5H'
+            # 'programme' => '5H'
         ]);             
 
         Volee::create([
             'designation' => '2014',
-            'programme' => '6H'
+            # 'programme' => '6H'
         ]); 
 
         Volee::create([
             'designation' => '2013',
-            'programme' => '7H'            
+            #'programme' => '7H'            
         ]); 
         
         Volee::create([
             'designation' => '2012',
-            'programme' => '8H'            
+            # 'programme' => '8H'            
         ]); 
 
         Volee::create([
             'designation' => '2011',
-            'programme' => '9H'
+            #'programme' => '9H'
         ]); 
 
         Volee::create([
             'designation' => '2010',
-            'programme' => '10H'            
+            #'programme' => '10H'            
         ]); 
         
         Volee::create([
             'designation' => '2009',
-            'programme' => '11H'            
+            #'programme' => '11H'            
         ]);                
     }
 }

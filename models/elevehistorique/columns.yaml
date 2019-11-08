@@ -3,43 +3,43 @@ columns:
         label: Annéee
         type: text
         searchable: true
-        sortable: true
+        sortable: false
         select: designation
         relation: annee
     ecole:
         label: Ecole
         type: text
         searchable: true
-        sortable: true
+        sortable: false
         select: abreviation
         relation: ecole
     debut:
         label: Début
         type: date
         searchable: true
-        sortable: true
+        sortable: false
     fin:
         label: Fin
         type: date
         searchable: true
-        sortable: true
+        sortable: false
     designation:
         label: Désignation
         type: text
         searchable: true
-        sortable: true
+        sortable: false
     programme:
         label: Programme
         type: text
         searchable: true
-        sortable: true
+        sortable: false
         select: designation
         relation: programme
     passage:
         label: 'Décision fin annéee'
         type: text
         searchable: true
-        sortable: true
+        sortable: false
         select: designation
         relation: passage
     

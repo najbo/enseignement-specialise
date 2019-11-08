@@ -1,6 +1,7 @@
 <?php namespace DigitalArtisan\Enseignement\Models;
 
 use Model;
+use Backend\Models\User;
 
 /**
  * Model
@@ -30,6 +31,9 @@ class Annee extends Model
         'anneesuivante' => ['DigitalArtisan\Enseignement\Models\Annee',
                    'key' => 'anneesuivante_id',
                    'order' => 'debut'],           
+        'backenduser' => ['Backend\Models\User',
+                   'key' => 'gestionnaire_id',
+                   'order' => 'last_name'],                  
     ];   
 
 }

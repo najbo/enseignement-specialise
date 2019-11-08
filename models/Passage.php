@@ -24,5 +24,12 @@ class Passage extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'designation' => 'required'
     ];
+
+    public $belongsTo = [
+        'passagetype' => ['DigitalArtisan\Enseignement\Models\PassageType',
+                   'key' => 'passagetype_id',
+                   'order' => 'sort_order']
+    ];    
 }

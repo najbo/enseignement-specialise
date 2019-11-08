@@ -109,7 +109,7 @@ class Eleve extends Model
 
     public function afterSave()
         {
-         \Log::info("Enregistrement de l'élève ID ".$this->id);    
+         # \Log::info("Enregistrement de l'élève ID ".$this->id);    
     }
 
     public function afterDelete()

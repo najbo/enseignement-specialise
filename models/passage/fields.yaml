@@ -3,3 +3,14 @@ fields:
         label: Désignation
         span: auto
         type: text
+    passagetype:
+        label: 'Type de passage'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    complement:
+        label: Complément
+        span: full
+        size: large
+        type: textarea

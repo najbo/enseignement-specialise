@@ -25,7 +25,8 @@ class Enseignant extends Model
      */
     public $rules = [
         'nom' => 'required',
-        'prenom' => 'required'
+        'prenom' => 'required',
+        'mail' => 'email'
     ];
 
     public $attachMany = [

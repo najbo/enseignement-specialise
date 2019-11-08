@@ -12,10 +12,9 @@ class BuilderTableCreateDigitalartisanEnseignementVolees extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->string('designation', 20);
-            $table->string('programme', 20);
             $table->text('complement')->nullable();
             $table->string('classe', 20)->nullable();
-            $table->integer('enseignant_id')->nullable();
+            # $table->integer('enseignant_id')->nullable();
             $table->boolean('is_archived')->nullable()->default(0);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
