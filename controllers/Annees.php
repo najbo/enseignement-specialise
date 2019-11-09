@@ -170,7 +170,7 @@ class Annees extends Controller
     public function bouclerAnnee($annee)
     {
         $annee->bouclementMaintenant();  // Inscription de la date de bouclement dans le champ bouclement
-        $annee->inscriptionGestionnaire();
+        $annee->inscriptionGestionnaire(); // Inscription du gestionnaire qui a fait le bouclement
         $annee->save();
     }
 }
