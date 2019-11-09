@@ -27,11 +27,12 @@ class Annees extends Controller
         BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'annees');
     }
 
-    public function onBouclement($recordId)
+    public function onBouclement($recordId) 
         {
+
             $saveNouvelHistorique = '';
 
-            // On cherche des informations sur l'année actuelle
+            // On charge les informations sur l'année actuelle
             $annee = $this->formFindModelObject($recordId);
 
             // L'année actuelle est déjà bouclée ? 
@@ -42,25 +43,26 @@ class Annees extends Controller
 
             }
 
+
+            // On contrôle si l'annnée précédente est bouclée
+            $anneePrecedente = Annee::where('anneesuivante_id', $recordId)->first();
+            $anneeSuivante = Annee::where('id', $annee->anneesuivante_id)->first();
+
+
             // L'année contient-elle une prochaine période ?
             if (empty($annee->anneesuivante_id))
             {
                 Flash::error("La période ". $annee->designation ." ne peut pas encore être bouclée parce qu'il n'y a pas de période suivante indiquée !"); 
                 return;               
+            }  
 
-            }
-
-
-            // On contrôle si l'annnée précédente est bouclée
-            $anneePrecedente = Annee::where('anneesuivante_id', $recordId)->first();
-            $anneeSuivante = Annee::where('id', $annee->anneesuivante_id)->first();
 
             // Si l'année précdente n'est pas bouclée ou que ce n'est pas la première période, on arrête le traitement
             if (!(!$anneePrecedente || !is_null($anneePrecedente->bouclement)))
             {
                 Flash::error("La période précédente ". $anneePrecedente->designation ." n'est pas bouclée"); 
                 return;  
-            }   
+            }     
 
             
 
@@ -95,7 +97,7 @@ class Annees extends Controller
                                 
                                 $nouvelHistorique->programme_id = Programme::where('id', $historique->programme_id)->first()->programmesuivant_id;
 
-                                $nouvelHistorique->ecole_id = Programme::where('programmesuivant_id', $historique->programme_id)->first()->ecole_id;
+                                # $nouvelHistorique->ecole_id = Programme::where('programmesuivant_id', $historique->programme_id)->first()->ecole_id;
 
                                 $saveNouvelHistorique = true;
                             }
@@ -153,17 +155,22 @@ class Annees extends Controller
                 }
 
                 // On note le résultat sur l'année concernée et on la boucle.
-                $annee->bouclement = now();
-                $annee->gestionnaire_id = BackendAuth::getUser()->id;
-                $annee->save();
+                $this->bouclerAnnee($annee);
+                
 
                 Flash::success("Bouclement terminé ! Nous avons traité ". $historiques->count() ." enregistrements pour l'année " .$annee->designation);
 
                  return Redirect::refresh();
             } else {
 
-                Flash::error("Aucun enregistrement trouvé dans les historique historiques des élèves pour cette année à boucler");
+                Flash::error("Aucun enregistrement trouvé dans les historiques des élèves pour l'année ".$annee->designation.".");
                 return;
             }
         }    
+    public function bouclerAnnee($annee)
+    {
+        $annee->bouclementMaintenant();  // Inscription de la date de bouclement dans le champ bouclement
+        $annee->inscriptionGestionnaire();
+        $annee->save();
+    }
 }

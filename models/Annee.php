@@ -2,6 +2,7 @@
 
 use Model;
 use Backend\Models\User;
+use BackendAuth;
 
 /**
  * Model
@@ -36,4 +37,13 @@ class Annee extends Model
                    'order' => 'last_name'],                  
     ];   
 
+    public function bouclementMaintenant() 
+    {
+        return $this->bouclement = now();
+    }
+
+    public function inscriptionGestionnaire()
+    {
+        return $this->gestionnaire_id = BackendAuth::getUser()->id;
+    }
 }
