@@ -6,7 +6,7 @@ fields:
         required: 1
         default: now
         firstDay: 1
-        format: 'd.m.Y'
+        format: d.m.Y
         type: datepicker
     fin:
         label: 'Fin activité'
@@ -14,7 +14,7 @@ fields:
         span: auto
         type: datepicker
         firstDay: 1
-        format: 'd.m.Y'
+        format: d.m.Y
         tab: 'Autres informations'
     type:
         label: 'Type d''activité'
@@ -72,6 +72,7 @@ tabs:
             span: auto
             type: relation
             tab: 'Autres informations'
+            #default: getBackendUserAttribute()
         prochaineecheance:
             label: 'Prochaine échéance'
             span: auto

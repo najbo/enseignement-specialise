@@ -1,6 +1,7 @@
 <?php namespace DigitalArtisan\Enseignement\Models;
 
 use Model;
+use BackendAuth;
 
 /**
  * Model
@@ -12,7 +13,12 @@ class SuiviActivite extends Model
     use \October\Rain\Database\Traits\SoftDelete;
 
     protected $dates = ['date', 'debut', 'fin', 'prochaineecheance', 'deleted_at'];
-
+  
+    #public $attributes = [
+    #  'gestionnaire_id' => 2,
+    #];
+    
+    protected $appends = ['gestionnaire_id'];
 
     /**
      * @var string The database table used by the model.
@@ -51,4 +57,11 @@ class SuiviActivite extends Model
                    'key' => 'suivi_id',
                    'order' => ''],                   
     ];    
+
+
+public function getGestionnaireAttribute()
+{
+   return $this->exists ?: BackendAuth::getUser();
+  }
+    
 }

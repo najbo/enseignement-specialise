@@ -8,6 +8,10 @@ use Model;
 class Gestionnaire extends Model
 {
     use \October\Rain\Database\Traits\Validation;
+    #use \October\Rain\Database\Traits\SoftDelete;
+
+
+    protected $dates = ['deleted_at'];
 
     /**
      * @var string The database table used by the model.
@@ -56,5 +60,10 @@ class Gestionnaire extends Model
     public $attachOne = [];
     public $attachMany = [];
 
+
+    public function scopeActive($query)
+        {
+            return $query->where('active', 1);
+        }
 
 }
