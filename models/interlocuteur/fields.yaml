@@ -14,7 +14,7 @@ fields:
         span: auto
         type: text
     fonctions:
-        label: Fonctions professionnelles
+        label: 'Fonctions professionnelles'
         span: auto
         mode: relation
         separator: comma
@@ -24,9 +24,19 @@ fields:
         type: taglist
 tabs:
     fields:
+        adresse:
+            label: Adresse
+            span: auto
+            type: text
+            tab: 'Données de base'
+        mail:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: 'Données de base'
         npa:
             label: NPA
-            span: auto
+            span: left
             type: text
             tab: 'Données de base'
         localite:
@@ -41,11 +51,6 @@ tabs:
             tab: 'Données de base'
         telephoneprive:
             label: 'Téléphone privé'
-            span: auto
-            type: text
-            tab: 'Données de base'
-        mail:
-            label: 'Adresse e-mail'
             span: auto
             type: text
             tab: 'Données de base'
