@@ -1,6 +1,7 @@
 <?php namespace DigitalArtisan\Enseignement\Models;
 
 use Model;
+use BackendAuth;
 
 /**
  * Model
@@ -59,8 +60,18 @@ class Suivi extends Model
          'enseignants' => ['DigitalArtisan\Enseignement\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc'] 
     ]; 
 
+
+  // Valeur par défaut pour le gestionnaire lors de la création d'une nouvelle activité. On prend l'utilisateur connecté.    
+  public function __construct(array $attributes = array())
+  {
+      $this->setRawAttributes(['gestionnaire_id' => BackendAuth::getUser()->id], true);
+      parent::__construct($attributes);
+  }
+
+
     public function getFullNameAttribute() {
         return $this->id.' - ' .$this->designation;
     }  
+
 
 }

@@ -19,7 +19,8 @@ class Plugin extends PluginBase
     public function boot()
     {
        $backend_user = BackendAuth::getUser();
-
+       #$sessionKey = uniqid('session_key', true);
+       
         // Ajout de la feuille de style style.css du plugin au moment du démarrage pour certains styles spécifiques au plugin :
 
         // Check if we are currently in backend module.

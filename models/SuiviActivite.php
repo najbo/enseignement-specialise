@@ -9,17 +9,18 @@ use BackendAuth;
 class SuiviActivite extends Model
 {
 
-
-
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\SoftDelete;
 
     protected $dates = ['date', 'debut', 'fin', 'prochaineecheance', 'deleted_at'];
   
-/*    public $attributes = [
+    /*    
+    public $attributes = [
       'resume' => 2,
-    ];
-*/    
+      ];
+    */    
+
+  // Valeur par défaut pour le gestionnaire lors de la création d'une nouvelle activité. On prend l'utilisateur connecté.    
   public function __construct(array $attributes = array())
   {
       $this->setRawAttributes(['gestionnaire_id' => BackendAuth::getUser()->id], true);
@@ -68,10 +69,5 @@ class SuiviActivite extends Model
                    'order' => ''],                   
     ];    
 
-/*
-public function getGestionnaireAttribute()
-{
-   return $this->exists ?: BackendAuth::getUser()->id;
-  }
-*/
+
 }
