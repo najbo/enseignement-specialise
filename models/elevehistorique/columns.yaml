@@ -5,7 +5,7 @@ columns:
         searchable: true
         sortable: false
         select: designation
-        relation: annee
+        relation: annee  
     ecole:
         label: Ecole
         type: text

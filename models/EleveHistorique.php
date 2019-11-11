@@ -48,5 +48,19 @@ class EleveHistorique extends Model
         'eleve' => ['DigitalArtisan\Enseignement\Models\Eleve',
                    'key' => 'eleve_id',
                    'order' => 'nom'],                    
-    ];    
+    ];  
+
+
+
+  public function __construct(array $attributes = array())
+  {
+
+      $ecole = null;
+      #$ecole = $this->ecole->ecole_id;
+      
+      $this->setRawAttributes(['ecole_id' => $ecole], true);
+      parent::__construct($attributes);
+  }
+
+
 }
