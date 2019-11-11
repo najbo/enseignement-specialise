@@ -62,5 +62,11 @@ class EleveHistorique extends Model
       parent::__construct($attributes);
   }
 
+  public function beforeCreate()
+  {
+         \Log::info("Before create EleveHistorique");   
+         return; 
+      
+  }
 
 }
