@@ -29,6 +29,10 @@ fields:
         span: auto
         type: relation
         emptyOption: '-- Aucune mesure --'
+    resume:
+        label: Résumé
+        span: auto
+        type: text
     interlocuteur:
         label: Thérapeute
         nameFrom: FullName
@@ -37,10 +41,7 @@ fields:
         list: $/digitalartisan/enseignement/models/interlocuteur/columns_short.yaml
         span: auto
         type: recordfinder
-    resume:
-        label: Résumé
-        span: auto
-        type: text
+
     statut:
         label: 'Statut de l''activité'
         nameFrom: designation
