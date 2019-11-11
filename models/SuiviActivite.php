@@ -9,7 +9,6 @@ use BackendAuth;
 class SuiviActivite extends Model
 {
     use \October\Rain\Database\Traits\Validation;
-    
     use \October\Rain\Database\Traits\SoftDelete;
 
     protected $dates = ['date', 'debut', 'fin', 'prochaineecheance', 'deleted_at'];
@@ -18,7 +17,7 @@ class SuiviActivite extends Model
     #  'gestionnaire_id' => 2,
     #];
     
-    protected $appends = ['gestionnaire_id'];
+    #protected $appends = ['gestionnaire_id'];
 
     /**
      * @var string The database table used by the model.
