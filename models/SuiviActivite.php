@@ -19,14 +19,14 @@ class SuiviActivite extends Model
 /*    public $attributes = [
       'resume' => 2,
     ];
-    
+*/    
   public function __construct(array $attributes = array())
   {
-      $this->setRawAttributes(['resume' => BackendAuth::getUser()->id], true);
+      $this->setRawAttributes(['gestionnaire_id' => BackendAuth::getUser()->id], true);
       parent::__construct($attributes);
   }
 
-*/
+
 
     #protected $appends = ['gestionnaire_id'];
 
@@ -68,10 +68,10 @@ class SuiviActivite extends Model
                    'order' => ''],                   
     ];    
 
-
+/*
 public function getGestionnaireAttribute()
 {
    return $this->exists ?: BackendAuth::getUser()->id;
   }
-   
+*/
 }
