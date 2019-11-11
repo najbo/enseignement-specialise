@@ -60,7 +60,7 @@ class SuiviActivite extends Model
 
 public function getGestionnaireAttribute()
 {
-   return  BackendAuth::getUser();
+   return $this->exists ?: BackendAuth::getUser();
   }
     
 }
