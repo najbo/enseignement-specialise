@@ -8,15 +8,26 @@ use BackendAuth;
  */
 class SuiviActivite extends Model
 {
+
+
+
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\SoftDelete;
 
     protected $dates = ['date', 'debut', 'fin', 'prochaineecheance', 'deleted_at'];
   
-    #public $attributes = [
-    #  'gestionnaire_id' => 2,
-    #];
+/*    public $attributes = [
+      'resume' => 2,
+    ];
     
+  public function __construct(array $attributes = array())
+  {
+      $this->setRawAttributes(['resume' => BackendAuth::getUser()->id], true);
+      parent::__construct($attributes);
+  }
+
+*/
+
     #protected $appends = ['gestionnaire_id'];
 
     /**
@@ -60,7 +71,7 @@ class SuiviActivite extends Model
 
 public function getGestionnaireAttribute()
 {
-   return $this->exists ?: BackendAuth::getUser();
+   return $this->exists ?: BackendAuth::getUser()->id;
   }
-    
+   
 }
