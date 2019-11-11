@@ -34,12 +34,18 @@ columns:
         type: text
         searchable: true
         sortable: true
-    date:
-        label: 'Date de l''activité'
+    debut:
+        label: 'Début activité'
         type: date
         format: 'd.m.Y'
         searchable: true
         sortable: true
+    fin:
+        label: 'fin activité'
+        type: date
+        format: 'd.m.Y'
+        searchable: true
+        sortable: true        
     type:
         label: Type d'activité
         type: text

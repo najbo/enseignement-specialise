@@ -1,13 +1,21 @@
 fields:
-    date:
-        label: Date
+    debut:
+        label: 'Début activité'
         mode: date
         span: auto
         required: 1
+        default: now
+        firstDay: 1
+        format: 'd.m.Y'
+        type: datepicker
+    fin:
+        label: 'Fin activité'
+        mode: date
+        span: auto
         type: datepicker
         firstDay: 1
-        default: now
         format: 'd.m.Y'
+        tab: 'Autres informations'
     type:
         label: 'Type d''activité'
         nameFrom: designation
@@ -38,7 +46,7 @@ fields:
         nameFrom: designation
         descriptionFrom: description
         span: auto
-        type: relation        
+        type: relation
 tabs:
     fields:
         developpement:
@@ -70,15 +78,13 @@ tabs:
             mode: date
             type: datepicker
             tab: 'Autres informations'
-        debut:
-            label: 'Début de la mesure'
+        date:
+            label: Date
             mode: date
+            format: d.m.Y
             span: auto
-            type: datepicker
-            tab: 'Autres informations'
-        fin:
-            label: 'Fin de la mesure'
-            mode: date
-            span: auto
+            default: now
+            hidden: 1
+            required: 0
             type: datepicker
             tab: 'Autres informations'

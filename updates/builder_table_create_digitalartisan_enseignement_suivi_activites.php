@@ -15,9 +15,9 @@ class BuilderTableCreateDigitalartisanEnseignementSuiviActivites extends Migrati
             $table->integer('type_id')->nullable();
             $table->integer('interlocuteur_id')->nullable();
             $table->integer('therapie_id')->nullable();
-            $table->dateTime('date');
-            $table->dateTime('debut')->nullable();
+            $table->dateTime('debut');
             $table->dateTime('fin')->nullable();
+            $table->dateTime('date')->nullable();
             $table->dateTime('prochaineecheance')->nullable();
             $table->integer('gestionnaire_id')->nullable();
             $table->string('resume', 255);

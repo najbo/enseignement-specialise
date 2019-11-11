@@ -1,10 +1,18 @@
 columns:
-    date:
-        label: Date
+    debut:
+        label: Début
         type: date
         searchable: true
         sortable: true
-        width: 150px
+        #width: 120px
+        format: 'd.m.Y'
+    fin:
+        label: Fin
+        type: date
+        searchable: true
+        sortable: true
+        #width: 120px 
+        format: 'd.m.Y'       
     type:
         label: 'Type d''activité'
         type: text
@@ -16,7 +24,7 @@ columns:
         label: Résumé
         type: text
         searchable: true
-        sortable: true        
+        sortable: true
     therapie:
         label: Mesure
         type: text
@@ -32,13 +40,14 @@ columns:
         select: 'concat(prenom, '' '' ,nom)'
         relation: interlocuteur
     prochaineecheance:
-        label: 'Prochaine échéance'
+        label: 'Proch. échéance'
         type: date
         searchable: true
         sortable: true
+        format: 'd.m.Y'
     statut_id:
         label: Statut
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_statut_column.htm
         searchable: false
-        sortable: true        
+        sortable: true

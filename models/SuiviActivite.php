@@ -23,7 +23,7 @@ class SuiviActivite extends Model
      * @var array Validation rules
      */
     public $rules = [
-        'date' => 'required',
+        'debut' => 'required',
     ];
 
     public $attachMany = [
