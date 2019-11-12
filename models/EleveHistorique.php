@@ -64,6 +64,15 @@ class EleveHistorique extends Model
 
   }
 
+      public function filterFields($fields, $context)
+    {
+        if ($context == 'create') {  
+             #$fields->designation->value = $id; #'Default';
+             #$fields->ecole->value = 2;
+        
+            } 
+    }
+
 
 
 }

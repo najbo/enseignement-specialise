@@ -128,7 +128,7 @@ class Eleve extends Model
     public function filterFields($fields, $context)
     {
         if ($context == 'create') {  
-             #$fields->prenom->value = 'Default';
+             #$fields->adresse->value = $this->id;
              #$fields->ecole->value = 2;
         
             } 

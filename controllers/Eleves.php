@@ -26,7 +26,7 @@ class Eleves extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'ressources-humaines', 'eleves');
+        BackendMenu::setContext('DigitalArtisan.Enseignement', 'ressources-humaines', 'eleves'); 
     }
 
     public function onPDF()
