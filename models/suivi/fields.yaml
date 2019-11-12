@@ -6,7 +6,7 @@ fields:
         prompt: 'Sélectionner un élève'
         list: $/digitalartisan/enseignement/models/eleve/columns_short.yaml
         span: auto
-        required: 0
+        required: 1
         type: recordfinder
     statut:
         label: 'Statut du suivi'
@@ -43,7 +43,6 @@ fields:
         type: datepicker
         firstDay: 1
         format: d.m.Y
-
 tabs:
     fields:
         hint_activites:
@@ -54,12 +53,13 @@ tabs:
             type: hint
             tab: Activités
         activites:
-            label: Activités
             span: full
-            type: partial
             path: field_activite
+            context:
+                - update
+                - preview
+            type: partial
             tab: Activités
-            context: update
         remarques:
             label: Remarques
             size: large
@@ -79,14 +79,15 @@ tabs:
             context:
                 - create
             type: hint
-            tab: 'Enseignants liés'      
-        enseignants:
-            label: 'Enseignants liés'
-            span: full
-            type: partial
-            path: field_enseignant
             tab: 'Enseignants liés'
-            context: update
+        enseignants:
+            span: full
+            path: field_enseignant
+            context:
+                - update
+                - preview
+            type: partial
+            tab: 'Enseignants liés'
         documents:
             label: 'Documents généraux'
             mode: file

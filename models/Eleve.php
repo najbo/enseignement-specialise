@@ -125,5 +125,13 @@ class Eleve extends Model
          \Log::info("We just deleted record #".$this->id. " but *not* the related pathologies");    
     }
 
+    public function filterFields($fields, $context)
+    {
+        if ($context == 'create') {  
+             #$fields->prenom->value = 'Default';
+             #$fields->ecole->value = 2;
+        
+            } 
+    }
 
 }

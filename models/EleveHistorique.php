@@ -54,20 +54,16 @@ class EleveHistorique extends Model
 
   public function __construct(array $attributes = array())
   {
-      
+      /*
         $ecole = null;
         #$ecole = $this->ecole->ecole_id;
         
         $this->setRawAttributes(['ecole_id' => $ecole], true);
         parent::__construct($attributes);
+        */
 
   }
 
-  public function beforeCreate()
-  {
-         \Log::info("Before create EleveHistorique");   
-         return; 
-      
-  }
+
 
 }

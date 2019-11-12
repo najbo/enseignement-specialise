@@ -65,7 +65,7 @@ class Suivi extends Model
    
     public $hasMany = [
          'activites' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'suivi_id', 'order' => 'debut asc'],
-         'enseignants' => ['DigitalArtisan\Enseignement\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc'] 
+         'enseignants' => ['DigitalArtisan\Enseignement\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc']       
     ]; 
 
 
@@ -86,7 +86,7 @@ class Suivi extends Model
     public function getFilterAttribute() {
         $prefix = '';
         $suffix = '';
-        $prefix =  $this->id.' { '. $this->eleve->prenom . ' ' .$this->eleve->nom . ' | ' .$this->datedebut;
+        $prefix =  '#'. $this->id.' { '. $this->eleve->prenom . ' ' .$this->eleve->nom . ' | ' .$this->datedebut;
 
         if ($this->designation)
         {

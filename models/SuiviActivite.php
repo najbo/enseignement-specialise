@@ -11,7 +11,6 @@ class SuiviActivite extends Model
 
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\SoftDelete;
-    #use \October\Rain\Database\Traits\SimpleTree;
 
     protected $dates = ['date', 'debut', 'fin', 'prochaineecheance', 'deleted_at'];
     
@@ -32,8 +31,6 @@ class SuiviActivite extends Model
   }
 
 
-
-    #protected $appends = ['gestionnaire_id'];
 
     /**
      * @var string The database table used by the model.
@@ -70,7 +67,7 @@ class SuiviActivite extends Model
                    'order' => 'sort_order'],                           
         'suivi'    => ['DigitalArtisan\Enseignement\Models\Suivi',
                    'key' => 'suivi_id',
-                   'order' => ''],                   
+                   'order' => '']                                      
     ];    
  
 

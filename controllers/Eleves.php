@@ -3,6 +3,7 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 use Flash;
+use BackendAuth;
 #use Renatio\DynamicPDF\Classes\PDF;
 use Renatio\DynamicPDF\Classes\PDFWrapper;
 
@@ -53,4 +54,7 @@ class Eleves extends Controller
             return PDF::loadTemplate($templateCode, $data)->stream();
 */
         }
+
+
+
 }

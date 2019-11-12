@@ -17,7 +17,6 @@ fields:
         type: relation
     programme:
         label: 'Programme en cours'
-        oc.commentPosition: below
         span: auto
         type: text
     pathologies:
@@ -98,48 +97,51 @@ tabs:
             context:
                 - create
             type: hint
-            tab: 'Proches'                 
-        proches:
-            label: Proches
-            span: full
-            type: partial
-            path: field_proche
             tab: Proches
-            context: update
+        proches:
+            span: full
+            path: field_proche
+            context:
+                - update
+                - preview
+            type: partial
+            tab: Proches
         hint_historique:
             span: full
             path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
             context:
                 - create
             type: hint
-            tab: 'Historique'                 
-        historique:
-            label: 'Historique de passage'
-            span: full
-            type: partial
-            path: field_historique
             tab: Historique
-            context: update
+        historique:
+            span: full
+            path: field_historique
+            context:
+                - update
+                - preview
+            type: partial
+            tab: Historique
         hint_fait:
             span: full
             path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
             context:
                 - create
             type: hint
-            tab: 'Faits marquants'              
-        fait:
-            label: Faits
-            span: full
-            type: partial
-            path: field_fait
             tab: 'Faits marquants'
-            context: update
+        fait:
+            span: full
+            path: field_fait
+            context:
+                - update
+                - preview
+            type: partial
+            tab: 'Faits marquants'
         remarque:
             label: Remarques
             size: large
             span: full
             type: richeditor
-            tab: Remarques          
+            tab: Remarques
         suivi:
             label: 'Suivi de cet élève'
             span: full

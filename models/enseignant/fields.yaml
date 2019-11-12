@@ -76,7 +76,7 @@ tabs:
             descriptionFrom: description
             type: relation
             tab: 'Données de base'
-            emptyOption: '-- Non défini --'            
+            emptyOption: '-- Non défini --'
         remarques:
             label: Remarques
             size: large
@@ -88,34 +88,35 @@ tabs:
             mode: date
             span: auto
             type: datepicker
-            tab: 'Engagement'
+            tab: Engagement
         sortie:
             label: 'Date de sortie'
             span: auto
             mode: date
             type: datepicker
-            tab: 'Engagement'
+            tab: Engagement
+        permis:
+            label: 'Type de permis'
+            nameFrom: designation
+            descriptionFrom: description
+            tab: Engagement
+            span: auto
+            type: relation
         hint_fait:
             span: full
             path: $/digitalartisan/enseignement/models/enseignant/_hint_onglets.htm
             context:
                 - create
             type: hint
-            tab: 'Faits marquants'             
+            tab: 'Faits marquants'
         fait:
-            label: Faits
             span: full
-            type: partial
             path: field_fait
-            tab: 'Faits marquants'   
-            context: update             
-        permis:
-            label: 'Type de permis'
-            nameFrom: designation
-            descriptionFrom: description
-            tab: 'Engagement'
-            span: auto
-            type: relation              
+            context:
+                - update
+                - preview
+            type: partial
+            tab: 'Faits marquants'
         documents:
             label: 'Documents généraux'
             mode: file
@@ -135,4 +136,4 @@ tabs:
                 mode: crop
                 extension: auto
             type: fileupload
-            tab: 'Documents généraux'            
+            tab: 'Documents généraux'
