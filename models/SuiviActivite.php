@@ -23,8 +23,10 @@ class SuiviActivite extends Model
   // Valeur par défaut pour le gestionnaire lors de la création d'une nouvelle activité. On prend l'utilisateur connecté.    
   public function __construct(array $attributes = array())
   {
-      $this->setRawAttributes(['gestionnaire_id' => BackendAuth::getUser()->id], true);
-      parent::__construct($attributes);
+      if (BackendAuth::check()) {
+        $this->setRawAttributes(['gestionnaire_id' => BackendAuth::getUser()->id], true);
+        parent::__construct($attributes);
+      }
   }
 
 

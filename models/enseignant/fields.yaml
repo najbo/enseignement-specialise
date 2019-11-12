@@ -100,7 +100,8 @@ tabs:
             span: full
             type: partial
             path: field_fait
-            tab: Faits marquants               
+            tab: Faits marquants
+            context: update             
         permis:
             label: 'Type de permis'
             nameFrom: designation

@@ -50,6 +50,7 @@ tabs:
             type: partial
             path: field_activite
             tab: Activités
+            context: update
         remarques:
             label: Remarques
             size: large
@@ -69,6 +70,7 @@ tabs:
             type: partial
             path: field_enseignant
             tab: 'Enseignants liés'
+            context: update
         documents:
             label: 'Documents généraux'
             mode: file
