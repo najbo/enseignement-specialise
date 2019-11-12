@@ -95,12 +95,19 @@ tabs:
             mode: date
             type: datepicker
             tab: 'Engagement'
+        hint_fait:
+            span: full
+            path: $/digitalartisan/enseignement/models/enseignant/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: 'Faits marquants'             
         fait:
             label: Faits
             span: full
             type: partial
             path: field_fait
-            tab: Faits marquants
+            tab: 'Faits marquants'   
             context: update             
         permis:
             label: 'Type de permis'

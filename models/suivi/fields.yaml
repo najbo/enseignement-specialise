@@ -43,8 +43,16 @@ fields:
         type: datepicker
         firstDay: 1
         format: d.m.Y
+
 tabs:
     fields:
+        hint_activites:
+            span: full
+            path: $/digitalartisan/enseignement/models/suivi/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: Activités
         activites:
             label: Activités
             span: full
@@ -65,6 +73,13 @@ tabs:
             span: auto
             type: relation
             tab: Remarques
+        hint_enseignants:
+            span: full
+            path: $/digitalartisan/enseignement/models/suivi/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: 'Enseignants liés'      
         enseignants:
             label: 'Enseignants liés'
             span: full

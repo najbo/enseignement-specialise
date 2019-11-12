@@ -92,6 +92,13 @@ tabs:
             tab: 'Données de base'
             span: auto
             type: relation
+        hint_proches:
+            span: full
+            path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: 'Proches'                 
         proches:
             label: Proches
             span: full
@@ -99,6 +106,13 @@ tabs:
             path: field_proche
             tab: Proches
             context: update
+        hint_historique:
+            span: full
+            path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: 'Historique'                 
         historique:
             label: 'Historique de passage'
             span: full
@@ -106,6 +120,13 @@ tabs:
             path: field_historique
             tab: Historique
             context: update
+        hint_fait:
+            span: full
+            path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: 'Faits marquants'              
         fait:
             label: Faits
             span: full
@@ -118,7 +139,7 @@ tabs:
             size: large
             span: full
             type: richeditor
-            tab: Remarques
+            tab: Remarques          
         suivi:
             label: 'Suivi de cet élève'
             span: full
