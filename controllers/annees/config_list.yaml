@@ -1,4 +1,4 @@
-title: Annees
+title: Années
 modelClass: DigitalArtisan\Enseignement\Models\Annee
 list: $/digitalartisan/enseignement/models/annee/columns.yaml
 recordUrl: 'digitalartisan/enseignement/annees/update/:id'

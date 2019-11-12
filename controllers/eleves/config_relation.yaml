@@ -7,6 +7,7 @@ proches:
         showSearch: true
     manage:
         form: $/digitalartisan/enseignement/models/proche/fields.yaml
+        title : Gestion des proches
         showSearch: true   
 historiques:
     label: Historiques

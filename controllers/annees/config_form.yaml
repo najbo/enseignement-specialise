@@ -1,10 +1,13 @@
-name: Annees
-form: $/digitalartisan/enseignement/models/annee/fields.yaml
+name: Années
 modelClass: DigitalArtisan\Enseignement\Models\Annee
+form: $/digitalartisan/enseignement/models/annee/fields.yaml
 defaultRedirect: digitalartisan/enseignement/annees
 create:
+    title: 'Créer une nouvelle année'
     redirect: 'digitalartisan/enseignement/annees/update/:id'
     redirectClose: digitalartisan/enseignement/annees
 update:
+    title: 'Editer une année'
     redirect: digitalartisan/enseignement/annees
     redirectClose: digitalartisan/enseignement/annees
+preview: {  }
