@@ -6,9 +6,10 @@ fields:
         prompt: 'Sélectionner un élève'
         list: $/digitalartisan/enseignement/models/eleve/columns_short.yaml
         span: auto
+        required: 0
         type: recordfinder
     statut:
-        label: Statut du suivi
+        label: 'Statut du suivi'
         span: auto
         nameFrom: designation
         descriptionFrom: description
@@ -33,7 +34,7 @@ fields:
         span: auto
         type: datepicker
         firstDay: 1
-        format: 'd.m.Y'
+        format: d.m.Y
         default: now
     fin:
         label: Fin
@@ -41,7 +42,7 @@ fields:
         mode: date
         type: datepicker
         firstDay: 1
-        format: 'd.m.Y'
+        format: d.m.Y
 tabs:
     fields:
         activites:

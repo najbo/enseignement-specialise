@@ -1,6 +1,7 @@
 <?php namespace DigitalArtisan\Enseignement\Models;
 
 use Model;
+use Flash;
 use BackendAuth;
 
 /**
@@ -25,9 +26,14 @@ class Suivi extends Model
      */
 
     public $rules = [
-        'eleve_id' => 'required',
+        'eleve_id' => 'required',        
         'debut' => 'required'
     ];
+
+    public $customMessages = [
+        'eleve_id.required' => "Pssst ... il faut sélectionnier un élève avant d'enregistrer ;-)",
+    ];
+
 
     public $attachMany = [
         'images' => ['System\Models\File', 'public' => false],
@@ -74,6 +80,5 @@ class Suivi extends Model
     public function getFullNameAttribute() {
         return $this->id.' - ' .$this->designation;
     }  
-
 
 }
