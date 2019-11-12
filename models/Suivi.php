@@ -4,6 +4,8 @@ use Model;
 use Flash;
 use BackendAuth;
 
+use Carbon\Carbon;
+
 /**
  * Model
  */
@@ -15,7 +17,7 @@ class Suivi extends Model
 
     protected $dates = ['debut', 'fin', 'deleted_at'];
 
-
+    protected $appends = ['statutsuivi'];
     /**
      * @var string The database table used by the model.
      */
@@ -80,5 +82,32 @@ class Suivi extends Model
     public function getFullNameAttribute() {
         return $this->id.' - ' .$this->designation;
     }  
+
+    public function getFilterAttribute() {
+        $prefix = '';
+        $suffix = '';
+        $prefix =  $this->id.' { '. $this->eleve->prenom . ' ' .$this->eleve->nom . ' | ' .$this->datedebut;
+
+        if ($this->designation)
+        {
+            $suffix = ' | '.$this->designation;
+        }
+
+        return $prefix . $suffix .' }';
+    }  
+
+    public function getDateDebutAttribute() {
+        return $this->debut->format('d.m.y');
+    }
+
+    public function getIdElevesOptions() {
+
+        $result = Suivi::orderBy('id')->get()->pluck('Filter', 'id')->toArray();          
+        return $result;
+    } 
+
+    public function getStatutSuiviAttribute() {
+        return $this->designation;
+    }
 
 }

@@ -11,9 +11,11 @@ class SuiviActivite extends Model
 
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\SoftDelete;
+    #use \October\Rain\Database\Traits\SimpleTree;
 
     protected $dates = ['date', 'debut', 'fin', 'prochaineecheance', 'deleted_at'];
-  
+    
+    protected $appends = ['full_name'];
     /*    
     public $attributes = [
       'resume' => 2,
@@ -70,6 +72,6 @@ class SuiviActivite extends Model
                    'key' => 'suivi_id',
                    'order' => ''],                   
     ];    
-
+ 
 
 }

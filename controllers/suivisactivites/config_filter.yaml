@@ -3,7 +3,8 @@ scopes:
         label: Suivi
         modelClass: DigitalArtisan\Enseignement\Models\Suivi
         conditions: suivi_id in (:filtered)
-        nameFrom: FullName    
+        #nameFrom: id
+        options: getIdElevesOptions    
     statuts_suivi:
         label: Statut du suivi
         modelClass: DigitalArtisan\Enseignement\Models\Statut

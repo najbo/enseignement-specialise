@@ -9,3 +9,7 @@ fields:
         span: full
         size: small
         type: textarea
+    is_archived:
+        label: Archivé
+        span: auto
+        type: checkbox

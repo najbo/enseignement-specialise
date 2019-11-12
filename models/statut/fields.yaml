@@ -13,6 +13,10 @@ fields:
         label: Archivé
         span: auto
         type: switch
+    is_finished:
+        label: 'Ce statut indique une activité terminée'
+        span: auto
+        type: checkbox
     color_bg:
         label: 'Couleur de fond'
         span: left

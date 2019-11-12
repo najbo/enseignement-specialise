@@ -4,10 +4,15 @@ columns:
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/statut/_designation_column.htm
         searchable: true
-        sortable: false 
+        sortable: false
     complement:
         label: Complément
         type: text
+        searchable: true
+        sortable: false
+    is_finished:
+        label: 'Est terminé'
+        type: switch
         searchable: true
         sortable: false
     is_archived:
@@ -15,3 +20,4 @@ columns:
         type: switch
         searchable: true
         sortable: false
+
