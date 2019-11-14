@@ -55,6 +55,15 @@ class Eleves extends Controller
 */
         }
 
-
+public function update($recordId, $context = null)
+{
+    //
+    // Do any custom code here
+    //
+    
+    #Flash::success('Oooops');
+    // Call the FormController behavior update() method
+    return $this->asExtension('FormController')->update($recordId, $context);
+}
 
 }

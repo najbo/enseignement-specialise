@@ -1,6 +1,8 @@
 <?php namespace DigitalArtisan\Enseignement\Models;
 
 use Model;
+use Request;
+use DigitalArtisan\Enseignement\Models\Eleve;
 
 /**
  * Model
@@ -64,11 +66,17 @@ class EleveHistorique extends Model
 
   }
 
+
+
+
       public function filterFields($fields, $context)
     {
         if ($context == 'create') {  
-             #$fields->designation->value = $id; #'Default';
-             #$fields->ecole->value = 2;
+            $eleve = Eleve::findOrFail(Request::segment(6));
+            # $fields->designation->value = Request::segment(6); #'Default';
+             
+             #$fields->designation->value = $eleve ; #'Default';
+             $fields->ecole->value = $eleve->ecole_id;
         
             } 
     }
