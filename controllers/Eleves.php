@@ -55,15 +55,15 @@ class Eleves extends Controller
 */
         }
 
-public function update($recordId, $context = null)
-{
-    //
-    // Do any custom code here
-    //
-    
-    #Flash::success('Oooops');
-    // Call the FormController behavior update() method
-    return $this->asExtension('FormController')->update($recordId, $context);
-}
+    public function update($recordId, $context = null)
+    {
+
+        #$this->vars['myId'] = $recordId;
+        \Session::put('id',$recordId);
+        # Flash::success('Préparation de la variable ID = '.$recordId);
+        // Call the FormController behavior update() method
+        return $this->asExtension('FormController')->update($recordId, $context);
+    }
+
 
 }

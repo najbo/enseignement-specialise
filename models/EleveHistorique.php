@@ -72,10 +72,12 @@ class EleveHistorique extends Model
       public function filterFields($fields, $context)
     {
         if ($context == 'create') {  
-            $eleve = Eleve::findOrFail(Request::segment(6));
-            # $fields->designation->value = Request::segment(6); #'Default';
+            $id = \Session::get('id');
+            $eleve = Eleve::findOrFail($id);
+            #$eleve = Eleve::findOrFail(Request::segment(6));
              
              #$fields->designation->value = $eleve ; #'Default';
+           
              $fields->ecole->value = $eleve->ecole_id;
         
             } 

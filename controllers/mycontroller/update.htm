@@ -1,0 +1,11 @@
+<h1>My Controller</h1>
+<p>You gave me an id of <?= $myId ?>.</p>
+
+<?= Form::open() ?>
+	<?= $widget->render() ?>
+
+<button data-request="onUpdate" class="btn btn-primary">
+	Write to log
+</button>
+
+<?= Form::close() ?>

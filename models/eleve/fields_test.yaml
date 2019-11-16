@@ -1,0 +1,138 @@
+fields:
+    nom:
+        label: 'Nom de l''élève'
+        span: auto
+        required: 1
+        type: text
+    prenom:
+        label: 'Prénom de l''élève'
+        span: auto
+        required: 1
+        type: text
+    ecole:
+        label: Ecole
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+    programme:
+        label: 'Programme en cours'
+        span: auto
+        type: text
+    pathologies:
+        label: Pathologies
+        span: auto
+        mode: relation
+        separator: comma
+        nameFrom: designation
+        customTags: true
+        useKey: false
+        type: taglist
+    volee:
+        label: Volée
+        nameFrom: FullName
+        descriptionFrom: complement
+        span: auto
+        required: 1
+        type: relation
+        emptyOption: '-- Non spécifiée --'
+tabs:
+    fields:
+        adresse:
+            label: Adresse
+            span: auto
+            type: text
+            tab: 'Données de base'
+        pays:
+            label: 'Pays d''origine'
+            span: auto
+            nameFrom: designation
+            descriptionFrom: description
+            type: relation
+            tab: 'Données de base'
+            emptyOption: '-- Non spécifié --'
+        npa:
+            label: NPA
+            span: left
+            type: text
+            tab: 'Données de base'
+        localite:
+            label: Localité
+            span: auto
+            type: text
+            tab: 'Données de base'
+        naissance:
+            label: 'Date de naissance'
+            mode: date
+            span: auto
+            type: datepicker
+            firstDay: 1
+            tab: 'Données de base'
+        genre:
+            label: Genre
+            span: auto
+            nameFrom: designation
+            descriptionFrom: description
+            type: relation
+            tab: 'Données de base'
+            emptyOption: '-- Non défini --'
+        langue:
+            label: 'Langue maternelle'
+            span: auto
+            nameFrom: designation
+            descriptionFrom: description
+            type: relation
+            tab: 'Données de base'
+            emptyOption: '-- Non défini --'
+        permis:
+            label: 'Type de permis'
+            nameFrom: designation
+            descriptionFrom: description
+            tab: 'Données de base'
+            span: auto
+            type: relation
+        hint_proches:
+            span: full
+            path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: Proches
+        proches:
+            span: full
+            path: field_proche
+            context:
+                - update
+                - preview
+            type: partial
+            tab: Proches
+        hint_historique:
+            span: full
+            path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: Historique
+
+        hint_fait:
+            span: full
+            path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
+            context:
+                - create
+            type: hint
+            tab: 'Faits marquants'
+
+        remarque:
+            label: Remarques
+            size: large
+            span: full
+            type: richeditor
+            tab: Remarques
+
+
+        nss:
+            label: 'Numéro d''assurance sociale'
+            span: auto
+            placeholder: '756.'
+            type: text
+            tab: 'Autres données'
