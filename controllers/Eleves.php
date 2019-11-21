@@ -23,11 +23,14 @@ class Eleves extends Controller
         'digitalartisan.enseignement.eleves' 
     ];
 
+
     public function __construct()
     {
         parent::__construct();
         BackendMenu::setContext('DigitalArtisan.Enseignement', 'ressources-humaines', 'eleves'); 
     }
+
+
 
     public function onPDF()
         {
@@ -65,5 +68,10 @@ class Eleves extends Controller
         return $this->asExtension('FormController')->update($recordId, $context);
     }
 
+    public function onRelationPredict($recordId = null)
+    {
+        $texte = $recordId;
+        Flash::success('Hello '.$texte);
 
+    }
 }
