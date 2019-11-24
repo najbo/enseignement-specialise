@@ -16,7 +16,7 @@ fields:
     role:
         label: 'Rôle (autre)'
         span: auto
-        type: text
+        type: text    
     permis:
         label: 'Type de permis'
         nameFrom: designation

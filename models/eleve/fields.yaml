@@ -36,6 +36,13 @@ fields:
         required: 1
         type: relation
         emptyOption: '-- Non spécifiée --'
+    id:
+        label: ID
+        span: auto
+        disabled: 1
+        readOnly: 1
+        hidden: 1
+        type: number
 tabs:
     fields:
         adresse:

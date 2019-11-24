@@ -14,7 +14,7 @@ historiques:
     emptyMessage: Aucun historique pour le moment
     view:
         list: $/digitalartisan/enseignement/models/elevehistorique/columns.yaml
-        toolbarButtons: create|delete|createhisto
+        toolbarButtons: create|delete
         showSearch: true
     manage:
         form: $/digitalartisan/enseignement/models/elevehistorique/fields.yaml

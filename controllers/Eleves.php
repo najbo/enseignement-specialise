@@ -62,7 +62,7 @@ class Eleves extends Controller
     {
 
         #$this->vars['myId'] = $recordId;
-        \Session::put('id',$recordId);
+        \Session::put('eleve_id',$recordId);
         # Flash::success('Préparation de la variable ID = '.$recordId);
         // Call the FormController behavior update() method
         return $this->asExtension('FormController')->update($recordId, $context);
