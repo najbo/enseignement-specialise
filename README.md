@@ -12,7 +12,7 @@ Gestion de l'enseignement spécialisé. Le plugin doit être placé dans /plugin
 - Fonctions professionnelles
 - Mesures thérapeuthiques
 
-## Installation
+## Installation de OctoberCMS
 
 - Créer un nouveau projet vide (avec Laragon par exemple)
 - Se rendre dans le dossier www du projet
@@ -35,7 +35,7 @@ php artisan october:install
 
 Source : https://octobercms.com/docs/console/commands#console-install
 
-## Cloner le projet :
+## Installation du plugin :
 
 - Créer un dossier plugins/digitalartisan/enseignement
 - Se rendre dans le dossier enseignement
