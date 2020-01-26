@@ -35,6 +35,17 @@ php artisan october:install
 
 Source : https://octobercms.com/docs/console/commands#console-install
 
+## Cloner le projet :
+
+- Créer un dossier plugins/digitalartisan/enseignement
+- Se rendre dans le dossier enseignement
+
+```shell
+git init
+git remot add origin {URL du projet sous GIT}
+git pull origin master
+```
+
 ## Mise à jour du plugin (migration & seed):
 
 Attention : cette commande efface toutes les données déjà présentes dans la base de données.
