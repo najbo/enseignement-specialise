@@ -42,7 +42,7 @@ Source : https://octobercms.com/docs/console/commands#console-install
 
 ```shell
 git init
-git remot add origin {URL du projet sous GIT}
+git remote add origin {URL du projet sous GIT}
 git pull origin master
 ```
 
