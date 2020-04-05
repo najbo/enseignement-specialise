@@ -12,13 +12,40 @@ Gestion de l'enseignement spécialisé. Le plugin doit être placé dans /plugin
 - Fonctions professionnelles
 - Mesures thérapeuthiques
 
-## Installation de OctoberCMS
+## Installation de OctoberCMS avec curl (à préférer)
+
+- Créer un nouveau projet vide (avec Laragon par exemple)
+- Se rendre dans le dossier du projet
+
+```shell
+curl -s https://octobercms.com/api/installer | php
+```
+
+Lancer l'installation (base de données et autres données) :
+
+```shell
+php artisan october:install
+```
+
+Pour mettre à jour les migrations, ne pas utiliser artisan migrate, mais :
+
+```shell
+php artisan october:up
+```
+
+## Installation de OctoberCMS avec composer
 
 - Créer un nouveau projet vide (avec Laragon par exemple)
 - Se rendre dans le dossier www du projet
 
 ```shell
 composer create-project october/october .
+```
+
+Modifier le fichier /config/cms.php pour éviter que les mises à jour ne se fasse par le GUI (on utilise composer) :
+
+```shell
+'disableCoreUpdates' => true,
 ```
 
 Mettre à jour les dépendances
@@ -42,9 +69,16 @@ Source : https://octobercms.com/docs/console/commands#console-install
 
 ```shell
 git init
-git remote add origin {URL du projet sous GIT}
+git remote add origin https://github.com/najbo/enseignement-specialise.git
 git pull origin master
 ```
+
+Retourner dans le dossier du projet et lancer la commande up :
+
+```shell
+php artisan october:up
+```
+
 
 ## Mise à jour du plugin (migration & seed):
 
