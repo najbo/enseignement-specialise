@@ -3,7 +3,7 @@ plugin:
     description: 'Gère le suivi de l''enseignement spécialisé'
     author: digital-artisan
     icon: oc-icon-trophy
-    homepage: ''
+    homepage: 'www.digital-artisan.ch'
 permissions:
     digitalartisan.enseignement.interlocuteurs:
         tab: 'Ressources humaines'
