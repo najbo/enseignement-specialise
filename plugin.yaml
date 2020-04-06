@@ -1,5 +1,5 @@
 plugin:
-    name: 'digitalartisan.enseignement::lang.plugin.name'
+    name: 'Enseignement spécialisé'
     description: 'Gère le suivi de l''enseignement spécialisé'
     author: digital-artisan
     icon: oc-icon-trophy
