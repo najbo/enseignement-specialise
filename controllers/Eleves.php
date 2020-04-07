@@ -34,6 +34,8 @@ class Eleves extends Controller
 
     public function onPDF()
         {
+            # Bouton PDF en haut de la table des élèves
+            
             # Flash::error("DO NOT CLICK THIS BUTTON!");
 
             $templateCode = 'renatio::invoice';
