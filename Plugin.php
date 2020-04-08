@@ -32,6 +32,21 @@ class Plugin extends PluginBase
         Event::listen('backend.page.beforeDisplay', function($controller, $action, $params) {
             $controller->addCss('/plugins/digitalartisan/enseignement/assets/css/style.css', 'DigitalArtisan.Enseignement');
         });
-
     }    
+
+
+    public function registerPDFTemplates()
+    {
+        return [
+            'digitalartisan.enseignement::pdf.invoice',
+        ];
+    }
+
+    public function registerPDFLayouts()
+    {
+        return [
+            'digitalartisan.enseignement::pdf.layouts.default',
+        ];
+    }
+
 }

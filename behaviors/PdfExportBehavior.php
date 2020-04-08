@@ -4,8 +4,9 @@ use Backend\Classes\ControllerBehavior;
 use Config;
 use Exception;
 use October\Rain\Exception\ApplicationException;
-use DigitalArtisan\Enseignement\Models\Eleve;
+#use DigitalArtisan\Enseignement\Models\Eleve;
 use Renatio\DynamicPDF\Classes\PDFWrapper;
+use Renatio\DynamicPDF\Classes\PDF;
 use Response;
 use Str;
 
@@ -18,7 +19,9 @@ class PdfExportBehavior extends ControllerBehavior
             throw new ApplicationException('Elève non trouvé.');
         }
 
+        #$templateCode = 'digitalartisan.enseignement::pdf.invoice';
         $templateCode = 'enseignement:eleve';
+
         $filename = 'eleve_'.Str::slug($eleve->nom . '-' . $eleve->prenom) . '.pdf';
 
         try {
