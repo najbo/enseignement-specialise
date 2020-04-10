@@ -16,7 +16,7 @@ fields:
     role:
         label: 'Rôle (autre)'
         span: auto
-        type: text    
+        type: text
     permis:
         label: 'Type de permis'
         nameFrom: designation
@@ -61,6 +61,11 @@ tabs:
             tab: 'Données de base'
         is_autoriteparentale:
             label: 'Détient l''autorité parentale'
+            span: auto
+            type: switch
+            tab: 'Données de base'
+        is_autredomicile:
+            label: 'Habite à une autre adresse'
             span: auto
             type: switch
             tab: 'Données de base'

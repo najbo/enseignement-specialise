@@ -3,9 +3,10 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 use Flash;
+use Log;
 use BackendAuth;
-#use Renatio\DynamicPDF\Classes\PDF;
-use Renatio\DynamicPDF\Classes\PDFWrapper;
+use Renatio\DynamicPDF\Classes\PDF;
+
 
 class Eleves extends Controller
 {
@@ -31,9 +32,56 @@ class Eleves extends Controller
     }
 
 
+    public function export()
+    {
+
+        $lists = $this->makeLists();
+        $widget = reset($lists);
+
+        /* Add headers */
+        $headers = [];
+        $columns = $widget->getVisibleColumns();
+        foreach ($columns as $column) {
+            if ($column->label !== 'Export') {
+                $headers[] = \Lang::get($column->label);
+            }
+        }
+
+        /* Add records */
+        $getter = $this->getConfig('export[useList][raw]', false)
+            ? 'getColumnValueRaw'
+            : 'getColumnValue';
+
+        $model = $widget->prepareModel();
+        $results = $model->get();
+        $records = [];
+        foreach ($results as $result) {
+            $record = [];
+            foreach ($columns as $column) {
+
+                if ($column->label !== 'Export') {
+                
+                $value = $widget->$getter($result, $column);
+                if (is_array($value)) {
+                    $value = implode('|', $value);
+                }
+                $record[] = $value;
+
+                }
+
+            }
+            $records[] = $record;
+        }
+        return PDF::loadTemplate('digitalartisan.enseignement::pdf.liste_eleves',
+            ['headers' => $headers, 'records' => $records])->stream('export.pdf');
+    }
+
+
 
     public function onPDF()
         {
+            # Retiré :
+            
             # Bouton PDF en haut de la table des élèves
             
             # Flash::error("DO NOT CLICK THIS BUTTON!");
@@ -59,6 +107,8 @@ class Eleves extends Controller
             return PDF::loadTemplate($templateCode, $data)->stream();
 */
         }
+
+
 
     public function update($recordId, $context = null)
     {

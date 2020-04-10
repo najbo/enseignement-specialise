@@ -1,0 +1,21 @@
+title = "ESP - Liste élèves"
+layout = "digitalartisan.enseignement::pdf.layouts.default"
+description = "Template pour liste des élèves"
+size = "a4"
+orientation = "portrait"
+==
+
+<table border="1" style="border-collapse: collapse;">        
+    <tr>
+    {% for header in headers %}
+        <th>{{ header }}</th>
+    {% endfor %}
+    </tr>        
+    {% for record in records %}
+    <tr>
+        {% for data in record %}
+            <td>{{ data }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}        
+</table>

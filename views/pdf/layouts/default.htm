@@ -1,7 +1,31 @@
-name = "Default PDF layout"
+name = "ESP - layout par défaut"
 ==
 body {
-    font-size: 16px;
+    font-size: 16px; }
+@page { margin:5mm 15mm 5mm 20mm;}
+
+.fullwidth  {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+th {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.date {
+    width: 80px;
 }
 ==
 <!DOCTYPE html>

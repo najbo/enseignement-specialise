@@ -38,7 +38,8 @@ class Plugin extends PluginBase
     public function registerPDFTemplates()
     {
         return [
-            'digitalartisan.enseignement::pdf.invoice',
+            'digitalartisan.enseignement::pdf.detail_eleve',
+            'digitalartisan.enseignement::pdf.liste_eleves',
         ];
     }
 

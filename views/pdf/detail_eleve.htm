@@ -1,0 +1,183 @@
+title = "ESP - Détail éleve"
+layout = "digitalartisan.enseignement::pdf.layouts.default"
+description = "Template pour détail des éleves"
+size = "a4"
+orientation = "portrait"
+==
+<div class="section" id="profile">
+    <div class="left-col">
+    <h3>FICHE D'ÉLÈVE | {{ eleve.ecole.abreviation|upper }} {{ eleve.programme ? '| ' ~  eleve.programme|upper }}</h3>
+    <hr>
+        <h1>{{ eleve.prenom }} {{ eleve.nom |upper}}</h1>
+        <p>
+        	Adresse : {{ eleve.adresse }}<br>
+        	NPA et localité : {{ eleve.npa }} {{ eleve.localite }}
+        </p>
+        <p>
+        	Date de naissance : {{ eleve.naissance|date("d.m.Y") }}<br>
+        	Numéro assurance sociale : {{ eleve.nss }}
+        </p>
+
+        
+
+        <h3>Pathologies</h3>
+        <!--{% if eleve.pathologies %}<p>Pathologies : {{ eleve.pathologies.first().designation }}</p>{% endif %}-->
+        <p>
+        	{% for pathologie in eleve.pathologies %}  
+     			{{ pathologie.designation }}  
+    		{% endfor %} 
+    	</p>
+
+
+        <h3>Proches</h3>
+
+		<table class="fullwidth">       
+		    <tr>
+				<th>Prénom et nom</th>
+				<th>Adresse</th>
+				<th>Localité</th>
+				<th>Tél. mobile</th>
+				<th>Aut. par.</th>
+				<th>Rôle</th>
+		    </tr> 
+
+		    {% for proche in eleve.proches %} 
+		    <tr>	
+		    	<td>{{ proche.prenom }} {{ proche.nom|upper }}</td>
+		    	<td>{{ proche.adresse }}</td>
+		    	<td>{{ proche.localite }}</td>
+		    	<td>{{ proche.telephonemobile }}</td>
+		    	<td>{{ proche.is_autoriteparentale ? 'Oui' : 'Non' }}</td>
+		    	<td>{{ proche.procherole.is_autre ? proche.role : proche.procherole.designation }}</td>
+		    </tr>     
+			{% endfor %} 		     
+		</table>
+
+
+        <h3>Faits marquants</h3>
+
+		<table class="fullwidth"> 
+		    <tr>
+				<th>Début</th>
+				<th>Fin</th>
+				<th>Désignation</th>
+				<!--<th>Complément</th>-->
+				<th>Terminé</th>
+			</tr>    
+
+			{% for fait in eleve.faits %}  
+			<tr>	
+				<td class="date">{{ fait.debut ? fait.debut|date("d.m.Y") }}</td>
+				<td class="date">{{ fait.fin ? fait.fin|date("d.m.Y") }}</td>
+				<td>{{ fait.designation }}</td>
+				<!--<td>{{ fait.complement|length > 25 ? fait.complement|striptags('<br><img>')|raw|slice(0, 25) ~ '...' : fait.complement|striptags('<br><img>')|raw }}</td>-->
+				<td>{{ fait.is_closed ? 'Oui' }}</td>
+			</tr>     
+			{% endfor %} 
+		</table>
+
+
+
+        <h3>Suivi ESP</h3>
+
+		<table class="fullwidth"> 
+		    <tr>
+				<th class="date">Début</th>
+				<th class="date">Fin</th>
+				<th>Désignation</th>
+				<th>Pathologies</th>
+				<th>Activités</th>
+				<th>Statut</th>
+			</tr>    
+
+			{% for suivi in eleve.suivis %}  
+			<tr>	
+				<td class="date">{{ suivi.debut ? suivi.debut|date("d.m.Y") }}</td>
+				<td class="date"></td>>{{ suivi.fin ? suivi.fin|date("d.m.Y") }}</td>
+				<td>{{ suivi.designation }}</td>
+				<td>
+					{% for pathologie in suivi.pathologies %}  
+						{{ pathologie.designation }}  
+					{% endfor %} 
+				</td>
+				<td>{{ suivi.activites|length }}</td>
+				<td>{{ suivi.statut.designation }}</td>
+			</tr>     
+			{% endfor %} 
+		</table>
+ 
+	 	<h3>Remarques</h3>
+		{{ eleve.remarque|raw }}
+
+
+
+    </div>
+    <div class="right-col">
+        {% set config = {mode: 'crop', extension: 'auto'} %}
+        <img src="{{ user.avatar.getLocalPath() }}" style="max-width: 260px; max-height: 260px;" alt="" />
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="info">
+    <div class="left-col">
+        <table>
+            <tr>
+                <th>Fiche d'éleve créée le :</th>
+                <td>{{ eleve.created_at | date('d.m.Y H:i:s') }}</td>
+            </tr>
+            {% if user.company %}
+            <tr>
+                <th>Company:</th>
+                <td>{{ user.company }}</td>
+            </tr>
+            {% endif %}
+            {% if user.street_addr %}
+            <tr>
+                <th>Street:</th>
+                <td>{{ user.street_addr }}</td>
+            </tr>
+            {% endif %}
+            {% if user.city %}
+            <tr>
+                <th>City:</th>
+                <td>{{ user.city }}</td>
+            </tr>
+            {% endif %}
+            {% if user.zip %}
+            <tr>
+                <th>ZIP:</th>
+                <td>{{ user.zip }}</td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+    <div class="right-col">
+        <table>
+            {% if user.phone %}
+            <tr>
+                <th>Phone:</th>
+                <td>{{ user.phone }}</td>
+            </tr>
+            {% endif %}
+            {% if user.mobile %}
+            <tr>
+                <th>Mobile:</th>
+                <td>{{ user.mobile }}</td>
+            </tr>
+            {% endif %}
+            {% if user.state %}
+            <tr>
+                <th>State:</th>
+                <td>{{ user.state.name }}</td>
+            </tr>
+            {% endif %}
+            {% if user.country %}
+            <tr>
+                <th>Country:</th>
+                <td>{{ user.country.name }}</td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+    <div class="clear"></div>
+</div>
