@@ -11,6 +11,8 @@ class Seeder1040 extends Seeder
         
         Cercle::create([
             'designation' => 'Tavannes',
+            'entete_document' => 'Enseignement spécialisé | Cercle de Tavannes',
+            'responsable' => 'Virginie Léchot',
             'is_default' => 1,
         ]);
     }

@@ -4,3 +4,7 @@ columns:
         type: text
         searchable: true
         sortable: false
+    is_archived:
+        label: Archivé
+        type: switch
+        searchable: true

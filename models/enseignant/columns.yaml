@@ -17,7 +17,7 @@ columns:
         select: abreviation
         relation: ecoles
     is_maitreclasse:
-        label: 'Maître de calsse'
+        label: 'Maître de classe'
         type: switch
         searchable: true
         sortable: true

@@ -13,6 +13,8 @@ class BuilderTableCreateDigitalartisanEnseignementCercles extends Migration
             $table->increments('id')->unsigned();
             $table->string('code', 20)->nullable();
             $table->string('designation', 255);
+            $table->string('entete_document', 255);
+            $table->string('responsable', 255);
             $table->text('complement')->nullable();
             $table->integer('sort_order')->nullable();
             $table->boolean('is_archived')->nullable()->default(0);

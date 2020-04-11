@@ -1,0 +1,8 @@
+scopes:
+    is_archived:
+        label: Actif
+        type: switch
+        default: 2
+        conditions:
+            - is_archived <> false
+            - is_archived = false

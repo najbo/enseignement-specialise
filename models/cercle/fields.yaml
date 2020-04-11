@@ -7,6 +7,14 @@ fields:
         label: Code
         span: auto
         type: text
+    entete_document:
+        label: 'Entête de documents (PDF)'
+        span: auto
+        type: text
+    responsable:
+        label: Responsable
+        span: auto
+        type: text
     complement:
         label: Complément
         size: large
