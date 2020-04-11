@@ -27,7 +27,8 @@ class Eleve extends Model
         'prenom' => 'required'
     ];
 
-    public $documents = [
+    # Variable pour la liste d'impression PDF ; titre pour la liste générique
+    public $pdf_headers = [
         'title' => 'Liste des éleves',
         ];
 

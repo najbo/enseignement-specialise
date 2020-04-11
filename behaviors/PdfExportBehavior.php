@@ -27,8 +27,8 @@ class PdfExportBehavior extends ControllerBehavior
     public function exports()
     {
 
-        $documents = []; #Valeurs d'entête du document
-        $documents['title'] = 'Titre';
+        $pdf_headers = []; #Valeurs d'entête du document
+        #$pdf_headers['title'] = 'Titre';
 
 
         $lists = $this->parent->makeLists();
@@ -75,16 +75,16 @@ class PdfExportBehavior extends ControllerBehavior
        
         #$test = array_map("utf8_encode", $records);
         
-        $documents['title'] = URL::current();
-        $documents['title'] = $this->parent->pageTitle;
+        #$documents['title'] = URL::current();
+
 
         # Log::info($records);
 
-        $documents = $model->getModel()->documents;
+        $pdf_headers = $model->getModel()->pdf_headers;
 
 
         return PDF::loadTemplate('digitalartisan.enseignement::pdf.liste_générique',
-            ['documents' => $documents, 'headers' => $headers, 'records' => $records])->stream('export.pdf');
+            ['pdf_headers' => $pdf_headers, 'headers' => $headers, 'records' => $records])->stream('export.pdf');
     }    
 
 

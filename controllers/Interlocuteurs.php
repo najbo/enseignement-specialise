@@ -5,7 +5,10 @@ use BackendMenu;
 
 class Interlocuteurs extends Controller
 {
-    public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController'    ];
+    public $implement = [       'Backend\Behaviors\ListController',
+                                'Backend\Behaviors\FormController',
+                                'DigitalArtisan\Enseignement\Behaviors\PdfExportBehavior',
+                            ];
     
     public $listConfig = 'config_list.yaml';
     public $formConfig = 'config_form.yaml';

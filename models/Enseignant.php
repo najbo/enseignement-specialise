@@ -30,7 +30,7 @@ class Enseignant extends Model
     ];
 
     # Variable pour la liste d'impression PDF ; titre pour la liste générique
-    public $documents = [
+    public $pdf_headers = [
         'title' => 'Liste des enseignants',
         ];
 

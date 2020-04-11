@@ -28,6 +28,12 @@ class Interlocuteur extends Model
         'mail' => 'email'
     ];
 
+    # Variable pour la liste d'impression PDF ; titre pour la liste générique
+    public $pdf_headers = [
+        'title' => 'Liste des interlocuteurs / tiers',
+        ];
+
+
     public $belongsToMany = [
         'fonctions' => [
             'DigitalArtisan\Enseignement\Models\Fonction',

@@ -1,6 +1,11 @@
 <div data-control="toolbar">
         <a href="<?= Backend::url('digitalartisan/enseignement/enseignants/create') ?>" class="btn btn-primary oc-icon-plus"><?= e(trans('backend::lang.form.create')) ?></a>
-            <button
+
+        <a target="_blank" href="<?= Backend::url('digitalartisan/enseignement/enseignants/exports') ?>" 
+            class="btn btn-primary oc-icon-sign-out">Liste PDF</a> 
+               
+
+    <button
         class="btn btn-default oc-icon-trash-o"
         disabled="disabled"
         onclick="$(this).data('request-data', {
@@ -15,10 +20,4 @@
         data-stripe-load-indicator>
         <?= e(trans('backend::lang.list.delete_selected')) ?>
     </button>
-
-<a target="_blank" href="<?= Backend::url('digitalartisan/enseignement/enseignants/exports') ?>" 
-            class="btn btn-primary oc-icon-sign-out">Liste PDF gen</a> 
-               
 </div>
-
-

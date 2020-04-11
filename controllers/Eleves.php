@@ -5,7 +5,7 @@ use BackendMenu;
 use Flash;
 use Log;
 use BackendAuth;
-use Renatio\DynamicPDF\Classes\PDF;
+#use Renatio\DynamicPDF\Classes\PDF;
 
 
 class Eleves extends Controller
