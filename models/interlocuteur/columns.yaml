@@ -20,7 +20,7 @@ columns:
         searchable: true
         sortable: true
         select: designation
-        relation: fonctions        
+        relation: fonctions
     localite:
         label: Localité
         type: text
@@ -42,3 +42,8 @@ columns:
         sortable: true
         relation: suivis
         useRelationCount: 'yes'
+    is_archived:
+        label: Archivé
+        type: switch
+        searchable: true
+        sortable: true

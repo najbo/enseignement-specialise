@@ -55,10 +55,8 @@ columns:
         select: abreviation
         relation: genre
         cssClass: nopdf
-    export:
-        label: Export
-        type: partial
-        cssClass: nopdf
-        path: ~/plugins/digitalartisan/enseignement/models/eleve/_export_column.htm
-        searchable: false
-        sortable: false
+    is_archived:
+        label: Archivé
+        type: switch
+        searchable: true
+        sortable: true

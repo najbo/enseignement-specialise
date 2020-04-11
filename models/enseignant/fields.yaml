@@ -137,3 +137,9 @@ tabs:
                 extension: auto
             type: fileupload
             tab: 'Documents généraux'
+        is_archived:
+            label: Archivé
+            span: auto
+            type: checkbox
+            comment: 'Les données de l''enseignant ne sont pas effacées'
+            tab: 'Autres données'

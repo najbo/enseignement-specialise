@@ -37,3 +37,8 @@ columns:
         sortable: true
         select: abreviation
         relation: genre
+    is_archived:
+        label: Archivé
+        type: switch
+        searchable: true
+        sortable: true

@@ -60,3 +60,9 @@ tabs:
             span: full
             type: richeditor
             tab: Remarques
+        is_archived:
+            label: Archivé
+            span: auto
+            type: checkbox
+            comment: 'Les données de cet interlocuteur ne sont pas effacées'
+            tab: 'Autres données'

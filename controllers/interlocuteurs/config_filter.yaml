@@ -3,4 +3,12 @@ scopes:
         label: Fonctions
         modelClass: DigitalArtisan\Enseignement\Models\Fonction
         conditions: id in (select interloc_id from digitalartisan_enseignement_inter_fct where fct_id in (:filtered))
-        nameFrom: designation                                        
+        nameFrom: designation
+    is_archived:
+        label: Actif
+        type: switch
+        default: 2
+        conditions:
+            - is_archived <> false
+            - is_archived = false
+                    
