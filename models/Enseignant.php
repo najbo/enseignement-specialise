@@ -29,6 +29,12 @@ class Enseignant extends Model
         'mail' => 'email'
     ];
 
+    # Variable pour la liste d'impression PDF ; titre pour la liste générique
+    public $documents = [
+        'title' => 'Liste des enseignants',
+        ];
+
+
     public $attachMany = [
         'images' => ['System\Models\File', 'public' => false],
         'documents' => ['System\Models\File', 'public' => false]

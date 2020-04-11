@@ -3,11 +3,13 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 
+
 class Enseignants extends Controller
 {
     public $implement = [       'Backend\Behaviors\ListController',
                                 'Backend\Behaviors\FormController',
                                 'Backend.Behaviors.RelationController',
+                                'DigitalArtisan\Enseignement\Behaviors\PdfExportBehavior'
                         ];
     
     public $listConfig = 'config_list.yaml';

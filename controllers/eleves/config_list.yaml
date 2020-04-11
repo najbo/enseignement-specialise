@@ -1,4 +1,4 @@
-title: Eleves
+title: Elèves
 modelClass: DigitalArtisan\Enseignement\Models\Eleve
 list: $/digitalartisan/enseignement/models/eleve/columns.yaml
 recordUrl: 'digitalartisan/enseignement/eleves/update/:id'

@@ -27,6 +27,10 @@ class Eleve extends Model
         'prenom' => 'required'
     ];
 
+    public $documents = [
+        'title' => 'Liste des éleves',
+        ];
+
 
     public $attachMany = [
         'images' => ['System\Models\File', 'public' => false],

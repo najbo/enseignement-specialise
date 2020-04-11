@@ -40,6 +40,7 @@ class Plugin extends PluginBase
         return [
             'digitalartisan.enseignement::pdf.detail_eleve',
             'digitalartisan.enseignement::pdf.liste_eleves',
+            'digitalartisan.enseignement::pdf.liste_generique',
         ];
     }
 
