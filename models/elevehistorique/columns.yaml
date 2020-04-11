@@ -23,11 +23,6 @@ columns:
         type: date
         searchable: true
         sortable: false
-    designation:
-        label: Désignation
-        type: text
-        searchable: true
-        sortable: false
     programme:
         label: Programme
         type: text
@@ -35,6 +30,11 @@ columns:
         sortable: false
         select: designation
         relation: programme
+    designation:
+        label: Désignation de la classe
+        type: text
+        searchable: true
+        sortable: false        
     passage:
         label: 'Décision fin annéee'
         type: text

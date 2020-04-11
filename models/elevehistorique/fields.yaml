@@ -29,7 +29,7 @@ fields:
         span: auto
         type: relation
     designation:
-        label: Désignation
+        label: Désignation de la classe
         span: auto
         type: text
     passage:
