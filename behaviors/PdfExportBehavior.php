@@ -11,11 +11,11 @@ use Response;
 use Str;
 use Log;
 use URL;
+use BackendAuth;
 
 class PdfExportBehavior extends ControllerBehavior
 {
     
-
     protected $parent;
 
     public function __construct($parent)
@@ -27,6 +27,8 @@ class PdfExportBehavior extends ControllerBehavior
     public function exports()
     {
 
+        $user = BackendAuth::getUser();
+        
         $pdf_headers = []; #Valeurs d'entête du document
         #$pdf_headers['title'] = 'Titre';
 
@@ -83,13 +85,15 @@ class PdfExportBehavior extends ControllerBehavior
         $pdf_headers = $model->getModel()->pdf_headers;
 
 
-        return PDF::loadTemplate('digitalartisan.enseignement::pdf.liste_générique',
-            ['pdf_headers' => $pdf_headers, 'headers' => $headers, 'records' => $records])->stream('export.pdf');
+        return PDF::loadTemplate('digitalartisan.enseignement::pdf.liste_générique', compact('user','pdf_headers', 'headers', 'records'))->stream('export.pdf');
     }    
 
 
     public function pdf($id)
     {
+
+        $user = BackendAuth::getUser();
+
         $eleve = Eleve::find($id);
         if ($eleve === null) {
             throw new ApplicationException('Elève non trouvé.');
@@ -108,7 +112,8 @@ class PdfExportBehavior extends ControllerBehavior
             ];
 
             return 
-                PDF::loadTemplate($templateCode, compact('eleve'))
+                #PDF::loadTemplate($templateCode, compact('eleve'))
+                PDF::loadTemplate($templateCode, compact('user', 'eleve'))
                 ->setOptions($options)
                 ->stream();
                 #->download($filename);

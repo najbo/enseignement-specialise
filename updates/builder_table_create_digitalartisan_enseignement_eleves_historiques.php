@@ -29,6 +29,7 @@ class BuilderTableCreateDigitalartisanEnseignementElevesHistoriques extends Migr
             $table->string('ecole_lieu', 255)->nullable();
             $table->boolean('is_auto')->nullable()->default(0);
             $table->boolean('is_done')->nullable()->default(0);
+            $table->integer('auteur_id')->unsigned()->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

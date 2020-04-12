@@ -40,11 +40,12 @@ class Interlocuteur extends Model
             'table' => 'digitalartisan_enseignement_inter_fct',
             'key' => 'interloc_id',
             'otherKey' => 'fct_id',
+            'softDelete' => true,
             'order' => 'sort_order']
     ];
 
     public $hasMany = [
-         'suivis' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'interlocuteur_id', 'order' => '']
+         'suivis' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'interlocuteur_id', 'order' => '','softDelete' => true]
     ]; 
 
     public function getFullNameAttribute() {

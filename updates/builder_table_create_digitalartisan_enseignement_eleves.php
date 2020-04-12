@@ -29,6 +29,7 @@ class BuilderTableCreateDigitalartisanEnseignementEleves extends Migration
             $table->string('nss', 16)->nullable();
             $table->string('programme', 20)->nullable();
             $table->boolean('is_actif')->nullable()->default(1);
+            $table->integer('auteur_id')->unsigned()->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

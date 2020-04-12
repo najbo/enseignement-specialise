@@ -58,11 +58,12 @@ class Enseignant extends Model
             'table' => 'digitalartisan_enseignement_ens_eco',
             'key' => 'ens_id',
             'otherKey' => 'eco_id',
+            'softDelete' => true,
             'order' => 'designation']
     ];
 
     public $hasMany = [
-          'faits' => ['DigitalArtisan\Enseignement\Models\EnseignantFait', 'key' => 'enseignant_id', 'order' => 'debut']
+          'faits' => ['DigitalArtisan\Enseignement\Models\EnseignantFait', 'key' => 'enseignant_id', 'order' => 'debut', 'softDelete' => true]
     ];     
 
     public function getFullNameAttribute() {

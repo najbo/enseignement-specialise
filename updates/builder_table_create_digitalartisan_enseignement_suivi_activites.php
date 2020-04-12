@@ -25,6 +25,7 @@ class BuilderTableCreateDigitalartisanEnseignementSuiviActivites extends Migrati
             $table->boolean('is_termine')->nullable()->default(false);
             $table->string('emplacement', 255)->nullable();
             $table->integer('statut_id')->nullable();
+            $table->integer('auteur_id')->unsigned()->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

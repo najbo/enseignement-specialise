@@ -4,6 +4,7 @@ use Backend\Classes\Controller;
 use BackendMenu;
 use Flash;
 use Log;
+use Redirect;
 use BackendAuth;
 #use Renatio\DynamicPDF\Classes\PDF;
 
@@ -109,6 +110,44 @@ class Eleves extends Controller
         }
 
 
+    /**
+     * Strike out deleted records
+     */
+    public function listInjectRowClass($record, $definition = null)
+    {
+        if ($record->trashed()) {
+            return 'strike';
+        }
+    }
+
+
+    /**
+     * Extends the form query to prevent non-superusers from accessing trashed records
+     */
+    public function formExtendQuery($query)
+    {
+        $user = BackendAuth::getUser();
+
+        if ($user->isSuperUser()) {
+            #$query->where('is_superuser', false);
+        
+            // Ensure soft-deleted records can still be managed
+            $query->withTrashed();
+        }
+    }
+
+
+    /**
+     * Prevents non-superusers from even seeing the Show trashed records filter
+     */
+    public function listFilterExtendScopes($filterWidget)
+    {
+        $user = BackendAuth::getUser();
+
+        if (!$user->isSuperUser()) {
+            $filterWidget->removeScope('show_deleted');
+        }
+    }
 
     public function update($recordId, $context = null)
     {
@@ -126,4 +165,16 @@ class Eleves extends Controller
         Flash::success('Hello '.$texte);
 
     }
+
+    /**
+     * Handle restoring users
+     */
+    public function update_onRestore($recordId)
+    {
+        $this->formFindModelObject($recordId)->restore();
+
+        Flash::success("Elève restauré avec succès");
+
+        return Redirect::refresh();
+    }    
 }

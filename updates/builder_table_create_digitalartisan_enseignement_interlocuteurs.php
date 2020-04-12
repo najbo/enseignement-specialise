@@ -23,6 +23,7 @@ class BuilderTableCreateDigitalartisanEnseignementInterlocuteurs extends Migrati
             $table->string('mail', 255)->nullable();
             $table->text('remarque')->nullable();
             $table->boolean('is_actif')->nullable()->default(1);
+            $table->integer('auteur_id')->unsigned()->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

@@ -1,0 +1,7 @@
+<?php
+
+if ($model->gestionnaire) {
+	echo '<h3>Fiche créée le '. $model->created_at->format('d.m.Y').' par</h3>';
+	echo $model->gestionnaire->full_name;
+}
+?>

@@ -32,3 +32,9 @@ scopes:
         conditions:
             - is_actif <> true
             - is_actif = true
+    show_deleted:
+        label: Afficher les supprimés
+        type: checkbox
+        modelClass: DigitalArtisan\Enseignement\Models\Eleve
+        scope: withTrashed
+        default: 0            

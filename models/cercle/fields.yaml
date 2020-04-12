@@ -11,26 +11,68 @@ fields:
         label: 'Entête de documents (PDF)'
         span: auto
         type: text
-    responsable:
-        label: Responsable
-        span: auto
-        type: text
-    complement:
-        label: Complément
-        size: large
-        span: full
-        type: richeditor
-    is_default:
-        label: 'Cercle par défaut'
-        span: auto
-        type: checkbox
-    is_statistiques:
-        label: Statistiques
-        span: auto
-        default: 1
-        type: checkbox
-    is_actif:
-        label: Actif
-        span: auto
-        default: 1
-        type: checkbox
+tabs:
+    fields:
+        complement:
+            label: Complément
+            size: small
+            span: full
+            type: richeditor
+            tab: 'Données de base'
+        is_default:
+            label: 'Cercle par défaut'
+            span: auto
+            type: checkbox
+            tab: 'Données de base'
+        is_statistiques:
+            label: Statistiques
+            span: auto
+            default: 1
+            type: checkbox
+            tab: 'Données de base'
+        is_actif:
+            label: Actif
+            span: auto
+            default: 1
+            type: checkbox
+            tab: 'Données de base'
+        prenom:
+            label: Prénom
+            span: auto
+            type: text
+            tab: Responsable
+        nom:
+            label: Nom
+            span: auto
+            type: text
+            tab: Responsable
+        adresse:
+            label: Adresse
+            span: auto
+            type: text
+            tab: Responsable
+        npa:
+            label: NPA
+            span: left
+            type: text
+            tab: Responsable
+        localite:
+            label: Localité
+            span: auto
+            type: text
+            tab: Responsable
+        telephonprof:
+            label: 'Téléphone professionnel'
+            span: auto
+            type: text
+            tab: Responsable
+        telephonemobile:
+            label: 'Téléphone mobile'
+            span: auto
+            type: text
+            tab: Responsable
+        mail:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: Responsable

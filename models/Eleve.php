@@ -2,6 +2,8 @@
 
 use Model;
 use DB;
+use BackendAuth;
+
 
 /**
  * Model
@@ -26,6 +28,8 @@ class Eleve extends Model
         'nom' => 'required',
         'prenom' => 'required'
     ];
+
+
 
     # Variable pour la liste d'impression PDF ; titre pour la liste générique
     public $pdf_headers = [
@@ -59,7 +63,10 @@ class Eleve extends Model
                    'order' => 'sort_order'],
         'permis' => ['DigitalArtisan\Enseignement\Models\ProchePermis',
                    'key' => 'permis_id',
-                   'order' => 'sort_order']                   
+                   'order' => 'sort_order'],
+        'gestionnaire' => ['DigitalArtisan\Enseignement\Models\Gestionnaire',
+                   'key' => 'auteur_id',
+                   'order' => 'last_name']                  
     ];
 
     public $belongsToMany = [
@@ -68,17 +75,24 @@ class Eleve extends Model
             'table' => 'digitalartisan_enseignement_path_eleve',
             'key' => 'eleve_id',
             'otherKey' => 'path_id',
+            'softDelete' => true,
             'order' => 'sort_order']
     ];
 
 
     public $hasMany = [
-         'proches' => ['DigitalArtisan\Enseignement\Models\Proche', 'key' => 'eleve_id', 'order' => ''],
-         'suivis' => ['DigitalArtisan\Enseignement\Models\Suivi', 'key' => 'eleve_id', 'order' => ''],
-         'historiques' => ['DigitalArtisan\Enseignement\Models\EleveHistorique', 'key' => 'eleve_id', 'order' => 'debut'],
-         'faits' => ['DigitalArtisan\Enseignement\Models\EleveFait', 'key' => 'eleve_id', 'order' => 'debut']
+         'proches' => ['DigitalArtisan\Enseignement\Models\Proche', 'key' => 'eleve_id', 'order' => '','softDelete' => true],
+         'suivis' => ['DigitalArtisan\Enseignement\Models\Suivi', 'key' => 'eleve_id', 'order' => '', 'softDelete' => true],
+         'historiques' => ['DigitalArtisan\Enseignement\Models\EleveHistorique', 'key' => 'eleve_id', 'order' => 'debut', 'softDelete' => true],
+         'faits' => ['DigitalArtisan\Enseignement\Models\EleveFait', 'key' => 'eleve_id', 'order' => 'debut', 'softDelete' => true]
     ]; 
 
+
+public function setAuteurIdAttribute($value)
+    {
+        $user = BackendAuth::getUser();
+        $this->attributes['auteur_id'] = $user->id;
+    }
 
 
     public function getFullNameAttribute() {
@@ -91,6 +105,8 @@ class Eleve extends Model
     {
         return $this->programme;
     }   
+
+
 
     public function getPrenomNomElevesOptions() {
         #$result = Eleve::orderBy('nom','prenom')->get()->pluck('FullName', 'id');
@@ -112,9 +128,36 @@ class Eleve extends Model
          #\Log::info("Before Save");
     }
 
-    public function afterSave()
+    public function AfterCreate()
+
+    {
+         $user = BackendAuth::getUser();
+
+         if ($user) {
+
+         $update = DB::table('digitalartisan_enseignement_eleves')
+                  ->where('id', $this->id)
+                  ->update(['auteur_id' => $user->id]);
+/* 
+            # This method fires the afterUpdate event:     
+            $eleve = Eleve::find($this->id);
+            $eleve->auteur_id = $user->id;
+            $eleve->save();
+*/
+
+             \Log::info("Ajout de l'élève ID ".$this->id. ' ' .$this->full_name .' par ' .$user->full_name);
+        }
+
+    }
+
+    public function afterUpdate()
         {
-         # \Log::info("Enregistrement de l'élève ID ".$this->id);    
+
+        $user = BackendAuth::getUser();
+
+        if ($user) {
+            \Log::info("Mise à jour de l'élève ID ".$this->id. ' ' .$this->full_name .' par ' .$user->full_name); 
+         }   
     }
 
     public function afterDelete()
@@ -126,8 +169,15 @@ class Eleve extends Model
         # $this->pathologies()->delete();
         
         # PathologieEleve::where("eleve_id", $this->id)->forceDelete(); // NoSoftDelete
-        PathologieEleve::where("eleve_id", $this->id)->delete(); // Softdelete
-         \Log::info("We just deleted record #".$this->id. " but *not* the related pathologies");    
+        $user = BackendAuth::getUser();
+
+        if ($user) {
+            # PathologieEleve::where("eleve_id", $this->id)->delete();
+            # Suivi::where("eleve_id", $this->id)->delete(); 
+
+            \Log::info("Effacement de l'éleve ID #".$this->id. " et effacement données liées");
+             }
+
     }
 
     public function filterFields($fields, $context)

@@ -10,7 +10,7 @@ orientation = "portrait"
 {% endput %}
 
 <div class="section" id="profile">
-    <div">
+    <div class="left-col">
     <h3>FICHE D'ÉLÈVE | {{ eleve.ecole.abreviation|upper }} {{ eleve.programme ? '| ' ~  eleve.programme|upper }}</h3>
     <hr>
         <h1>{{ eleve.prenom }} {{ eleve.nom |upper}}</h1>
@@ -116,18 +116,71 @@ orientation = "portrait"
 
 
     </div>
-
+    <div class="right-col">
+        {% set config = {mode: 'crop', extension: 'auto'} %}
+        <img src="{{ user.avatar.getLocalPath() }}" style="max-width: 260px; max-height: 260px;" alt="" />
+    </div>
     <div class="clear"></div>
 </div>
 <div id="info">
-    <h3>Informations</h3>
-    <div">
+    <div class="left-col">
         <table>
             <tr>
                 <th>Fiche d'éleve créée le :</th>
                 <td>{{ eleve.created_at | date('d.m.Y H:i:s') }}</td>
             </tr>
-           
+            {% if user.company %}
+            <tr>
+                <th>Company:</th>
+                <td>{{ user.company }}</td>
+            </tr>
+            {% endif %}
+            {% if user.street_addr %}
+            <tr>
+                <th>Street:</th>
+                <td>{{ user.street_addr }}</td>
+            </tr>
+            {% endif %}
+            {% if user.city %}
+            <tr>
+                <th>City:</th>
+                <td>{{ user.city }}</td>
+            </tr>
+            {% endif %}
+            {% if user.zip %}
+            <tr>
+                <th>ZIP:</th>
+                <td>{{ user.zip }}</td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+    <div class="right-col">
+        <table>
+            {% if user.phone %}
+            <tr>
+                <th>Phone:</th>
+                <td>{{ user.phone }}</td>
+            </tr>
+            {% endif %}
+            {% if user.mobile %}
+            <tr>
+                <th>Mobile:</th>
+                <td>{{ user.mobile }}</td>
+            </tr>
+            {% endif %}
+            {% if user.state %}
+            <tr>
+                <th>State:</th>
+                <td>{{ user.state.name }}</td>
+            </tr>
+            {% endif %}
+            {% if user.country %}
+            <tr>
+                <th>Country:</th>
+                <td>{{ user.country.name }}</td>
+            </tr>
+            {% endif %}
         </table>
     </div>
     <div class="clear"></div>

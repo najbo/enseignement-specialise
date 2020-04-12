@@ -25,4 +25,10 @@ class Cycle extends Model
     public $rules = [
         'designation' => 'required'
     ];
+
+
+    public function getFullNameAttribute() {
+        return $this->prenom.' '. $this->nom;
+    }   
+    
 }

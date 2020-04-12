@@ -12,7 +12,11 @@ class Seeder1040 extends Seeder
         Cercle::create([
             'designation' => 'Tavannes',
             'entete_document' => 'Enseignement spécialisé | Cercle de Tavannes',
-            'responsable' => 'Virginie Léchot',
+            'prenom' => 'Virginie',
+            'nom' => 'Léchot',
+            'adresse' => 'Le Saucy 32',
+            'npa' => '2722',
+            'localite' => 'Les Reussilles',
             'is_default' => 1,
         ]);
     }

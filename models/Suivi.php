@@ -60,12 +60,13 @@ class Suivi extends Model
             'table' => 'digitalartisan_enseignement_path_suivi',
             'key' => 'suivi_id',
             'otherKey' => 'path_id',
+            'softDelete' => true,
             'order' => 'sort_order']
     ];
    
     public $hasMany = [
-         'activites' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'suivi_id', 'order' => 'debut asc'],
-         'enseignants' => ['DigitalArtisan\Enseignement\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc']       
+         'activites' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'suivi_id', 'order' => 'debut asc', 'softDelete' => true],
+         'enseignants' => ['DigitalArtisan\Enseignement\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc', 'softDelete' => true]       
     ]; 
 
 

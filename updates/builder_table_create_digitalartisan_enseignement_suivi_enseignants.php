@@ -21,6 +21,7 @@ class BuilderTableCreateDigitalartisanEnseignementSuiviEnseignants extends Migra
             $table->text('remarques')->nullable();
             $table->date('debut')->nullable();
             $table->date('fin')->nullable();
+            $table->integer('auteur_id')->unsigned()->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

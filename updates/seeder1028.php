@@ -2,6 +2,9 @@
 
 use Seeder;
 use DigitalArtisan\Enseignement\Models\Eleve;
+# use DigitalArtisan\Enseignement\Models\Gestionnaire;
+
+
 
 class Seeder1028 extends Seeder
 {

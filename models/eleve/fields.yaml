@@ -187,3 +187,8 @@ tabs:
             default: 1
             type: checkbox
             tab: 'Autres données'
+        partial1:
+            span: auto
+            path: ~/plugins/digitalartisan/enseignement/models/eleve/_gestionnaire_field.htm
+            type: partial
+            tab: 'Autres données'
