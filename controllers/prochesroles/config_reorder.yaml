@@ -1,4 +1,4 @@
-title: ProchesRoles
+title: 'Réorganiser l''ordre des proches'
 modelClass: DigitalArtisan\Enseignement\Models\ProcheRole
 nameFrom: designation
 toolbar:

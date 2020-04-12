@@ -26,3 +26,8 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: checkbox  

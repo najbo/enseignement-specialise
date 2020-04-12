@@ -23,8 +23,8 @@ class Interlocuteur extends Model
      * @var array Validation rules
      */
     public $rules = [
-        'prenom' => 'required',
         'nom' => 'required',
+        'prenom' => 'required',
         'mail' => 'email'
     ];
 

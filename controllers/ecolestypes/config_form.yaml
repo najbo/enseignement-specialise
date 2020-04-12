@@ -1,0 +1,10 @@
+name: EcolesTypes
+form: $/digitalartisan/enseignement/models/ecoletype/fields.yaml
+modelClass: DigitalArtisan\Enseignement\Models\EcoleType
+defaultRedirect: digitalartisan/enseignement/ecolestypes
+create:
+    redirect: 'digitalartisan/enseignement/ecolestypes/update/:id'
+    redirectClose: digitalartisan/enseignement/ecolestypes
+update:
+    redirect: digitalartisan/enseignement/ecolestypes
+    redirectClose: digitalartisan/enseignement/ecolestypes

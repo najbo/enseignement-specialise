@@ -16,7 +16,7 @@ class BuilderTableCreateDigitalartisanEnseignementEcolesTypes extends Migration
             $table->text('complement')->nullable();
             $table->integer('typesuivant_id')->unsigned()->nullable();
             $table->integer('sort_order')->nullable()->unsigned();
-            $table->boolean('is_archived')->nullable()->default(0);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

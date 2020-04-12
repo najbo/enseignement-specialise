@@ -1,4 +1,4 @@
-title: ProchesPermis
+title: 'Réorganiser l''ordre des permis'
 modelClass: DigitalArtisan\Enseignement\Models\ProchePermis
 nameFrom: designation
 toolbar:

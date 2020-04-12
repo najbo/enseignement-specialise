@@ -17,7 +17,7 @@ class BuilderTableCreateDigitalartisanEnseignementPassages extends Migration
             $table->integer('passagetype_id')->nullable(); // 1 = Promu ; 2 = Redouble / 3 = Saute une année / 4 = Fin / sortie d'école / 5 = Pause
             $table->integer('sort_order')->nullable();
             $table->integer('decalage')->nullable();
-            $table->boolean('is_archived')->nullable()->default(0);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

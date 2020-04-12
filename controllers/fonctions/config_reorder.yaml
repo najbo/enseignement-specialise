@@ -1,4 +1,4 @@
-title: Fonctions
+title: 'Réorganiser l''ordre des fonctions'
 modelClass: DigitalArtisan\Enseignement\Models\Fonction
 nameFrom: designation
 toolbar:

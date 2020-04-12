@@ -23,5 +23,6 @@ class Fonction extends Model
      * @var array Validation rules
      */
     public $rules = [
+        'designation' => 'required'
     ];
 }

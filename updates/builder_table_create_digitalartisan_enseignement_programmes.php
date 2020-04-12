@@ -16,7 +16,7 @@ class BuilderTableCreateDigitalartisanEnseignementProgrammes extends Migration
             $table->integer('typecole_id')->nullable()->unsigned();
             $table->integer('cycle_id')->nullable()->unsigned();
             $table->integer('programmesuivant_id')->nullable();
-            $table->boolean('is_archived')->nullable()->default(0);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->integer('sort_order')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

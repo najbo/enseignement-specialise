@@ -1,4 +1,4 @@
-title: Ecole
+title: 'Réorganiser l''ordre des écoles'
 modelClass: DigitalArtisan\Enseignement\Models\Ecole
 nameFrom: designation
 toolbar:

@@ -1,4 +1,4 @@
-title: Fonctions
+title: 'Fonctions professionnelles'
 modelClass: DigitalArtisan\Enseignement\Models\Fonction
 list: $/digitalartisan/enseignement/models/fonction/columns.yaml
 recordUrl: 'digitalartisan/enseignement/fonctions/update/:id'
@@ -13,3 +13,4 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
+filter: config_filter.yaml

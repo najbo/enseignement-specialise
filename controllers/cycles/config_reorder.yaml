@@ -1,4 +1,4 @@
-title: Cycles
+title: 'Réorganiser l''ordre des cycles'
 modelClass: DigitalArtisan\Enseignement\Models\Cycle
 nameFrom: designation
 toolbar:

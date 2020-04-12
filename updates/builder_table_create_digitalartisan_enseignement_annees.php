@@ -18,7 +18,7 @@ class BuilderTableCreateDigitalartisanEnseignementAnnees extends Migration
             $table->text('complement')->nullable();
             $table->timestamp('bouclement')->nullable();
             $table->integer('gestionnaire_id')->nullable();
-            $table->boolean('is_archived')->nullable()->default(0);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

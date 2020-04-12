@@ -15,7 +15,7 @@ class BuilderTableCreateDigitalartisanEnseignementVolees extends Migration
             $table->text('complement')->nullable();
             $table->string('classe', 20)->nullable();
             # $table->integer('enseignant_id')->nullable();
-            $table->boolean('is_archived')->nullable()->default(0);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

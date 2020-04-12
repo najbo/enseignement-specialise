@@ -55,8 +55,8 @@ columns:
         select: abreviation
         relation: genre
         cssClass: nopdf
-    is_archived:
-        label: Archivé
+    is_actif:
+        label: Actif
         type: switch
         searchable: true
         sortable: true

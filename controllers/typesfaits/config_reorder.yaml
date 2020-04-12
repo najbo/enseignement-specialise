@@ -1,4 +1,4 @@
-title: TypesFaits
+title: 'Réorganiser l''ordre des types de faits'
 modelClass: DigitalArtisan\Enseignement\Models\TypeFait
 nameFrom: designation
 toolbar:

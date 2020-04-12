@@ -11,32 +11,39 @@ class Seeder1064 extends Seeder
 
         PassageType::create([
             'id' => 1,
-            'designation' => 'Promu',
+            'designation' => 'Aucune décision',
             'sort_order' => 1
-        ]);
-        
+        ]);  
+
         PassageType::create([
             'id' => 2,
-            'designation' => 'Redouble',
+            'designation' => 'Promu',
             'sort_order' => 2
         ]);
         
         PassageType::create([
             'id' => 3,
-            'designation' => 'Saute une année',
+            'designation' => 'Redouble',
             'sort_order' => 3
+        ]);
+        
+        PassageType::create([
+            'id' => 4,
+            'designation' => 'Saute une année',
+            'sort_order' => 4
         ]);        
 
         PassageType::create([
-            'id' => 4,
+            'id' => 5,
             'designation' => "Sortie ou fin d'école",
-            'sort_order' => 4
+            'sort_order' => 5
         ]);                
         
         PassageType::create([
-            'id' => 5,
+            'id' => 6,
             'designation' => 'Pause',
-            'sort_order' => 5
-        ]);                        
+            'sort_order' => 6
+        ]);        
+              
     }
 }

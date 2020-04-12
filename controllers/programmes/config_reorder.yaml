@@ -1,4 +1,4 @@
-title: Programmes
+title: 'Réorganiser l''ordre des programmes'
 modelClass: DigitalArtisan\Enseignement\Models\Programme
 nameFrom: designation
 toolbar:

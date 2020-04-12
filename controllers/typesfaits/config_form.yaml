@@ -1,6 +1,6 @@
-name: TypesFaits
-form: $/digitalartisan/enseignement/models/typefait/fields.yaml
+name: 'Types de faits'
 modelClass: DigitalArtisan\Enseignement\Models\TypeFait
+form: $/digitalartisan/enseignement/models/typefait/fields.yaml
 defaultRedirect: digitalartisan/enseignement/typesfaits
 create:
     redirect: 'digitalartisan/enseignement/typesfaits/update/:id'
@@ -8,3 +8,4 @@ create:
 update:
     redirect: digitalartisan/enseignement/typesfaits
     redirectClose: digitalartisan/enseignement/typesfaits
+preview: {  }

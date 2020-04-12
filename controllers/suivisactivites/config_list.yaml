@@ -1,4 +1,4 @@
-title: SuivisActivites
+title: 'Suivi des activités'
 modelClass: DigitalArtisan\Enseignement\Models\SuiviActivite
 list: $/digitalartisan/enseignement/models/suiviactivite/suivi_columns.yaml
 recordUrl: 'digitalartisan/enseignement/suivisactivites/update/:id'

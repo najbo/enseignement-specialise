@@ -4,17 +4,18 @@ fields:
         span: auto
         required: 1
         type: text
-    color:
-        label: Couleur
-        span: auto
-        type: colorpicker
+    # color:
+    #     label: Couleur
+    #     span: auto
+    #     type: colorpicker
     complement:
         label: Complément
         size: small
         span: full
         required: 1
         type: textarea
-    is_archived:
-        label: 'Est archivé'
+    is_actif:
+        label: Actif
         span: auto
-        type: switch
+        default: 1
+        type: checkbox

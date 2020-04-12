@@ -1,4 +1,4 @@
-title: Statuts
+title: 'Statuts des suivis'
 modelClass: DigitalArtisan\Enseignement\Models\Statut
 list: $/digitalartisan/enseignement/models/statut/columns.yaml
 recordUrl: 'digitalartisan/enseignement/statuts/update/:id'
@@ -13,3 +13,4 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
+filter: config_filter.yaml

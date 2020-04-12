@@ -1,4 +1,4 @@
-title: Therapies
+title: 'Réorganiser l''ordre des thérapies'
 modelClass: DigitalArtisan\Enseignement\Models\Therapie
 nameFrom: designation
 toolbar:

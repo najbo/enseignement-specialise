@@ -9,7 +9,8 @@ fields:
         span: full
         size: small
         type: textarea
-    is_archived:
-        label: Archivé
+    is_actif:
+        label: Actif
         span: auto
-        type: checkbox
+        default: 1
+        type: checkbox  

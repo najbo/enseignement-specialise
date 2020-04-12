@@ -42,3 +42,8 @@ columns:
         sortable: false
         select: abreviation
         relation: type
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: false

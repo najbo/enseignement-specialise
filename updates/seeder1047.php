@@ -37,6 +37,16 @@ class Seeder1047 extends Seeder
         ProchePermis::create([
             'designation' => 'Autre permis',
             'sort_order' => '100',
-        ]);             
+        ]); 
+
+        ProchePermis::create([
+            'designation' => 'Non relevant',
+            'sort_order' => '101',
+        ]);            
+
+        ProchePermis::create([
+            'designation' => 'Non connu',
+            'sort_order' => '102',
+        ]);                    
     }
 }

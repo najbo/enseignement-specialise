@@ -1,4 +1,4 @@
-title: TypesFaits
+title: 'Types de faits'
 modelClass: DigitalArtisan\Enseignement\Models\TypeFait
 list: $/digitalartisan/enseignement/models/typefait/columns.yaml
 recordUrl: 'digitalartisan/enseignement/typesfaits/update/:id'
@@ -13,3 +13,4 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
+filter: config_filter.yaml

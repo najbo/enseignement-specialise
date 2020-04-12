@@ -3,7 +3,7 @@
 use Model;
 
 /**
- * Model
+ * Model qui détermine le type d'école : primaire ou secondaire
  */
 class EcoleType extends Model
 {

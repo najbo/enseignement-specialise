@@ -15,8 +15,8 @@ columns:
         type: switch
         searchable: true
         sortable: false
-    is_archived:
-        label: 'Est archivé'
+    is_actif:
+        label: Actif
         type: switch
         searchable: true
         sortable: false

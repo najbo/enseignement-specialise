@@ -3,14 +3,14 @@ columns:
         label: Désignation
         type: text
         searchable: true
-        sortable: true
+        sortable: false
     abreviation:
         label: Abréviation
         type: text
         searchable: true
-        sortable: true
-    is_archived:
-        label: Archivé
+        sortable: false
+    is_actif:
+        label: Actif
         type: switch
         searchable: true
-        sortable: true
+        sortable: false

@@ -1,4 +1,4 @@
-title: Statut
+title: 'Réorganiser l''ordre des statuts'
 modelClass: DigitalArtisan\Enseignement\Models\Statut
 nameFrom: designation
 toolbar:

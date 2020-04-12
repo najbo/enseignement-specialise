@@ -16,7 +16,7 @@ class BuilderTableCreateDigitalartisanEnseignementEcoles extends Migration
             $table->string('adresse', 255)->nullable();
             $table->string('npa', 10)->nullable();
             $table->string('localite', 255)->nullable();
-            $table->boolean('is_archived')->default(0);
+            $table->boolean('is_actif')->default(1);
             $table->integer('cercle_id')->unsigned()->nullable();
             $table->integer('type_id')->unsigned()->nullable();
             $table->integer('ecolesuivante_id')->unsigned()->nullable();

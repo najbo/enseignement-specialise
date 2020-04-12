@@ -1,4 +1,4 @@
-title: Genres
+title: 'Réorganiser l''ordre des genres'
 modelClass: DigitalArtisan\Enseignement\Models\Genre
 nameFrom: designation
 toolbar:

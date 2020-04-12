@@ -1,4 +1,4 @@
-title: Pathologies
+title: 'Réorganiser l''ordre des pathologies'
 modelClass: DigitalArtisan\Enseignement\Models\Pathologie
 nameFrom: designation
 toolbar:

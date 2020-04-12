@@ -14,11 +14,10 @@ scopes:
         modelClass: DigitalArtisan\Enseignement\Models\Langue
         conditions: langue_id in (:filtered)
         nameFrom: designation
-    is_archived:
+    is_actif:
         label: Actif
         type: switch
         default: 2
         conditions:
-            - is_archived <> false
-            - is_archived = false
-            
+            - is_actif <> true
+            - is_actif = true

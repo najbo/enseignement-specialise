@@ -23,6 +23,7 @@ class Pays extends Model
      * @var array Validation rules
      */
     public $rules = [
-        'is_origin' => 'unique:pays'
+        'designation' => 'required',
+        #'is_origine' => 'unique:digitalartisan_enseignement_pays'
     ];
 }

@@ -1,4 +1,4 @@
-title: ProchesRoles
+title: 'Rôles des proches'
 modelClass: DigitalArtisan\Enseignement\Models\ProcheRole
 list: $/digitalartisan/enseignement/models/procherole/columns.yaml
 recordUrl: 'digitalartisan/enseignement/prochesroles/update/:id'
@@ -13,3 +13,4 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
+filter: config_filter.yaml

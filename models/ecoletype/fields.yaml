@@ -12,7 +12,9 @@ fields:
         size: large
         span: full
         type: textarea
-    is_archived:
-        label: Checkbox
+    is_actif:
+        label: Actif
         span: auto
+        default: 1
         type: checkbox
+

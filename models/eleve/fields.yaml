@@ -181,9 +181,9 @@ tabs:
             placeholder: '756.'
             type: text
             tab: 'Autres données'
-        is_archived:
-            label: 'Archiver l''élève'
+        is_actif:
+            label: Actif
             span: auto
+            default: 1
             type: checkbox
-            comment: 'Les données de l''élève ne sont pas effacées'
             tab: 'Autres données'

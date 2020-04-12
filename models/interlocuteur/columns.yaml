@@ -42,8 +42,8 @@ columns:
         sortable: true
         relation: suivis
         useRelationCount: 'yes'
-    is_archived:
-        label: Archivé
+    is_actif:
+        label: Actif
         type: switch
         searchable: true
         sortable: true

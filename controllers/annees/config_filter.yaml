@@ -1,0 +1,8 @@
+scopes:
+     is_actif:
+        label: Actif
+        type: switch
+        default: 2
+        conditions:
+            - is_actif <> true
+            - is_actif = true

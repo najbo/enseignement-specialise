@@ -3,7 +3,7 @@ plugin:
     description: 'Gère le suivi de l''enseignement spécialisé'
     author: digital-artisan
     icon: oc-icon-trophy
-    homepage: 'www.digital-artisan.ch'
+    homepage: www.digital-artisan.ch
 permissions:
     digitalartisan.enseignement.interlocuteurs:
         tab: 'Ressources humaines'
@@ -71,6 +71,9 @@ permissions:
     digitalartisan.enseignement.programmes:
         tab: Structures
         label: 'Gère les programmes et les cycles liés'
+    digitalartisan.enseignement.ecoletype:
+        tab: Structures
+        label: 'Gère les types d''écoles'
 navigation:
     protocoles:
         label: Protocoles
@@ -156,6 +159,10 @@ navigation:
                 label: Volées
                 url: digitalartisan/enseignement/volees
                 icon: icon-sitemap
+            ecoles-types:
+                label: 'Types d''écoles'
+                url: digitalartisan/enseignement/ecolestypes
+                icon: icon-list-ul
     bases:
         label: Bases
         url: digitalartisan/enseignement/pays

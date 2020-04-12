@@ -36,10 +36,11 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
-    is_archived:
-        label: 'Est archivé'
+    is_actif:
+        label: Actif
         span: auto
-        type: switch                
+        default: 1
+        type: checkbox                
 tabs:
     fields:
         adresse:

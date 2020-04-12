@@ -1,4 +1,4 @@
-title: Types
+title: 'Types d''activités'
 modelClass: DigitalArtisan\Enseignement\Models\Type
 list: $/digitalartisan/enseignement/models/type/columns.yaml
 recordUrl: 'digitalartisan/enseignement/types/update/:id'

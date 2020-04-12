@@ -19,7 +19,7 @@ class BuilderTableCreateDigitalartisanEnseignementSuivi extends Migration
             $table->integer('eleve_id');
             $table->integer('statut_id');
             $table->integer('gestionnaire_id')->nullable()->unsigned();
-            $table->boolean('is_archived')->nullable();
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

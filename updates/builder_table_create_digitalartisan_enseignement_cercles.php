@@ -17,7 +17,7 @@ class BuilderTableCreateDigitalartisanEnseignementCercles extends Migration
             $table->string('responsable', 255);
             $table->text('complement')->nullable();
             $table->integer('sort_order')->nullable();
-            $table->boolean('is_archived')->nullable()->default(0);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->boolean('is_statistiques')->nullable()->default(1);
             $table->boolean('is_default')->nullable()->default(0);
             $table->timestamp('created_at')->nullable();

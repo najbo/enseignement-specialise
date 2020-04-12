@@ -3,9 +3,14 @@ columns:
         label: Désignation
         type: text
         searchable: true
-        sortable: true
+        sortable: false
     is_autre:
         label: 'Autre rôle'
         type: switch
         searchable: true
-        sortable: true
+        sortable: false
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: false

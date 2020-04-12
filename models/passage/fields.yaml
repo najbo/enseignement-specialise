@@ -14,3 +14,8 @@ fields:
         span: full
         size: large
         type: textarea
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: checkbox

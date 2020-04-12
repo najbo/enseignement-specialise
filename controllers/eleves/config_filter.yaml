@@ -25,10 +25,10 @@ scopes:
         conditions: id in (select eleve_id from digitalartisan_enseignement_proches where id in (:filtered))
         #nameFrom: FullName
         options: getPrenomNomProchesOptions           
-    is_archived:
+    is_actif:
         label: Actif
         type: switch
         default: 2
         conditions:
-            - is_archived <> false
-            - is_archived = false
+            - is_actif <> true
+            - is_actif = true

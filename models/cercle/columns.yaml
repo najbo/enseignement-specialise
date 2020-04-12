@@ -26,3 +26,8 @@ columns:
         searchable: true
         sortable: false
         relation: ecoles
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: false

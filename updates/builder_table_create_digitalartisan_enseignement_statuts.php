@@ -15,7 +15,7 @@ class BuilderTableCreateDigitalartisanEnseignementStatuts extends Migration
             $table->text('complement')->nullable();
             $table->string('color_txt', 20)->default('#000000')->nullable();
             $table->string('color_bg', 20)->default('#bdc3c7')->nullable();
-            $table->boolean('is_archived')->nullable()->default(0);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->boolean('is_finished')->nullable()->default(0);
             $table->integer('sort_order')->nullable();
             $table->timestamp('created_at')->nullable();

@@ -1,4 +1,4 @@
-title: Langues
+title: 'Réorganiser l''ordre des langues'
 modelClass: DigitalArtisan\Enseignement\Models\Langue
 nameFrom: designation
 toolbar:

@@ -8,3 +8,8 @@ fields:
         span: auto
         type: switch
         comment: 'Permet d''introduire un texte spécifique'
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: checkbox

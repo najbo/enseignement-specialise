@@ -1,4 +1,4 @@
-title: Passages
+title: 'Réorganiser l''ordre des passages'
 modelClass: DigitalArtisan\Enseignement\Models\Passage
 nameFrom: designation
 toolbar:

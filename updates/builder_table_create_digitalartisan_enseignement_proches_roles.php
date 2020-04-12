@@ -14,6 +14,7 @@ class BuilderTableCreateDigitalartisanEnseignementProchesRoles extends Migration
             $table->string('designation');
             $table->integer('sort_order')->nullable();
             $table->boolean('is_autre')->nullable()->default(0);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

@@ -25,3 +25,8 @@ columns:
         sortable: false
         select: designation
         relation: programmesuivant
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: false        

@@ -1,4 +1,4 @@
-title: Cercles
+title: 'Réorganiser l''ordre des cercles'
 modelClass: DigitalArtisan\Enseignement\Models\Cercle
 nameFrom: designation
 toolbar:

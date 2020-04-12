@@ -11,3 +11,8 @@ fields:
         label: 'Pays par défaut'
         span: auto
         type: checkbox
+    is_actif:
+        label: Actif
+        span: auto
+        default: 1
+        type: checkbox

@@ -29,7 +29,8 @@ fields:
         span: auto
         default: 1
         type: checkbox
-    is_archived:
-        label: Archivé
+    is_actif:
+        label: Actif
         span: auto
+        default: 1
         type: checkbox

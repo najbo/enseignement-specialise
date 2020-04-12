@@ -14,7 +14,7 @@ class BuilderTableCreateDigitalartisanEnseignementPays extends Migration
             $table->string('designation', 255);
             $table->string('iso', 5)->nullable();
             $table->boolean('is_origine')->nullable()->default(0);
-            $table->boolean('is_archived')->nullable()->default(0);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

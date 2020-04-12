@@ -1,4 +1,4 @@
-title: Types
+title: 'Réorganiser l''ordre des types d''activités'
 modelClass: DigitalArtisan\Enseignement\Models\Type
 nameFrom: designation
 toolbar:

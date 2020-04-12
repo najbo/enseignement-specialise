@@ -29,7 +29,7 @@ class BuilderTableCreateDigitalartisanEnseignementEnseignants extends Migration
             $table->string('permis_id', 10)->nullable();
             $table->boolean('is_maitreclasse')->nullable()->default(0);
             $table->boolean('is_direction')->nullable()->default(0);
-            $table->boolean('is_archived')->nullable()->default(0);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();

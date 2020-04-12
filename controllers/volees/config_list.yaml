@@ -1,4 +1,4 @@
-title: Volees
+title: Volées
 modelClass: DigitalArtisan\Enseignement\Models\Volee
 list: $/digitalartisan/enseignement/models/volee/columns.yaml
 recordUrl: 'digitalartisan/enseignement/volees/update/:id'
@@ -10,3 +10,4 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
+filter: config_filter.yaml

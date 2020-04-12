@@ -30,3 +30,8 @@ columns:
         searchable: true
         select: designation
         relation: anneesuivante
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: false

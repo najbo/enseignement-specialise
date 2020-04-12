@@ -4,3 +4,8 @@ columns:
         type: text
         searchable: true
         sortable: true
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: true
+        sortable: true 
