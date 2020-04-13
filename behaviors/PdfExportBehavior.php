@@ -24,7 +24,7 @@ class PdfExportBehavior extends ControllerBehavior
     }
 
 
-    public function exports()
+    public function liste_pdf()
     {
 
         $user = BackendAuth::getUser();
@@ -89,7 +89,7 @@ class PdfExportBehavior extends ControllerBehavior
     }    
 
 
-    public function pdf($id)
+    public function pdf_eleve($id)
     {
 
         $user = BackendAuth::getUser();

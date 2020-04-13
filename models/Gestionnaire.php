@@ -1,50 +1,13 @@
 <?php namespace DigitalArtisan\Enseignement\Models;
 
 use Model;
+use \Backend\Models\User;
 
 /**
  * Gestionnaire Model
  */
-class Gestionnaire extends Model
+class Gestionnaire extends User
 {
-    use \October\Rain\Database\Traits\Validation;
-    use \October\Rain\Database\Traits\SoftDelete;
-
-
-    protected $dates = ['deleted_at'];
-
-    /**
-     * @var string The database table used by the model.
-     */
-    public $table = 'backend_users';
-
-    /**
-     * @var array Guarded fields
-     */
-    protected $guarded = ['*'];
-
-    /**
-     * @var array Fillable fields
-     */
-    protected $fillable = [];
-
-    public $rules = [
-            'first_name' => 'required',
-            'last_name' => 'required'
-        ];
-
-
-    public function getFullNameAttribute()
-    {
-        return trim($this->first_name . ' ' . $this->last_name);
-    }
-
-    /**
-     * @var array Relations
-     */
-    public $hasOne = [];
-    public $hasMany = [];
-    public $belongsTo = [];
 
     public $belongsToMany = [
             'suivis' => [
@@ -54,11 +17,13 @@ class Gestionnaire extends Model
             ],
     ];
 
-    public $morphTo = [];
-    public $morphOne = [];
-    public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [];
+
+    public function getFullNameAttribute()
+    {
+        return trim($this->first_name . ' ' . $this->last_name);
+    }
+
+
 
 
     public function scopeActive($query)

@@ -5,190 +5,284 @@ plugin:
     icon: oc-icon-trophy
     homepage: www.digital-artisan.ch
 permissions:
-    digitalartisan.enseignement.interlocuteurs:
-        tab: 'Ressources humaines'
-        label: 'Gère les interlocuteurs'
-    digitalartisan.enseignement.statuts:
-        tab: Protocoles
-        label: 'Gère les statuts de la prise en charge'
-    digitalartisan.enseignement.eleves:
-        tab: 'Ressources humaines'
-        label: 'Gère les élèves de l''enseignement spécialisé'
-    digitalartisan.enseignement.volees:
-        tab: Structures
-        label: 'Gère les volées'
-    digitalartisan.enseignement.annees:
-        tab: Structures
-        label: 'Gère les années scolaires'
-    digitalartisan.enseignement.ecoles:
-        tab: Structures
-        label: 'Gère les écoles'
-    digitalartisan.enseignement.pathologies:
-        tab: Protocoles
-        label: 'Gère les pathologies des cas'
-    digitalartisan.enseignement.fonctions:
-        tab: Protocoles
-        label: 'Gère les fonctions des suivis'
     digitalartisan.enseignement.suivis:
-        tab: Protocoles
+        tab: 'ESP - Protocoles'
         label: 'Gère le suivi des élèves'
+        order: 50
+    digitalartisan.enseignement.pathologies:
+        tab: 'ESP - Protocoles'
+        label: 'Gère les pathologies'        
     digitalartisan.enseignement.therapies:
-        tab: Protocoles
-        label: 'Gère les thérapies à disposition'
+        tab: 'ESP - Protocoles'
+        label: 'Gère les mesures (thérapies) à disposition'
+    digitalartisan.enseignement.statuts:
+        tab: 'ESP - Protocoles'
+        label: 'Gère les statuts de la prise en charge'
     digitalartisan.enseignement.types:
-        tab: Protocoles
+        tab: 'ESP - Protocoles'
         label: 'Gère les types d''activités liées aux suivis'
-    digitalartisan.enseignement.prochesroles:
-        tab: 'Ressources humaines'
-        label: 'Gère les rôles des proches (parents et autres)'
+
+
+    digitalartisan.enseignement.eleves:
+        tab: 'ESP - Ressources humaines'
+        label: 'Gère les élèves de l''enseignement spécialisé'
+        order: 51
+    digitalartisan.enseignement.interlocuteurs:
+        tab: 'ESP - Ressources humaines'
+        label: 'Gère les interlocuteurs' 
     digitalartisan.enseignement.enseignants:
-        tab: 'Ressources humaines'
+        tab: 'ESP - Ressources humaines'
         label: 'Gère les enseignants'
-    digitalartisan.enseignement.pays:
-        tab: Structures
-        label: 'Gère les pays'
+    digitalartisan.enseignement.fonctions:
+        tab: 'ESP - Ressources humaines'
+        label: 'Gère les fonctions professionnelles des interlocuteurs'        
+    digitalartisan.enseignement.prochesroles:
+        tab: 'ESP - Ressources humaines'
+        label: 'Gère les rôles des proches (parents et autres)'
+
+
+    digitalartisan.enseignement.ecoles:
+        tab: 'ESP - Structures'
+        label: 'Gère les écoles'
+        order: 52
     digitalartisan.enseignement.cercles:
-        tab: Structures
+        tab: 'ESP - Structures'
         label: 'Gère les cercles des écoles'
-    digitalartisan.enseignement.genres:
-        tab: Structures
-        label: 'Gère les genres des différents protagonistes'
+    digitalartisan.enseignement.annees:
+        tab: 'ESP - Structures'
+        label: 'Gère les années scolaires'
+    digitalartisan.enseignement.programmes:
+        tab: 'ESP - Structures'
+        label: 'Gère les programmes et les cycles liés'
+    digitalartisan.enseignement.cycles:
+        tab: 'ESP - Structures'
+        label: 'Gère les cycles'
+    digitalartisan.enseignement.volees:
+        tab: 'ESP - Structures'
+        label: 'Gère les volées' 
+    digitalartisan.enseignement.ecoletype:
+        tab: 'ESP - Structures'
+        label: 'Gère les types d''écoles'  
+
+
+    digitalartisan.enseignement.pays:
+        tab: 'ESP - Bases'
+        label: 'Gère les pays'        
+        order: 53
     digitalartisan.enseignement.langues:
-        tab: Structures
+        tab: 'ESP - Bases'
         label: 'Gère les langues des différents protagonistes'
     digitalartisan.enseignement.prochespermis:
-        tab: 'Ressources humaines'
-        label: 'Gère les types de permis des proches'
+        tab: 'ESP - Bases'
+        label: 'Gère les types de permis des élèves et des proches'        
+    digitalartisan.enseignement.genres:
+        tab: 'ESP - Bases'
+        label: 'Gère les genres des différents protagonistes'                
     digitalartisan.enseignement.passages:
-        tab: Structures
+        tab: 'ESP - Bases'
         label: 'Gère les types de passages d''une année à l''autre pour les élèves'
     digitalartisan.enseignement.typesfaits:
-        tab: Structures
+        tab: 'ESP - Bases'
         label: 'Gère les types de faits des enseignants'
-    digitalartisan.enseignement.cycles:
-        tab: Structures
-        label: 'Gère les cycles'
-    digitalartisan.enseignement.programmes:
-        tab: Structures
-        label: 'Gère les programmes et les cycles liés'
-    digitalartisan.enseignement.ecoletype:
-        tab: Structures
-        label: 'Gère les types d''écoles'
+
+    digitalartisan.enseignement.can_restore:
+        tab: 'ESP - Droits spécifiques'
+        label: 'Peut restaurer des enregistrement effacés (softdeletes)'
+        order: 53
+    digitalartisan.enseignement.can_bouclement:
+        tab: 'ESP - Droits spécifiques'
+        label: 'Peut boucler une année spécifique (créée une nouvelle année dans l''historique des élèves)'        
+
 navigation:
     protocoles:
         label: Protocoles
         url: digitalartisan/enseignement/suivis
         icon: icon-pencil
+        permissions:
+            - digitalartisan.enseignement.suivis
+            - digitalartisan.enseignement.therapies
+            - digitalartisan.enseignement.statuts
+            - digitalartisan.enseignement.types
+            - digitalartisan.enseignement.pathologies  
         sideMenu:
             suivi:
                 label: 'Suivi des élèves'
                 url: digitalartisan/enseignement/suivis
                 icon: icon-stethoscope
+                permissions:
+                    - digitalartisan.enseignement.suivis
             activites:
                 label: Activités
                 url: digitalartisan/enseignement/suivisactivites
                 icon: icon-calendar-o
+                permissions:
+                    - digitalartisan.enseignement.suivis
+            pathologies:
+                label: Pathologies
+                url: digitalartisan/enseignement/pathologies
+                icon: icon-bug
+                permissions:
+                    - digitalartisan.enseignement.pathologies                    
             mesures:
                 label: Mesures
                 url: digitalartisan/enseignement/therapies
                 icon: icon-wheelchair
+                permissions:
+                    - digitalartisan.enseignement.therapies
             statuts:
                 label: 'Statuts des suivis'
                 url: digitalartisan/enseignement/statuts
                 icon: icon-tags
+                permissions:
+                    - digitalartisan.enseignement.statuts
             type-activites:
                 label: 'Types d''activités'
                 url: digitalartisan/enseignement/types
                 icon: icon-suitcase
+                permissions:
+                    - digitalartisan.enseignement.types
     ressources-humaines:
         label: 'Ressources humaines'
         url: digitalartisan/enseignement/eleves
         icon: icon-child
+        permissions:
+            - digitalartisan.enseignement.eleves
+            - digitalartisan.enseignement.interlocuteurs
+            - digitalartisan.enseignement.enseignants
+            - digitalartisan.enseignement.fonctions
+            - digitalartisan.enseignement.prochesroles
         sideMenu:
             eleves:
                 label: Elèves
                 url: digitalartisan/enseignement/eleves
                 icon: icon-mortar-board
+                permissions:
+                    - digitalartisan.enseignement.eleves
             interlocuteurs:
                 label: 'Interlocuteurs externes'
                 url: digitalartisan/enseignement/interlocuteurs
                 icon: icon-users
+                permissions:
+                    - digitalartisan.enseignement.interlocuteurs
             enseignants:
                 label: Enseignants
                 url: digitalartisan/enseignement/enseignants
                 icon: icon-coffee
-            pathologies:
-                label: Pathologies
-                url: digitalartisan/enseignement/pathologies
-                icon: icon-bug
+                permissions:
+                    - digitalartisan.enseignement.enseignants
             fonctions:
                 label: 'Fonctions professionnelles'
                 url: digitalartisan/enseignement/fonctions
                 icon: icon-ambulance
+                permissions:
+                    - digitalartisan.enseignement.fonctions
                 attributes: {  }
             roles-proches:
                 label: 'Rôles des proches'
                 url: digitalartisan/enseignement/prochesroles
                 icon: icon-link
+                permissions:
+                    - digitalartisan.enseignement.prochesroles
     structures:
         label: Structures
         url: digitalartisan/enseignement/ecoles
         icon: icon-sitemap
+        permissions:
+            - digitalartisan.enseignement.ecoles
+            - digitalartisan.enseignement.cercles
+            - digitalartisan.enseignement.annees
+            - digitalartisan.enseignement.programmes
+            - digitalartisan.enseignement.cycles
+            - digitalartisan.enseignement.volees
+            - digitalartisan.enseignement.ecoletype
         sideMenu:
             ecoles:
                 label: Ecoles
                 url: digitalartisan/enseignement/ecoles
                 icon: icon-institution
+                permissions:
+                    - digitalartisan.enseignement.ecoles
             cercles:
                 label: 'Cercles scolaires'
                 url: digitalartisan/enseignement/cercles
                 icon: icon-circle-o
+                permissions:
+                    - digitalartisan.enseignement.cercles
             annees:
                 label: 'Années scolaires'
                 url: digitalartisan/enseignement/annees
                 icon: icon-calendar
+                permissions:
+                    - digitalartisan.enseignement.annees
             programmes:
                 label: Programmes
                 url: digitalartisan/enseignement/programmes
                 icon: icon-sort-alpha-asc
+                permissions:
+                    - digitalartisan.enseignement.programmes
             cycles:
                 label: Cycles
                 url: digitalartisan/enseignement/cycles
                 icon: icon-bars
+                permissions:
+                    - digitalartisan.enseignement.cycles
             volees:
                 label: Volées
                 url: digitalartisan/enseignement/volees
                 icon: icon-sitemap
+                permissions:
+                    - digitalartisan.enseignement.volees
             ecoles-types:
                 label: 'Types d''écoles'
                 url: digitalartisan/enseignement/ecolestypes
                 icon: icon-list-ul
+                permissions:
+                    - digitalartisan.enseignement.ecoletype
     bases:
         label: Bases
         url: digitalartisan/enseignement/pays
         icon: icon-list
+        permissions:
+            - digitalartisan.enseignement.pays
+            - digitalartisan.enseignement.genres
+            - digitalartisan.enseignement.langues
+            - digitalartisan.enseignement.prochespermis
+            - digitalartisan.enseignement.passages
+            - digitalartisan.enseignement.typesfaits
         sideMenu:
             pays:
                 label: Pays
                 url: digitalartisan/enseignement/pays
                 icon: icon-flag
-            Genres:
-                label: Genres
-                url: digitalartisan/enseignement/genres
-                icon: icon-transgender
+                permissions:
+                    - digitalartisan.enseignement.pays
             langues:
                 label: Langues
                 url: digitalartisan/enseignement/langues
                 icon: icon-comments
+                permissions:
+                    - digitalartisan.enseignement.langues
             permis:
                 label: 'Types de permis'
                 url: digitalartisan/enseignement/prochespermis
                 icon: icon-suitcase
+                permissions:
+                    - digitalartisan.enseignement.prochespermis                                        
+            Genres:
+                label: Genres
+                url: digitalartisan/enseignement/genres
+                icon: icon-transgender
+                permissions:
+                    - digitalartisan.enseignement.genres
             passages:
                 label: Passages
                 url: digitalartisan/enseignement/passages
                 icon: icon-thumbs-o-up
+                permissions:
+                    - digitalartisan.enseignement.passages
             types-faits:
                 label: 'Types de faits'
                 url: digitalartisan/enseignement/typesfaits
                 icon: icon-phone
+                permissions:
+                    - digitalartisan.enseignement.typesfaits

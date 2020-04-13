@@ -13,6 +13,15 @@ class Eleve extends Model
     use \October\Rain\Database\Traits\Validation;
     use \October\Rain\Database\Traits\SoftDelete;
 
+    protected $user;
+
+    public function __construct(array $attributes = array())
+    {
+        $this->user = BackendAuth::getUser();
+        parent::__construct($attributes);
+    }
+
+
     protected $dates = ['naissance','deleted_at'];
 
     protected $appends = ['full_name'];
@@ -88,10 +97,13 @@ class Eleve extends Model
     ]; 
 
 
+
 public function setAuteurIdAttribute($value)
     {
-        $user = BackendAuth::getUser();
-        $this->attributes['auteur_id'] = $user->id;
+        # $user = BackendAuth::getUser();
+        if ($this->user) {
+            $this->attributes['auteur_id'] = $this->user->id;
+        }
     }
 
 
@@ -122,7 +134,6 @@ public function setAuteurIdAttribute($value)
     }   
 
 
-
     public function beforeSave()
         {
          #\Log::info("Before Save");
@@ -131,13 +142,14 @@ public function setAuteurIdAttribute($value)
     public function AfterCreate()
 
     {
-         $user = BackendAuth::getUser();
+        # $user = BackendAuth::getUser();
 
-         if ($user) {
 
-         $update = DB::table('digitalartisan_enseignement_eleves')
+        if ($this->user) {
+
+            $update = DB::table('digitalartisan_enseignement_eleves')
                   ->where('id', $this->id)
-                  ->update(['auteur_id' => $user->id]);
+                  ->update(['auteur_id' => $this->user->id]);
 /* 
             # This method fires the afterUpdate event:     
             $eleve = Eleve::find($this->id);
@@ -145,7 +157,7 @@ public function setAuteurIdAttribute($value)
             $eleve->save();
 */
 
-             \Log::info("Ajout de l'élève ID ".$this->id. ' ' .$this->full_name .' par ' .$user->full_name);
+            \Log::info("Ajout de l'élève ID ".$this->id. ' ' .$this->full_name .' par ' .$this->user->full_name);
         }
 
     }
@@ -153,10 +165,10 @@ public function setAuteurIdAttribute($value)
     public function afterUpdate()
         {
 
-        $user = BackendAuth::getUser();
+        #$user = BackendAuth::getUser();
 
-        if ($user) {
-            \Log::info("Mise à jour de l'élève ID ".$this->id. ' ' .$this->full_name .' par ' .$user->full_name); 
+        if ($this->user) {
+            \Log::info("Mise à jour de l'élève ID ".$this->id. ' ' .$this->full_name .' par ' .$this->user->full_name); 
          }   
     }
 
@@ -169,13 +181,14 @@ public function setAuteurIdAttribute($value)
         # $this->pathologies()->delete();
         
         # PathologieEleve::where("eleve_id", $this->id)->forceDelete(); // NoSoftDelete
-        $user = BackendAuth::getUser();
+        
+        # $user = BackendAuth::getUser();
 
-        if ($user) {
+        if ($this->user) {
             # PathologieEleve::where("eleve_id", $this->id)->delete();
             # Suivi::where("eleve_id", $this->id)->delete(); 
 
-            \Log::info("Effacement de l'éleve ID #".$this->id. " et effacement données liées");
+            \Log::info("Effacement de l'éleve ID #".$this->id. ' '. $this->full_name .' par ' . $this->user->full_name .' et effacement des tables liées');
              }
 
     }
@@ -188,5 +201,6 @@ public function setAuteurIdAttribute($value)
         
             } 
     }
+
 
 }

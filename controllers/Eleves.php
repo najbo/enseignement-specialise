@@ -5,8 +5,10 @@ use BackendMenu;
 use Flash;
 use Log;
 use Redirect;
-use BackendAuth;
-#use Renatio\DynamicPDF\Classes\PDF;
+use Str;
+#use BackendAuth;
+use Config;
+use Renatio\DynamicPDF\Classes\PDF;
 
 
 class Eleves extends Controller
@@ -126,9 +128,9 @@ class Eleves extends Controller
      */
     public function formExtendQuery($query)
     {
-        $user = BackendAuth::getUser();
+        #$user = BackendAuth::getUser();
 
-        if ($user->isSuperUser()) {
+        if ($this->user->isSuperUser() || $this->user->hasAccess('digitalartisan.enseignement.can_restore')) {
             #$query->where('is_superuser', false);
         
             // Ensure soft-deleted records can still be managed
@@ -142,13 +144,16 @@ class Eleves extends Controller
      */
     public function listFilterExtendScopes($filterWidget)
     {
-        $user = BackendAuth::getUser();
+        #$user = BackendAuth::getUser();
 
-        if (!$user->isSuperUser()) {
+        if (! ($this->user->isSuperUser() || $this->user->hasAccess('digitalartisan.enseignement.can_restore'))) {
             $filterWidget->removeScope('show_deleted');
         }
     }
 
+    /**
+     * Enregistre la valeur de l'ID pour être utilisé plus tard
+     */
     public function update($recordId, $context = null)
     {
 
@@ -173,8 +178,70 @@ class Eleves extends Controller
     {
         $this->formFindModelObject($recordId)->restore();
 
-        Flash::success("Elève restauré avec succès");
+        # Enregistrement restauré avec succès
+        Flash::success(e(trans('digitalartisan.enseignement::lang.eleve.restored')));
 
         return Redirect::refresh();
-    }    
+    }
+
+
+    /**
+     * Fonction pour générer un fichier PDF détaillé d'un élève
+     * La fonction pdf dans behaviers\PdfExpertBehaviors n'est pas utilisée
+     */
+    public function pdf($id)
+    {
+
+        # On remplit la variable $user avec les données de l'utilisateur actuellement connecté
+        $user = $this->user;
+
+        $eleve =  $this->formFindModelObject($id);
+        if ($eleve === null) {
+            throw new ApplicationException('Elève non trouvé.');
+        }
+
+        $templateCode = 'digitalartisan.enseignement::pdf.detail_eleve';
+        #$templateCode = 'enseignement:eleve';
+
+        $filename = 'eleve_'.Str::slug($eleve->nom . '-' . $eleve->prenom) . '.pdf';
+
+        try {
+
+
+            $options = [
+                'logOutputFile' => storage_path('temp/log.htm'),
+            ];
+
+            return 
+                #PDF::loadTemplate($templateCode, compact('eleve'))
+                PDF::loadTemplate($templateCode, compact('user', 'eleve'))
+                ->setOptions($options)
+                ->stream();
+                #->download($filename);
+
+        } catch (Exception $e) {
+            throw new ApplicationException($e->getMessage());
+        }
+    }
+
+
+    /**
+     * Fonction pour générer un fichier PDF via AJAX
+     *
+     * Avantage : stocke le fichier PDF dans le dossier public et la fonctionn est accessible avec CTRL-P par exemple (voir update.htm)
+     * Inconvénient : le fichier PDF est visible par tous sur le serveur 
+     */
+    public function onPreviewDownload()
+        {
+
+            $templateCode = 'renatio::invoice'; // unique code of the template
+            $storagePath =  storage_path('app/uploads/');
+            $pdf_file_name =  'regency-brochure-test.pdf' ;
+            $pdf_file_name_directory =  $storagePath . $pdf_file_name;
+            PDF::loadTemplate($templateCode)->setPaper('a4', 'landscape')->save($pdf_file_name_directory);
+            return $baseUrl = url(Config::get('cms.storage.uploads.path')) . '/' . $pdf_file_name;
+
+        }
+
+
 }

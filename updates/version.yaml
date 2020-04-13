@@ -186,3 +186,6 @@
 1.0.64:
     - 'Seed types de passages'
     - seeder1064.php
+1.0.65:
+    - 'Seed roles administrateurs et gestionnaires'
+    - seeder1065.php

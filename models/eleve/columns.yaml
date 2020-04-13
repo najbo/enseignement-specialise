@@ -41,13 +41,13 @@ columns:
         sortable: true
         relation: suivis
         useRelationCount: 'yes'
-    proches:
-        label: Proches
-        type: text
-        searchable: false
-        sortable: false
-        valueFrom: FullName
-        relation: proches
+#    proches:
+#        label: Proches
+#        type: text
+#        searchable: false
+#        sortable: false
+#        valueFrom: FullName
+#        relation: proches
     genre:
         label: Genre
         type: text

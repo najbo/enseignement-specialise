@@ -41,6 +41,7 @@
                     data-request-confirm="<?= e(trans('backend::lang.form.confirm_delete')) ?>">
                 </button>
 
+                <?php if ($this->user->isSuperUser() || $this->user->hasAccess('digitalartisan.enseignement.can_bouclement')): ?>
                 <button 
                     type="button"
                     class="btn btn-default" 
@@ -48,6 +49,7 @@
                     data-request-confirm="Lancer le bouclement de cette année ?">
                     Bouclement
                 </button>
+                <?php endif ?>
 
                 <span class="btn-text">
                     <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('digitalartisan/enseignement/annees') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
