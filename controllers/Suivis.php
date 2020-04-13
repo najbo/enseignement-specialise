@@ -23,4 +23,6 @@ class Suivis extends Controller
         parent::__construct();
         BackendMenu::setContext('DigitalArtisan.Enseignement', 'protocoles', 'suivi');
     }
+
+
 }

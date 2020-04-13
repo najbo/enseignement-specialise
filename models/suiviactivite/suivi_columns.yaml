@@ -23,7 +23,7 @@ columns:
         relation: suivi
         cssClass: gras            
     statut_suivi:
-        label: Statut du suivi
+        label: Statut suivi
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_statutsuivi_column.htm
         searchable: false
@@ -68,7 +68,7 @@ columns:
         relation: interlocuteur
         valueFrom: FullName
     activite_statut_colors:
-        label: Statut
+        label: Statut activité
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_statut_column.htm
         searchable: false

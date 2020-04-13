@@ -47,6 +47,7 @@ class Seeder1065 extends Seeder
                 'backend.impersonate_users' => 1,
                 'system.access_logs' => 1,
                 'system.manage_mail_settings' => 1,
+                'panakour.backup.access' => 1,
             ];
             
             GestionnaireRole::create([

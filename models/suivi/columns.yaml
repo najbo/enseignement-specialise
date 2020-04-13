@@ -41,7 +41,7 @@ columns:
         sortable: true
         relation: activites
     statut_id:
-        label: Statut
+        label: statut suivi
         type: partial
         path: ~/plugins/digitalartisan/enseignement/models/suivi/_statut_column.htm
         searchable: false

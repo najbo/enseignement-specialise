@@ -4,6 +4,20 @@ scopes:
         #modelClass: DigitalArtisan\Enseignement\Models\Eleve
         #conditions: eleve_id in (:filtered)
         #nameFrom: FullName     
+    # show_actifs:
+    #     label: En cours
+    #     type: checkbox
+    #     modelClass: DigitalArtisan\Enseignement\Models\Suivi
+    #     scope: Ouverts
+    #     default: 1     
+    show_actif:
+        label: En cours
+        type: switch
+        modelClass: DigitalArtisan\Enseignement\Models\Statut
+        default: 2
+        conditions:
+            - statut_id in (select id from digitalartisan_enseignement_statuts where is_finished = 1)
+            - statut_id in (select id from digitalartisan_enseignement_statuts where is_finished <> 1)          
     eleve:
         label: Eleves
         type: group
@@ -13,7 +27,7 @@ scopes:
     ecole:
         label: Ecole
         modelClass: DigitalArtisan\Enseignement\Models\Ecole
-        conditions: eleve_id in (select id from digitalartisan_enseignement_eleves where eleve_id in (:filtered))
+        conditions: eleve_id in (select id from digitalartisan_enseignement_eleves where ecole_id in (:filtered))
         nameFrom: designation    
     pathologies:
         label: Pathologies
@@ -40,3 +54,4 @@ scopes:
         label: Période
         type: daterange
         conditions: debut >= ':after' AND fin <= ':before'
+ 

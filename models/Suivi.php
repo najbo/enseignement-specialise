@@ -44,8 +44,8 @@ class Suivi extends Model
 
     public $belongsTo = [
         'eleve'    => ['DigitalArtisan\Enseignement\Models\Eleve',
-                   'key' => 'eleve_id',
-                   'order' => 'nom'],
+                'key' => 'eleve_id',
+                'order' => 'nom'],
         'statut'    => ['DigitalArtisan\Enseignement\Models\Statut',
                'key' => 'statut_id',
                'order' => 'sort_order'],                   
@@ -111,4 +111,13 @@ class Suivi extends Model
         return $this->designation;
     }
 
+    public function scopeOuverts($query){
+       #return $query->where('eleve_id', '<>', 1);
+
+      $isFinished = false;
+      $query->whereHas('statut', function ($q) use ($isFinished) {
+        $q->where('is_finished', $isFinished);
+    })
+    ->get();
+    }
 }

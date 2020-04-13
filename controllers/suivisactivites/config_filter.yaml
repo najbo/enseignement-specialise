@@ -1,4 +1,12 @@
 scopes:
+    show_actif:
+        label: En cours
+        type: switch
+        modelClass: DigitalArtisan\Enseignement\Models\ActiviteStatut
+        default: 2
+        conditions:
+            - statut_id in (select id FROM digitalartisan_enseignement_activites_statuts where is_finished = 1)
+            - statut_id in (select id FROM digitalartisan_enseignement_activites_statuts where is_finished <> 1) 
     suivi:
         label: Suivi
         modelClass: DigitalArtisan\Enseignement\Models\Suivi
