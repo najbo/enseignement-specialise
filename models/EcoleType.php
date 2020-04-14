@@ -25,4 +25,11 @@ class EcoleType extends Model
     public $rules = [
         'designation' => 'required'
     ];
+
+
+   public function scopeActifs($query) {
+        return $query->where('is_actif', true);
+   }    
+
+
 }

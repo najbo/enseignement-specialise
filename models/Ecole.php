@@ -1,6 +1,8 @@
 <?php namespace DigitalArtisan\Enseignement\Models;
 
 use Model;
+use Log;
+
 
 /**
  * Model
@@ -65,5 +67,43 @@ class Ecole extends Model
     {
         return $this->designation;
     }
+
+
+   public function scopeActifs($query) {
+        return $query->where('is_actif', true);
+   }    
+
+
+   public function listEcoles($value, $fieldName, $formData)
+   {
+        # $result = $this->actifs()->pluck('designation', 'id');
+        # $result = $this->withTrashed()->actifs()->orWhere('id',$value)->pluck('designation', 'id');
+
+        # renvoie la liste des enregistrement actifs (ou les softedeleted si c'est l'enregistrement actif)
+        # ATTENTION : les champs de la fonction $value et $fieldname sont inversés selon le mode d'emploi !
+
+        
+        $result = $this->withTrashed()->actifs()->where('deleted_at', NULL)->
+            orWhere(function ($q) use ($value) {
+                $q->where('id',$value);
+            })->pluck('designation', 'id');
+
+        return $result;
+   }
+
+
+   public function listEcolesTypes($value, $fieldName, $formData)
+   {
+        # renvoie la liste des enregistrement actifs (ou les softedeleted si c'est l'enregistrement actif)
+        # ATTENTION : les champs de la fonction $value et $fieldname sont inversés selon le mode d'emploi !
+
+
+        $result = EcoleType::withTrashed()->actifs()->where('deleted_at', NULL)->
+            orWhere(function ($q) use ($value) {
+                $q->where('id',$value);
+            })->pluck('designation', 'id');
+
+        return $result;
+   }    
 
 }
