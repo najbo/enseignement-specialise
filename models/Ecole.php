@@ -73,7 +73,7 @@ class Ecole extends Model
         return $query->where('is_actif', true);
    }    
 
-
+   # Non utilisé ; remplacé par la méthode getEcoleSuivanteOptions :
    public function listEcoles($value, $fieldName, $formData)
    {
         # $result = $this->actifs()->pluck('designation', 'id');
@@ -88,11 +88,34 @@ class Ecole extends Model
                 $q->where('id',$value);
             })->pluck('designation', 'id');
 
+        # \Log::info('Value : '. $value. ' / Fieldname : '.$fieldName. ' / formData : '.$formData .'<br>'.$result);
+
         return $result;
+
    }
 
 
-   public function listEcolesTypes($value, $fieldName, $formData)
+   public function getEcolesuivanteOptions($value, $formData)
+   {
+        # $result = $this->actifs()->pluck('designation', 'id');
+        # $result = $this->withTrashed()->actifs()->orWhere('id',$value)->pluck('designation', 'id');
+
+        # renvoie la liste des enregistrement actifs (ou les softedeleted si c'est l'enregistrement actif)
+
+        
+        $result = $this->withTrashed()->actifs()->where('deleted_at', NULL)->
+            orWhere(function ($q) use ($value) {
+                $q->where('id',$value);
+            })->pluck('designation', 'id');
+
+        #\Log::info('Value : '. $value.  ' / formData : '.$formData .'<br>'.$result);
+
+        return $result;
+
+   }
+
+
+   public function getTypeOptions($value, $formData)
    {
         # renvoie la liste des enregistrement actifs (ou les softedeleted si c'est l'enregistrement actif)
         # ATTENTION : les champs de la fonction $value et $fieldname sont inversés selon le mode d'emploi !
@@ -101,8 +124,9 @@ class Ecole extends Model
         $result = EcoleType::withTrashed()->actifs()->where('deleted_at', NULL)->
             orWhere(function ($q) use ($value) {
                 $q->where('id',$value);
-            })->pluck('designation', 'id');
+            })->get()->pluck('designation', 'id');
 
+        # \Log::info('Value : '. $value. ' / Fieldname : '.$fieldName. ' / formData : '.$formData .'<br>'.$result);
         return $result;
    }    
 

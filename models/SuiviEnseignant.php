@@ -1,6 +1,7 @@
 <?php namespace DigitalArtisan\Enseignement\Models;
 
 use Model;
+use Request;
 
 /**
  * Model
@@ -42,5 +43,30 @@ class SuiviEnseignant extends Model
             return $this->prenom.' '. $this->nom ;
         }
     }
+
+
+   public function getEnseignantOptions($value, $formData)
+   {
+
+        # renvoie la liste des enregistrement actifs (ou les softedeleted si c'est l'enregistrement actif)
+        # ATTENTION : les champs de la fonction $value et $fieldname sont inversés selon le mode d'emploi !
+
+        
+        $result = Enseignant::withTrashed()->actifs()->where('deleted_at', NULL)->
+            orWhere(function ($q) use ($value) {
+                $q->where('id',$value);
+            })->get()->pluck('full_name', 'id');
+
+        # $data = Request::segment(6);
+        # $sessionKey = uniqid('session_key', true);
+        # $data = $sessionKey;
+
+        # Read value from session (see update.htm)
+            
+        $parent_id = request::session()->get('parent_id');
+
+        #  \Log::info($data. ' - ' . $value .' - '. $formData);
+        return $result;
+   }
 
 }

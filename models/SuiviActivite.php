@@ -71,4 +71,6 @@ class SuiviActivite extends Model
     ];    
  
 
+
+
 }

@@ -8,22 +8,28 @@ fields:
         label: Abréviation
         span: auto
         type: text
-    type_id:
+    type:
         label: 'Type d''école'
         span: auto
         #nameFrom: designation
         #descriptionFrom: description
         type: dropdown
-        options: listEcolesTypes
-    #ecolesuivante:
-    ecolesuivante_id:
+    # ecolesuivante:
+    #     label: 'Ecole suivante'
+    #     span: auto
+    #     type: relation
+    #     nameFrom: designation
+    #     emptyOption: '-- Aucune ou non définie --'
+    # ecolesuivante_id:
+    #     label: 'Ecole suivante'
+    #     span: auto
+    #     type: dropdown
+    #     options: listEcoles
+    #     emptyOption: '-- Aucune ou non définie --'
+    ecolesuivante:
         label: 'Ecole suivante'
         span: auto
-        #nameFrom: designation
-        #descriptionFrom: description
-        type: dropdown
-        options: listEcoles
-        #type: relation
+        type: dropdown  
         emptyOption: '-- Aucune ou non définie --'
     directeurs:
         label: Directeur(s)

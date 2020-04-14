@@ -66,7 +66,13 @@ class Enseignant extends Model
           'faits' => ['DigitalArtisan\Enseignement\Models\EnseignantFait', 'key' => 'enseignant_id', 'order' => 'debut', 'softDelete' => true]
     ];     
 
+
     public function getFullNameAttribute() {
         return $this->prenom.' '. $this->nom;
-    }    
+    }   
+
+   public function scopeActifs($query) {
+        return $query->where('is_actif', true);
+   }    
+
 }

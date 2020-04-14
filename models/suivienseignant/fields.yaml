@@ -1,11 +1,16 @@
 fields:
+    # enseignant:
+    #     label: Enseignant
+    #     nameFrom: FullName
+    #     descriptionFrom: description
+    #     span: auto
+    #     type: relation
+    #     emptyOption: '-- Autre enseignant --'
     enseignant:
         label: Enseignant
-        nameFrom: FullName
-        descriptionFrom: description
         span: auto
-        type: relation
-        emptyOption: '-- Autre enseignant --'
+        type: dropdown
+        emptyOption: '-- Autre enseignant --'        
     complement:
         label: 'Complément ou fonction'
         span: full

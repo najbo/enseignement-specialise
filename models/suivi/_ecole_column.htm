@@ -1,5 +1,12 @@
 <?php
 
-	echo "<span>".$record->eleve->ecole->abreviation."</span>";
+	if ($record->eleve->ecole) {
+		echo "<span>".$record->eleve->ecole->abreviation."</span>";
+	}
+	else {
+
+	echo 'Ecole supprimée ?';	
+
+}
 
 ?>
