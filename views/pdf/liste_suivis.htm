@@ -1,0 +1,40 @@
+title = "ESP - Liste des suivis"
+layout = "digitalartisan.enseignement::pdf.layouts.default"
+description = "Template pour liste des suivs"
+size = "a4"
+orientation = "portrait"
+==
+{% put title %}
+    Liste des suivis
+{% endput %}
+
+<h1>{{ pdf_headers.title}}</h1>
+
+{% if records|length %}
+    <table border="1" style="border-collapse: collapse;">        
+        <tr>
+
+            <th>ID</th>
+            <th>Elève</th>
+            <th>Ecole</th>
+            <th>Classe</th>
+            <th>Pathologies</th>
+            <th>Périodes</th>
+            <th>Statut</th>
+
+        </tr>        
+        {% for record in records %}
+        <tr>
+            <td>{{ record.id }}</td>
+            <td>{{ record.eleve.full_name }}</td>
+            <td>{{ record.eleve.ecole.abreviation }}</td>
+            <td>{{ record.eleve.programme }}</td>
+            <td>{{ record.pathologies }}</td> 
+            <td>{{ record.periodes }}</td> 
+            <td>{{ record.statut.designation }}</td> 
+        </tr>
+        {% endfor %}        
+    </table>
+{% else %}
+<p>Il n'y a pas d'enregistrements actifs</p>
+{% endif %}

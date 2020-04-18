@@ -3,8 +3,8 @@
 use Model;
 use Flash;
 use BackendAuth;
-
 use Carbon\Carbon;
+
 
 /**
  * Model
@@ -70,19 +70,39 @@ class Suivi extends Model
     ]; 
 
 
-  // Valeur par défaut pour le gestionnaire lors de la création d'une nouvelle activité. On prend l'utilisateur connecté.    
-  public function __construct(array $attributes = array())
-  {
-        if (BackendAuth::check()) {
-            $this->setRawAttributes(['gestionnaire_id' => BackendAuth::getUser()->id], true);
-            parent::__construct($attributes);
-        }
-  }
+    # Variable pour la liste d'impression PDF ; titre pour la liste générique
+    public $pdf_headers = [
+        'title' => 'Liste des suivis',
+        ];
+
+
+      // Valeur par défaut pour le gestionnaire lors de la création d'une nouvelle activité. On prend l'utilisateur connecté.    
+      public function __construct(array $attributes = array())
+      {
+            if (BackendAuth::check()) {
+                $this->setRawAttributes(['gestionnaire_id' => BackendAuth::getUser()->id], true);
+                parent::__construct($attributes);
+            }
+      }
 
 
     public function getFullNameAttribute() {
         return $this->id.' - ' .$this->designation;
     }  
+
+
+    public function getPeriodesAttribute() {
+
+        if ($this->fin) {
+            $periode = $this->debut->format('d.m.Y').' - '. $this->fin->format('d.m.Y');
+        } else {
+            $periode = $this->debut->format('d.m.Y');
+        }
+        
+        return $periode;
+    }  
+
+
 
     public function getFilterAttribute() {
         $prefix = '';
