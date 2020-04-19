@@ -45,6 +45,7 @@ class Seeder1065 extends Seeder
 
                 'backend.manage_users' => 1,
                 'backend.impersonate_users' => 1,
+                'backend.manage_preferences' => 1,
                 'system.access_logs' => 1,
                 'system.manage_mail_settings' => 1,
                 'panakour.backup.access' => 1,
@@ -91,6 +92,7 @@ class Seeder1065 extends Seeder
                 'digitalartisan.enseignement.can_bouclement' => 0,
 
 
+                'backend.manage_preferences' => 1,
                 'backend.manage_users' => 0,
                 'backend.impersonate_users' => 0,
                 'system.access_logs' => 0,
@@ -139,6 +141,7 @@ class Seeder1065 extends Seeder
                 'digitalartisan.enseignement.can_bouclement' => 0,
 
 
+                'backend.manage_preferences' => 1,
                 'backend.manage_users' => 0,
                 'backend.impersonate_users' => 0,
                 'system.access_logs' => 0,

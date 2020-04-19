@@ -203,7 +203,7 @@ class Eleves extends Controller
         $templateCode = 'digitalartisan.enseignement::pdf.detail_eleve';
         #$templateCode = 'enseignement:eleve';
 
-        $filename = 'eleve_'.Str::slug($eleve->nom . '-' . $eleve->prenom) . '.pdf';
+        $filename = Str::slug('eleve '. $eleve->nom . ' ' . $eleve->prenom) . '.pdf';
 
         try {
 

@@ -18,12 +18,14 @@ class BuilderTableCreateDigitalartisanEnseignementSuiviActivites extends Migrati
             $table->dateTime('debut');
             $table->dateTime('fin')->nullable();
             $table->dateTime('date')->nullable();
-            $table->dateTime('prochaineecheance')->nullable();
-            $table->integer('gestionnaire_id')->nullable();
             $table->string('resume', 255);
             $table->text('developpement')->nullable();
+            $table->dateTime('prochaineecheance')->nullable();
+            $table->string('prochaineaction', 255)->nullable();
+            $table->integer('gestionnaire_id')->nullable();
             $table->boolean('is_termine')->nullable()->default(false);
             $table->string('emplacement', 255)->nullable();
+            $table->string('tiers', 255)->nullable();
             $table->integer('statut_id')->nullable();
             $table->integer('auteur_id')->unsigned()->nullable();
             $table->timestamp('created_at')->nullable();

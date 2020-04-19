@@ -8,30 +8,35 @@ class Seeder1019 extends Seeder
     public function run()
     {
         Type::truncate();    
-        
+
         Type::create([
-            'designation' => 'Entretien avec parents',
+            'designation' => 'Constat et observation',
             'sort_order' => 1,
         ]);
         
         Type::create([
-            'designation' => 'Bilan',
+            'designation' => 'Entretien avec parents',
             'sort_order' => 2,
+        ]);
+        
+        Type::create([
+            'designation' => 'Bilan',
+            'sort_order' => 3,
         ]);          
         
         Type::create([
             'designation' => 'Décision',
-            'sort_order' => 3,
+            'sort_order' => 4,
         ]);  
 
         Type::create([
             'designation' => 'Application',
-            'sort_order' => 4,
+            'sort_order' => 5,
         ]);        
         
         Type::create([
             'designation' => 'Réseau',
-            'sort_order' => 5,
+            'sort_order' => 6,
         ]);  
         
         Type::create([

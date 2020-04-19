@@ -9,29 +9,42 @@ orientation = "portrait"
     {{ eleve.programme ? ' (' ~  eleve.programme ~ ')' }}
 {% endput %}
 
+
+{% put header %}
+	{{ eleve.ecole.cercle.entete_document ? eleve.ecole.cercle.entete_document : 'Enseignement spécialisé' }}
+{% endput %}	
+
 <div class="section" id="profile">
     <div">
     <h3>FICHE D'ÉLÈVE | {{ eleve.ecole.abreviation|upper }} {{ eleve.programme ? '| ' ~  eleve.programme|upper }}</h3>
     <hr>
         <h1>{{ eleve.prenom }} {{ eleve.nom |upper}}</h1>
         <p>
+        	{% if eleve.adresse %}
         	Adresse : {{ eleve.adresse }}<br>
+        	{% endif %}
         	NPA et localité : {{ eleve.npa }} {{ eleve.localite }}
         </p>
         <p>
         	Date de naissance : {{ eleve.naissance|date("d.m.Y") }}<br>
-        	Numéro assurance sociale : {{ eleve.nss }}
+        	{% if eleve.nss %}
+        		Numéro assurance sociale : {{ eleve.nss }}
+        	{% endif %}
         </p>        
 
+        {% if eleve.pathologies|length %}
         <h3>Pathologies</h3>
         <!--{% if eleve.pathologies %}<p>Pathologies : {{ eleve.pathologies.first().designation }}</p>{% endif %}-->
         <p>
         	{% for pathologie in eleve.pathologies %}  
-     			{{ pathologie.designation }}  
+     			{{ pathologie.designation|lower }}
+     			{% if not loop.last %}, {% endif %}   
     		{% endfor %} 
     	</p>
+    	{% endif %}
 
 
+    	{% if eleve.proches|length %}
         <h3>Proches</h3>
 
 		<table class="fullwidth">       
@@ -55,8 +68,10 @@ orientation = "portrait"
 		    </tr>     
 			{% endfor %} 		     
 		</table>
+		{% endif %}
 
 
+		{% if eleve.faits|length %}
         <h3>Faits marquants</h3>
 
 		<table class="fullwidth"> 
@@ -78,9 +93,10 @@ orientation = "portrait"
 			</tr>     
 			{% endfor %} 
 		</table>
+		{% endif %}
 
 
-
+		{% if eleve.suivis|length %}
         <h3>Suivi ESP</h3>
 
 		<table class="fullwidth"> 
@@ -108,6 +124,7 @@ orientation = "portrait"
 			</tr>     
 			{% endfor %} 
 		</table>
+		{% endif %}
  
         {% if eleve.remarque %}
             <h3>Remarques</h3>

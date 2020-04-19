@@ -66,3 +66,8 @@ tabs:
             default: 1
             type: checkbox
             tab: 'Autres données'
+        suivi:
+            span: full
+            path: field_suivis
+            type: partial
+            tab: 'Activités ESP ouvertes'

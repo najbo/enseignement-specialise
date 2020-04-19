@@ -111,13 +111,19 @@ public function setAuteurIdAttribute($value)
         return $this->prenom.' '. $this->nom;
     }
 
-   
 
     public function getProgrammeEffectifAttribute($value)
     {
         return $this->programme;
     }   
 
+
+    public function getDateNaissanceAttribute()
+    {
+        if ($this->naissance) {
+            return $this->naissance->format('d.m.y');
+        }
+    }   
 
 
     public function getPrenomNomElevesOptions() {

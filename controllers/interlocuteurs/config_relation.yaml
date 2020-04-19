@@ -1,0 +1,8 @@
+suivis:
+    readOnly: true
+    label: Suivi
+    emptyMessage: Aucun suivi pour le moment
+    view:
+        list: $/digitalartisan/enseignement/models/suiviactivite/interlocuteur_columns.yaml
+        showSearch: true
+        scope: Ouverts

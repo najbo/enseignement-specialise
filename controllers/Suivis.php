@@ -5,6 +5,7 @@ use BackendMenu;
 use BackendAuth;
 use Renatio\DynamicPDF\Classes\PDF;
 use Log;
+use Str;
 
 class Suivis extends Controller
 {
@@ -64,9 +65,48 @@ class Suivis extends Controller
             }
         }
 
-
         return PDF::loadTemplate('digitalartisan.enseignement::pdf.liste_suivis', compact('user','pdf_headers', 'records'))->stream('export.pdf');
     } 
+
+
+
+    /**
+     * Fonction pour générer un fichier PDF détaillé d'un élève
+     * La fonction pdf dans behaviers\PdfExpertBehaviors n'est pas utilisée
+     */
+    public function pdf($id)
+    {
+
+        # On remplit la variable $user avec les données de l'utilisateur actuellement connecté
+        $user = $this->user;
+
+        $suivi =  $this->formFindModelObject($id);
+        if ($suivi === null) {
+            throw new ApplicationException('Fiche non trouvée.');
+        }
+
+        $templateCode = 'digitalartisan.enseignement::pdf.detail_suivi';
+
+        $filename = Str::slug('suivi '.$suivi->id . ' ' . $suivi->eleve->nom .' ' . $suivi->eleve->prenom) . '.pdf';
+
+        try {
+
+
+            $options = [
+                'logOutputFile' => storage_path('temp/log.htm'),
+            ];
+
+            return 
+                PDF::loadTemplate($templateCode, compact('user', 'suivi'))
+                ->setOptions($options)
+                ->stream();
+                #->download($filename);
+
+        } catch (Exception $e) {
+            throw new ApplicationException($e->getMessage());
+        }
+    }
+
 
 
 }

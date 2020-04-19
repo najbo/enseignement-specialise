@@ -1,0 +1,185 @@
+title = "ESP - Détail suivi"
+layout = "digitalartisan.enseignement::pdf.layouts.default"
+description = "Template pour détail d'un suivi par élève"
+size = "a4"
+orientation = "portrait"
+==
+{% put title %}
+    Fiche de suivi {{ suivi.eleve.prenom }} {{ suivi.eleve.nom |upper }}
+    {{ suivi.eleve.programme ? ' (' ~  suivi.eleve.programme ~ ')' }}
+{% endput %}
+
+{% put header %}
+	{{ suivi.eleve.ecole.cercle.entete_document ? suivi.eleve.ecole.cercle.entete_document : 'Enseignement spécialisé' }}
+	 | Suivi ID #{{ suivi.id }} de {{ suivi.eleve.full_name }} 
+{% endput %}
+
+<div class="section" id="suivi">
+    <div">
+    <h3>FICHE DE SUIVI #{{ suivi.id }} | {{ suivi.eleve.full_name|upper }} | {{ suivi.eleve.ecole.abreviation }}{{ suivi.eleve.programme ? '| ' ~  suivi.eleve.programme|upper }}</h3>
+    <hr>
+        <!--<h1>{{ suivi.eleve.prenom }} {{ suivi.eleve.nom |upper}}</h1>-->
+    
+
+		<h3>Données de l'élève</h3>
+		<p>
+			NPA et localité : {{ suivi.eleve.npa }} {{ suivi.eleve.localite }}<br>
+			{% if suivi.eleve.date_naissance %}
+				Date de naissance : {{ suivi.eleve.date_naissance }}<br>
+			{% endif %}	
+			{% if suivi.eleve.nss %}
+				Numéro d'assurance sociale : {{ suivi.eleve.nss }}<br>
+			{% endif %}
+			Pays d'origine : {{ suivi.eleve.pays.designation }}<br>
+			Genre : {{ suivi.eleve.genre.designation }}
+
+			{% if suivi.eleve.pathologies|length %}
+			<br>
+			Pathologies enregistrées :
+				{% for pathologie in suivi.eleve.pathologies %}  
+     				{{ pathologie.designation|lower }} 
+     				{% if not loop.last %}, {% endif %}  
+    			{% endfor %} 
+    		{% endif %}
+		</p>
+
+		<h3>Données de base du suivi</h3>
+			<p>
+			<b>Période</b> : {{ suivi.periodes }}
+			{% if suivi.designation %}
+				<br>
+				<b>Désignation</b> : {{ suivi.designation }}
+			{% endif %} 
+			{% if suivi.pathologies|length %}
+				<br>
+				<b>{{ suivi.pathologies|length > 1 ? 'Pathologies traitées' : 'Pathologie traitée' }}</b> :{% for pathologie_suivi in suivi.pathologies %}  
+	     			{{ pathologie_suivi.designation|lower }}
+	     			{% if not loop.last %}, {% endif %}  
+	    		{% endfor %}
+	    	{% endif %} 
+	    	{% if suivi.statut.designation %}
+				<br>
+				<b>Statut</b> : {{ suivi.statut.designation }}<br>
+  			{% endif %} 
+
+  				<b>Gestionnaire</b> : {{ suivi.gestionnaire.full_name }}
+
+    		<p>
+
+		{% if suivi.enseignants|length %}
+	        <h3>Enseignants liés au suivi</h3>
+
+			<table class="fullwidth">       
+			    <tr>
+					<th>Prénom et nom</th>
+					<th>Complément ou fonction</th>
+					<th>Période</th>
+					<th>Tél. mobile</th>
+			    </tr> 
+
+			    {% for enseignant in suivi.enseignants %} 
+
+			    <tr>	
+			    	<td>{{ enseignant.nom_enseignant}}</td>
+			    	<td>{{ enseignant.complement }}</td>
+			    	<td>{{ enseignant.periodes }}</td>
+			    	<td>{{ enseignant.mobile_enseignant }}</td>
+			    </tr>     
+				{% endfor %} 		     
+			</table>
+		{% endif %}
+
+        <h3>Activités ({{ suivi.activites|length }})</h3>
+		
+		{% for activite in suivi.activites %}
+		<table class="fullwidth"> 
+			
+		    <tr>
+				<th colspan="4">{{ activite.periodes }} | {{ activite.resume }} | {{ activite.statut.designation}}
+				</th>>
+			</tr> 
+  
+			<tr>	
+				<td style="width:20%">Type d'activité</td>
+				<td style="width:30%">{{ activite.type.designation}}</td>
+				<td style="width:20%">Mesure</td>
+				<td style="width:30%">{{ activite.therapie.designation}}</td>
+			</tr>
+			{% if activite.interlocuteur %}
+				<tr>
+					<td style="width:20%">Thérapeute</td>
+					<td style="width:30%">{{ activite.interlocuteur.full_name}}</td>
+					<td style="width:20%">Téléphone pro.</td>
+					<td style="width:30%">{{ activite.interlocuteur.telephonepro}}</td>				
+				</tr>  
+			{% endif %}
+			<tr>
+				<td style="width:20%">Gestionnaire</td>
+				<td style="width:30%">{{ activite.gestionnaire.full_name}}</td>
+				<td style="width:20%">Créé/mis à jour le</td>
+				<td style="width:30%">{{ activite.created_updated}}</td>				
+			</tr>
+
+			{% if activite.developpement %}
+				<tr>
+					<td style="width:20%">Développement</td>
+					<td colspan="3">{{ activite.developpement|striptags|raw }}</td>
+				</tr>
+			{% endif %}
+
+			{% if activite.documents|length %}
+				<tr>
+					<td style="width:20%">Documents</td>
+					<td colspan="3">
+						{% for document in activite.documents %}
+							{{ document.title ? document.title : document.file_name }}
+							{% if not loop.last %}<br>{% endif %} 
+						{% endfor %}
+					</td>				
+				</tr>
+			{% endif %}
+
+			<tr>
+				<td style="width:20%">Prochaine action</td>
+				<td colspan="3">{{ activite.next }}</td>
+			</tr>
+
+		</table>
+		{% endfor %} 
+
+ 
+        {% if suivi.remarques %}
+            <h3>Remarques</h3>
+            <p>
+	       		{{ suivi.remarques|striptags|raw }}
+	   		</p>
+        {% endif %}
+
+
+        {% if suivi.documents|length %}
+            <h3>Documents généraux</h3>
+            <p>
+            {% for document in suivi.documents %}
+	    		{{ document.title ? document.title : document.file_name }}
+	    		{% if not loop.last %}<br>{% endif %} 
+	    	{% endfor %}
+	    	</p>
+        {% endif %}
+   
+    </div>
+
+    <div class="clear"></div>
+</div>
+<div id="info">
+    <h3>Informations</h3>
+    <div">
+        <table>
+            <tr>
+                <th>Fiche  créée le :</th>
+                <td>{{ suivi.created_at | date('d.m.Y H:i:s') }}</td>
+            </tr>
+           
+        </table>
+    </div>
+    <div class="clear"></div>
+</div>

@@ -33,6 +33,10 @@
                     class="btn btn-default">
                     <?= e(trans('backend::lang.form.save_and_close')) ?>
                 </button>
+
+                <a target="_blank" href="<?= Backend::url('digitalartisan/enseignement/suivis/pdf').'/'. $formModel->getKey() ?>"  
+                class="btn btn-primary oc-icon-sign-out">Fiche PDF</a> 
+
                 <button
                     type="button"
                     class="oc-icon-trash-o btn-icon danger pull-right"
@@ -43,7 +47,8 @@
 
                 <span class="btn-text">
                     <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('digitalartisan/enseignement/suivis') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
-                </span>
+                </span>                
+
             </div>
         </div>
     <?= Form::close() ?>

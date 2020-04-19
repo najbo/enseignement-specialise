@@ -35,7 +35,7 @@ class SuiviEnseignant extends Model
 
 #'order' => 'nom'], 
 
-    public function getnomEnseignantAttribute() {
+    public function getNomEnseignantAttribute() {
 
         if ($this->enseignant_id) {
             return  $this->enseignant['prenom'] . ' ' . $this->enseignant['nom'];
@@ -44,6 +44,35 @@ class SuiviEnseignant extends Model
         }
     }
 
+
+    public function getMobileEnseignantAttribute() {
+
+        if ($this->enseignant_id) {
+            return  $this->enseignant['telephonemobile'];
+        } else {
+            return $this->telephonemobile ;
+        }
+    }
+
+
+
+    public function getPeriodesAttribute() {
+
+        $periode = '';
+
+        if ($this->debut && $this->fin) {
+            $periode = $this->debut->format('d.m.y').' - '. $this->fin->format('d.m.y');
+        }
+        if ($this->debut && !$this->fin) {
+            $periode = 'Dès ' . $this->debut->format('d.m.y');
+        }
+        
+        if (!$this->debut && $this->fin) {
+            $periode = 'Jusqu\'au '. $this->fin->format('d.m.y');
+        }
+        
+        return $periode;
+    } 
 
    public function getEnseignantOptions($value, $formData)
    {

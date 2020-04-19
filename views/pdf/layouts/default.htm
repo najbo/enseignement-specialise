@@ -74,7 +74,15 @@ th {
         </style>
     </head>
     <body>
-        <header>{{ eleve.ecole.cercle.entete_document ? eleve.ecole.cercle.entete_document : 'Enseignement spécialisé' }}</header>
+        <header>
+            {% placeholder header default %}
+                Enseignement spécialisé
+            {% endplaceholder %}
+        </header>
+
+        <!--
+        {{ eleve.ecole.cercle.entete_document ? eleve.ecole.cercle.entete_document : 'Enseignement spécialisé' }}
+        -->
         <footer>
             Tous droits réservés | Imprimé le {{ "now"|date("d.m.Y") }}
             {% if user %}

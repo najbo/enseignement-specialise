@@ -8,7 +8,7 @@ orientation = "portrait"
     Liste des suivis
 {% endput %}
 
-<h1>{{ pdf_headers.title}}</h1>
+<h1>{{ pdf_headers.title ~ ' (' ~ records|length ~ ')' }}</h1>
 
 {% if records|length %}
     <table border="1" style="border-collapse: collapse;">        
@@ -30,11 +30,12 @@ orientation = "portrait"
             <td>{{ record.eleve.ecole.abreviation }}</td>
             <td>{{ record.eleve.programme }}</td>
             <td>{{ record.pathologies }}</td> 
-            <td>{{ record.periodes }}</td> 
+            <td>{{ record.periodes }}</td>  
             <td>{{ record.statut.designation }}</td> 
         </tr>
         {% endfor %}        
     </table>
+    
 {% else %}
-<p>Il n'y a pas d'enregistrements actifs</p>
+    <p>Il n'y a pas d'enregistrements actifs</p>
 {% endif %}

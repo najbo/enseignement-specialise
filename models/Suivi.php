@@ -93,10 +93,13 @@ class Suivi extends Model
 
     public function getPeriodesAttribute() {
 
-        if ($this->fin) {
-            $periode = $this->debut->format('d.m.Y').' - '. $this->fin->format('d.m.Y');
-        } else {
-            $periode = $this->debut->format('d.m.Y');
+        $periode = '';
+        
+        if ($this->debut && $this->fin) {
+            $periode = $this->debut->format('d.m.y').' - '. $this->fin->format('d.m.y');
+        } 
+        if ($this->debut && ! $this->fin) {
+            $periode = $this->debut->format('d.m.y');
         }
         
         return $periode;

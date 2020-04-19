@@ -22,6 +22,7 @@ class Seeder1028 extends Seeder
             'genre_id' => 2,
             'langue_id' => 1,
             'pays_id' => 1,
+            'programme' => '7A',
         ]);        
         
         Eleve::create([
@@ -34,6 +35,7 @@ class Seeder1028 extends Seeder
             'genre_id' => 2,
             'langue_id' => 1,
             'pays_id' => 2,
+            'programme' => '3B',
         ]);        
  
          Eleve::create([
@@ -46,6 +48,7 @@ class Seeder1028 extends Seeder
             'genre_id' => 2,
             'langue_id' => 2,
             'pays_id' => 1,
+            'programme' => '6A',
         ]);        
                
          Eleve::create([

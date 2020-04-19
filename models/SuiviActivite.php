@@ -71,6 +71,73 @@ class SuiviActivite extends Model
     ];    
  
 
+    public function getPeriodesAttribute() {
 
+        $periode = '';
+        
+        if ($this->debut && $this->fin) {
+            $periode = $this->debut->format('d.m.y').' - '. $this->fin->format('d.m.y');
+        } 
+        if ($this->debut && ! $this->fin) {
+            $periode = $this->debut->format('d.m.y');
+        }
+        
+        return $periode;
+    }  
+
+
+
+    public function getCreatedUpdatedAttribute() {
+
+        $periode = '';
+        
+        if ($this->created_at && $this->updated_at) {
+            $periode = $this->created_at->format('d.m.y').' / '. $this->updated_at->format('d.m.y');
+        } 
+        
+        return $periode;
+    }  
+
+
+    public function getEcheanceSuivanteAttribute() {
+
+        $periode = '';
+        
+        if ($this->prochaineecheance) {
+            $periode = $this->prochaineecheance->format('d.m.y');
+        } 
+        
+        return $periode;
+    }
+
+
+    public function getNextAttribute() {
+
+        $action = '';
+        
+        if ($this->prochaineecheance && $this->prochaineaction) {
+          $action = $this->prochaineaction . ' le ' .$this->prochaineecheance->format('d.m.y');
+        } 
+        if (!$this->prochaineecheance && $this->prochaineaction) {
+          $action = $this->prochaineaction;
+        }
+        if ($this->prochaineecheance && ! $this->prochaineaction) {
+          $action = $this->prochaineecheance->format('d.m.y');
+        }
+
+        return $action;
+    }
+
+
+
+  public function scopeOuverts($query){
+        #$query->where('is_termine',true) ;
+
+        $isFinished = false;
+        $query->whereHas('statut', function ($q) use ($isFinished) {
+          $q->where('is_finished', $isFinished);
+      })
+      ->get();
+      }
 
 }

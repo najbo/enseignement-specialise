@@ -57,4 +57,6 @@ class Interlocuteur extends Model
         $result = Interlocuteur::orderBy('nom','prenom')->get()->pluck('FullName', 'id')->toArray();          
         return $result;
     }       
+
+
 }

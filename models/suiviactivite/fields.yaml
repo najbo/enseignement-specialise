@@ -29,27 +29,34 @@ fields:
         span: auto
         type: relation
         emptyOption: '-- Aucune mesure --'
-    resume:
-        label: Résumé
-        span: auto
-        type: text
-    interlocuteur:
-        label: Thérapeute
-        nameFrom: FullName
-        descriptionFrom: description
-        prompt: 'Sélectionnez le thérapeute affecté'
-        list: $/digitalartisan/enseignement/models/interlocuteur/columns_short.yaml
-        span: auto
-        type: recordfinder
-
-    statut:
-        label: 'Statut de l''activité'
-        nameFrom: designation
-        descriptionFrom: description
-        span: auto
-        type: relation
 tabs:
     fields:
+        resume:
+            label: Résumé
+            span: auto
+            type: text
+            tab: 'Données de base'
+        statut:
+            label: 'Statut de l''activité'
+            nameFrom: designation
+            descriptionFrom: description
+            span: auto
+            type: relation
+            tab: 'Données de base'
+        tiers:
+            label: 'Tiers concerné(s)'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        interlocuteur:
+            label: Thérapeute
+            nameFrom: FullName
+            descriptionFrom: description
+            prompt: 'Sélectionnez le thérapeute affecté'
+            list: $/digitalartisan/enseignement/models/interlocuteur/columns_short.yaml
+            span: auto
+            type: recordfinder
+            tab: 'Données de base'
         developpement:
             label: Développement
             size: large
@@ -66,27 +73,21 @@ tabs:
             span: full
             type: fileupload
             tab: 'Documents et rapports'
-        gestionnaire:
-            label: Gestionnaire
-            nameFrom: FullName
-            descriptionFrom: description
-            span: auto
-            type: relation
-            tab: 'Autres informations'
-            #default: getBackendUserAttribute()
         prochaineecheance:
             label: 'Prochaine échéance'
             span: auto
             mode: date
             type: datepicker
             tab: 'Autres informations'
-        date:
-            label: Date
-            mode: date
-            format: d.m.Y
+        prochaineaction:
+            label: 'Prochaine action'
             span: auto
-            default: now
-            hidden: 1
-            required: 0
-            type: datepicker
+            type: text
+            tab: 'Autres informations'
+        gestionnaire:
+            label: Gestionnaire
+            nameFrom: FullName
+            descriptionFrom: description
+            span: auto
+            type: relation
             tab: 'Autres informations'
