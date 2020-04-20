@@ -1,7 +1,7 @@
 title: 'Rôles des proches'
-modelClass: DigitalArtisan\Enseignement\Models\ProcheRole
-list: $/digitalartisan/enseignement/models/procherole/columns.yaml
-recordUrl: 'digitalartisan/enseignement/prochesroles/update/:id'
+modelClass: DigArt\Ecole\Models\ProcheRole
+list: $/digart/ecole/models/procherole/columns.yaml
+recordUrl: 'digart/ecole/prochesroles/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

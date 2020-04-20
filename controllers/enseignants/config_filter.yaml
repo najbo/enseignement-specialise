@@ -1,17 +1,17 @@
 scopes:
     ecole:
         label: Ecole
-        modelClass: DigitalArtisan\Enseignement\Models\Ecole
+        modelClass: DigArt\Ecole\Models\Ecole
         conditions: id in (select ens_id from digart_ecole_ens_eco where eco_id in (:filtered))
         nameFrom: designation
     genre:
         label: Genres
-        modelClass: DigitalArtisan\Enseignement\Models\Genre
+        modelClass: DigArt\Ecole\Models\Genre
         conditions: genre_id in (:filtered)
         nameFrom: designation        
     langue:
         label: Langues
-        modelClass: DigitalArtisan\Enseignement\Models\Langue
+        modelClass: DigArt\Ecole\Models\Langue
         conditions: langue_id in (:filtered)
         nameFrom: designation
     is_actif:

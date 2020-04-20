@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -12,12 +12,12 @@ class Cercles extends Controller
     public $reorderConfig = 'config_reorder.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.cercles' 
+        'digart.ecole.cercles' 
     ];
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'cercles');
+        BackendMenu::setContext('DigArt.Ecole', 'structures', 'cercles');
     }
 }

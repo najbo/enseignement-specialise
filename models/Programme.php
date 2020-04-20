@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 
@@ -27,13 +27,13 @@ class Programme extends Model
     ];
 
     public $belongsTo = [
-        'typeecole' => ['DigitalArtisan\Enseignement\Models\EcoleType',
+        'typeecole' => ['DigArt\Ecole\Models\EcoleType',
                    'key' => 'typecole_id',
                    'order' => 'sort_order'],
-        'cycle' => ['DigitalArtisan\Enseignement\Models\Cycle',
+        'cycle' => ['DigArt\Ecole\Models\Cycle',
                    'key' => 'cycle_id',
                    'order' => 'sort_order'],                  
-        'programmesuivant' => ['DigitalArtisan\Enseignement\Models\Programme',
+        'programmesuivant' => ['DigArt\Ecole\Models\Programme',
                    'key' => 'programmesuivant_id',
                    'order' => 'sort_order']
     ];    

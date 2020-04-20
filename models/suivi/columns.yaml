@@ -43,13 +43,13 @@ columns:
     statut_id:
         label: statut suivi
         type: partial
-        path: ~/plugins/digitalartisan/enseignement/models/suivi/_statut_column.htm
+        path: ~/plugins/digart/ecole/models/suivi/_statut_column.htm
         searchable: false
         sortable: true
     ecole_id:
         label: Ecole
         type: partial
-        path: ~/plugins/digitalartisan/enseignement/models/suivi/_ecole_column.htm
+        path: ~/plugins/digart/ecole/models/suivi/_ecole_column.htm
         searchable: false
         sortable: false
 

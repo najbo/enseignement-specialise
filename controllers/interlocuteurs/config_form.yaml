@@ -1,10 +1,10 @@
 name: Interlocuteurs
-form: $/digitalartisan/enseignement/models/interlocuteur/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Interlocuteur
-defaultRedirect: digitalartisan/enseignement/interlocuteurs
+form: $/digart/ecole/models/interlocuteur/fields.yaml
+modelClass: DigArt\Ecole\Models\Interlocuteur
+defaultRedirect: digart/ecole/interlocuteurs
 create:
-    redirect: 'digitalartisan/enseignement/interlocuteurs/update/:id'
-    redirectClose: digitalartisan/enseignement/interlocuteurs
+    redirect: 'digart/ecole/interlocuteurs/update/:id'
+    redirectClose: digart/ecole/interlocuteurs
 update:
-    redirect: digitalartisan/enseignement/interlocuteurs
-    redirectClose: digitalartisan/enseignement/interlocuteurs
+    redirect: digart/ecole/interlocuteurs
+    redirectClose: digart/ecole/interlocuteurs

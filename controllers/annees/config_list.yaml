@@ -1,7 +1,7 @@
 title: Années
-modelClass: DigitalArtisan\Enseignement\Models\Annee
-list: $/digitalartisan/enseignement/models/annee/columns.yaml
-recordUrl: 'digitalartisan/enseignement/annees/update/:id'
+modelClass: DigArt\Ecole\Models\Annee
+list: $/digart/ecole/models/annee/columns.yaml
+recordUrl: 'digart/ecole/annees/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 use Flash;
@@ -43,20 +43,20 @@ class Suivi extends Model
     ];
 
     public $belongsTo = [
-        'eleve'    => ['DigitalArtisan\Enseignement\Models\Eleve',
+        'eleve'    => ['DigArt\Ecole\Models\Eleve',
                 'key' => 'eleve_id',
                 'order' => 'nom'],
-        'statut'    => ['DigitalArtisan\Enseignement\Models\Statut',
+        'statut'    => ['DigArt\Ecole\Models\Statut',
                'key' => 'statut_id',
                'order' => 'sort_order'],                   
-        'gestionnaire'    => ['DigitalArtisan\Enseignement\Models\Gestionnaire',
+        'gestionnaire'    => ['DigArt\Ecole\Models\Gestionnaire',
                'key' => 'gestionnaire_id',
                'order' => ['last_name', 'first_name']], 
     ];
 
     public $belongsToMany = [
         'pathologies' => [
-            'DigitalArtisan\Enseignement\Models\Pathologie',
+            'DigArt\Ecole\Models\Pathologie',
             'table' => 'digart_ecole_path_suivi',
             'key' => 'suivi_id',
             'otherKey' => 'path_id',
@@ -65,8 +65,8 @@ class Suivi extends Model
     ];
    
     public $hasMany = [
-         'activites' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'suivi_id', 'order' => 'debut asc', 'softDelete' => true],
-         'enseignants' => ['DigitalArtisan\Enseignement\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc', 'softDelete' => true]       
+         'activites' => ['DigArt\Ecole\Models\SuiviActivite', 'key' => 'suivi_id', 'order' => 'debut asc', 'softDelete' => true],
+         'enseignants' => ['DigArt\Ecole\Models\SuiviEnseignant', 'key' => 'suivi_id', 'order' => 'debut desc', 'softDelete' => true]       
     ]; 
 
 

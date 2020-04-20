@@ -1,11 +1,11 @@
-<?php namespace DigitalArtisan\Enseignement\Behaviors;
+<?php namespace DigArt\Ecole\Behaviors;
 
 use Backend\Classes\ControllerBehavior;
 use Config;
 use Exception;
 use October\Rain\Exception\ApplicationException;
-use DigitalArtisan\Enseignement\Models\Eleve;
-use DigitalArtisan\Enseignement\Models\Enseignant;
+use DigArt\Ecole\Models\Eleve;
+use DigArt\Ecole\Models\Enseignant;
 use Renatio\DynamicPDF\Classes\PDF;
 use Response;
 use Str;
@@ -85,7 +85,7 @@ class PdfExportBehavior extends ControllerBehavior
         $pdf_headers = $model->getModel()->pdf_headers;
 
 
-        return PDF::loadTemplate('digitalartisan.enseignement::pdf.liste_générique', compact('user','pdf_headers', 'headers', 'records'))->stream('export.pdf');
+        return PDF::loadTemplate('digart.ecole::pdf.liste_générique', compact('user','pdf_headers', 'headers', 'records'))->stream('export.pdf');
     }    
 
 
@@ -99,7 +99,7 @@ class PdfExportBehavior extends ControllerBehavior
             throw new ApplicationException('Elève non trouvé.');
         }
 
-        $templateCode = 'digitalartisan.enseignement::pdf.detail_eleve';
+        $templateCode = 'digart.ecole::pdf.detail_eleve';
         #$templateCode = 'enseignement:eleve';
 
         $filename = 'eleve_'.Str::slug($eleve->nom . '-' . $eleve->prenom) . '.pdf';

@@ -1,10 +1,10 @@
 name: ProchesRoles
-form: $/digitalartisan/enseignement/models/procherole/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\ProcheRole
-defaultRedirect: digitalartisan/enseignement/prochesroles
+form: $/digart/ecole/models/procherole/fields.yaml
+modelClass: DigArt\Ecole\Models\ProcheRole
+defaultRedirect: digart/ecole/prochesroles
 create:
-    redirect: 'digitalartisan/enseignement/prochesroles/update/:id'
-    redirectClose: digitalartisan/enseignement/prochesroles
+    redirect: 'digart/ecole/prochesroles/update/:id'
+    redirectClose: digart/ecole/prochesroles
 update:
-    redirect: digitalartisan/enseignement/prochesroles
-    redirectClose: digitalartisan/enseignement/prochesroles
+    redirect: digart/ecole/prochesroles
+    redirectClose: digart/ecole/prochesroles

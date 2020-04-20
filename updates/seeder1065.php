@@ -1,7 +1,7 @@
-<?php namespace DigitalArtisan\Enseignement\Updates;
+<?php namespace DigArt\Ecole\Updates;
 
 use Seeder;
-use DigitalArtisan\Enseignement\Models\GestionnaireRole;
+use DigArt\Ecole\Models\GestionnaireRole;
 
 class Seeder1065 extends Seeder
 {
@@ -13,35 +13,35 @@ class Seeder1065 extends Seeder
         
         if (! GestionnaireRole::where('code', 'administrateur-esp')->first()){
             $droits = [
-                'digitalartisan.enseignement.suivis' => 1,
-                'digitalartisan.enseignement.pathologies' => 1,
-                'digitalartisan.enseignement.therapies' => 1,
-                'digitalartisan.enseignement.statuts' => 1,
-                'digitalartisan.enseignement.types' => 1,
+                'digart.ecole.suivis' => 1,
+                'digart.ecole.pathologies' => 1,
+                'digart.ecole.therapies' => 1,
+                'digart.ecole.statuts' => 1,
+                'digart.ecole.types' => 1,
 
-                'digitalartisan.enseignement.eleves' => 1,
-                'digitalartisan.enseignement.interlocuteurs' => 1,
-                'digitalartisan.enseignement.enseignants' => 1,
-                'digitalartisan.enseignement.fonctions' => 1,
-                'digitalartisan.enseignement.prochesroles' => 1,
+                'digart.ecole.eleves' => 1,
+                'digart.ecole.interlocuteurs' => 1,
+                'digart.ecole.enseignants' => 1,
+                'digart.ecole.fonctions' => 1,
+                'digart.ecole.prochesroles' => 1,
 
-                'digitalartisan.enseignement.ecoles' => 1,
-                'digitalartisan.enseignement.cercles' => 1,
-                'digitalartisan.enseignement.annees' => 1,
-                'digitalartisan.enseignement.programmes' => 1,
-                'digitalartisan.enseignement.cycles' => 1,
-                'digitalartisan.enseignement.volees' => 1,
-                'digitalartisan.enseignement.ecoletype' => 1,
+                'digart.ecole.ecoles' => 1,
+                'digart.ecole.cercles' => 1,
+                'digart.ecole.annees' => 1,
+                'digart.ecole.programmes' => 1,
+                'digart.ecole.cycles' => 1,
+                'digart.ecole.volees' => 1,
+                'digart.ecole.ecoletype' => 1,
 
-                'digitalartisan.enseignement.pays' => 1,
-                'digitalartisan.enseignement.langues' => 1,
-                'digitalartisan.enseignement.prochespermis' => 1,
-                'digitalartisan.enseignement.genres' => 1,
-                'digitalartisan.enseignement.passages' => 1,
-                'digitalartisan.enseignement.typesfaits' => 1,
+                'digart.ecole.pays' => 1,
+                'digart.ecole.langues' => 1,
+                'digart.ecole.prochespermis' => 1,
+                'digart.ecole.genres' => 1,
+                'digart.ecole.passages' => 1,
+                'digart.ecole.typesfaits' => 1,
 
-                'digitalartisan.enseignement.can_restore' => 1,
-                'digitalartisan.enseignement.can_bouclement' => 1,
+                'digart.ecole.can_restore' => 1,
+                'digart.ecole.can_bouclement' => 1,
 
                 'backend.manage_users' => 1,
                 'backend.impersonate_users' => 1,
@@ -61,35 +61,35 @@ class Seeder1065 extends Seeder
 
         if (! GestionnaireRole::where('code', 'gestionnaire-esp')->first()){
             $droits = [
-                'digitalartisan.enseignement.suivis' => 1,
-                'digitalartisan.enseignement.pathologies' => 1,
-                'digitalartisan.enseignement.therapies' => 1,
-                'digitalartisan.enseignement.statuts' => 1,
-                'digitalartisan.enseignement.types' => 1,
+                'digart.ecole.suivis' => 1,
+                'digart.ecole.pathologies' => 1,
+                'digart.ecole.therapies' => 1,
+                'digart.ecole.statuts' => 1,
+                'digart.ecole.types' => 1,
 
-                'digitalartisan.enseignement.eleves' => 1,
-                'digitalartisan.enseignement.interlocuteurs' => 1,
-                'digitalartisan.enseignement.enseignants' => 1,
-                'digitalartisan.enseignement.fonctions' => 1,
-                'digitalartisan.enseignement.prochesroles' => 1,
+                'digart.ecole.eleves' => 1,
+                'digart.ecole.interlocuteurs' => 1,
+                'digart.ecole.enseignants' => 1,
+                'digart.ecole.fonctions' => 1,
+                'digart.ecole.prochesroles' => 1,
 
-                'digitalartisan.enseignement.ecoles' => 1,
-                'digitalartisan.enseignement.cercles' => 1,
-                'digitalartisan.enseignement.annees' => 1,
-                'digitalartisan.enseignement.programmes' => 1,
-                'digitalartisan.enseignement.cycles' => 1,
-                'digitalartisan.enseignement.volees' => 1,
-                'digitalartisan.enseignement.ecoletype' => 1,
+                'digart.ecole.ecoles' => 1,
+                'digart.ecole.cercles' => 1,
+                'digart.ecole.annees' => 1,
+                'digart.ecole.programmes' => 1,
+                'digart.ecole.cycles' => 1,
+                'digart.ecole.volees' => 1,
+                'digart.ecole.ecoletype' => 1,
 
-                'digitalartisan.enseignement.pays' => 1,
-                'digitalartisan.enseignement.langues' => 1,
-                'digitalartisan.enseignement.prochespermis' => 1,
-                'digitalartisan.enseignement.genres' => 1,
-                'digitalartisan.enseignement.passages' => 1,
-                'digitalartisan.enseignement.typesfaits' => 1,
+                'digart.ecole.pays' => 1,
+                'digart.ecole.langues' => 1,
+                'digart.ecole.prochespermis' => 1,
+                'digart.ecole.genres' => 1,
+                'digart.ecole.passages' => 1,
+                'digart.ecole.typesfaits' => 1,
 
-                'digitalartisan.enseignement.can_restore' => 0,
-                'digitalartisan.enseignement.can_bouclement' => 0,
+                'digart.ecole.can_restore' => 0,
+                'digart.ecole.can_bouclement' => 0,
 
 
                 'backend.manage_preferences' => 1,
@@ -110,35 +110,35 @@ class Seeder1065 extends Seeder
 
         if (! GestionnaireRole::where('code', 'secretaire-esp')->first()){
             $droits = [
-                'digitalartisan.enseignement.suivis' => 0,
-                'digitalartisan.enseignement.pathologies' => 0,
-                'digitalartisan.enseignement.therapies' => 0,
-                'digitalartisan.enseignement.statuts' => 0,
-                'digitalartisan.enseignement.types' => 0,
+                'digart.ecole.suivis' => 0,
+                'digart.ecole.pathologies' => 0,
+                'digart.ecole.therapies' => 0,
+                'digart.ecole.statuts' => 0,
+                'digart.ecole.types' => 0,
 
-                'digitalartisan.enseignement.eleves' => 1,
-                'digitalartisan.enseignement.interlocuteurs' => 1,
-                'digitalartisan.enseignement.enseignants' => 1,
-                'digitalartisan.enseignement.fonctions' => 1,
-                'digitalartisan.enseignement.prochesroles' => 1,
+                'digart.ecole.eleves' => 1,
+                'digart.ecole.interlocuteurs' => 1,
+                'digart.ecole.enseignants' => 1,
+                'digart.ecole.fonctions' => 1,
+                'digart.ecole.prochesroles' => 1,
 
-                'digitalartisan.enseignement.ecoles' => 0,
-                'digitalartisan.enseignement.cercles' => 0,
-                'digitalartisan.enseignement.annees' => 0,
-                'digitalartisan.enseignement.programmes' => 0,
-                'digitalartisan.enseignement.cycles' => 0,
-                'digitalartisan.enseignement.volees' => 0,
-                'digitalartisan.enseignement.ecoletype' => 0,
+                'digart.ecole.ecoles' => 0,
+                'digart.ecole.cercles' => 0,
+                'digart.ecole.annees' => 0,
+                'digart.ecole.programmes' => 0,
+                'digart.ecole.cycles' => 0,
+                'digart.ecole.volees' => 0,
+                'digart.ecole.ecoletype' => 0,
 
-                'digitalartisan.enseignement.pays' => 1,
-                'digitalartisan.enseignement.langues' => 1,
-                'digitalartisan.enseignement.prochespermis' => 1,
-                'digitalartisan.enseignement.genres' => 1,
-                'digitalartisan.enseignement.passages' => 0,
-                'digitalartisan.enseignement.typesfaits' => 0,
+                'digart.ecole.pays' => 1,
+                'digart.ecole.langues' => 1,
+                'digart.ecole.prochespermis' => 1,
+                'digart.ecole.genres' => 1,
+                'digart.ecole.passages' => 0,
+                'digart.ecole.typesfaits' => 0,
 
-                'digitalartisan.enseignement.can_restore' => 0,
-                'digitalartisan.enseignement.can_bouclement' => 0,
+                'digart.ecole.can_restore' => 0,
+                'digart.ecole.can_bouclement' => 0,
 
 
                 'backend.manage_preferences' => 1,

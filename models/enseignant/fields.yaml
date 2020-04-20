@@ -104,7 +104,7 @@ tabs:
             type: relation
         hint_fait:
             span: full
-            path: $/digitalartisan/enseignement/models/enseignant/_hint_onglets.htm
+            path: $/digart/ecole/models/enseignant/_hint_onglets.htm
             context:
                 - create
             type: hint

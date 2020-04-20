@@ -1,9 +1,9 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 use Request;
 use Flash;
-use DigitalArtisan\Enseignement\Models\Eleve;
+use DigArt\Ecole\Models\Eleve;
 
 /**
  * Model
@@ -35,20 +35,20 @@ class EleveHistorique extends Model
     ];    
 
     public $belongsTo = [
-        'annee' => ['DigitalArtisan\Enseignement\Models\Annee',
+        'annee' => ['DigArt\Ecole\Models\Annee',
                    'key' => 'annee_id',
                    'order' => 'debut'],
 
-        'ecole' => ['DigitalArtisan\Enseignement\Models\Ecole',
+        'ecole' => ['DigArt\Ecole\Models\Ecole',
                    'key' => 'ecole_id',
                    'order' => 'designation'],
-        'passage' => ['DigitalArtisan\Enseignement\Models\Passage',
+        'passage' => ['DigArt\Ecole\Models\Passage',
                    'key' => 'passage_id',
                    'order' => 'sort_order'],               
-        'programme' => ['DigitalArtisan\Enseignement\Models\Programme',
+        'programme' => ['DigArt\Ecole\Models\Programme',
                    'key' => 'programme_id',
                    'order' => 'sort_order'],                   
-        'eleve' => ['DigitalArtisan\Enseignement\Models\Eleve',
+        'eleve' => ['DigArt\Ecole\Models\Eleve',
                    'key' => 'eleve_id',
                    'order' => 'nom'],                    
     ];  

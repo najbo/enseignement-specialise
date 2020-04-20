@@ -1,6 +1,6 @@
 # Enseignement specialisé
 
-Gestion de l'enseignement spécialisé. Le plugin doit être placé dans /plugins/digitalartisan/enseignement.
+Gestion de l'enseignement spécialisé. Le plugin doit être placé dans /plugins/digart/ecole.
 
 ## Fonctions et tables :
 
@@ -64,7 +64,7 @@ Source : https://octobercms.com/docs/console/commands#console-install
 
 ## Installation du plugin :
 
-- Créer un dossier plugins/digitalartisan/enseignement
+- Créer un dossier plugins/digart/ecole
 - Se rendre dans le dossier enseignement
 
 ```shell
@@ -85,7 +85,7 @@ php artisan october:up
 Attention : cette commande efface toutes les données déjà présentes dans la base de données.
 
 ```shell
-php artisan plugin:refresh digitalartisan.enseignement
+php artisan plugin:refresh digart.ecole
 ```
 
 ## Plugins nécessaires :

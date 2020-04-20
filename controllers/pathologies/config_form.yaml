@@ -1,10 +1,10 @@
 name: Pathologies
-form: $/digitalartisan/enseignement/models/pathologie/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Pathologie
-defaultRedirect: digitalartisan/enseignement/pathologies
+form: $/digart/ecole/models/pathologie/fields.yaml
+modelClass: DigArt\Ecole\Models\Pathologie
+defaultRedirect: digart/ecole/pathologies
 create:
-    redirect: 'digitalartisan/enseignement/pathologies/update/:id'
-    redirectClose: digitalartisan/enseignement/pathologies
+    redirect: 'digart/ecole/pathologies/update/:id'
+    redirectClose: digart/ecole/pathologies
 update:
-    redirect: digitalartisan/enseignement/pathologies
-    redirectClose: digitalartisan/enseignement/pathologies
+    redirect: digart/ecole/pathologies
+    redirectClose: digart/ecole/pathologies

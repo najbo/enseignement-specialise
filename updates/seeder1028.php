@@ -1,8 +1,8 @@
-<?php namespace DigitalArtisan\Enseignement\Updates;
+<?php namespace DigArt\Ecole\Updates;
 
 use Seeder;
-use DigitalArtisan\Enseignement\Models\Eleve;
-# use DigitalArtisan\Enseignement\Models\Gestionnaire;
+use DigArt\Ecole\Models\Eleve;
+# use DigArt\Ecole\Models\Gestionnaire;
 
 
 

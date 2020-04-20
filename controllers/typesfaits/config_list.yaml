@@ -1,7 +1,7 @@
 title: 'Types de faits'
-modelClass: DigitalArtisan\Enseignement\Models\TypeFait
-list: $/digitalartisan/enseignement/models/typefait/columns.yaml
-recordUrl: 'digitalartisan/enseignement/typesfaits/update/:id'
+modelClass: DigArt\Ecole\Models\TypeFait
+list: $/digart/ecole/models/typefait/columns.yaml
+recordUrl: 'digart/ecole/typesfaits/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

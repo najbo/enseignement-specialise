@@ -1,19 +1,19 @@
 scopes:
     #ecole:
         #label: Eleves
-        #modelClass: DigitalArtisan\Enseignement\Models\Eleve
+        #modelClass: DigArt\Ecole\Models\Eleve
         #conditions: eleve_id in (:filtered)
         #nameFrom: FullName     
     # show_actifs:
     #     label: En cours
     #     type: checkbox
-    #     modelClass: DigitalArtisan\Enseignement\Models\Suivi
+    #     modelClass: DigArt\Ecole\Models\Suivi
     #     scope: Ouverts
     #     default: 1     
     show_actif:
         label: En cours
         type: switch
-        modelClass: DigitalArtisan\Enseignement\Models\Statut
+        modelClass: DigArt\Ecole\Models\Statut
         default: 2
         conditions:
             - statut_id in (select id from digart_ecole_statuts where is_finished = 1)
@@ -21,33 +21,33 @@ scopes:
     eleve:
         label: Eleves
         type: group
-        modelClass: DigitalArtisan\Enseignement\Models\Eleve
+        modelClass: DigArt\Ecole\Models\Eleve
         conditions: eleve_id in (:filtered)
         options: getPrenomNomElevesOptions   
     ecole:
         label: Ecole
-        modelClass: DigitalArtisan\Enseignement\Models\Ecole
+        modelClass: DigArt\Ecole\Models\Ecole
         conditions: eleve_id in (select id from digart_ecole_eleves where ecole_id in (:filtered))
         nameFrom: designation    
     pathologies:
         label: Pathologies
-        modelClass: DigitalArtisan\Enseignement\Models\Pathologie
+        modelClass: DigArt\Ecole\Models\Pathologie
         conditions: id in (select suivi_id from digart_ecole_path_suivi where path_id in (:filtered))
         nameFrom: designation   
     therapies:
         label: Thérapies
-        modelClass: DigitalArtisan\Enseignement\Models\Therapie
+        modelClass: DigArt\Ecole\Models\Therapie
         conditions: id in (select suivi_id from digart_ecole_suivi_activites where therapie_id in (:filtered))
         nameFrom: designation        
     therapeutes:
         label: Thérapeutes
-        modelClass: DigitalArtisan\Enseignement\Models\Interlocuteur
+        modelClass: DigArt\Ecole\Models\Interlocuteur
         conditions: id in (select suivi_id from digart_ecole_suivi_activites where interlocuteur_id in (:filtered))
         #nameFrom: FullName     
         options: getPrenomNomInterlocuteursOptions
     statut:
         label: Statuts
-        modelClass: DigitalArtisan\Enseignement\Models\Statut
+        modelClass: DigArt\Ecole\Models\Statut
         conditions: statut_id in (:filtered)
         nameFrom: designation                        
     periode:

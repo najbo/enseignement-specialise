@@ -1,5 +1,5 @@
 title: 'Réorganiser l''ordre des langues'
-modelClass: DigitalArtisan\Enseignement\Models\Langue
+modelClass: DigArt\Ecole\Models\Langue
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

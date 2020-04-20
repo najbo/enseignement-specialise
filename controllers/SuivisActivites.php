@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -7,7 +7,7 @@ class SuivisActivites extends Controller
 {
     public $implement = [   'Backend\Behaviors\ListController',
                             'Backend\Behaviors\FormController',
-                            'DigitalArtisan\Enseignement\Behaviors\PdfExportBehavior'
+                            'DigArt\Ecole\Behaviors\PdfExportBehavior'
 
                         ];
     
@@ -15,13 +15,13 @@ class SuivisActivites extends Controller
     public $formConfig = 'config_form.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.suivis' 
+        'digart.ecole.suivis' 
     ];
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'protocoles', 'activites');
-        #$this->addCss('/plugins/digitalartisan/enseignement/assets/css/style.css', 'DigitalArtisan.Enseignement');
+        BackendMenu::setContext('DigArt.Ecole', 'protocoles', 'activites');
+        #$this->addCss('/plugins/digart/ecole/assets/css/style.css', 'DigArt.Ecole');
     }
 }

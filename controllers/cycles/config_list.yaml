@@ -1,7 +1,7 @@
 title: Cycles
-modelClass: DigitalArtisan\Enseignement\Models\Cycle
-list: $/digitalartisan/enseignement/models/cycle/columns.yaml
-recordUrl: 'digitalartisan/enseignement/cycles/update/:id'
+modelClass: DigArt\Ecole\Models\Cycle
+list: $/digart/ecole/models/cycle/columns.yaml
+recordUrl: 'digart/ecole/cycles/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

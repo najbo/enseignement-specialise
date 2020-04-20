@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 use \Backend\Models\UserRole;

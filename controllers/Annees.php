@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -6,9 +6,9 @@ use BackendMenu;
 use Flash;
 use Redirect;
 
-use DigitalArtisan\Enseignement\Models\EleveHistorique;
-use DigitalArtisan\Enseignement\Models\Annee;
-use DigitalArtisan\Enseignement\Models\Programme;
+use DigArt\Ecole\Models\EleveHistorique;
+use DigArt\Ecole\Models\Annee;
+use DigArt\Ecole\Models\Programme;
 
 class Annees extends Controller
 {
@@ -18,19 +18,19 @@ class Annees extends Controller
     public $formConfig = 'config_form.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.annees' 
+        'digart.ecole.annees' 
     ];
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'annees');
+        BackendMenu::setContext('DigArt.Ecole', 'structures', 'annees');
     }
 
     public function onBouclement($recordId) 
         {
 
-            if ($this->user->isSuperUser() || $this->user->hasAccess('digitalartisan.enseignement.can_bouclement')) {
+            if ($this->user->isSuperUser() || $this->user->hasAccess('digart.ecole.can_bouclement')) {
 
                 $saveNouvelHistorique = '';
 

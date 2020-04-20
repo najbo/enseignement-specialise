@@ -1,13 +1,13 @@
 name: Années
-modelClass: DigitalArtisan\Enseignement\Models\Annee
-form: $/digitalartisan/enseignement/models/annee/fields.yaml
-defaultRedirect: digitalartisan/enseignement/annees
+modelClass: DigArt\Ecole\Models\Annee
+form: $/digart/ecole/models/annee/fields.yaml
+defaultRedirect: digart/ecole/annees
 create:
     title: 'Créer une nouvelle année'
-    redirect: 'digitalartisan/enseignement/annees/update/:id'
-    redirectClose: digitalartisan/enseignement/annees
+    redirect: 'digart/ecole/annees/update/:id'
+    redirectClose: digart/ecole/annees
 update:
     title: 'Editer une année'
-    redirect: digitalartisan/enseignement/annees
-    redirectClose: digitalartisan/enseignement/annees
+    redirect: digart/ecole/annees
+    redirectClose: digart/ecole/annees
 preview: {  }

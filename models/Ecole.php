@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 use Log;
@@ -30,20 +30,20 @@ class Ecole extends Model
 
 
     public $belongsTo = [
-        'cercle' => ['DigitalArtisan\Enseignement\Models\Cercle',
+        'cercle' => ['DigArt\Ecole\Models\Cercle',
                    'key' => 'cercle_id',
                    'order' => 'sort_order'],
-        'type' => ['DigitalArtisan\Enseignement\Models\EcoleType',
+        'type' => ['DigArt\Ecole\Models\EcoleType',
                    'key' => 'type_id',
                    'order' => 'sort_order'],                  
-        'ecolesuivante' => ['DigitalArtisan\Enseignement\Models\Ecole',
+        'ecolesuivante' => ['DigArt\Ecole\Models\Ecole',
                    'key' => 'ecolesuivante_id',
                    'order' => 'designation']
     ];
 
     public $belongsToMany = [
         'directeurs' => [
-            'DigitalArtisan\Enseignement\Models\Enseignant',
+            'DigArt\Ecole\Models\Enseignant',
             'table' => 'digart_ecole_eco_dir',
             'key' => 'eco_id',
             'otherKey' => 'ens_id',
@@ -52,7 +52,7 @@ class Ecole extends Model
     ];
 
     public $hasMany = [
-         'eleves' => ['DigitalArtisan\Enseignement\Models\Eleve', 'key' => 'ecole_id', 'order' => 'FullName'] 
+         'eleves' => ['DigArt\Ecole\Models\Eleve', 'key' => 'ecole_id', 'order' => 'FullName'] 
     ]; 
 
 

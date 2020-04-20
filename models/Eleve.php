@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 use DB;
@@ -54,33 +54,33 @@ class Eleve extends Model
 
 
     public $belongsTo = [
-        'volee' => ['DigitalArtisan\Enseignement\Models\Volee',
+        'volee' => ['DigArt\Ecole\Models\Volee',
                    'key' => 'volee_id',
                    'order' => 'designation'],
 
-        'ecole' => ['DigitalArtisan\Enseignement\Models\Ecole',
+        'ecole' => ['DigArt\Ecole\Models\Ecole',
                    'key' => 'ecole_id',
                    'order' => 'designation'],
-        'pays' => ['DigitalArtisan\Enseignement\Models\Pays',
+        'pays' => ['DigArt\Ecole\Models\Pays',
                    'key' => 'pays_id',
                    'order' => 'is_origine desc'],
-        'genre' => ['DigitalArtisan\Enseignement\Models\Genre',
+        'genre' => ['DigArt\Ecole\Models\Genre',
                    'key' => 'genre_id',
                    'order' => 'sort_order'],                   
-        'langue' => ['DigitalArtisan\Enseignement\Models\Langue',
+        'langue' => ['DigArt\Ecole\Models\Langue',
                    'key' => 'langue_id',
                    'order' => 'sort_order'],
-        'permis' => ['DigitalArtisan\Enseignement\Models\ProchePermis',
+        'permis' => ['DigArt\Ecole\Models\ProchePermis',
                    'key' => 'permis_id',
                    'order' => 'sort_order'],
-        'gestionnaire' => ['DigitalArtisan\Enseignement\Models\Gestionnaire',
+        'gestionnaire' => ['DigArt\Ecole\Models\Gestionnaire',
                    'key' => 'auteur_id',
                    'order' => 'last_name']                  
     ];
 
     public $belongsToMany = [
         'pathologies' => [
-            'DigitalArtisan\Enseignement\Models\Pathologie',
+            'DigArt\Ecole\Models\Pathologie',
             'table' => 'digart_ecole_path_eleve',
             'key' => 'eleve_id',
             'otherKey' => 'path_id',
@@ -90,10 +90,10 @@ class Eleve extends Model
 
 
     public $hasMany = [
-         'proches' => ['DigitalArtisan\Enseignement\Models\Proche', 'key' => 'eleve_id', 'order' => '','softDelete' => true],
-         'suivis' => ['DigitalArtisan\Enseignement\Models\Suivi', 'key' => 'eleve_id', 'order' => '', 'softDelete' => true],
-         'historiques' => ['DigitalArtisan\Enseignement\Models\EleveHistorique', 'key' => 'eleve_id', 'order' => 'debut', 'softDelete' => true],
-         'faits' => ['DigitalArtisan\Enseignement\Models\EleveFait', 'key' => 'eleve_id', 'order' => 'debut', 'softDelete' => true]
+         'proches' => ['DigArt\Ecole\Models\Proche', 'key' => 'eleve_id', 'order' => '','softDelete' => true],
+         'suivis' => ['DigArt\Ecole\Models\Suivi', 'key' => 'eleve_id', 'order' => '', 'softDelete' => true],
+         'historiques' => ['DigArt\Ecole\Models\EleveHistorique', 'key' => 'eleve_id', 'order' => 'debut', 'softDelete' => true],
+         'faits' => ['DigArt\Ecole\Models\EleveFait', 'key' => 'eleve_id', 'order' => 'debut', 'softDelete' => true]
     ]; 
 
 

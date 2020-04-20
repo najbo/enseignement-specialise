@@ -1,10 +1,10 @@
 name: ProchesPermis
-form: $/digitalartisan/enseignement/models/prochepermis/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\ProchePermis
-defaultRedirect: digitalartisan/enseignement/prochespermis
+form: $/digart/ecole/models/prochepermis/fields.yaml
+modelClass: DigArt\Ecole\Models\ProchePermis
+defaultRedirect: digart/ecole/prochespermis
 create:
-    redirect: 'digitalartisan/enseignement/prochespermis/update/:id'
-    redirectClose: digitalartisan/enseignement/prochespermis
+    redirect: 'digart/ecole/prochespermis/update/:id'
+    redirectClose: digart/ecole/prochespermis
 update:
-    redirect: digitalartisan/enseignement/prochespermis
-    redirectClose: digitalartisan/enseignement/prochespermis
+    redirect: digart/ecole/prochespermis
+    redirectClose: digart/ecole/prochespermis

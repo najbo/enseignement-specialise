@@ -1,5 +1,5 @@
 title: 'Réorganiser l''ordre des genres'
-modelClass: DigitalArtisan\Enseignement\Models\Genre
+modelClass: DigArt\Ecole\Models\Genre
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

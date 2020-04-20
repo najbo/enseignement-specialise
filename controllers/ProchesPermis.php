@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -12,12 +12,12 @@ class ProchesPermis extends Controller
     public $reorderConfig = 'config_reorder.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.prochespermis' 
+        'digart.ecole.prochespermis' 
     ];
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'bases', 'permis');
+        BackendMenu::setContext('DigArt.Ecole', 'bases', 'permis');
     }
 }

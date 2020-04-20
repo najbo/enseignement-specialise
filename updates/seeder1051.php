@@ -1,7 +1,7 @@
-<?php namespace DigitalArtisan\Enseignement\Updates;
+<?php namespace DigArt\Ecole\Updates;
 
 use Seeder;
-use DigitalArtisan\Enseignement\Models\Passage;
+use DigArt\Ecole\Models\Passage;
 
 class Seeder1051 extends Seeder
 

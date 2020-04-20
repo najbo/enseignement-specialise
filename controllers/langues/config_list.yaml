@@ -1,7 +1,7 @@
 title: Langues
-modelClass: DigitalArtisan\Enseignement\Models\Langue
-list: $/digitalartisan/enseignement/models/langue/columns.yaml
-recordUrl: 'digitalartisan/enseignement/langues/update/:id'
+modelClass: DigArt\Ecole\Models\Langue
+list: $/digart/ecole/models/langue/columns.yaml
+recordUrl: 'digart/ecole/langues/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

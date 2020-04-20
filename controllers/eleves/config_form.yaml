@@ -1,11 +1,11 @@
 name: Eleves
-modelClass: DigitalArtisan\Enseignement\Models\Eleve
-form: $/digitalartisan/enseignement/models/eleve/fields.yaml
-defaultRedirect: digitalartisan/enseignement/eleves
+modelClass: DigArt\Ecole\Models\Eleve
+form: $/digart/ecole/models/eleve/fields.yaml
+defaultRedirect: digart/ecole/eleves
 create:
-    redirect: 'digitalartisan/enseignement/eleves/update/:id'
-    redirectClose: digitalartisan/enseignement/eleves
+    redirect: 'digart/ecole/eleves/update/:id'
+    redirectClose: digart/ecole/eleves
 update:
-    redirect: digitalartisan/enseignement/eleves
-    redirectClose: digitalartisan/enseignement/eleves
+    redirect: digart/ecole/eleves
+    redirectClose: digart/ecole/eleves
 preview: {  }

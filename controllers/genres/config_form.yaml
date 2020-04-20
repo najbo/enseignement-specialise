@@ -1,10 +1,10 @@
 name: Genres
-modelClass: DigitalArtisan\Enseignement\Models\Genre
-form: $/digitalartisan/enseignement/models/genre/fields.yaml
-defaultRedirect: digitalartisan/enseignement/genres
+modelClass: DigArt\Ecole\Models\Genre
+form: $/digart/ecole/models/genre/fields.yaml
+defaultRedirect: digart/ecole/genres
 create:
-    redirect: 'digitalartisan/enseignement/genres/update/:id'
-    redirectClose: digitalartisan/enseignement/genres
+    redirect: 'digart/ecole/genres/update/:id'
+    redirectClose: digart/ecole/genres
 update:
-    redirect: digitalartisan/enseignement/genres
-    redirectClose: digitalartisan/enseignement/genres
+    redirect: digart/ecole/genres
+    redirectClose: digart/ecole/genres

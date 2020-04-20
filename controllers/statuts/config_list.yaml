@@ -1,7 +1,7 @@
 title: 'Statuts des suivis'
-modelClass: DigitalArtisan\Enseignement\Models\Statut
-list: $/digitalartisan/enseignement/models/statut/columns.yaml
-recordUrl: 'digitalartisan/enseignement/statuts/update/:id'
+modelClass: DigArt\Ecole\Models\Statut
+list: $/digart/ecole/models/statut/columns.yaml
+recordUrl: 'digart/ecole/statuts/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

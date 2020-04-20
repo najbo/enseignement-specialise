@@ -1,7 +1,7 @@
 title: Elèves
-modelClass: DigitalArtisan\Enseignement\Models\Eleve
-list: $/digitalartisan/enseignement/models/eleve/columns.yaml
-recordUrl: 'digitalartisan/enseignement/eleves/update/:id'
+modelClass: DigArt\Ecole\Models\Eleve
+list: $/digart/ecole/models/eleve/columns.yaml
+recordUrl: 'digart/ecole/eleves/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

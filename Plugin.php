@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement;
+<?php namespace DigArt\Ecole;
 
 use System\Classes\PluginBase;
 use BackendAuth;
@@ -64,7 +64,7 @@ class Plugin extends PluginBase
 
         // Listen for `backend.page.beforeDisplay` event and inject js to current controller instance.
         Event::listen('backend.page.beforeDisplay', function($controller, $action, $params) {
-            $controller->addCss('/plugins/digitalartisan/enseignement/assets/css/style.css', 'DigitalArtisan.Enseignement');
+            $controller->addCss('/plugins/digart/ecole/assets/css/style.css', 'DigArt.Ecole');
         });
     }    
 
@@ -73,19 +73,19 @@ class Plugin extends PluginBase
     public function registerPDFTemplates()
     {
         return [
-            'digitalartisan.enseignement::pdf.liste_eleves',
-            'digitalartisan.enseignement::pdf.liste_generique',
-            'digitalartisan.enseignement::pdf.liste_suivis',
+            'digart.ecole::pdf.liste_eleves',
+            'digart.ecole::pdf.liste_generique',
+            'digart.ecole::pdf.liste_suivis',
 
-             'digitalartisan.enseignement::pdf.detail_eleve',
-             'digitalartisan.enseignement::pdf.detail_suivi',
+             'digart.ecole::pdf.detail_eleve',
+             'digart.ecole::pdf.detail_suivi',
         ];
     }
 
     public function registerPDFLayouts()
     {
         return [
-            'digitalartisan.enseignement::pdf.layouts.default',
+            'digart.ecole::pdf.layouts.default',
         ];
     }
 

@@ -1,7 +1,7 @@
 title: 'Fonctions professionnelles'
-modelClass: DigitalArtisan\Enseignement\Models\Fonction
-list: $/digitalartisan/enseignement/models/fonction/columns.yaml
-recordUrl: 'digitalartisan/enseignement/fonctions/update/:id'
+modelClass: DigArt\Ecole\Models\Fonction
+list: $/digart/ecole/models/fonction/columns.yaml
+recordUrl: 'digart/ecole/fonctions/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

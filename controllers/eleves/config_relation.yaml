@@ -2,37 +2,37 @@ proches:
     label: Proches
     emptyMessage: Aucun proche pour le moment
     view:
-        list: $/digitalartisan/enseignement/models/proche/columns.yaml
+        list: $/digart/ecole/models/proche/columns.yaml
         toolbarButtons: create|delete
         showSearch: true
     manage:
-        form: $/digitalartisan/enseignement/models/proche/fields.yaml
+        form: $/digart/ecole/models/proche/fields.yaml
         title : Gestion des proches
         showSearch: true   
 historiques:
     label: Historiques
     emptyMessage: Aucun historique pour le moment
     view:
-        list: $/digitalartisan/enseignement/models/elevehistorique/columns.yaml
+        list: $/digart/ecole/models/elevehistorique/columns.yaml
         toolbarButtons: create|delete
         showSearch: true
     manage:
-        form: $/digitalartisan/enseignement/models/elevehistorique/fields.yaml
+        form: $/digart/ecole/models/elevehistorique/fields.yaml
         showSearch: true          
 faits:
     label: Faits marquants
     emptyMessage: Aucun fait marquant pour le moment
     view:
-        list: $/digitalartisan/enseignement/models/elevefait/columns.yaml
+        list: $/digart/ecole/models/elevefait/columns.yaml
         toolbarButtons: create|delete
         showSearch: true
     manage:
-        form: $/digitalartisan/enseignement/models/elevefait/fields.yaml
+        form: $/digart/ecole/models/elevefait/fields.yaml
         showSearch: true          
 suivis:
     readOnly: true
     label: Suivi
     emptyMessage: Aucun suivi pour le moment
     view:
-        list: $/digitalartisan/enseignement/models/suivi/columns.yaml
+        list: $/digart/ecole/models/suivi/columns.yaml
         showSearch: true

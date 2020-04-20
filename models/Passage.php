@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 
@@ -28,7 +28,7 @@ class Passage extends Model
     ];
 
     public $belongsTo = [
-        'passagetype' => ['DigitalArtisan\Enseignement\Models\PassageType',
+        'passagetype' => ['DigArt\Ecole\Models\PassageType',
                    'key' => 'passagetype_id',
                    'order' => 'sort_order']
     ];    

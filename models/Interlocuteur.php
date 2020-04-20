@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 
@@ -36,7 +36,7 @@ class Interlocuteur extends Model
 
     public $belongsToMany = [
         'fonctions' => [
-            'DigitalArtisan\Enseignement\Models\Fonction',
+            'DigArt\Ecole\Models\Fonction',
             'table' => 'digart_ecole_inter_fct',
             'key' => 'interloc_id',
             'otherKey' => 'fct_id',
@@ -45,7 +45,7 @@ class Interlocuteur extends Model
     ];
 
     public $hasMany = [
-         'suivis' => ['DigitalArtisan\Enseignement\Models\SuiviActivite', 'key' => 'interlocuteur_id', 'order' => '','softDelete' => true]
+         'suivis' => ['DigArt\Ecole\Models\SuiviActivite', 'key' => 'interlocuteur_id', 'order' => '','softDelete' => true]
     ]; 
 
     public function getFullNameAttribute() {

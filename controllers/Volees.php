@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -11,12 +11,12 @@ class Volees extends Controller
     public $formConfig = 'config_form.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.volees' 
+        'digart.ecole.volees' 
     ];
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'volees');
+        BackendMenu::setContext('DigArt.Ecole', 'structures', 'volees');
     }
 }

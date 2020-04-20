@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 
@@ -41,20 +41,20 @@ class Enseignant extends Model
     ];
 
     public $belongsTo = [
-        'genre' => ['DigitalArtisan\Enseignement\Models\Genre',
+        'genre' => ['DigArt\Ecole\Models\Genre',
                    'key' => 'genre_id',
                    'order' => 'sort_order'],                   
-        'langue' => ['DigitalArtisan\Enseignement\Models\Langue',
+        'langue' => ['DigArt\Ecole\Models\Langue',
                    'key' => 'langue_id',
                    'order' => 'sort_order'],    
-        'permis' => ['DigitalArtisan\Enseignement\Models\ProchePermis',
+        'permis' => ['DigArt\Ecole\Models\ProchePermis',
                    'key' => 'permis_id',
                    'order' => 'sort_order']                                    
     ];
 
     public $belongsToMany = [
         'ecoles' => [
-            'DigitalArtisan\Enseignement\Models\Ecole',
+            'DigArt\Ecole\Models\Ecole',
             'table' => 'digart_ecole_ens_eco',
             'key' => 'ens_id',
             'otherKey' => 'eco_id',
@@ -63,7 +63,7 @@ class Enseignant extends Model
     ];
 
     public $hasMany = [
-          'faits' => ['DigitalArtisan\Enseignement\Models\EnseignantFait', 'key' => 'enseignant_id', 'order' => 'debut', 'softDelete' => true]
+          'faits' => ['DigArt\Ecole\Models\EnseignantFait', 'key' => 'enseignant_id', 'order' => 'debut', 'softDelete' => true]
     ];     
 
 

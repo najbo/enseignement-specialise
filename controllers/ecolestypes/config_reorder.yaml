@@ -1,5 +1,5 @@
 title: 'Réorganiser l''ordre des types d''écoles'
-modelClass: DigitalArtisan\Enseignement\Models\EcoleType
+modelClass: DigArt\Ecole\Models\EcoleType
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

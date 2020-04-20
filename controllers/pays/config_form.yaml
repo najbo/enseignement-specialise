@@ -1,10 +1,10 @@
 name: Pays
-form: $/digitalartisan/enseignement/models/pays/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Pays
-defaultRedirect: digitalartisan/enseignement/pays
+form: $/digart/ecole/models/pays/fields.yaml
+modelClass: DigArt\Ecole\Models\Pays
+defaultRedirect: digart/ecole/pays
 create:
-    redirect: 'digitalartisan/enseignement/pays/update/:id'
-    redirectClose: digitalartisan/enseignement/pays
+    redirect: 'digart/ecole/pays/update/:id'
+    redirectClose: digart/ecole/pays
 update:
-    redirect: digitalartisan/enseignement/pays
-    redirectClose: digitalartisan/enseignement/pays
+    redirect: digart/ecole/pays
+    redirectClose: digart/ecole/pays

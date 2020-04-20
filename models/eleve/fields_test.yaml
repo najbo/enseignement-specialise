@@ -93,7 +93,7 @@ tabs:
             type: relation
         hint_proches:
             span: full
-            path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
+            path: $/digart/ecole/models/eleve/_hint_onglets.htm
             context:
                 - create
             type: hint
@@ -108,7 +108,7 @@ tabs:
             tab: Proches
         hint_historique:
             span: full
-            path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
+            path: $/digart/ecole/models/eleve/_hint_onglets.htm
             context:
                 - create
             type: hint
@@ -116,7 +116,7 @@ tabs:
 
         hint_fait:
             span: full
-            path: $/digitalartisan/enseignement/models/eleve/_hint_onglets.htm
+            path: $/digart/ecole/models/eleve/_hint_onglets.htm
             context:
                 - create
             type: hint

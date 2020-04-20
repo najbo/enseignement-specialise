@@ -1,11 +1,11 @@
 name: 'Types de faits'
-modelClass: DigitalArtisan\Enseignement\Models\TypeFait
-form: $/digitalartisan/enseignement/models/typefait/fields.yaml
-defaultRedirect: digitalartisan/enseignement/typesfaits
+modelClass: DigArt\Ecole\Models\TypeFait
+form: $/digart/ecole/models/typefait/fields.yaml
+defaultRedirect: digart/ecole/typesfaits
 create:
-    redirect: 'digitalartisan/enseignement/typesfaits/update/:id'
-    redirectClose: digitalartisan/enseignement/typesfaits
+    redirect: 'digart/ecole/typesfaits/update/:id'
+    redirectClose: digart/ecole/typesfaits
 update:
-    redirect: digitalartisan/enseignement/typesfaits
-    redirectClose: digitalartisan/enseignement/typesfaits
+    redirect: digart/ecole/typesfaits
+    redirectClose: digart/ecole/typesfaits
 preview: {  }

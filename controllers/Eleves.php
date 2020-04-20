@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -16,7 +16,7 @@ class Eleves extends Controller
     public $implement = [       'Backend\Behaviors\ListController',
                                 'Backend\Behaviors\FormController',
                                 'Backend.Behaviors.RelationController',
-                                'DigitalArtisan\Enseignement\Behaviors\PdfExportBehavior'
+                                'DigArt\Ecole\Behaviors\PdfExportBehavior'
                             ];
     
     public $listConfig = 'config_list.yaml';
@@ -24,14 +24,14 @@ class Eleves extends Controller
     public $relationConfig = 'config_relation.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.eleves' 
+        'digart.ecole.eleves' 
     ];
 
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'ressources-humaines', 'eleves'); 
+        BackendMenu::setContext('DigArt.Ecole', 'ressources-humaines', 'eleves'); 
     }
 
 
@@ -75,7 +75,7 @@ class Eleves extends Controller
             }
             $records[] = $record;
         }
-        return PDF::loadTemplate('digitalartisan.enseignement::pdf.liste_eleves',
+        return PDF::loadTemplate('digart.ecole::pdf.liste_eleves',
             ['headers' => $headers, 'records' => $records])->stream('export.pdf');
     }
 
@@ -130,7 +130,7 @@ class Eleves extends Controller
     {
         #$user = BackendAuth::getUser();
 
-        if ($this->user->isSuperUser() || $this->user->hasAccess('digitalartisan.enseignement.can_restore')) {
+        if ($this->user->isSuperUser() || $this->user->hasAccess('digart.ecole.can_restore')) {
             #$query->where('is_superuser', false);
         
             // Ensure soft-deleted records can still be managed
@@ -146,7 +146,7 @@ class Eleves extends Controller
     {
         #$user = BackendAuth::getUser();
 
-        if (! ($this->user->isSuperUser() || $this->user->hasAccess('digitalartisan.enseignement.can_restore'))) {
+        if (! ($this->user->isSuperUser() || $this->user->hasAccess('digart.ecole.can_restore'))) {
             $filterWidget->removeScope('show_deleted');
         }
     }
@@ -179,7 +179,7 @@ class Eleves extends Controller
         $this->formFindModelObject($recordId)->restore();
 
         # Enregistrement restauré avec succès
-        Flash::success(e(trans('digitalartisan.enseignement::lang.eleve.restored')));
+        Flash::success(e(trans('digart.ecole::lang.eleve.restored')));
 
         return Redirect::refresh();
     }
@@ -200,7 +200,7 @@ class Eleves extends Controller
             throw new ApplicationException('Elève non trouvé.');
         }
 
-        $templateCode = 'digitalartisan.enseignement::pdf.detail_eleve';
+        $templateCode = 'digart.ecole::pdf.detail_eleve';
         #$templateCode = 'enseignement:eleve';
 
         $filename = Str::slug('eleve '. $eleve->nom . ' ' . $eleve->prenom) . '.pdf';

@@ -1,7 +1,7 @@
 title: Enseignants
-modelClass: DigitalArtisan\Enseignement\Models\Enseignant
-list: $/digitalartisan/enseignement/models/enseignant/columns.yaml
-recordUrl: 'digitalartisan/enseignement/enseignants/update/:id'
+modelClass: DigArt\Ecole\Models\Enseignant
+list: $/digart/ecole/models/enseignant/columns.yaml
+recordUrl: 'digart/ecole/enseignants/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

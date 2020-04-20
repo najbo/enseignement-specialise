@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('digitalartisan/enseignement/suivis') ?>">Suivis</a></li>
+        <li><a href="<?= Backend::url('digart/ecole/suivis') ?>">Suivis</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -34,7 +34,7 @@
                     <?= e(trans('backend::lang.form.save_and_close')) ?>
                 </button>
 
-                <a target="_blank" href="<?= Backend::url('digitalartisan/enseignement/suivis/pdf').'/'. $formModel->getKey() ?>"  
+                <a target="_blank" href="<?= Backend::url('digart/ecole/suivis/pdf').'/'. $formModel->getKey() ?>"  
                 class="btn btn-primary oc-icon-sign-out">Fiche PDF</a> 
 
                 <button
@@ -46,7 +46,7 @@
                 </button>
 
                 <span class="btn-text">
-                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('digitalartisan/enseignement/suivis') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
+                    <?= e(trans('backend::lang.form.or')) ?> <a href="<?= Backend::url('digart/ecole/suivis') ?>"><?= e(trans('backend::lang.form.cancel')) ?></a>
                 </span>                
 
             </div>
@@ -55,5 +55,5 @@
 
 <?php else: ?>
     <p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
-    <p><a href="<?= Backend::url('digitalartisan/enseignement/suivis') ?>" class="btn btn-default"><?= e(trans('backend::lang.form.return_to_list')) ?></a></p>
+    <p><a href="<?= Backend::url('digart/ecole/suivis') ?>" class="btn btn-default"><?= e(trans('backend::lang.form.return_to_list')) ?></a></p>
 <?php endif ?>

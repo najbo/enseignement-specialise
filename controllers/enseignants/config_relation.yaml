@@ -2,9 +2,9 @@ faits:
     label: Faits marquants
     emptyMessage: Aucun fait marquant pour le moment
     view:
-        list: $/digitalartisan/enseignement/models/enseignantfait/columns.yaml
+        list: $/digart/ecole/models/enseignantfait/columns.yaml
         toolbarButtons: create|delete
         showSearch: true
     manage:
-        form: $/digitalartisan/enseignement/models/enseignantfait/fields.yaml
+        form: $/digart/ecole/models/enseignantfait/fields.yaml
         showSearch: true  

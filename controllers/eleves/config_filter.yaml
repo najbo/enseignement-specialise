@@ -1,27 +1,27 @@
 scopes:
     ecole:
         label: Ecole
-        modelClass: DigitalArtisan\Enseignement\Models\Ecole
+        modelClass: DigArt\Ecole\Models\Ecole
         conditions: ecole_id in (:filtered)
         nameFrom: designation
     pathologies:
         label: Pathologies
-        modelClass: DigitalArtisan\Enseignement\Models\Pathologie
+        modelClass: DigArt\Ecole\Models\Pathologie
         conditions: id in (select eleve_id from digart_ecole_path_eleve where path_id in (:filtered))
         nameFrom: designation                                                                
     genre:
         label: Genres
-        modelClass: DigitalArtisan\Enseignement\Models\Genre
+        modelClass: DigArt\Ecole\Models\Genre
         conditions: genre_id in (:filtered)
         nameFrom: designation        
     langue:
         label: Langues maternelles
-        modelClass: DigitalArtisan\Enseignement\Models\Langue
+        modelClass: DigArt\Ecole\Models\Langue
         conditions: langue_id in (:filtered)
         nameFrom: designation
     proches:
         label: Proches
-        modelClass: DigitalArtisan\Enseignement\Models\Proche
+        modelClass: DigArt\Ecole\Models\Proche
         conditions: id in (select eleve_id from digart_ecole_proches where id in (:filtered))
         #nameFrom: FullName
         options: getPrenomNomProchesOptions           
@@ -35,6 +35,6 @@ scopes:
     show_deleted:
         label: Afficher les supprimés
         type: checkbox
-        modelClass: DigitalArtisan\Enseignement\Models\Eleve
+        modelClass: DigArt\Ecole\Models\Eleve
         scope: withTrashed
         default: 0            

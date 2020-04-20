@@ -46,7 +46,7 @@ columns:
     statut_id:
         label: Statut
         type: partial
-        path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_statut_column.htm
+        path: ~/plugins/digart/ecole/models/suiviactivite/_statut_column.htm
         searchable: false
         sortable: true
     suivi_id:

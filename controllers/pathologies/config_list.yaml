@@ -1,5 +1,5 @@
-list: $/digitalartisan/enseignement/models/pathologie/columns.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Pathologie
+list: $/digart/ecole/models/pathologie/columns.yaml
+modelClass: DigArt\Ecole\Models\Pathologie
 title: Pathologies
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
@@ -9,5 +9,5 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
-recordUrl: 'digitalartisan/enseignement/pathologies/update/:id'
+recordUrl: 'digart/ecole/pathologies/update/:id'
 filter: config_filter.yaml

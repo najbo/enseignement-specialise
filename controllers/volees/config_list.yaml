@@ -1,7 +1,7 @@
 title: Volées
-modelClass: DigitalArtisan\Enseignement\Models\Volee
-list: $/digitalartisan/enseignement/models/volee/columns.yaml
-recordUrl: 'digitalartisan/enseignement/volees/update/:id'
+modelClass: DigArt\Ecole\Models\Volee
+list: $/digart/ecole/models/volee/columns.yaml
+recordUrl: 'digart/ecole/volees/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -12,7 +12,7 @@ class Suivis extends Controller
     public $implement = [       'Backend\Behaviors\ListController',
                                 'Backend\Behaviors\FormController',
                                 'Backend.Behaviors.RelationController',
-                                'DigitalArtisan\Enseignement\Behaviors\PdfExportBehavior'
+                                'DigArt\Ecole\Behaviors\PdfExportBehavior'
                         ];
     
     public $listConfig = 'config_list.yaml';
@@ -20,13 +20,13 @@ class Suivis extends Controller
     public $relationConfig = 'config_relation.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.suivis' 
+        'digart.ecole.suivis' 
     ];
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'protocoles', 'suivi');
+        BackendMenu::setContext('DigArt.Ecole', 'protocoles', 'suivi');
     }
 
 
@@ -65,7 +65,7 @@ class Suivis extends Controller
             }
         }
 
-        return PDF::loadTemplate('digitalartisan.enseignement::pdf.liste_suivis', compact('user','pdf_headers', 'records'))->stream('export.pdf');
+        return PDF::loadTemplate('digart.ecole::pdf.liste_suivis', compact('user','pdf_headers', 'records'))->stream('export.pdf');
     } 
 
 
@@ -85,7 +85,7 @@ class Suivis extends Controller
             throw new ApplicationException('Fiche non trouvée.');
         }
 
-        $templateCode = 'digitalartisan.enseignement::pdf.detail_suivi';
+        $templateCode = 'digart.ecole::pdf.detail_suivi';
 
         $filename = Str::slug('suivi '.$suivi->id . ' ' . $suivi->eleve->nom .' ' . $suivi->eleve->prenom) . '.pdf';
 

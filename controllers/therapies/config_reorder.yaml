@@ -1,5 +1,5 @@
 title: 'Réorganiser l''ordre des thérapies'
-modelClass: DigitalArtisan\Enseignement\Models\Therapie
+modelClass: DigArt\Ecole\Models\Therapie
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

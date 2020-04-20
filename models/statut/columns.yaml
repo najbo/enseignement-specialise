@@ -2,7 +2,7 @@ columns:
     designation:
         label: Désignation
         type: partial
-        path: ~/plugins/digitalartisan/enseignement/models/statut/_designation_column.htm
+        path: ~/plugins/digart/ecole/models/statut/_designation_column.htm
         searchable: true
         sortable: false
     complement:

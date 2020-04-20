@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -12,12 +12,12 @@ class EcolesTypes extends Controller
     public $reorderConfig = 'config_reorder.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.ecoletype' 
+        'digart.ecole.ecoletype' 
     ];
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'structures', 'ecoles-types');
+        BackendMenu::setContext('DigArt.Ecole', 'structures', 'ecoles-types');
     }
 }

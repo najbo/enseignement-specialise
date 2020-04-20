@@ -53,7 +53,7 @@ tabs:
             nameFrom: FullName
             descriptionFrom: description
             prompt: 'Sélectionnez le thérapeute affecté'
-            list: $/digitalartisan/enseignement/models/interlocuteur/columns_short.yaml
+            list: $/digart/ecole/models/interlocuteur/columns_short.yaml
             span: auto
             type: recordfinder
             tab: 'Données de base'

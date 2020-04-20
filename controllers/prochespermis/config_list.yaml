@@ -1,7 +1,7 @@
 title: Permis
-modelClass: DigitalArtisan\Enseignement\Models\ProchePermis
-list: $/digitalartisan/enseignement/models/prochepermis/columns.yaml
-recordUrl: 'digitalartisan/enseignement/prochespermis/update/:id'
+modelClass: DigArt\Ecole\Models\ProchePermis
+list: $/digart/ecole/models/prochepermis/columns.yaml
+recordUrl: 'digart/ecole/prochespermis/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

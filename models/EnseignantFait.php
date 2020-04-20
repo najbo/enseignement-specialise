@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 
@@ -34,7 +34,7 @@ class EnseignantFait extends Model
     ];
 
     public $belongsTo = [
-        'typefait' => ['DigitalArtisan\Enseignement\Models\TypeFait',
+        'typefait' => ['DigArt\Ecole\Models\TypeFait',
                    'key' => 'typefait_id',
                    'order' => 'sort_order'],                   
     ];    

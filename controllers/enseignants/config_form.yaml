@@ -1,10 +1,10 @@
 name: Enseignants
-form: $/digitalartisan/enseignement/models/enseignant/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Enseignant
-defaultRedirect: digitalartisan/enseignement/enseignants
+form: $/digart/ecole/models/enseignant/fields.yaml
+modelClass: DigArt\Ecole\Models\Enseignant
+defaultRedirect: digart/ecole/enseignants
 create:
-    redirect: 'digitalartisan/enseignement/enseignants/update/:id'
-    redirectClose: digitalartisan/enseignement/enseignants
+    redirect: 'digart/ecole/enseignants/update/:id'
+    redirectClose: digart/ecole/enseignants
 update:
-    redirect: digitalartisan/enseignement/enseignants
-    redirectClose: digitalartisan/enseignement/enseignants
+    redirect: digart/ecole/enseignants
+    redirectClose: digart/ecole/enseignants

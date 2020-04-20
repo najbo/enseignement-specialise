@@ -1,10 +1,10 @@
 name: Ecoles
-form: $/digitalartisan/enseignement/models/ecole/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Ecole
-defaultRedirect: digitalartisan/enseignement/ecoles
+form: $/digart/ecole/models/ecole/fields.yaml
+modelClass: DigArt\Ecole\Models\Ecole
+defaultRedirect: digart/ecole/ecoles
 create:
-    redirect: 'digitalartisan/enseignement/ecoles/update/:id'
-    redirectClose: digitalartisan/enseignement/ecoles
+    redirect: 'digart/ecole/ecoles/update/:id'
+    redirectClose: digart/ecole/ecoles
 update:
-    redirect: digitalartisan/enseignement/ecoles
-    redirectClose: digitalartisan/enseignement/ecoles
+    redirect: digart/ecole/ecoles
+    redirectClose: digart/ecole/ecoles

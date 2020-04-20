@@ -1,7 +1,7 @@
 title: Pays
-modelClass: DigitalArtisan\Enseignement\Models\Pays
-list: $/digitalartisan/enseignement/models/pays/columns.yaml
-recordUrl: 'digitalartisan/enseignement/pays/update/:id'
+modelClass: DigArt\Ecole\Models\Pays
+list: $/digart/ecole/models/pays/columns.yaml
+recordUrl: 'digart/ecole/pays/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

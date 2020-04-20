@@ -1,7 +1,7 @@
 title: Suivis
-modelClass: DigitalArtisan\Enseignement\Models\Suivi
-list: $/digitalartisan/enseignement/models/suivi/columns.yaml
-recordUrl: 'digitalartisan/enseignement/suivis/update/:id'
+modelClass: DigArt\Ecole\Models\Suivi
+list: $/digart/ecole/models/suivi/columns.yaml
+recordUrl: 'digart/ecole/suivis/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

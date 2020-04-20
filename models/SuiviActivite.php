@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 use BackendAuth;
@@ -50,22 +50,22 @@ class SuiviActivite extends Model
     ];
 
     public $belongsTo = [
-        'therapie'    => ['DigitalArtisan\Enseignement\Models\Therapie',
+        'therapie'    => ['DigArt\Ecole\Models\Therapie',
                    'key' => 'therapie_id',
                    'order' => 'sort_order'],
-        'interlocuteur'    => ['DigitalArtisan\Enseignement\Models\Interlocuteur',
+        'interlocuteur'    => ['DigArt\Ecole\Models\Interlocuteur',
                    'key' => 'interlocuteur_id',
                    'order' => 'nom', 'prenom'],        
-        'type'    => ['DigitalArtisan\Enseignement\Models\Type',
+        'type'    => ['DigArt\Ecole\Models\Type',
                    'key' => 'type_id',
                    'order' => 'sort_order'],
-        'gestionnaire'    => ['DigitalArtisan\Enseignement\Models\Gestionnaire',
+        'gestionnaire'    => ['DigArt\Ecole\Models\Gestionnaire',
                'key' => 'gestionnaire_id',
                'order' => ['last_name', 'first_name']],       
-        'statut'    => ['DigitalArtisan\Enseignement\Models\ActiviteStatut',
+        'statut'    => ['DigArt\Ecole\Models\ActiviteStatut',
                    'key' => 'statut_id',
                    'order' => 'sort_order'],                           
-        'suivi'    => ['DigitalArtisan\Enseignement\Models\Suivi',
+        'suivi'    => ['DigArt\Ecole\Models\Suivi',
                    'key' => 'suivi_id',
                    'order' => '']                                      
     ];    

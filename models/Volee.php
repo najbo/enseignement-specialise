@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 
@@ -27,7 +27,7 @@ class Volee extends Model
     ];
 
 /*    public $belongsTo = [
-        'maitredeclasse' => ['DigitalArtisan\Enseignement\Models\Enseignant',
+        'maitredeclasse' => ['DigArt\Ecole\Models\Enseignant',
                    'key' => 'enseignant_id',
                    'order' => 'nom'],
     ];*/

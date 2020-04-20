@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 use Backend\Models\User;
@@ -29,7 +29,7 @@ class Annee extends Model
     ];
 
     public $belongsTo = [                
-        'anneesuivante' => ['DigitalArtisan\Enseignement\Models\Annee',
+        'anneesuivante' => ['DigArt\Ecole\Models\Annee',
                    'key' => 'anneesuivante_id',
                    'order' => 'debut'],           
         'backenduser' => ['Backend\Models\User',

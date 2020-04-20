@@ -1,7 +1,7 @@
-<?php namespace DigitalArtisan\Enseignement\Updates;
+<?php namespace DigArt\Ecole\Updates;
 
 use Seeder;
-use DigitalArtisan\Enseignement\Models\Cercle;
+use DigArt\Ecole\Models\Cercle;
 
 class Seeder1040 extends Seeder
 {

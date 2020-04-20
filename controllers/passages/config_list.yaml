@@ -1,7 +1,7 @@
 title: Passages
-modelClass: DigitalArtisan\Enseignement\Models\Passage
-list: $/digitalartisan/enseignement/models/passage/columns.yaml
-recordUrl: 'digitalartisan/enseignement/passages/update/:id'
+modelClass: DigArt\Ecole\Models\Passage
+list: $/digart/ecole/models/passage/columns.yaml
+recordUrl: 'digart/ecole/passages/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

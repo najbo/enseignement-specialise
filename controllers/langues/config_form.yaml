@@ -1,10 +1,10 @@
 name: Langues
-form: $/digitalartisan/enseignement/models/langue/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Langue
-defaultRedirect: digitalartisan/enseignement/langues
+form: $/digart/ecole/models/langue/fields.yaml
+modelClass: DigArt\Ecole\Models\Langue
+defaultRedirect: digart/ecole/langues
 create:
-    redirect: 'digitalartisan/enseignement/langues/update/:id'
-    redirectClose: digitalartisan/enseignement/langues
+    redirect: 'digart/ecole/langues/update/:id'
+    redirectClose: digart/ecole/langues
 update:
-    redirect: digitalartisan/enseignement/langues
-    redirectClose: digitalartisan/enseignement/langues
+    redirect: digart/ecole/langues
+    redirectClose: digart/ecole/langues

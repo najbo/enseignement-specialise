@@ -10,7 +10,7 @@ columns:
     eleve:
         label: Eleve concerné
         type: partial
-        path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_eleve_column.htm
+        path: ~/plugins/digart/ecole/models/suiviactivite/_eleve_column.htm
         searchable: false
         sortable: false
         cssClass: gras
@@ -25,7 +25,7 @@ columns:
     statut_suivi:
         label: Statut suivi
         type: partial
-        path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_statutsuivi_column.htm
+        path: ~/plugins/digart/ecole/models/suiviactivite/_statutsuivi_column.htm
         searchable: false
         sortable: false
         cssClass: gras  
@@ -70,6 +70,6 @@ columns:
     activite_statut_colors:
         label: Statut activité
         type: partial
-        path: ~/plugins/digitalartisan/enseignement/models/suiviactivite/_statut_column.htm
+        path: ~/plugins/digart/ecole/models/suiviactivite/_statut_column.htm
         searchable: false
         sortable: false        

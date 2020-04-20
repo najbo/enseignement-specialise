@@ -1,5 +1,5 @@
 title: 'Réorganiser l''ordre des types de faits'
-modelClass: DigitalArtisan\Enseignement\Models\TypeFait
+modelClass: DigArt\Ecole\Models\TypeFait
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

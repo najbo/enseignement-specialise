@@ -1,5 +1,5 @@
-list: $/digitalartisan/enseignement/models/interlocuteur/columns.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Interlocuteur
+list: $/digart/ecole/models/interlocuteur/columns.yaml
+modelClass: DigArt\Ecole\Models\Interlocuteur
 title: Interlocuteurs
 noRecordsMessage: 'backend::lang.list.no_records'
 showSetup: true
@@ -9,5 +9,5 @@ toolbar:
     buttons: list_toolbar
     search:
         prompt: 'backend::lang.list.search_prompt'
-recordUrl: 'digitalartisan/enseignement/interlocuteurs/update/:id'
+recordUrl: 'digart/ecole/interlocuteurs/update/:id'
 filter: config_filter.yaml

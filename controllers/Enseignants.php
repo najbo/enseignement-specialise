@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -9,7 +9,7 @@ class Enseignants extends Controller
     public $implement = [       'Backend\Behaviors\ListController',
                                 'Backend\Behaviors\FormController',
                                 'Backend.Behaviors.RelationController',
-                                'DigitalArtisan\Enseignement\Behaviors\PdfExportBehavior'
+                                'DigArt\Ecole\Behaviors\PdfExportBehavior'
                         ];
     
     public $listConfig = 'config_list.yaml';
@@ -17,12 +17,12 @@ class Enseignants extends Controller
     public $relationConfig = 'config_relation.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.enseignants' 
+        'digart.ecole.enseignants' 
     ];
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'ressources-humaines', 'enseignants');
+        BackendMenu::setContext('DigArt.Ecole', 'ressources-humaines', 'enseignants');
     }
 }

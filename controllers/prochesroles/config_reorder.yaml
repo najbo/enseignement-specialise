@@ -1,5 +1,5 @@
 title: 'Réorganiser l''ordre des proches'
-modelClass: DigitalArtisan\Enseignement\Models\ProcheRole
+modelClass: DigArt\Ecole\Models\ProcheRole
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

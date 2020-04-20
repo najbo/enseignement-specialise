@@ -1,5 +1,5 @@
 title: 'Réorganiser l''ordre des cycles'
-modelClass: DigitalArtisan\Enseignement\Models\Cycle
+modelClass: DigArt\Ecole\Models\Cycle
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

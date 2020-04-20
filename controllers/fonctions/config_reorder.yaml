@@ -1,5 +1,5 @@
 title: 'Réorganiser l''ordre des fonctions'
-modelClass: DigitalArtisan\Enseignement\Models\Fonction
+modelClass: DigArt\Ecole\Models\Fonction
 nameFrom: designation
 toolbar:
     buttons: reorder_toolbar

@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 use Request;
@@ -28,7 +28,7 @@ class SuiviEnseignant extends Model
     ];
 
     public $belongsTo = [
-        'enseignant'    => ['DigitalArtisan\Enseignement\Models\Enseignant',
+        'enseignant'    => ['DigArt\Ecole\Models\Enseignant',
                    'key' => 'enseignant_id'],
                    
     ];   

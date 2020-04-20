@@ -1,10 +1,10 @@
 name: Passages
-form: $/digitalartisan/enseignement/models/passage/fields.yaml
-modelClass: DigitalArtisan\Enseignement\Models\Passage
-defaultRedirect: digitalartisan/enseignement/passages
+form: $/digart/ecole/models/passage/fields.yaml
+modelClass: DigArt\Ecole\Models\Passage
+defaultRedirect: digart/ecole/passages
 create:
-    redirect: 'digitalartisan/enseignement/passages/update/:id'
-    redirectClose: digitalartisan/enseignement/passages
+    redirect: 'digart/ecole/passages/update/:id'
+    redirectClose: digart/ecole/passages
 update:
-    redirect: digitalartisan/enseignement/passages
-    redirectClose: digitalartisan/enseignement/passages
+    redirect: digart/ecole/passages
+    redirectClose: digart/ecole/passages

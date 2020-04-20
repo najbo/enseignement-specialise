@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 
@@ -27,6 +27,6 @@ class Cercle extends Model
     ];
 
     public $hasMany = [
-         'ecoles' => ['DigitalArtisan\Enseignement\Models\Ecole', 'key' => 'cercle_id', 'order' => 'designation']        
+         'ecoles' => ['DigArt\Ecole\Models\Ecole', 'key' => 'cercle_id', 'order' => 'designation']        
     ];     
 }

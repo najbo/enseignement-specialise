@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Models;
+<?php namespace DigArt\Ecole\Models;
 
 use Model;
 
@@ -35,10 +35,10 @@ class Proche extends Model
     ];
 
     public $belongsTo = [
-        'procherole' => ['DigitalArtisan\Enseignement\Models\ProcheRole',
+        'procherole' => ['DigArt\Ecole\Models\ProcheRole',
                    'key' => 'role_id',
                    'order' => 'sort_order'],
-        'permis' => ['DigitalArtisan\Enseignement\Models\ProchePermis',
+        'permis' => ['DigArt\Ecole\Models\ProchePermis',
                    'key' => 'permis_id',
                    'order' => 'sort_order']
     ];         

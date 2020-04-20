@@ -4,7 +4,7 @@ fields:
         nameFrom: FullName
         descriptionFrom: description
         prompt: 'Sélectionner un élève'
-        list: $/digitalartisan/enseignement/models/eleve/columns_short.yaml
+        list: $/digart/ecole/models/eleve/columns_short.yaml
         span: auto
         required: 1
         type: recordfinder
@@ -47,7 +47,7 @@ tabs:
     fields:
         hint_activites:
             span: full
-            path: $/digitalartisan/enseignement/models/suivi/_hint_onglets.htm
+            path: $/digart/ecole/models/suivi/_hint_onglets.htm
             context:
                 - create
             type: hint
@@ -75,7 +75,7 @@ tabs:
             tab: Remarques
         hint_enseignants:
             span: full
-            path: $/digitalartisan/enseignement/models/suivi/_hint_onglets.htm
+            path: $/digart/ecole/models/suivi/_hint_onglets.htm
             context:
                 - create
             type: hint

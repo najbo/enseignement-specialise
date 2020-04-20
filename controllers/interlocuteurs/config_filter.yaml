@@ -1,7 +1,7 @@
 scopes:
     fonctions:
         label: Fonctions
-        modelClass: DigitalArtisan\Enseignement\Models\Fonction
+        modelClass: DigArt\Ecole\Models\Fonction
         conditions: id in (select interloc_id from digart_ecole_inter_fct where fct_id in (:filtered))
         nameFrom: designation
     is_actif:

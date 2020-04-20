@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -11,12 +11,12 @@ class Pays extends Controller
     public $formConfig = 'config_form.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.pays' 
+        'digart.ecole.pays' 
     ];
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'bases', 'pays');
+        BackendMenu::setContext('DigArt.Ecole', 'bases', 'pays');
     }
 }

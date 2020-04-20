@@ -1,7 +1,7 @@
 title: Thérapies
-modelClass: DigitalArtisan\Enseignement\Models\Therapie
-list: $/digitalartisan/enseignement/models/therapie/columns.yaml
-recordUrl: 'digitalartisan/enseignement/therapies/update/:id'
+modelClass: DigArt\Ecole\Models\Therapie
+list: $/digart/ecole/models/therapie/columns.yaml
+recordUrl: 'digart/ecole/therapies/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

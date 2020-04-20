@@ -1,7 +1,7 @@
 title: 'Suivi des activités'
-modelClass: DigitalArtisan\Enseignement\Models\SuiviActivite
-list: $/digitalartisan/enseignement/models/suiviactivite/suivi_columns.yaml
-recordUrl: 'digitalartisan/enseignement/suivisactivites/update/:id'
+modelClass: DigArt\Ecole\Models\SuiviActivite
+list: $/digart/ecole/models/suiviactivite/suivi_columns.yaml
+recordUrl: 'digart/ecole/suivisactivites/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

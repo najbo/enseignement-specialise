@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Controllers;
+<?php namespace DigArt\Ecole\Controllers;
 
 use Backend\Classes\Controller;
 use BackendMenu;
@@ -12,12 +12,12 @@ class TypesFaits extends Controller
     public $reorderConfig = 'config_reorder.yaml';
 
     public $requiredPermissions = [
-        'digitalartisan.enseignement.typesfaits' 
+        'digart.ecole.typesfaits' 
     ];
 
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('DigitalArtisan.Enseignement', 'bases', 'types-faits');
+        BackendMenu::setContext('DigArt.Ecole', 'bases', 'types-faits');
     }
 }

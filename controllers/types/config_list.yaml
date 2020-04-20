@@ -1,7 +1,7 @@
 title: 'Types d''activités'
-modelClass: DigitalArtisan\Enseignement\Models\Type
-list: $/digitalartisan/enseignement/models/type/columns.yaml
-recordUrl: 'digitalartisan/enseignement/types/update/:id'
+modelClass: DigArt\Ecole\Models\Type
+list: $/digart/ecole/models/type/columns.yaml
+recordUrl: 'digart/ecole/types/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true

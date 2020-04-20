@@ -1,11 +1,11 @@
 name: Fonctions
-modelClass: DigitalArtisan\Enseignement\Models\Fonction
-form: $/digitalartisan/enseignement/models/fonction/fields.yaml
-defaultRedirect: digitalartisan/enseignement/fonctions
+modelClass: DigArt\Ecole\Models\Fonction
+form: $/digart/ecole/models/fonction/fields.yaml
+defaultRedirect: digart/ecole/fonctions
 create:
-    redirect: 'digitalartisan/enseignement/fonctions/update/:id'
-    redirectClose: digitalartisan/enseignement/fonctions
+    redirect: 'digart/ecole/fonctions/update/:id'
+    redirectClose: digart/ecole/fonctions
 update:
-    redirect: digitalartisan/enseignement/fonctions
-    redirectClose: digitalartisan/enseignement/fonctions
+    redirect: digart/ecole/fonctions
+    redirectClose: digart/ecole/fonctions
 preview: {  }

@@ -1,4 +1,4 @@
-<?php namespace DigitalArtisan\Enseignement\Updates;
+<?php namespace DigArt\Ecole\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
