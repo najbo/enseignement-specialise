@@ -65,7 +65,7 @@ Source : https://octobercms.com/docs/console/commands#console-install
 ## Installation du plugin :
 
 - Créer un dossier plugins/digart/ecole
-- Se rendre dans le dossier enseignement
+- Se rendre dans le dossier ecole
 
 ```shell
 git init
