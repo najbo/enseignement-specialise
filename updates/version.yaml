@@ -67,8 +67,8 @@
     - 'Seed interlocuteurs'
     - seeder1024.php
 1.0.25:
-    - 'Created table digart_ecole_activites_statuts'
-    - builder_table_create_digart_ecole_activites_statuts.php
+    - 'Created table digart_ecole_activstatuts'
+    - builder_table_create_digart_ecole_activstatuts.php
 1.0.26:
     - 'Seed Statut des activités'
     - seeder1026.php

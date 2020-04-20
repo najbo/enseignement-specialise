@@ -3,11 +3,11 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreateDigartEcoleActivitesStatuts extends Migration
+class BuilderTableCreateDigartEcoleActivStatuts extends Migration
 {
     public function up()
     {
-        Schema::create('digart_ecole_activites_statuts', function($table)
+        Schema::create('digart_ecole_activstatuts', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
@@ -26,6 +26,6 @@ class BuilderTableCreateDigartEcoleActivitesStatuts extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('digart_ecole_activites_statuts');
+        Schema::dropIfExists('digart_ecole_activstatuts');
     }
 }

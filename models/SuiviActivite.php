@@ -62,7 +62,7 @@ class SuiviActivite extends Model
         'gestionnaire'    => ['DigArt\Ecole\Models\Gestionnaire',
                'key' => 'gestionnaire_id',
                'order' => ['last_name', 'first_name']],       
-        'statut'    => ['DigArt\Ecole\Models\ActiviteStatut',
+        'statut'    => ['DigArt\Ecole\Models\StatutActivite',
                    'key' => 'statut_id',
                    'order' => 'sort_order'],                           
         'suivi'    => ['DigArt\Ecole\Models\Suivi',

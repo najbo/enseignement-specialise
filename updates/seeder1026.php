@@ -1,15 +1,15 @@
 <?php namespace DigArt\Ecole\Updates;
 
 use Seeder;
-use DigArt\Ecole\Models\ActiviteStatut;
+use DigArt\Ecole\Models\StatutActivite;
 
 class Seeder1026 extends Seeder
 {
     public function run()
     {
-        ActiviteStatut::truncate();
+        StatutActivite::truncate();
         
-        ActiviteStatut::create([
+        StatutActivite::create([
             'designation' => 'En cours',
             'sort_order' => 1,
             'is_finished' => 0,
@@ -17,7 +17,7 @@ class Seeder1026 extends Seeder
             'color_txt' => '#ffffff',
         ]);   
 
-        ActiviteStatut::create([
+        StatutActivite::create([
             'designation' => 'En attente',
             'sort_order' => 2,
             'is_finished' => 0,
@@ -25,7 +25,7 @@ class Seeder1026 extends Seeder
             'color_txt' => '#ffffff',
         ]);        
         
-        ActiviteStatut::create([
+        StatutActivite::create([
             'designation' => 'Terminé',
             'sort_order' => 3,
             'is_finished' => 1,

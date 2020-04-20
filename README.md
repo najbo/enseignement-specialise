@@ -1,5 +1,6 @@
 # Enseignement specialisé
 
+Plugin proposé par DigitalArtisan (CH).
 Gestion de l'enseignement spécialisé. Le plugin doit être placé dans /plugins/digart/ecole.
 
 ## Fonctions et tables :

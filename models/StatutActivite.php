@@ -5,7 +5,7 @@ use Model;
 /**
  * Model
  */
-class ActiviteStatut extends Model
+class StatutActivite extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     
@@ -17,7 +17,7 @@ class ActiviteStatut extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digart_ecole_activites_statuts';
+    public $table = 'digart_ecole_activstatuts';
 
     /**
      * @var array Validation rules

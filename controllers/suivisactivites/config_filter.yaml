@@ -2,11 +2,11 @@ scopes:
     show_actif:
         label: En cours
         type: switch
-        modelClass: DigArt\Ecole\Models\ActiviteStatut
+        modelClass: DigArt\Ecole\Models\StatutActivite
         default: 2
         conditions:
-            - statut_id in (select id FROM digart_ecole_activites_statuts where is_finished = 1)
-            - statut_id in (select id FROM digart_ecole_activites_statuts where is_finished <> 1) 
+            - statut_id in (select id FROM digart_ecole_activstatuts where is_finished = 1)
+            - statut_id in (select id FROM digart_ecole_activstatuts where is_finished <> 1) 
     suivi:
         label: Suivi
         modelClass: DigArt\Ecole\Models\Suivi
@@ -40,7 +40,7 @@ scopes:
         options: getPrenomNomInterlocuteursOptions                        
     statuts_activites:
         label: Statut de l'activité
-        modelClass: DigArt\Ecole\Models\ActiviteStatut
+        modelClass: DigArt\Ecole\Models\StatutActivite
         conditions: statut_id in (:filtered)
         nameFrom: designation
     periode:
