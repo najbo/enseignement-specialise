@@ -5,8 +5,8 @@ scopes:
         modelClass: DigitalArtisan\Enseignement\Models\ActiviteStatut
         default: 2
         conditions:
-            - statut_id in (select id FROM digitalartisan_enseignement_activites_statuts where is_finished = 1)
-            - statut_id in (select id FROM digitalartisan_enseignement_activites_statuts where is_finished <> 1) 
+            - statut_id in (select id FROM digart_ecole_activites_statuts where is_finished = 1)
+            - statut_id in (select id FROM digart_ecole_activites_statuts where is_finished <> 1) 
     suivi:
         label: Suivi
         modelClass: DigitalArtisan\Enseignement\Models\Suivi
@@ -16,12 +16,12 @@ scopes:
     statuts_suivi:
         label: Statut du suivi
         modelClass: DigitalArtisan\Enseignement\Models\Statut
-        conditions: suivi_id in (SELECT suivi_id FROM digitalartisan_enseignement_suivi_activites JOIN digitalartisan_enseignement_suivi ON digitalartisan_enseignement_suivi.id = digitalartisan_enseignement_suivi_activites.suivi_id where digitalartisan_enseignement_suivi.statut_id in (:filtered))
+        conditions: suivi_id in (SELECT suivi_id FROM digart_ecole_suivi_activites JOIN digart_ecole_suivi ON digart_ecole_suivi.id = digart_ecole_suivi_activites.suivi_id where digart_ecole_suivi.statut_id in (:filtered))
         nameFrom: designation          
     Eleves:
         label: Eleves
         modelClass: DigitalArtisan\Enseignement\Models\Eleve
-        conditions: suivi_id in (SELECT suivi_id FROM digitalartisan_enseignement_suivi_activites JOIN digitalartisan_enseignement_suivi ON digitalartisan_enseignement_suivi.id = digitalartisan_enseignement_suivi_activites.suivi_id where eleve_id in (:filtered))
+        conditions: suivi_id in (SELECT suivi_id FROM digart_ecole_suivi_activites JOIN digart_ecole_suivi ON digart_ecole_suivi.id = digart_ecole_suivi_activites.suivi_id where eleve_id in (:filtered))
         options: getPrenomNomElevesOptions      
     types_activites:
         label: Type d'activité

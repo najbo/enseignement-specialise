@@ -18,7 +18,7 @@ class Proche extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_proches';
+    public $table = 'digart_ecole_proches';
 
     /**
      * @var array Validation rules

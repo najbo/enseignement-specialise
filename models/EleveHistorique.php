@@ -20,7 +20,7 @@ class EleveHistorique extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_eleves_historiques';
+    public $table = 'digart_ecole_eleves_historiques';
 
     /**
      * @var array Validation rules

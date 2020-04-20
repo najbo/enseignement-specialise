@@ -17,7 +17,7 @@ class PassageType extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_passages_types';
+    public $table = 'digart_ecole_passages_types';
 
     /**
      * @var array Validation rules

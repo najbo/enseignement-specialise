@@ -17,7 +17,7 @@ class PathologieEleve extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_path_eleve';
+    public $table = 'digart_ecole_path_eleve';
 
     /**
      * @var array Validation rules

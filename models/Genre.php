@@ -17,7 +17,7 @@ class Genre extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_genres';
+    public $table = 'digart_ecole_genres';
 
     /**
      * @var array Validation rules

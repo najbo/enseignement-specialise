@@ -1,50 +1,50 @@
 1.0.1:
     - 'Initialize plugin.'
 1.0.2:
-    - 'Created table digitalartisan_enseignement_interlocuteurs'
-    - builder_table_create_digitalartisan_enseignement_interlocuteurs.php
+    - 'Created table digart_ecole_interlocuteurs'
+    - builder_table_create_digart_ecole_interlocuteurs.php
 1.0.3:
-    - 'Created table digitalartisan_enseignement_statuts'
-    - builder_table_create_digitalartisan_enseignement_statuts.php
+    - 'Created table digart_ecole_statuts'
+    - builder_table_create_digart_ecole_statuts.php
 1.0.4:
-    - 'Created table digitalartisan_enseignement_eleves'
-    - builder_table_create_digitalartisan_enseignement_eleves.php
+    - 'Created table digart_ecole_eleves'
+    - builder_table_create_digart_ecole_eleves.php
 1.0.5:
-    - 'Created table digitalartisan_enseignement_volees'
-    - builder_table_create_digitalartisan_enseignement_volees.php
+    - 'Created table digart_ecole_volees'
+    - builder_table_create_digart_ecole_volees.php
 1.0.6:
-    - 'Created table digitalartisan_enseignement_annees'
-    - builder_table_create_digitalartisan_enseignement_annees.php
+    - 'Created table digart_ecole_annees'
+    - builder_table_create_digart_ecole_annees.php
 1.0.7:
-    - 'Created table digitalartisan_enseignement_ecoles'
-    - builder_table_create_digitalartisan_enseignement_ecoles.php
+    - 'Created table digart_ecole_ecoles'
+    - builder_table_create_digart_ecole_ecoles.php
 1.0.8:
-    - 'Created table digitalartisan_enseignement_pathologies'
-    - builder_table_create_digitalartisan_enseignement_pathologies.php
+    - 'Created table digart_ecole_pathologies'
+    - builder_table_create_digart_ecole_pathologies.php
 1.0.9:
-    - 'Created table digitalartisan_enseignement_path_suivi'
-    - builder_table_create_digitalartisan_enseignement_path_suivi.php
+    - 'Created table digart_ecole_path_suivi'
+    - builder_table_create_digart_ecole_path_suivi.php
 1.0.10:
-    - 'Created table digitalartisan_enseignement_suivi'
-    - builder_table_create_digitalartisan_enseignement_suivi.php
+    - 'Created table digart_ecole_suivi'
+    - builder_table_create_digart_ecole_suivi.php
 1.0.11:
-    - 'Created table digitalartisan_enseignement_fonctions'
-    - builder_table_create_digitalartisan_enseignement_fonctions.php
+    - 'Created table digart_ecole_fonctions'
+    - builder_table_create_digart_ecole_fonctions.php
 1.0.12:
-    - 'Created table digitalartisan_enseignement_therapie'
-    - builder_table_create_digitalartisan_enseignement_therapies.php
+    - 'Created table digart_ecole_therapie'
+    - builder_table_create_digart_ecole_therapies.php
 1.0.13:
-    - 'Created table digitalartisan_enseignement_path_eleve'
-    - builder_table_create_digitalartisan_enseignement_path_eleve.php
+    - 'Created table digart_ecole_path_eleve'
+    - builder_table_create_digart_ecole_path_eleve.php
 1.0.14:
-    - 'Created table digitalartisan_enseignement_inter_fct'
-    - builder_table_create_digitalartisan_enseignement_inter_fct.php
+    - 'Created table digart_ecole_inter_fct'
+    - builder_table_create_digart_ecole_inter_fct.php
 1.0.16:
-    - 'Created table digitalartisan_enseignement_suivi_activites'
-    - builder_table_create_digitalartisan_enseignement_suivi_activites.php
+    - 'Created table digart_ecole_suivi_activites'
+    - builder_table_create_digart_ecole_suivi_activites.php
 1.0.17:
-    - 'Created table digitalartisan_enseignement_type'
-    - builder_table_create_digitalartisan_enseignement_types.php
+    - 'Created table digart_ecole_type'
+    - builder_table_create_digart_ecole_types.php
 1.0.18:
     - 'Seed statuts'
     - seeder1018.php
@@ -67,14 +67,14 @@
     - 'Seed interlocuteurs'
     - seeder1024.php
 1.0.25:
-    - 'Created table digitalartisan_enseignement_activites_statuts'
-    - builder_table_create_digitalartisan_enseignement_activites_statuts.php
+    - 'Created table digart_ecole_activites_statuts'
+    - builder_table_create_digart_ecole_activites_statuts.php
 1.0.26:
     - 'Seed Statut des activités'
     - seeder1026.php
 1.0.27:
-    - 'Created table digitalartisan_enseignement_proches'
-    - builder_table_create_digitalartisan_enseignement_proches.php
+    - 'Created table digart_ecole_proches'
+    - builder_table_create_digart_ecole_proches.php
 1.0.28:
     - 'Seed élèves'
     - seeder1028.php
@@ -82,47 +82,47 @@
     - 'Seed volées'
     - seeder1029.php
 1.0.30:
-    - 'Created table digitalartisan_enseignement_proches_roles'
-    - builder_table_create_digitalartisan_enseignement_proches_roles.php
+    - 'Created table digart_ecole_proches_roles'
+    - builder_table_create_digart_ecole_proches_roles.php
 1.0.31:
     - 'Seed rôles des proches'
     - seeder1031.php
 1.0.32:
-    - 'Created table digitalartisan_enseignement_enseignants'
-    - builder_table_create_digitalartisan_enseignement_enseignants.php
+    - 'Created table digart_ecole_enseignants'
+    - builder_table_create_digart_ecole_enseignants.php
 1.0.33:
-    - 'Created table digitalartisan_enseignement_suivi_enseignants'
-    - builder_table_create_digitalartisan_enseignement_suivi_enseignants.php
+    - 'Created table digart_ecole_suivi_enseignants'
+    - builder_table_create_digart_ecole_suivi_enseignants.php
 1.0.34:
-    - 'Created table digitalartisan_enseignement_ens_eco'
-    - builder_table_create_digitalartisan_enseignement_ens_eco.php
+    - 'Created table digart_ecole_ens_eco'
+    - builder_table_create_digart_ecole_ens_eco.php
 1.0.35:
     - 'Seed des enseignants'
     - seeder1035.php
 1.0.36:
-    - 'Created table digitalartisan_enseignement_eco_dir'
-    - builder_table_create_digitalartisan_enseignement_eco_dir.php
+    - 'Created table digart_ecole_eco_dir'
+    - builder_table_create_digart_ecole_eco_dir.php
 1.0.37:
-    - 'Created table digitalartisan_enseignement_pays'
-    - builder_table_create_digitalartisan_enseignement_pays.php
+    - 'Created table digart_ecole_pays'
+    - builder_table_create_digart_ecole_pays.php
 1.0.38:
     - 'Seed pays'
     - seeder1038.php
 1.0.39:
-    - 'Created table digitalartisan_enseignement_cercles'
-    - builder_table_create_digitalartisan_enseignement_cercles.php
+    - 'Created table digart_ecole_cercles'
+    - builder_table_create_digart_ecole_cercles.php
 1.0.40:
     - 'Seed cercles scolaires'
     - seeder1040.php
 1.0.41:
-    - 'Created table digitalartisan_enseignement_genres'
-    - builder_table_create_digitalartisan_enseignement_genres.php
+    - 'Created table digart_ecole_genres'
+    - builder_table_create_digart_ecole_genres.php
 1.0.42:
     - 'Seed genres'
     - seeder1042.php
 1.0.43:
-    - 'Created table digitalartisan_enseignement_langues'
-    - builder_table_create_digitalartisan_enseignement_langues.php
+    - 'Created table digart_ecole_langues'
+    - builder_table_create_digart_ecole_langues.php
 1.0.44:
     - 'Seed langues'
     - seeder1044.php
@@ -130,8 +130,8 @@
     - 'Seed pathologies rattachées aux élèves'
     - seeder1045.php
 1.0.46:
-    - 'Created table digitalartisan_enseignement_proches_permis'
-    - builder_table_create_digitalartisan_enseignement_proches_permis.php
+    - 'Created table digart_ecole_proches_permis'
+    - builder_table_create_digart_ecole_proches_permis.php
 1.0.47:
     - 'Seed permis pour les proches'
     - seeder1047.php
@@ -139,41 +139,41 @@
     - 'Seed années'
     - seeder1048.php
 1.0.49:
-    - 'Created table digitalartisan_enseignement_eleves_historiques'
-    - builder_table_create_digitalartisan_enseignement_eleves_historiques.php
+    - 'Created table digart_ecole_eleves_historiques'
+    - builder_table_create_digart_ecole_eleves_historiques.php
 1.0.50:
-    - 'Created table digitalartisan_enseignement_passages'
-    - builder_table_create_digitalartisan_enseignement_passages.php
+    - 'Created table digart_ecole_passages'
+    - builder_table_create_digart_ecole_passages.php
 1.0.51:
     - 'Seed types de passages'
     - seeder1051.php
 1.0.52:
-    - 'Created table digitalartisan_enseignement_eleves_faits'
-    - builder_table_create_digitalartisan_enseignement_eleves_faits.php
+    - 'Created table digart_ecole_eleves_faits'
+    - builder_table_create_digart_ecole_eleves_faits.php
 1.0.53:
-    - 'Created table digitalartisan_enseignement_enseignants_faits'
-    - builder_table_create_digitalartisan_enseignement_enseignants_faits.php
+    - 'Created table digart_ecole_enseignants_faits'
+    - builder_table_create_digart_ecole_enseignants_faits.php
 1.0.54:
-    - 'Created table digitalartisan_enseignement_typesfaits'
-    - builder_table_create_digitalartisan_enseignement_typesfaits.php
+    - 'Created table digart_ecole_typesfaits'
+    - builder_table_create_digart_ecole_typesfaits.php
 1.0.55:
     - 'Seed types de faits des enseignants'
     - seeder1055.php
 1.0.56:
-    - 'Created table digitalartisan_enseignement_ecoles_types'
-    - builder_table_create_digitalartisan_enseignement_ecoles_types.php
+    - 'Created table digart_ecole_ecoles_types'
+    - builder_table_create_digart_ecole_ecoles_types.php
 1.0.57:
     - 'Seed types d''écoles'
     - seeder1057.php
 1.0.58:
-    - 'Created table digitalartisan_enseignement_cycles'
-    - builder_table_create_digitalartisan_enseignement_cycles.php
+    - 'Created table digart_ecole_cycles'
+    - builder_table_create_digart_ecole_cycles.php
 1.0.59:
     - 'Seed cycles'
     - seeder1059.php
 1.0.60:
-    - 'Created table digitalartisan_enseignement_programmes'
-    - builder_table_create_digitalartisan_enseignement_programmes.php
+    - 'Created table digart_ecole_programmes'
+    - builder_table_create_digart_ecole_programmes.php
 1.0.61:
     - 'Seed programmes'
     - seeder1061.php
@@ -181,8 +181,8 @@
     - 'Seed historique des années scolaires des élèves'
     - seeder1062.php
 1.0.63:
-    - 'Created table digitalartisan_enseignement_passages_types'
-    - builder_table_create_digitalartisan_enseignement_passages_types.php
+    - 'Created table digart_ecole_passages_types'
+    - builder_table_create_digart_ecole_passages_types.php
 1.0.64:
     - 'Seed types de passages'
     - seeder1064.php

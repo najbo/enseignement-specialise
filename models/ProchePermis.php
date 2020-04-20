@@ -17,7 +17,7 @@ class ProchePermis extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_proches_permis';
+    public $table = 'digart_ecole_proches_permis';
 
     /**
      * @var array Validation rules

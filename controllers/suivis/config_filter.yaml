@@ -16,8 +16,8 @@ scopes:
         modelClass: DigitalArtisan\Enseignement\Models\Statut
         default: 2
         conditions:
-            - statut_id in (select id from digitalartisan_enseignement_statuts where is_finished = 1)
-            - statut_id in (select id from digitalartisan_enseignement_statuts where is_finished <> 1)          
+            - statut_id in (select id from digart_ecole_statuts where is_finished = 1)
+            - statut_id in (select id from digart_ecole_statuts where is_finished <> 1)          
     eleve:
         label: Eleves
         type: group
@@ -27,22 +27,22 @@ scopes:
     ecole:
         label: Ecole
         modelClass: DigitalArtisan\Enseignement\Models\Ecole
-        conditions: eleve_id in (select id from digitalartisan_enseignement_eleves where ecole_id in (:filtered))
+        conditions: eleve_id in (select id from digart_ecole_eleves where ecole_id in (:filtered))
         nameFrom: designation    
     pathologies:
         label: Pathologies
         modelClass: DigitalArtisan\Enseignement\Models\Pathologie
-        conditions: id in (select suivi_id from digitalartisan_enseignement_path_suivi where path_id in (:filtered))
+        conditions: id in (select suivi_id from digart_ecole_path_suivi where path_id in (:filtered))
         nameFrom: designation   
     therapies:
         label: Thérapies
         modelClass: DigitalArtisan\Enseignement\Models\Therapie
-        conditions: id in (select suivi_id from digitalartisan_enseignement_suivi_activites where therapie_id in (:filtered))
+        conditions: id in (select suivi_id from digart_ecole_suivi_activites where therapie_id in (:filtered))
         nameFrom: designation        
     therapeutes:
         label: Thérapeutes
         modelClass: DigitalArtisan\Enseignement\Models\Interlocuteur
-        conditions: id in (select suivi_id from digitalartisan_enseignement_suivi_activites where interlocuteur_id in (:filtered))
+        conditions: id in (select suivi_id from digart_ecole_suivi_activites where interlocuteur_id in (:filtered))
         #nameFrom: FullName     
         options: getPrenomNomInterlocuteursOptions
     statut:

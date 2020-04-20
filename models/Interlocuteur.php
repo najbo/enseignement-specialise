@@ -17,7 +17,7 @@ class Interlocuteur extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_interlocuteurs';
+    public $table = 'digart_ecole_interlocuteurs';
 
     /**
      * @var array Validation rules
@@ -37,7 +37,7 @@ class Interlocuteur extends Model
     public $belongsToMany = [
         'fonctions' => [
             'DigitalArtisan\Enseignement\Models\Fonction',
-            'table' => 'digitalartisan_enseignement_inter_fct',
+            'table' => 'digart_ecole_inter_fct',
             'key' => 'interloc_id',
             'otherKey' => 'fct_id',
             'softDelete' => true,

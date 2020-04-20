@@ -17,13 +17,13 @@ class Pays extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_pays';
+    public $table = 'digart_ecole_pays';
 
     /**
      * @var array Validation rules
      */
     public $rules = [
         'designation' => 'required',
-        #'is_origine' => 'unique:digitalartisan_enseignement_pays'
+        #'is_origine' => 'unique:digart_ecole_pays'
     ];
 }

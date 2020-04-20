@@ -18,7 +18,7 @@ class SuiviEnseignant extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_suivi_enseignants';
+    public $table = 'digart_ecole_suivi_enseignants';
 
     protected $appends = ['nom_enseignant'];
     /**

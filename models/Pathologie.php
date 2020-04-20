@@ -19,7 +19,7 @@ class Pathologie extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_pathologies';
+    public $table = 'digart_ecole_pathologies';
 
     /**
      * @var array Validation rules

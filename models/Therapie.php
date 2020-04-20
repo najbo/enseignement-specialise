@@ -17,7 +17,7 @@ class Therapie extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_therapies';
+    public $table = 'digart_ecole_therapies';
 
     /**
      * @var array Validation rules

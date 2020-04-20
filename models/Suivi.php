@@ -21,7 +21,7 @@ class Suivi extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_suivi';
+    public $table = 'digart_ecole_suivi';
 
     /**
      * @var array Validation rules
@@ -57,7 +57,7 @@ class Suivi extends Model
     public $belongsToMany = [
         'pathologies' => [
             'DigitalArtisan\Enseignement\Models\Pathologie',
-            'table' => 'digitalartisan_enseignement_path_suivi',
+            'table' => 'digart_ecole_path_suivi',
             'key' => 'suivi_id',
             'otherKey' => 'path_id',
             'softDelete' => true,

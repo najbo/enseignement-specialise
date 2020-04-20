@@ -7,7 +7,7 @@ scopes:
     pathologies:
         label: Pathologies
         modelClass: DigitalArtisan\Enseignement\Models\Pathologie
-        conditions: id in (select eleve_id from digitalartisan_enseignement_path_eleve where path_id in (:filtered))
+        conditions: id in (select eleve_id from digart_ecole_path_eleve where path_id in (:filtered))
         nameFrom: designation                                                                
     genre:
         label: Genres
@@ -22,7 +22,7 @@ scopes:
     proches:
         label: Proches
         modelClass: DigitalArtisan\Enseignement\Models\Proche
-        conditions: id in (select eleve_id from digitalartisan_enseignement_proches where id in (:filtered))
+        conditions: id in (select eleve_id from digart_ecole_proches where id in (:filtered))
         #nameFrom: FullName
         options: getPrenomNomProchesOptions           
     is_actif:

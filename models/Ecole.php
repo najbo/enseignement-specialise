@@ -19,7 +19,7 @@ class Ecole extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_ecoles';
+    public $table = 'digart_ecole_ecoles';
 
     /**
      * @var array Validation rules
@@ -44,7 +44,7 @@ class Ecole extends Model
     public $belongsToMany = [
         'directeurs' => [
             'DigitalArtisan\Enseignement\Models\Enseignant',
-            'table' => 'digitalartisan_enseignement_eco_dir',
+            'table' => 'digart_ecole_eco_dir',
             'key' => 'eco_id',
             'otherKey' => 'ens_id',
             'conditions' => 'is_direction = 1',

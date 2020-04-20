@@ -28,7 +28,7 @@ class Eleve extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_eleves';
+    public $table = 'digart_ecole_eleves';
 
     /**
      * @var array Validation rules
@@ -81,7 +81,7 @@ class Eleve extends Model
     public $belongsToMany = [
         'pathologies' => [
             'DigitalArtisan\Enseignement\Models\Pathologie',
-            'table' => 'digitalartisan_enseignement_path_eleve',
+            'table' => 'digart_ecole_path_eleve',
             'key' => 'eleve_id',
             'otherKey' => 'path_id',
             'softDelete' => true,
@@ -153,7 +153,7 @@ public function setAuteurIdAttribute($value)
 
         if ($this->user) {
 
-            $update = DB::table('digitalartisan_enseignement_eleves')
+            $update = DB::table('digart_ecole_eleves')
                   ->where('id', $this->id)
                   ->update(['auteur_id' => $this->user->id]);
 /* 

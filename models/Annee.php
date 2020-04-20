@@ -19,7 +19,7 @@ class Annee extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_annees';
+    public $table = 'digart_ecole_annees';
 
     /**
      * @var array Validation rules

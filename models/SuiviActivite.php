@@ -35,7 +35,7 @@ class SuiviActivite extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_suivi_activites';
+    public $table = 'digart_ecole_suivi_activites';
 
     /**
      * @var array Validation rules

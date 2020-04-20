@@ -17,7 +17,7 @@ class Statut extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_statuts';
+    public $table = 'digart_ecole_statuts';
 
     /**
      * @var array Validation rules

@@ -17,7 +17,7 @@ class Volee extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digitalartisan_enseignement_volees';
+    public $table = 'digart_ecole_volees';
 
     /**
      * @var array Validation rules

@@ -2,7 +2,7 @@ scopes:
     ecole:
         label: Ecole
         modelClass: DigitalArtisan\Enseignement\Models\Ecole
-        conditions: id in (select ens_id from digitalartisan_enseignement_ens_eco where eco_id in (:filtered))
+        conditions: id in (select ens_id from digart_ecole_ens_eco where eco_id in (:filtered))
         nameFrom: designation
     genre:
         label: Genres
