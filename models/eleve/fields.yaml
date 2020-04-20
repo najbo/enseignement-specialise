@@ -98,6 +98,7 @@ tabs:
             tab: 'Données de base'
             span: auto
             type: relation
+            emptyOption: '-- Non défini --'
         hint_proches:
             span: full
             path: $/digart/ecole/models/eleve/_hint_onglets.htm
