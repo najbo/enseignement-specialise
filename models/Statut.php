@@ -3,7 +3,7 @@
 use Model;
 
 /**
- * Model
+ * Model Statut du suivi
  */
 class Statut extends Model
 {

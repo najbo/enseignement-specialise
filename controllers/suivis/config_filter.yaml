@@ -37,12 +37,12 @@ scopes:
     therapies:
         label: Thérapies
         modelClass: DigArt\Ecole\Models\Therapie
-        conditions: id in (select suivi_id from digart_ecole_suivi_activites where therapie_id in (:filtered))
+        conditions: id in (select suivi_id from digart_ecole_suivis_activ where therapie_id in (:filtered))
         nameFrom: designation        
     therapeutes:
         label: Thérapeutes
         modelClass: DigArt\Ecole\Models\Interlocuteur
-        conditions: id in (select suivi_id from digart_ecole_suivi_activites where interlocuteur_id in (:filtered))
+        conditions: id in (select suivi_id from digart_ecole_suivis_activ where interlocuteur_id in (:filtered))
         #nameFrom: FullName     
         options: getPrenomNomInterlocuteursOptions
     statut:

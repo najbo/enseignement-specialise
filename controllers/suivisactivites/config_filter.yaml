@@ -16,12 +16,12 @@ scopes:
     statuts_suivi:
         label: Statut du suivi
         modelClass: DigArt\Ecole\Models\Statut
-        conditions: suivi_id in (SELECT suivi_id FROM digart_ecole_suivi_activites JOIN digart_ecole_suivi ON digart_ecole_suivi.id = digart_ecole_suivi_activites.suivi_id where digart_ecole_suivi.statut_id in (:filtered))
+        conditions: suivi_id in (SELECT suivi_id FROM digart_ecole_suivis_activ JOIN digart_ecole_suivis ON digart_ecole_suivis.id = digart_ecole_suivis_activ.suivi_id where digart_ecole_suivis.statut_id in (:filtered))
         nameFrom: designation          
     Eleves:
         label: Eleves
         modelClass: DigArt\Ecole\Models\Eleve
-        conditions: suivi_id in (SELECT suivi_id FROM digart_ecole_suivi_activites JOIN digart_ecole_suivi ON digart_ecole_suivi.id = digart_ecole_suivi_activites.suivi_id where eleve_id in (:filtered))
+        conditions: suivi_id in (SELECT suivi_id FROM digart_ecole_suivis_activ JOIN digart_ecole_suivis ON digart_ecole_suivis.id = digart_ecole_suivis_activ.suivi_id where eleve_id in (:filtered))
         options: getPrenomNomElevesOptions      
     types_activites:
         label: Type d'activité

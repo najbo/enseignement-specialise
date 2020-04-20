@@ -57,6 +57,16 @@ tabs:
             span: auto
             type: recordfinder
             tab: 'Données de base'
+        enseignants:
+            label: Enseignants
+            separator: comma
+            customTags: false
+            useKey: true
+            span: auto
+            mode: array
+            options: true
+            type: taglist
+            tab: 'Données de base'
         developpement:
             label: Développement
             size: large

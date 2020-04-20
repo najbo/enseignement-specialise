@@ -35,7 +35,7 @@ class SuiviActivite extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digart_ecole_suivi_activites';
+    public $table = 'digart_ecole_suivis_activ';
 
     /**
      * @var array Validation rules
@@ -70,6 +70,15 @@ class SuiviActivite extends Model
                    'order' => '']                                      
     ];    
  
+
+    public $belongsToMany = [
+        'enseignants' => [
+            'DigArt\Ecole\Models\Enseignant',
+            'table' => 'digart_ecole_suivis_activ_ens',
+            'key' => 'activite_id',
+            'otherKey' => 'enseignant_id']
+    ];
+
 
     public function getPeriodesAttribute() {
 
@@ -128,6 +137,13 @@ class SuiviActivite extends Model
         return $action;
     }
 
+
+    public function getEnseignantsOptions($fieldName, $value)
+    {
+        
+        $result = Enseignant::orderBy('nom','prenom')->get()->where('is_actif', true)->pluck('fullname', 'id');
+        return $result;
+    }
 
 
   public function scopeOuverts($query){

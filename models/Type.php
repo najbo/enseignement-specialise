@@ -3,7 +3,7 @@
 use Model;
 
 /**
- * Model
+ * Model type d'activité (constat, entretien, bilan, ...)
  */
 class Type extends Model
 {

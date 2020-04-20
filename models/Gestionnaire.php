@@ -12,7 +12,7 @@ class Gestionnaire extends User
     public $belongsToMany = [
             'suivis' => [
                 'Jan\Ecole\Models\Suivi',
-                'table' => 'digart_ecole_suivi',
+                'table' => 'digart_ecole_suivis',
                 'key' => 'gestionnaire_id'
             ],
     ];

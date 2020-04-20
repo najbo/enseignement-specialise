@@ -25,8 +25,8 @@
     - 'Created table digart_ecole_path_suivi'
     - builder_table_create_digart_ecole_path_suivi.php
 1.0.10:
-    - 'Created table digart_ecole_suivi'
-    - builder_table_create_digart_ecole_suivi.php
+    - 'Created table digart_ecole_suivis'
+    - builder_table_create_digart_ecole_suivis.php
 1.0.11:
     - 'Created table digart_ecole_fonctions'
     - builder_table_create_digart_ecole_fonctions.php
@@ -40,8 +40,8 @@
     - 'Created table digart_ecole_inter_fct'
     - builder_table_create_digart_ecole_inter_fct.php
 1.0.16:
-    - 'Created table digart_ecole_suivi_activites'
-    - builder_table_create_digart_ecole_suivi_activites.php
+    - 'Created table digart_ecole_suivis_activ'
+    - builder_table_create_digart_ecole_suivis_activ.php
 1.0.17:
     - 'Created table digart_ecole_type'
     - builder_table_create_digart_ecole_types.php
@@ -91,8 +91,8 @@
     - 'Created table digart_ecole_ens'
     - builder_table_create_digart_ecole_ens.php
 1.0.33:
-    - 'Created table digart_ecole_suivi_ens'
-    - builder_table_create_digart_ecole_suivi_ens.php
+    - 'Created table digart_ecole_suivis_ens'
+    - builder_table_create_digart_ecole_suivis_ens.php
 1.0.34:
     - 'Created table digart_ecole_ens_eco'
     - builder_table_create_digart_ecole_ens_eco.php
@@ -189,3 +189,6 @@
 1.0.65:
     - 'Seed roles administrateurs et gestionnaires'
     - seeder1065.php
+1.0.66:
+    - 'Created table digart_ecole_suivis_activ_ens'
+    - builder_table_create_digart_ecole_suivis_activ_ens.php

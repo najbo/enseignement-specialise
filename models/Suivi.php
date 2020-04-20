@@ -21,7 +21,7 @@ class Suivi extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digart_ecole_suivi';
+    public $table = 'digart_ecole_suivis';
 
     /**
      * @var array Validation rules
