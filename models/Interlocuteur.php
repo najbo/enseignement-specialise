@@ -17,7 +17,7 @@ class Interlocuteur extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digart_ecole_interlocuteurs';
+    public $table = 'digart_ecole_inter';
 
     /**
      * @var array Validation rules

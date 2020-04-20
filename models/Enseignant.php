@@ -18,7 +18,7 @@ class Enseignant extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digart_ecole_enseignants';
+    public $table = 'digart_ecole_ens';
 
     /**
      * @var array Validation rules

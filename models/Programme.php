@@ -17,7 +17,7 @@ class Programme extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digart_ecole_programmes';
+    public $table = 'digart_ecole_progr';
 
     /**
      * @var array Validation rules

@@ -3,7 +3,7 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreateDigartEnseignementFonctions extends Migration
+class BuilderTableCreateDigartEcoleFonctions extends Migration
 {
     public function up()
     {

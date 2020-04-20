@@ -5,7 +5,7 @@ use October\Rain\Database\Updates\Migration;
 
 // Types d'activités
 
-class BuilderTableCreateDigartEnseignementTypes extends Migration
+class BuilderTableCreateDigartEcoleTypes extends Migration
 {
     public function up()
     {

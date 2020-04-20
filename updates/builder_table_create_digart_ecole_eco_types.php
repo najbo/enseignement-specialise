@@ -3,21 +3,20 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreateDigartEnseignementProgrammes extends Migration
+class BuilderTableCreateDigartEcoleEcoTypes extends Migration
 {
     public function up()
     {
-        Schema::create('digart_ecole_programmes', function($table)
+        Schema::create('digart_ecole_eco_types', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
-            $table->string('designation', 10);
+            $table->string('designation', 255);
+            $table->string('abreviation', 10);
             $table->text('complement')->nullable();
-            $table->integer('typecole_id')->nullable()->unsigned();
-            $table->integer('cycle_id')->nullable()->unsigned();
-            $table->integer('programmesuivant_id')->nullable();
+            $table->integer('typesuivant_id')->unsigned()->nullable();
+            $table->integer('sort_order')->nullable()->unsigned();
             $table->boolean('is_actif')->nullable()->default(1);
-            $table->integer('sort_order')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
@@ -26,6 +25,6 @@ class BuilderTableCreateDigartEnseignementProgrammes extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('digart_ecole_programmes');
+        Schema::dropIfExists('digart_ecole_eco_types');
     }
 }

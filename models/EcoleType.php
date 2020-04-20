@@ -17,7 +17,7 @@ class EcoleType extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'digart_ecole_ecoles_types';
+    public $table = 'digart_ecole_eco_types';
 
     /**
      * @var array Validation rules

@@ -1,8 +1,8 @@
 1.0.1:
     - 'Initialize plugin.'
 1.0.2:
-    - 'Created table digart_ecole_interlocuteurs'
-    - builder_table_create_digart_ecole_interlocuteurs.php
+    - 'Created table digart_ecole_inter'
+    - builder_table_create_digart_ecole_inter.php
 1.0.3:
     - 'Created table digart_ecole_statuts'
     - builder_table_create_digart_ecole_statuts.php
@@ -16,11 +16,11 @@
     - 'Created table digart_ecole_annees'
     - builder_table_create_digart_ecole_annees.php
 1.0.7:
-    - 'Created table digart_ecole_ecoles'
-    - builder_table_create_digart_ecole_ecoles.php
+    - 'Created table digart_ecole_eco'
+    - builder_table_create_digart_ecole_eco.php
 1.0.8:
-    - 'Created table digart_ecole_pathologies'
-    - builder_table_create_digart_ecole_pathologies.php
+    - 'Created table digart_ecole_path'
+    - builder_table_create_digart_ecole_path.php
 1.0.9:
     - 'Created table digart_ecole_path_suivi'
     - builder_table_create_digart_ecole_path_suivi.php
@@ -88,11 +88,11 @@
     - 'Seed rôles des proches'
     - seeder1031.php
 1.0.32:
-    - 'Created table digart_ecole_enseignants'
-    - builder_table_create_digart_ecole_enseignants.php
+    - 'Created table digart_ecole_ens'
+    - builder_table_create_digart_ecole_ens.php
 1.0.33:
-    - 'Created table digart_ecole_suivi_enseignants'
-    - builder_table_create_digart_ecole_suivi_enseignants.php
+    - 'Created table digart_ecole_suivi_ens'
+    - builder_table_create_digart_ecole_suivi_ens.php
 1.0.34:
     - 'Created table digart_ecole_ens_eco'
     - builder_table_create_digart_ecole_ens_eco.php
@@ -139,11 +139,11 @@
     - 'Seed années'
     - seeder1048.php
 1.0.49:
-    - 'Created table digart_ecole_eleves_historiques'
-    - builder_table_create_digart_ecole_eleves_historiques.php
+    - 'Created table digart_ecole_eleves_histo'
+    - builder_table_create_digart_ecole_eleves_histo.php
 1.0.50:
-    - 'Created table digart_ecole_passages'
-    - builder_table_create_digart_ecole_passages.php
+    - 'Created table digart_ecole_pass'
+    - builder_table_create_digart_ecole_pass.php
 1.0.51:
     - 'Seed types de passages'
     - seeder1051.php
@@ -151,8 +151,8 @@
     - 'Created table digart_ecole_eleves_faits'
     - builder_table_create_digart_ecole_eleves_faits.php
 1.0.53:
-    - 'Created table digart_ecole_enseignants_faits'
-    - builder_table_create_digart_ecole_enseignants_faits.php
+    - 'Created table digart_ecole_ens_faits'
+    - builder_table_create_digart_ecole_ens_faits.php
 1.0.54:
     - 'Created table digart_ecole_typesfaits'
     - builder_table_create_digart_ecole_typesfaits.php
@@ -160,8 +160,8 @@
     - 'Seed types de faits des enseignants'
     - seeder1055.php
 1.0.56:
-    - 'Created table digart_ecole_ecoles_types'
-    - builder_table_create_digart_ecole_ecoles_types.php
+    - 'Created table digart_ecole_eco_types'
+    - builder_table_create_digart_ecole_eco_types.php
 1.0.57:
     - 'Seed types d''écoles'
     - seeder1057.php
@@ -172,8 +172,8 @@
     - 'Seed cycles'
     - seeder1059.php
 1.0.60:
-    - 'Created table digart_ecole_programmes'
-    - builder_table_create_digart_ecole_programmes.php
+    - 'Created table digart_ecole_progr'
+    - builder_table_create_digart_ecole_progr.php
 1.0.61:
     - 'Seed programmes'
     - seeder1061.php
@@ -181,8 +181,8 @@
     - 'Seed historique des années scolaires des élèves'
     - seeder1062.php
 1.0.63:
-    - 'Created table digart_ecole_passages_types'
-    - builder_table_create_digart_ecole_passages_types.php
+    - 'Created table digart_ecole_pass_types'
+    - builder_table_create_digart_ecole_pass_types.php
 1.0.64:
     - 'Seed types de passages'
     - seeder1064.php
