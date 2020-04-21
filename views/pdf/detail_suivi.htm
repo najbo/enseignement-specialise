@@ -95,7 +95,7 @@ orientation = "portrait"
 		<table class="fullwidth"> 
 			
 		    <tr>
-				<th colspan="4">{{ activite.periodes }} | {{ activite.resume }} | {{ activite.statut.designation}}
+				<th colspan="4">{{ activite.periodes }} | {{ activite.resume ? activite.resume ~ ' | '}}{{ activite.statut.designation}}
 				</th>>
 			</tr> 
   
@@ -113,12 +113,33 @@ orientation = "portrait"
 					<td style="width:30%">{{ activite.interlocuteur.telephonepro}}</td>				
 				</tr>  
 			{% endif %}
-			<tr>
-				<td style="width:20%">Gestionnaire</td>
-				<td style="width:30%">{{ activite.gestionnaire.full_name}}</td>
-				<td style="width:20%">Créé/mis à jour le</td>
-				<td style="width:30%">{{ activite.created_updated}}</td>				
-			</tr>
+
+
+			{% if (activite.enseignants|length > 0 or activite.proches|length > 0) %}
+				<tr>
+					<td style="width:20%">{{ activite.enseignants|length > 1 ? 'Enseignants' : 'Enseignant' }}</td>
+					<td style="width:30%">
+						{% for enseignant in activite.enseignants %}
+							{{ enseignant.full_name }}
+							{% if not loop.last %}<br>{% endif %} 
+						{% endfor %}						
+					</td>
+					<td style="width:20%">{{ activite.proches|length > 1 ? 'Proches' : 'Proche' }}</td>
+					<td style="width:30%">
+						{% for proche in activite.proches %}
+							{{ proche.full_name }}
+							{% if not loop.last %}<br>{% endif %} 
+						{% endfor %}
+					</td>				
+				</tr>  
+			{% endif %}		
+
+			{% if activite.tiers %}
+				<tr>
+					<td style="width:20%">Tiers</td>
+					<td colspan="3" style="width:30%">{{ activite.tiers}}</td>		
+				</tr>  
+			{% endif %}
 
 			{% if activite.developpement %}
 				<tr>
@@ -142,6 +163,13 @@ orientation = "portrait"
 			<tr>
 				<td style="width:20%">Prochaine action</td>
 				<td colspan="3">{{ activite.next }}</td>
+			</tr>
+
+			<tr>
+				<td style="width:20%">Gestionnaire</td>
+				<td style="width:30%">{{ activite.gestionnaire.full_name}}</td>
+				<td style="width:20%">Créé/mis à jour le</td>
+				<td style="width:30%">{{ activite.created_updated}}</td>				
 			</tr>
 
 		</table>
@@ -175,7 +203,7 @@ orientation = "portrait"
     <div">
         <table>
             <tr>
-                <th>Fiche  créée le :</th>
+                <th>Suivi créé le :</th>
                 <td>{{ suivi.created_at | date('d.m.Y H:i:s') }}</td>
             </tr>
            

@@ -33,6 +33,7 @@ fields:
         mode: date
         span: auto
         type: datepicker
+        format: d.m.Y
         firstDay: 1
 tabs:
     fields:
@@ -88,12 +89,14 @@ tabs:
             mode: date
             span: auto
             type: datepicker
+            firstDay: 1
             tab: Engagement
         sortie:
             label: 'Date de sortie'
             span: auto
             mode: date
             type: datepicker
+            firstDay: 1
             tab: Engagement
         permis:
             label: 'Type de permis'

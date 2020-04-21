@@ -17,6 +17,8 @@ class BuilderTableCreateDigartEcoleEnsFaits extends Migration
                 $table->date('fin')->nullable();
                 $table->string('designation', 255);
                 $table->text('complement')->nullable();
+                $table->dateTime('prochaineecheance')->nullable();
+                $table->string('prochaineaction', 255)->nullable();
                 $table->boolean('is_closed')->default(0);
                 $table->integer('auteur_id')->unsigned()->nullable();
                 $table->timestamp('created_at')->nullable();

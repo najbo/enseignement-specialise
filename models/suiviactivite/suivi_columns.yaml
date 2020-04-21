@@ -35,13 +35,13 @@ columns:
         searchable: true
         sortable: true
     debut:
-        label: 'Début activité'
+        label: 'Début'
         type: date
         format: 'd.m.Y'
         searchable: true
         sortable: true
     fin:
-        label: 'fin activité'
+        label: 'Fin'
         type: date
         format: 'd.m.Y'
         searchable: true
@@ -54,7 +54,7 @@ columns:
         select: designation
         relation: type        
     therapie:
-        label: Thérapie
+        label: Mesure
         type: text
         searchable: true
         sortable: true
@@ -73,3 +73,9 @@ columns:
         path: ~/plugins/digart/ecole/models/suiviactivite/_statut_column.htm
         searchable: false
         sortable: false        
+    prochaineecheance:
+        label: 'Proch. éch.'
+        type: date
+        format: 'd.m.Y'
+        searchable: true
+        sortable: true  

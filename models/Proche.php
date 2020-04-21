@@ -40,17 +40,28 @@ class Proche extends Model
                    'order' => 'sort_order'],
         'permis' => ['DigArt\Ecole\Models\ProchePermis',
                    'key' => 'permis_id',
-                   'order' => 'sort_order']
-    ];         
+                   'order' => 'sort_order'],
+        'eleve' => ['DigArt\Ecole\Models\Eleve',
+                   'key' => 'eleve_id',
+                   'order' => 'nom']
+    ];       
+
+
+
 
     public function getFullNameAttribute() {
         # return $this->prenom.' '. $this->nom. ' ('.$this->procherole->designation .')';
         return $this->prenom.' '. $this->nom ;
     }    
 
+    public function getNomRoleAttribute() {
+        return $this->prenom.' '. $this->nom. ' (' .$this->procherole->designation .' de ' . $this->eleve->prenom . ' ' .$this->eleve->nom.')' ;
+    }   
+
     public function getPrenomNomProchesOptions() {
 
-        $result = Proche::orderBy('nom','prenom')->get()->pluck('FullName', 'id')->toArray();          
+        # $result = Proche::orderBy('nom','prenom')->get()->pluck('FullName', 'id')->toArray();          
+        $result = Proche::orderBy('nom','prenom')->get()->pluck('full_name', 'id')->toArray();          
         return $result;
     }     
 }

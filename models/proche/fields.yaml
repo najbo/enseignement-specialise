@@ -62,12 +62,18 @@ tabs:
         is_autoriteparentale:
             label: 'Détient l''autorité parentale'
             span: auto
-            type: switch
+            type: checkbox
             tab: 'Données de base'
         is_autredomicile:
             label: 'Habite à une autre adresse'
             span: auto
-            type: switch
+            type: checkbox
+            tab: 'Données de base'
+        is_actif:
+            label: Actif
+            span: auto
+            default: 1
+            type: checkbox
             tab: 'Données de base'
         remarque:
             label: Remarques

@@ -1,6 +1,13 @@
 columns:
+    typefait:
+        label: 'Type de fait'
+        type: text
+        searchable: true
+        sortable: true
+        select: designation
+        relation: typefait       
     debut:
-        label: Débug
+        label: Début
         type: date
         searchable: true
         sortable: true

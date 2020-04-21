@@ -31,22 +31,38 @@ tabs:
             label: Nom
             span: auto
             type: text
-            tab: 'Données de base'
+            trigger:
+                action: show
+                field: enseignant
+                condition: 'value[]'
+            tab: 'Autre enseignant'
         prenom:
             label: Prénom
             span: auto
             type: text
-            tab: 'Données de base'
+            trigger:
+                action: show
+                field: enseignant
+                condition: 'value[]'
+            tab: 'Autre enseignant'
         telephonemobile:
             label: 'Téléphone mobile'
             span: auto
             type: text
-            tab: 'Données de base'
+            trigger:
+                action: show
+                field: enseignant
+                condition: 'value[]'            
+            tab: 'Autre enseignant'
         mail:
             label: 'Adresse e-mail'
             span: auto
             type: text
-            tab: 'Données de base'
+            trigger:
+                action: show
+                field: enseignant
+                condition: 'value[]'            
+            tab: 'Autre enseignant'
         remarques:
             label: Remarques
             size: large

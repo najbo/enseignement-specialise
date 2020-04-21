@@ -192,3 +192,6 @@
 1.0.66:
     - 'Created table digart_ecole_suivis_activ_ens'
     - builder_table_create_digart_ecole_suivis_activ_ens.php
+1.0.67:
+    - 'Created table digart_ecole_suivis_activ_pro'
+    - builder_table_create_digart_ecole_suivis_activ_pro.php

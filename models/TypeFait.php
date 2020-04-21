@@ -3,7 +3,7 @@
 use Model;
 
 /**
- * Model types de faits pour les enseignants
+ * Model types de faits pour les enseignants et les élèves
  */
 class TypeFait extends Model
 {

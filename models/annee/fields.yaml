@@ -10,6 +10,7 @@ fields:
         span: left
         required: 1
         firstDay: 1
+        format: d.m.Y
         type: datepicker
     fin:
         label: 'Date de fin'
@@ -17,6 +18,7 @@ fields:
         span: auto
         required: 1
         firstDay: 1
+        format: d.m.Y
         type: datepicker
     complement:
         label: Complément

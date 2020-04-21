@@ -238,6 +238,12 @@ navigation:
                 icon: icon-list-ul
                 permissions:
                     - digart.ecole.ecoletype
+            passages:
+                label: Passages
+                url: digart/ecole/passages
+                icon: icon-thumbs-o-up
+                permissions:
+                    - digart.ecole.passages                    
     bases:
         label: Bases
         url: digart/ecole/pays
@@ -274,12 +280,6 @@ navigation:
                 icon: icon-transgender
                 permissions:
                     - digart.ecole.genres
-            passages:
-                label: Passages
-                url: digart/ecole/passages
-                icon: icon-thumbs-o-up
-                permissions:
-                    - digart.ecole.passages
             types-faits:
                 label: 'Types de faits'
                 url: digart/ecole/typesfaits

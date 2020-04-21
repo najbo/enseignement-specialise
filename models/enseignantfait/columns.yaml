@@ -7,13 +7,15 @@ columns:
         select: designation
         relation: typefait    
     debut:
-        label: Débug
+        label: Début
         type: date
+        format: d.m.Y
         searchable: true
         sortable: true
     fin:
         label: Fin
         type: date
+        format: d.m.Y
         searchable: true
         sortable: true
     designation:
@@ -21,6 +23,12 @@ columns:
         type: text
         searchable: true
         sortable: true
+    prochaineecheance:
+        label: Proch. éch.
+        type: date
+        format: d.m.Y
+        searchable: true
+        sortable: true        
     is_closed:
         label: Terminé
         type: switch

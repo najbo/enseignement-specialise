@@ -2,6 +2,7 @@
 
 use Model;
 use BackendAuth;
+use Log;
 
 /**
  * Model
@@ -76,7 +77,12 @@ class SuiviActivite extends Model
             'DigArt\Ecole\Models\Enseignant',
             'table' => 'digart_ecole_suivis_activ_ens',
             'key' => 'activite_id',
-            'otherKey' => 'enseignant_id']
+            'otherKey' => 'enseignant_id'],
+        'proches' => [
+            'DigArt\Ecole\Models\Proche',
+            'table' => 'digart_ecole_suivis_activ_pro',
+            'key' => 'activite_id',
+            'otherKey' => 'proche_id'],
     ];
 
 
@@ -137,11 +143,20 @@ class SuiviActivite extends Model
         return $action;
     }
 
-
+    # Affiche la liste des enseignants dans le menu déroulant des Activités
     public function getEnseignantsOptions($fieldName, $value)
     {
         
         $result = Enseignant::orderBy('nom','prenom')->get()->where('is_actif', true)->pluck('fullname', 'id');
+        return $result;
+    }
+
+    # Affiche la liste des proches dans le menu déroulant des Activités
+    public function getProchesOptions($fieldName, $value)
+    {
+
+        #log::info($value);
+        $result = Proche::orderBy('prenom','prenom')->get()->where('is_actif', true)->pluck('full_name', 'id');
         return $result;
     }
 

@@ -34,7 +34,7 @@ scopes:
         conditions: therapie_id in (:filtered)
         nameFrom: designation                
     interlocteurs:
-        label: Interlocuteurs
+        label: Thérapeutes
         modelClass: DigArt\Ecole\Models\Interlocuteur
         conditions: interlocuteur_id in (:filtered)
         options: getPrenomNomInterlocuteursOptions                        
@@ -44,6 +44,10 @@ scopes:
         conditions: statut_id in (:filtered)
         nameFrom: designation
     periode:
-        label: Période
+        label: Début act.
         type: daterange
-        conditions: date >= ':after' AND date <= ':before'        
+        conditions: debut >= ':after' AND debut <= ':before'
+    prochaineecheance:
+        label: Echéance
+        type: daterange
+        conditions: prochaineecheance >= ':after' AND prochaineecheance <= ':before'                

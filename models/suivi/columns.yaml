@@ -26,11 +26,13 @@ columns:
     debut:
         label: Début
         type: date
+        format: 'd.m.Y'
         searchable: true
         sortable: true
     fin:
         label: Fin
         type: date
+        format: 'd.m.Y'
         searchable: true
         sortable: true
     activites:

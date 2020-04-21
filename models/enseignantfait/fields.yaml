@@ -51,3 +51,16 @@ tabs:
                 extension: auto
             type: fileupload
             tab: 'Documents généraux'
+        prochaineecheance:
+            label: 'Prochaine échéance'
+            span: auto
+            mode: date
+            type: datepicker
+            firstDay: 1
+            format: d.m.Y
+            tab: 'Prochaine échéance'
+        prochaineaction:
+            label: 'Prochaine action'
+            span: auto
+            type: text
+            tab: 'Prochaine échéance'            

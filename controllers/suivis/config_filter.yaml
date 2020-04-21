@@ -50,8 +50,11 @@ scopes:
         modelClass: DigArt\Ecole\Models\Statut
         conditions: statut_id in (:filtered)
         nameFrom: designation                        
-    periode:
-        label: Période
+    periode_debut:
+        label: Début
         type: daterange
-        conditions: debut >= ':after' AND fin <= ':before'
- 
+        conditions: debut >= ':after' AND debut <= ':before'
+    periode_fin:
+        label: Début
+        type: daterange
+        conditions: fin >= ':after' AND fin <= ':before'

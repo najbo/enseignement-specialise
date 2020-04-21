@@ -44,7 +44,7 @@ tabs:
             type: relation
             tab: 'Données de base'
         tiers:
-            label: 'Tiers concerné(s)'
+            label: 'Autres tiers concernés'
             span: auto
             type: text
             tab: 'Données de base'
@@ -61,6 +61,16 @@ tabs:
             label: Enseignants
             separator: comma
             customTags: false
+            useKey: true
+            span: auto
+            mode: array
+            options: true
+            type: taglist
+            tab: 'Données de base'
+        proches:
+            label: Proches
+            separator: comma
+            #customTags: true
             useKey: true
             span: auto
             mode: array
@@ -88,6 +98,8 @@ tabs:
             span: auto
             mode: date
             type: datepicker
+            firstDay: 1
+            format: d.m.Y
             tab: 'Autres informations'
         prochaineaction:
             label: 'Prochaine action'

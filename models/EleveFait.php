@@ -11,7 +11,7 @@ class EleveFait extends Model
     
     use \October\Rain\Database\Traits\SoftDelete;
 
-    protected $dates = ['debut', 'fin', 'deleted_at'];
+    protected $dates = ['debut', 'fin', 'prochaineecheance', 'deleted_at'];
 
 
     /**
@@ -31,4 +31,11 @@ class EleveFait extends Model
         'images' => ['System\Models\File', 'public' => false],
         'documents' => ['System\Models\File', 'public' => false]
     ];
+
+    public $belongsTo = [
+        'typefait' => ['DigArt\Ecole\Models\TypeFait',
+                   'key' => 'typefait_id',
+                   'conditions' => 'is_eleve = 1',
+                   'order' => 'sort_order'],                   
+    ];     
 }

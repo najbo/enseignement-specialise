@@ -11,7 +11,7 @@ class EnseignantFait extends Model
     
     use \October\Rain\Database\Traits\SoftDelete;
 
-    protected $dates = ['debut', 'fin', 'deleted_at'];
+    protected $dates = ['debut', 'fin', 'prochaineecheance', 'deleted_at'];
 
 
     /**
@@ -36,6 +36,7 @@ class EnseignantFait extends Model
     public $belongsTo = [
         'typefait' => ['DigArt\Ecole\Models\TypeFait',
                    'key' => 'typefait_id',
+                   'conditions' => 'is_enseignant = 1',
                    'order' => 'sort_order'],                   
     ];    
 }

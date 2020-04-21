@@ -8,8 +8,17 @@ fields:
         size: large
         span: full
         type: textarea
+    is_eleve:
+        label: 'Pour les élèves'
+        span: auto
+        type: switch
+    is_enseignant:
+        label: 'Pour les enseignants'
+        span: auto
+        default: 1
+        type: switch
     is_actif:
         label: Actif
         span: auto
         default: 1
-        type: checkbox  
+        type: checkbox
