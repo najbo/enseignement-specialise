@@ -8,10 +8,10 @@ permissions:
     digart.ecole.suivis:
         tab: 'ESP - Protocoles'
         label: 'Gère le suivi des élèves'
-        order: 50
+        order: '50'
     digart.ecole.pathologies:
         tab: 'ESP - Protocoles'
-        label: 'Gère les pathologies'        
+        label: 'Gère les pathologies'
     digart.ecole.therapies:
         tab: 'ESP - Protocoles'
         label: 'Gère les mesures (thérapies) à disposition'
@@ -21,30 +21,29 @@ permissions:
     digart.ecole.types:
         tab: 'ESP - Protocoles'
         label: 'Gère les types d''activités liées aux suivis'
-
-
+    digart.ecole.statistiques:
+        tab: 'ESP - Protocoles'
+        label: 'Accède aux statistiques'
     digart.ecole.eleves:
         tab: 'ESP - Ressources humaines'
         label: 'Gère les élèves de l''enseignement spécialisé'
-        order: 51
+        order: '51'
     digart.ecole.interlocuteurs:
         tab: 'ESP - Ressources humaines'
-        label: 'Gère les interlocuteurs' 
+        label: 'Gère les interlocuteurs'
     digart.ecole.enseignants:
         tab: 'ESP - Ressources humaines'
         label: 'Gère les enseignants'
     digart.ecole.fonctions:
         tab: 'ESP - Ressources humaines'
-        label: 'Gère les fonctions professionnelles des interlocuteurs'        
+        label: 'Gère les fonctions professionnelles des interlocuteurs'
     digart.ecole.prochesroles:
         tab: 'ESP - Ressources humaines'
         label: 'Gère les rôles des proches (parents et autres)'
-
-
     digart.ecole.ecoles:
         tab: 'ESP - Structures'
         label: 'Gère les écoles'
-        order: 52
+        order: '52'
     digart.ecole.cercles:
         tab: 'ESP - Structures'
         label: 'Gère les cercles des écoles'
@@ -59,40 +58,36 @@ permissions:
         label: 'Gère les cycles'
     digart.ecole.volees:
         tab: 'ESP - Structures'
-        label: 'Gère les volées' 
+        label: 'Gère les volées'
     digart.ecole.ecoletype:
         tab: 'ESP - Structures'
-        label: 'Gère les types d''écoles'  
-
-
+        label: 'Gère les types d''écoles'
     digart.ecole.pays:
         tab: 'ESP - Bases'
-        label: 'Gère les pays'        
-        order: 53
+        label: 'Gère les pays'
+        order: '53'
     digart.ecole.langues:
         tab: 'ESP - Bases'
         label: 'Gère les langues des différents protagonistes'
     digart.ecole.prochespermis:
         tab: 'ESP - Bases'
-        label: 'Gère les types de permis des élèves et des proches'        
+        label: 'Gère les types de permis des élèves et des proches'
     digart.ecole.genres:
         tab: 'ESP - Bases'
-        label: 'Gère les genres des différents protagonistes'                
+        label: 'Gère les genres des différents protagonistes'
     digart.ecole.passages:
         tab: 'ESP - Bases'
         label: 'Gère les types de passages d''une année à l''autre pour les élèves'
     digart.ecole.typesfaits:
         tab: 'ESP - Bases'
         label: 'Gère les types de faits des enseignants'
-
     digart.ecole.can_restore:
         tab: 'ESP - Droits spécifiques'
         label: 'Peut restaurer des enregistrement effacés (softdeletes)'
-        order: 53
+        order: '53'
     digart.ecole.can_bouclement:
         tab: 'ESP - Droits spécifiques'
-        label: 'Peut boucler une année spécifique (créée une nouvelle année dans l''historique des élèves)'        
-
+        label: 'Peut boucler une année spécifique (créée une nouvelle année dans l''historique des élèves)'
 navigation:
     protocoles:
         label: Protocoles
@@ -103,7 +98,7 @@ navigation:
             - digart.ecole.therapies
             - digart.ecole.statuts
             - digart.ecole.types
-            - digart.ecole.pathologies  
+            - digart.ecole.pathologies
         sideMenu:
             suivi:
                 label: 'Suivi des élèves'
@@ -122,7 +117,7 @@ navigation:
                 url: digart/ecole/pathologies
                 icon: icon-bug
                 permissions:
-                    - digart.ecole.pathologies                    
+                    - digart.ecole.pathologies
             mesures:
                 label: Mesures
                 url: digart/ecole/therapies
@@ -141,6 +136,12 @@ navigation:
                 icon: icon-suitcase
                 permissions:
                     - digart.ecole.types
+            statistiques:
+                label: Statistiques
+                url: digart/ecole/statistiques
+                icon: icon-calculator
+                permissions:
+                    - digart.ecole.statistiques
     ressources-humaines:
         label: 'Ressources humaines'
         url: digart/ecole/eleves
@@ -243,7 +244,7 @@ navigation:
                 url: digart/ecole/passages
                 icon: icon-thumbs-o-up
                 permissions:
-                    - digart.ecole.passages                    
+                    - digart.ecole.passages
     bases:
         label: Bases
         url: digart/ecole/pays
@@ -273,7 +274,7 @@ navigation:
                 url: digart/ecole/prochespermis
                 icon: icon-suitcase
                 permissions:
-                    - digart.ecole.prochespermis                                        
+                    - digart.ecole.prochespermis
             Genres:
                 label: Genres
                 url: digart/ecole/genres

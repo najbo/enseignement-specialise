@@ -1,0 +1,36 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('digart/ecole/statistiques') ?>">Statistiques</a></li>
+        <li>ESP</li>
+    </ul>
+<?php Block::endPut() ?>
+
+<h1>Statistiques ESP</h1>
+<p>
+	<div class="alert alert-success" role="alert"><strong>Désolé !</strong> Fonctionnalité en cours de construction.</div>
+</p>    
+
+<p>
+	<!-- <?= e($this->vars['statistiques']) ?> -->
+	
+	<?= $statistiques ?>
+</p>
+<p>
+	<?= $stats['nom'] ?>
+	<?= $suivis ?><br />
+	Nombre : <?= $suivis->count() ?>
+
+
+</p>
+<h3>
+	Liste
+</h3>
+
+<?php
+foreach ($suivis as $suivi) {
+    echo $suivi->statut->designation .' : ' . $suivi->designation .'<br />';
+    foreach ($suivi->activites as $activite) {
+    	echo '- '. $activite->resume.'<br />';
+	}
+}
+?>
