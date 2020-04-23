@@ -25,7 +25,8 @@ class Ecole extends Model
      * @var array Validation rules
      */
     public $rules = [
-        'designation' => 'required'
+        'designation' => 'required',
+        'mail' => 'email'
     ];
 
 

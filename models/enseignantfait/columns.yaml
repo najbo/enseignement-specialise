@@ -23,14 +23,14 @@ columns:
         type: text
         searchable: true
         sortable: true
-    prochaineecheance:
-        label: Proch. éch.
-        type: date
-        format: d.m.Y
-        searchable: true
-        sortable: true        
     is_closed:
         label: Terminé
         type: switch
         searchable: true
         sortable: true
+    prochaineecheance:
+        label: Proch. éch.
+        type: date
+        format: d.m.Y
+        searchable: true
+        sortable: true         

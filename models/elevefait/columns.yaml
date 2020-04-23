@@ -9,11 +9,13 @@ columns:
     debut:
         label: Début
         type: date
+        format: d.m.Y
         searchable: true
         sortable: true
     fin:
         label: Fin
         type: date
+        format: d.m.Y
         searchable: true
         sortable: true   
     designation:
@@ -26,3 +28,10 @@ columns:
         type: switch
         searchable: true
         sortable: true
+    prochaineecheance:
+        label: Proch. éch.
+        type: date
+        format: d.m.Y
+        searchable: true
+        sortable: true          
+

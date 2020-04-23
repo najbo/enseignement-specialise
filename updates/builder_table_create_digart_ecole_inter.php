@@ -19,7 +19,9 @@ class BuilderTableCreateDigartEcoleInter extends Migration
             $table->string('localite', 255)->nullable();
             $table->string('telephonepro', 20)->nullable();
             $table->string('telephoneprive', 20)->nullable();
+            $table->string('fax', 20)->nullable();
             $table->string('titre', 255)->nullable();
+            $table->string('website', 255)->nullable();
             $table->string('mail', 255)->nullable();
             $table->text('remarque')->nullable();
             $table->boolean('is_actif')->nullable()->default(1);

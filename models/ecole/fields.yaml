@@ -11,25 +11,11 @@ fields:
     type:
         label: 'Type d''école'
         span: auto
-        #nameFrom: designation
-        #descriptionFrom: description
         type: dropdown
-    # ecolesuivante:
-    #     label: 'Ecole suivante'
-    #     span: auto
-    #     type: relation
-    #     nameFrom: designation
-    #     emptyOption: '-- Aucune ou non définie --'
-    # ecolesuivante_id:
-    #     label: 'Ecole suivante'
-    #     span: auto
-    #     type: dropdown
-    #     options: listEcoles
-    #     emptyOption: '-- Aucune ou non définie --'
     ecolesuivante:
         label: 'Ecole suivante'
         span: auto
-        type: dropdown  
+        type: dropdown
         emptyOption: '-- Aucune ou non définie --'
     directeurs:
         label: Directeur(s)
@@ -50,7 +36,7 @@ fields:
         label: Actif
         span: auto
         default: 1
-        type: checkbox                
+        type: checkbox
 tabs:
     fields:
         adresse:
@@ -65,6 +51,26 @@ tabs:
             tab: 'Données de base'
         localite:
             label: Localité
+            span: auto
+            type: text
+            tab: 'Données de base'
+        telephone:
+            label: 'Numéro de téléphone'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        fax:
+            label: 'Numéro de fax'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        mail:
+            label: 'Adresse e-mail'
+            span: auto
+            type: text
+            tab: 'Données de base'
+        website:
+            label: 'Site web de l''école'
             span: auto
             type: text
             tab: 'Données de base'

@@ -16,6 +16,10 @@ class BuilderTableCreateDigartEcoleEco extends Migration
             $table->string('adresse', 255)->nullable();
             $table->string('npa', 10)->nullable();
             $table->string('localite', 255)->nullable();
+            $table->string('telephone', 20)->nullable();
+            $table->string('mail', 255)->nullable();
+            $table->string('fax', 255)->nullable();
+            $table->string('website', 255)->nullable();
             $table->integer('cercle_id')->unsigned()->nullable();
             $table->integer('type_id')->unsigned()->nullable();
             $table->integer('ecolesuivante_id')->unsigned()->nullable();
