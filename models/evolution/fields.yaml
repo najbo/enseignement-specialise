@@ -3,6 +3,10 @@ fields:
         label: Désignation
         span: auto
         type: text
+    code:
+        label: Code
+        span: auto
+        type: text
     abreviation:
         label: Abréviation
         span: auto
@@ -12,7 +16,7 @@ fields:
         size: large
         span: full
         type: textarea
-    is_statistiqeus:
+    is_statistiques:
         label: Statistiques
         span: auto
         default: 1

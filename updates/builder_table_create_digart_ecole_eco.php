@@ -21,7 +21,7 @@ class BuilderTableCreateDigartEcoleEco extends Migration
             $table->integer('ecolesuivante_id')->unsigned()->nullable();
             $table->integer('sort_order')->nullable();
             $table->text('complement')->nullable();
-            $table->boolean('is_actif')->default(1);
+            $table->boolean('is_actif')->nullable()->default(1);
             $table->integer('auteur_id')->unsigned()->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();

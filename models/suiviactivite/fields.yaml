@@ -70,7 +70,7 @@ tabs:
         proches:
             label: Proches
             separator: comma
-            #customTags: true
+            customTags: false
             useKey: true
             span: auto
             mode: array
@@ -90,9 +90,19 @@ tabs:
             thumbOptions:
                 mode: crop
                 extension: auto
-            span: full
+            span: auto
             type: fileupload
             tab: 'Documents et rapports'
+        images:
+            label: Images
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
+            tab: 'Documents et rapports'            
         prochaineecheance:
             label: 'Prochaine échéance'
             span: auto

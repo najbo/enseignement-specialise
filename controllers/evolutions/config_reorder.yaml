@@ -1,0 +1,5 @@
+title: Évolutions
+modelClass: DigArt\Ecole\Models\Evolution
+nameFrom: designation
+toolbar:
+    buttons: reorder_toolbar

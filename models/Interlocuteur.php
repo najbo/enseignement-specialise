@@ -33,6 +33,14 @@ class Interlocuteur extends Model
         'title' => 'Liste des interlocuteurs / tiers',
         ];
 
+    public $attachOne = [
+        'profil' => ['System\Models\File', 'public' => false],
+    ];
+
+    public $attachMany = [
+        'images' => ['System\Models\File', 'public' => false],
+        'documents' => ['System\Models\File', 'public' => false]
+    ];
 
     public $belongsToMany = [
         'fonctions' => [

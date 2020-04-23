@@ -21,6 +21,9 @@ permissions:
     digart.ecole.types:
         tab: 'ESP - Protocoles'
         label: 'Gère les types d''activités liées aux suivis'
+    digart.ecole.evolutions:
+        tab: 'ESP - Protocoles'
+        label: 'Gère les types d ''évolution des mesures'
     digart.ecole.statistiques:
         tab: 'ESP - Protocoles'
         label: 'Accède aux statistiques'
@@ -136,6 +139,12 @@ navigation:
                 icon: icon-suitcase
                 permissions:
                     - digart.ecole.types
+            evolutions:
+                label: 'Évolutions des mesures'
+                url: digart/ecole/evolutions
+                icon: icon-signal
+                permissions:
+                    - digart.ecole.evolutions
             statistiques:
                 label: Statistiques
                 url: digart/ecole/statistiques

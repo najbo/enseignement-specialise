@@ -1,4 +1,11 @@
 scopes:
+    is_actif:
+        label: Actif
+        type: switch
+        default: 2
+        conditions:
+            - is_actif <> true
+            - is_actif = true
     ecole:
         label: Ecole
         modelClass: DigArt\Ecole\Models\Ecole
@@ -14,10 +21,3 @@ scopes:
         modelClass: DigArt\Ecole\Models\Langue
         conditions: langue_id in (:filtered)
         nameFrom: designation
-    is_actif:
-        label: Actif
-        type: switch
-        default: 2
-        conditions:
-            - is_actif <> true
-            - is_actif = true

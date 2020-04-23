@@ -139,6 +139,16 @@ tabs:
                 mode: crop
                 extension: auto
             type: fileupload
+            tab: 'Documents généraux'            
+        images:
+            label: Images
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
+            type: fileupload
             tab: 'Documents généraux'
         is_actif:
             label: Actif

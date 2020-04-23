@@ -195,3 +195,9 @@
 1.0.67:
     - 'Created table digart_ecole_suivis_activ_pro'
     - builder_table_create_digart_ecole_suivis_activ_pro.php
+1.0.68:
+    - 'Created table digart_ecole_evol'
+    - builder_table_create_digart_ecole_evol.php
+1.0.69:
+    - 'Seed évolutions'
+    - seeder1069.php

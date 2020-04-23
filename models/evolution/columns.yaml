@@ -1,0 +1,21 @@
+columns:
+    designation:
+        label: Désignation
+        type: text
+        searchable: true
+        sortable: false
+    code:
+        label: Code
+        type: text
+        searchable: true
+        sortable: false
+    abreviation:
+        label: Abréviation
+        type: text
+        searchable: true
+        sortable: false
+    is_actif:
+        label: Actif
+        type: switch
+        searchable: false
+        sortable: false

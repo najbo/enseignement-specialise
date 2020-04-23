@@ -3,18 +3,19 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
-class BuilderTableCreateDigartEcoleTherapies extends Migration
+class BuilderTableCreateDigartEcoleEvol extends Migration
 {
     public function up()
     {
-        Schema::create('digart_ecole_therapies', function($table)
+        Schema::create('digart_ecole_evol', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->string('designation', 255);
-            $table->string('abreviation', 20)->nullable();
+            $table->string('abreviation', 50)->nullable();
+            $table->string('code', 20)->nullable();
             $table->text('complement')->nullable();
-            $table->string('color', 20)->nullable();
+            $table->integer('next_id')->nullable()->unsigned();
             $table->integer('sort_order')->nullable();
             $table->boolean('is_actif')->nullable()->default(1);
             $table->boolean('is_statistiques')->nullable()->default(1);
@@ -26,6 +27,6 @@ class BuilderTableCreateDigartEcoleTherapies extends Migration
     
     public function down()
     {
-        Schema::dropIfExists('digart_ecole_therapies');
+        Schema::dropIfExists('digart_ecole_evol');
     }
 }

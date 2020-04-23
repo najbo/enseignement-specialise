@@ -55,6 +55,6 @@ scopes:
         type: daterange
         conditions: debut >= ':after' AND debut <= ':before'
     periode_fin:
-        label: Début
+        label: Fin
         type: daterange
         conditions: fin >= ':after' AND fin <= ':before'

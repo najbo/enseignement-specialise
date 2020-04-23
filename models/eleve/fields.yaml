@@ -25,7 +25,7 @@ fields:
         mode: relation
         separator: comma
         nameFrom: designation
-        customTags: true
+        customTags: false
         useKey: false
         type: taglist
     volee:
@@ -74,6 +74,7 @@ tabs:
             span: auto
             type: datepicker
             firstDay: 1
+            format: d.m.Y
             tab: 'Données de base'
         genre:
             label: Genre

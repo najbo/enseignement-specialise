@@ -18,6 +18,7 @@ class Seeder1065 extends Seeder
                 'digart.ecole.therapies' => 1,
                 'digart.ecole.statuts' => 1,
                 'digart.ecole.types' => 1,
+                'digart.ecole.evolutions' => 1,
                 'digart.ecole.statistiques' => 1,
 
                 'digart.ecole.eleves' => 1,
@@ -67,6 +68,7 @@ class Seeder1065 extends Seeder
                 'digart.ecole.therapies' => 1,
                 'digart.ecole.statuts' => 1,
                 'digart.ecole.types' => 1,
+                'digart.ecole.evolutions' => 1,
                 'digart.ecole.statistiques' => 1,
 
                 'digart.ecole.eleves' => 1,
@@ -116,6 +118,7 @@ class Seeder1065 extends Seeder
                 'digart.ecole.pathologies' => 0,
                 'digart.ecole.therapies' => 0,
                 'digart.ecole.statuts' => 0,
+                'digart.ecole.evolutions' => 0,
                 'digart.ecole.types' => 0,
                 'digart.ecole.statistiques' => 0,
 

@@ -1,0 +1,13 @@
+name: Evolutions
+modelClass: DigArt\Ecole\Models\Evolution
+form: $/digart/ecole/models/evolution/fields.yaml
+defaultRedirect: digart/ecole/evolutions
+create:
+    title: 'Ajouter une nouvelle évolution'
+    redirect: 'digart/ecole/evolutions/update/:id'
+    redirectClose: digart/ecole/evolutions
+update:
+    title: 'Mettre à jour une évolution'
+    redirect: digart/ecole/evolutions
+    redirectClose: digart/ecole/evolutions
+preview: {  }

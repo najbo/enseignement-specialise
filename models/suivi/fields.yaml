@@ -20,7 +20,7 @@ fields:
         mode: relation
         separator: comma
         nameFrom: designation
-        customTags: true
+        customTags: false
         useKey: false
         type: taglist
     designation:
@@ -95,6 +95,16 @@ tabs:
             thumbOptions:
                 mode: crop
                 extension: auto
-            span: full
+            span: auto
+            type: fileupload
+            tab: 'Documents généraux'
+        images:
+            label: Images
+            span: auto
+            mode: image
+            useCaption: true
+            thumbOptions:
+                mode: crop
+                extension: auto
             type: fileupload
             tab: 'Documents généraux'

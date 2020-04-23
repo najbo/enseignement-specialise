@@ -17,11 +17,15 @@ fields:
         mode: date
         span: auto
         type: datepicker
+        format: d.m.Y
+        firstDay: 1        
     fin:
         label: Fin
         mode: date
         span: auto
         type: datepicker
+        format: d.m.Y
+        firstDay: 1
     ecole:
         label: Ecole
         nameFrom: designation

@@ -4,11 +4,15 @@ fields:
         mode: date
         span: auto
         type: datepicker
+        format: d.m.Y
+        firstDay: 1        
     fin:
         label: Fin
         mode: date
         span: auto
         type: datepicker
+        format: d.m.Y
+        firstDay: 1        
     designation:
         label: Désignation
         span: full

@@ -1,11 +1,14 @@
-title: 'Types d''écoles'
-modelClass: DigArt\Ecole\Models\EcoleType
-list: $/digart/ecole/models/ecoletype/columns.yaml
-recordUrl: 'digart/ecole/ecolestypes/update/:id'
+title: Évolutions
+modelClass: DigArt\Ecole\Models\Evolution
+list: $/digart/ecole/models/evolution/columns.yaml
+recordUrl: 'digart/ecole/evolutions/update/:id'
 noRecordsMessage: 'backend::lang.list.no_records'
 recordsPerPage: 20
 showSetup: true
 showCheckboxes: true
+defaultSort:
+    column: sort_order
+    direction: asc
 toolbar:
     buttons: list_toolbar
     search:
