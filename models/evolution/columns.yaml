@@ -14,6 +14,16 @@ columns:
         type: text
         searchable: true
         sortable: false
+    lessons:
+        label: Leçons
+        type: text
+        searchable: true
+        sortable: false    
+    duree_mois:
+        label: Durée (mois)
+        type: text
+        searchable: true
+        sortable: false    
     is_actif:
         label: Actif
         type: switch

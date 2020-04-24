@@ -32,7 +32,12 @@ scopes:
         label: Thérapies
         modelClass: DigArt\Ecole\Models\Therapie
         conditions: therapie_id in (:filtered)
-        nameFrom: designation                
+        nameFrom: designation     
+    evolutions:
+        label: Evolutions
+        modelClass: DigArt\Ecole\Models\Evolution
+        conditions: evolution_id in (:filtered)
+        nameFrom: designation                    
     interlocteurs:
         label: Thérapeutes
         modelClass: DigArt\Ecole\Models\Interlocuteur

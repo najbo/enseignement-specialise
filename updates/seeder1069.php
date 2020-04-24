@@ -11,16 +11,22 @@ class Seeder1069 extends Seeder
 
         Evolution::create([
             'designation' => 'ICD',
+            'duree' => '12 leçons',
+            'lessons' => 12,
             'sort_order' => 1
         ]);
 
         Evolution::create([
             'designation' => 'ESL',
+            'duree' => '2 ans',
+            'duree_mois' => 24,
             'sort_order' => 2
         ]);
         
         Evolution::create([
             'designation' => 'ESG',
+            'duree' => '2 ans',
+            'duree_mois' => 24,
             'sort_order' => 3
         ]);        
               

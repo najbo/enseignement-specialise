@@ -7,13 +7,9 @@ fields:
         label: Code
         span: auto
         type: text
-    abreviation:
-        label: Abréviation
-        span: auto
-        type: text
     complement:
         label: Complément
-        size: large
+        size: small
         span: full
         type: textarea
     is_statistiques:
@@ -26,3 +22,15 @@ fields:
         span: auto
         default: 1
         type: checkbox
+    duree:
+        label: 'Texte de la durée ou de l''étendue'
+        span: auto
+        type: text
+    lessons:
+        label: 'Nombre de leçons'
+        span: left
+        type: number
+    duree_mois:
+        label: 'Durée en mois'
+        span: auto
+        type: number

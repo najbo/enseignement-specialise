@@ -15,7 +15,7 @@ class SuiviActivite extends Model
 
     protected $dates = ['date', 'debut', 'fin', 'prochaineecheance', 'deleted_at'];
     
-    protected $appends = ['full_name'];
+    protected $appends = ['full_name', 'mesure_evolution'];
     /*    
     public $attributes = [
       'resume' => 2,
@@ -54,6 +54,9 @@ class SuiviActivite extends Model
         'therapie'    => ['DigArt\Ecole\Models\Therapie',
                    'key' => 'therapie_id',
                    'order' => 'sort_order'],
+         'evolution'    => ['DigArt\Ecole\Models\Evolution',
+                   'key' => 'evolution_id',
+                   'order' => 'sort_order'],                       
         'interlocuteur'    => ['DigArt\Ecole\Models\Interlocuteur',
                    'key' => 'interlocuteur_id',
                    'order' => 'nom', 'prenom'],        
@@ -68,7 +71,7 @@ class SuiviActivite extends Model
                    'order' => 'sort_order'],                           
         'suivi'    => ['DigArt\Ecole\Models\Suivi',
                    'key' => 'suivi_id',
-                   'order' => '']                                      
+                   'order' => '']                                
     ];    
  
 
@@ -112,6 +115,29 @@ class SuiviActivite extends Model
         
         return $periode;
     }  
+
+
+
+    public function getMesureEvolutionAttribute() {
+        
+      if ($this->therapie && $this->evolution) {
+            return $this->therapie->designation . ' (' . $this->evolution->designation .')';
+          }
+
+      if ($this->therapie && ! $this->evolution) {
+
+        return $this->therapie->designation;
+
+        }
+
+      if (! $this->therapie && $this->evolution) { 
+        
+        return '*** ('.$this->evolution->designation .')';
+        }     
+
+    } 
+
+
 
 
     public function getEcheanceSuivanteAttribute() {

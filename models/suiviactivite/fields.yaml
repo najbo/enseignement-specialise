@@ -22,6 +22,13 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
+    statut:
+        label: 'Statut de l''activité'
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+        tab: 'Données de base'
     therapie:
         label: Mesure
         nameFrom: designation
@@ -29,19 +36,19 @@ fields:
         span: auto
         type: relation
         emptyOption: '-- Aucune mesure --'
+    evolution:
+        label: Evolution
+        nameFrom: designation
+        descriptionFrom: description
+        span: auto
+        type: relation
+        emptyOption: '-- Aucune évolution --'        
 tabs:
     fields:
         resume:
             label: Résumé
             span: auto
             type: text
-            tab: 'Données de base'
-        statut:
-            label: 'Statut de l''activité'
-            nameFrom: designation
-            descriptionFrom: description
-            span: auto
-            type: relation
             tab: 'Données de base'
         tiers:
             label: 'Autres tiers concernés'
@@ -102,7 +109,7 @@ tabs:
                 mode: crop
                 extension: auto
             type: fileupload
-            tab: 'Documents et rapports'            
+            tab: 'Documents et rapports'
         prochaineecheance:
             label: 'Prochaine échéance'
             span: auto

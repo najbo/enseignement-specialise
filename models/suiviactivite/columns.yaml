@@ -23,13 +23,19 @@ columns:
         type: text
         searchable: true
         sortable: true
-    therapie:
+    therapie_relation:
         label: Mesure
         type: text
         searchable: true
         sortable: true
         select: designation
         relation: therapie
+        invisible: true
+    mesure_evolution:
+        label: Mesure (évolution)
+        type: text
+        searchable: false
+        sortable: false
     interlocuteur_id:
         label: Thérapeute
         type: text
@@ -54,3 +60,4 @@ columns:
         type: text
         searchable: true
         sortable: true
+        invisible: true
