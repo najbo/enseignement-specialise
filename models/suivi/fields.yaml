@@ -66,13 +66,6 @@ tabs:
             span: full
             type: richeditor
             tab: Remarques
-        gestionnaire:
-            label: Gestionnaire
-            nameFrom: FullName
-            descriptionFrom: description
-            span: auto
-            type: relation
-            tab: Remarques
         hint_enseignants:
             span: full
             path: $/digart/ecole/models/suivi/_hint_onglets.htm
@@ -108,3 +101,23 @@ tabs:
                 extension: auto
             type: fileupload
             tab: 'Documents généraux'
+        prochaineecheance:
+            label: 'Prochaine échéance'
+            span: auto
+            mode: date
+            type: datepicker
+            firstDay: 1
+            format: d.m.Y
+            tab: 'Autres informations'
+        prochaineaction:
+            label: 'Prochaine action'
+            span: auto
+            type: text
+            tab: 'Autres informations'
+        gestionnaire:
+            label: Gestionnaire
+            span: auto
+            nameFrom: full_name
+            descriptionFrom: description
+            type: relation
+            tab: 'Autres informations'
