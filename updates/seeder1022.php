@@ -38,6 +38,10 @@ class Seeder1022 extends Seeder
         ]);
 
         Therapie::create([
+            'designation' => 'ICD'
+        ]);
+
+        Therapie::create([
             'designation' => 'Protection'
         ]);        
         

@@ -12,7 +12,7 @@ fields:
         size: large
         span: full
         type: textarea
-    is_statistiqeus:
+    is_statistiques:
         label: Statistiques
         span: auto
         default: 1
