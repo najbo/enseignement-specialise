@@ -15,7 +15,9 @@ class BuilderTableCreateDigartEcoleEvol extends Migration
             $table->string('abreviation', 50)->nullable();
             $table->string('code', 20)->nullable();
             $table->text('complement')->nullable();
-            $table->integer('next_id')->nullable()->unsigned();
+            $table->integer('lessons')->unsigned()->nullable();
+            $table->integer('duree_mois')->unsigned()->nullable();
+            $table->string('duree', 255)->nullable();
             $table->integer('sort_order')->nullable();
             $table->boolean('is_actif')->nullable()->default(1);
             $table->boolean('is_statistiques')->nullable()->default(1);

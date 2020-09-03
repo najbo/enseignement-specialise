@@ -102,6 +102,8 @@ navigation:
             - digart.ecole.statuts
             - digart.ecole.types
             - digart.ecole.pathologies
+            - digart.ecole.evolutions
+            - digart.ecole.statistiques
         sideMenu:
             suivi:
                 label: 'Suivi des élèves'
@@ -205,6 +207,7 @@ navigation:
             - digart.ecole.cycles
             - digart.ecole.volees
             - digart.ecole.ecoletype
+            - digart.ecole.passages
         sideMenu:
             ecoles:
                 label: Ecoles
@@ -263,7 +266,6 @@ navigation:
             - digart.ecole.genres
             - digart.ecole.langues
             - digart.ecole.prochespermis
-            - digart.ecole.passages
             - digart.ecole.typesfaits
         sideMenu:
             pays:

@@ -15,6 +15,7 @@ class BuilderTableCreateDigartEcoleSuivisActiv extends Migration
             $table->integer('type_id')->nullable();
             $table->integer('interlocuteur_id')->nullable();
             $table->integer('therapie_id')->nullable();
+            $table->integer('evolution_id')->nullable();
             $table->dateTime('debut');
             $table->dateTime('fin')->nullable();
             $table->dateTime('date')->nullable();

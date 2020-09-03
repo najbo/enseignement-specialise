@@ -102,8 +102,8 @@ orientation = "portrait"
 			<tr>	
 				<td style="width:20%">Type d'activité</td>
 				<td style="width:30%">{{ activite.type.designation}}</td>
-				<td style="width:20%">Mesure</td>
-				<td style="width:30%">{{ activite.therapie.designation}}</td>
+				<td style="width:20%">{{ activite.evolution ? 'Mesure (évolution)' : 'Mesure' }}</td>
+				<td style="width:30%">{{ activite.mesure_evolution}}</td>
 			</tr>
 			{% if activite.interlocuteur %}
 				<tr>

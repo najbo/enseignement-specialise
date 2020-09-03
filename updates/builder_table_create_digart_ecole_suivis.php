@@ -18,6 +18,8 @@ class BuilderTableCreateDigartEcoleSuivis extends Migration
             $table->text('bilan')->nullable();
             $table->integer('eleve_id');
             $table->integer('statut_id');
+            $table->dateTime('prochaineecheance')->nullable();
+            $table->string('prochaineaction', 255)->nullable();
             $table->integer('gestionnaire_id')->nullable()->unsigned();
             $table->boolean('is_actif')->nullable()->default(1);
             $table->integer('auteur_id')->unsigned()->nullable();

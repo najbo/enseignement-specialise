@@ -53,13 +53,11 @@ columns:
         sortable: true
         select: designation
         relation: type        
-    therapie:
+    mesure_evolution:
         label: Mesure
         type: text
-        searchable: true
-        sortable: true
-        select: designation
-        relation: therapie
+        searchable: false
+        sortable: false
     therapeute:
         label: Thérapeute
         type: text

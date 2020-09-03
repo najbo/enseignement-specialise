@@ -39,6 +39,11 @@ scopes:
         modelClass: DigArt\Ecole\Models\Therapie
         conditions: id in (select suivi_id from digart_ecole_suivis_activ where therapie_id in (:filtered))
         nameFrom: designation        
+    evolutions:
+        label: Evolutions
+        modelClass: DigArt\Ecole\Models\Evolution
+        conditions: id in (select suivi_id from digart_ecole_suivis_activ where evolution_id in (:filtered))
+        nameFrom: designation  
     therapeutes:
         label: Thérapeutes
         modelClass: DigArt\Ecole\Models\Interlocuteur
