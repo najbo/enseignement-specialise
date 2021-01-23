@@ -75,8 +75,22 @@ class Eleves extends Controller
             }
             $records[] = $record;
         }
-        return PDF::loadTemplate('digart.ecole::pdf.liste_eleves',
-            ['headers' => $headers, 'records' => $records])->stream('export.pdf');
+
+
+        $templateCode = 'digart.ecole::pdf.liste_eleves';
+        $options = [
+                'logOutputFile' => storage_path('temp/log.htm'),
+        ];
+
+        return 
+                PDF::loadTemplate($templateCode, ['headers' => $headers, 'records' => $records])
+                ->setOptions($options)
+                ->stream();
+
+
+        // Original (retourne une erreur sur hébergement partagé):
+        #return PDF::loadTemplate('digart.ecole::pdf.liste_eleves',
+        #    ['headers' => $headers, 'records' => $records])->stream('export.pdf');
     }
 
 
