@@ -85,7 +85,19 @@ class PdfExportBehavior extends ControllerBehavior
         $pdf_headers = $model->getModel()->pdf_headers;
 
 
-        return PDF::loadTemplate('digart.ecole::pdf.liste_générique', compact('user','pdf_headers', 'headers', 'records'))->stream('export.pdf');
+
+        $templateCode = 'digart.ecole::pdf.liste_générique';
+        $options = [
+                'logOutputFile' => storage_path('temp/log.htm'),
+        ];
+
+        return 
+                PDF::loadTemplate($templateCode, compact('user','pdf_headers', 'headers', 'records'))
+                ->setOptions($options)
+                ->stream();
+
+
+        #return PDF::loadTemplate('digart.ecole::pdf.liste_générique', compact('user','pdf_headers', 'headers', 'records'))->stream('export.pdf');
     }    
 
 
