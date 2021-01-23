@@ -65,7 +65,18 @@ class Suivis extends Controller
             }
         }
 
-        return PDF::loadTemplate('digart.ecole::pdf.liste_suivis', compact('user','pdf_headers', 'records'))->stream('export.pdf');
+        $templateCode = 'digart.ecole::pdf.liste_suivis';
+        $options = [
+                'logOutputFile' => storage_path('temp/log.htm'),
+        ];
+
+        return 
+                PDF::loadTemplate($templateCode, compact('user','pdf_headers', 'records'))
+                ->setOptions($options)
+                ->stream();
+
+        // Original :
+        #return PDF::loadTemplate('digart.ecole::pdf.liste_suivis', compact('user','pdf_headers', 'records'))->stream('export.pdf');
     } 
 
 
